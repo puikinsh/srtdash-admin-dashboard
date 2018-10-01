@@ -27,16 +27,7 @@ We believe we have covered everything you need to set up an All kind of website.
 - Free Updates
 - Quick support
 - Displays well in all modern browsers and devices
-- What do you get?
-- HTML content
-- documentation
-- Fonts:
-- Lato
-- Poppins
-- Plugins:
-- jQuery
-- bootstrap 4
-- SlickNav
+
 
 ## Note:
 Images are only for demo purpose and not included with the download bundle.
