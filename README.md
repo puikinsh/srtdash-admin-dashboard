@@ -15,19 +15,18 @@ We believe we have covered everything you need to set up an All kind of website.
 - Based on Bootstrap 4
 - HTML5, CSS3, jQuery
 - Fully Responsive
-- Easy to Customizable
+- Easy to customize
 - W3C Validated Code
 - Fontawesome Icons
 - Themify Icons
 - Free Google Fonts.
 - All files are well commented
 - Minimal and Clean
-- Well Documentation
-- UI Elements
+- Documentation
+- Clean UI Elements
 - Free Updates
 - Quick support
 - Displays well in all modern browsers and devices
-
 
 ## Note:
 Images are only for demo purpose and not included with the download bundle.
