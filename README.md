@@ -35,6 +35,19 @@ We believe we have covered everything you need to set up an All kind of website.
 ## Note:
 Images are only for demo purpose and not included with the download bundle.
 
+### Changelog
+#### V 1.0.0
+Initial Release
+### Authors
+[Colorlib](https://colorlib.com)
+
+### More info
+- [Bootstrap Dashboards](https://colorlib.com/wp/free-bootstrap-admin-dashboard-templates/)
+- [Angular Dashboards](https://colorlib.com/wp/angularjs-admin-templates/)
+- [Free Admin Dashboards](https://colorlib.com/wp/free-html5-admin-dashboard-templates/)
+- [Bootstrap Templates](https://colorlib.com/wp/templates/)
+- [WordPress Themes](https://colorlib.com/wp/free-wordpress-themes/)
+
 ### License
 
 SRTdash is licensed under The MIT License (MIT). Which means that you can use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the final products. But you always need to state that Colorlib is the original author of this template.
