@@ -12,6 +12,9 @@ It is a fully responsive bootstrap admin template/bootstrap admin dashboard temp
 
 We believe we have covered everything you need to set up an All kind of website.If there is something that you would like to know then we are happy to help you out.
 
+## Getting started
+If you want to kickstart your webapp right now, there is a [starter template](srtdash/starter.html) in place. This one includes everything you need to set up your app and nothing more.
+
 # Template Features:
 
 - 3 Deferent Home Version
