@@ -117,34 +117,37 @@
 
     /* sidebar */
     .sidebar-menu {
-        position: fixed;
-        left: -90%;
-        top: 0;
-        height: 100vh;
         width: 365px;
     }
-    .sbar_collapsed .logo a span {
-        display: block;
-    }
-    .sbar_collapsed .sidebar-menu {
-        width: 365px;
-        left: 0;
-    }
-    .minisidebar.main-menu {
-        margin-right: 0;
-    }
-    .sbar_collapsed .nav-btn {
-        margin-right: 15px;
+    .nav-btn {
         position: fixed;
         z-index: 99;
-        left: 364px;
+        left: 363px;
         background: #303641;
         padding: 14px;
         top: 0;
         margin: 0;
     }
-    .sbar_collapsed .nav-btn span {
+    .nav-btn span {
         background: #fffbfb;
+    }
+    .sbar_collapsed .sidebar-menu {
+        left: -90%;
+    }
+    .sbar_collapsed .nav-btn {
+        position: initial;
+        background: none;
+        padding: 0;
+        margin: 10px 30px 0 0;
+    }
+    .sbar_collapsed .nav-btn span {
+        background: #b3aaaa;
+    }
+    .sbar_collapsed .logo a span {
+        display: block;
+    }
+    .minisidebar.main-menu {
+        margin-right: 0;
     }
     /* main content */
     .main-content-inner {
@@ -171,34 +174,37 @@
     }
     /* sidebar */
     .sidebar-menu {
-        position: fixed;
-        left: -90%;
-        top: 0;
-        height: 100vh;
-        width: 365px;
-    }
-    .sbar_collapsed .logo a span {
-        display: block;
-    }
-    .sbar_collapsed .sidebar-menu {
         width: 306px;
-        left: 0;
     }
-    .minisidebar.main-menu {
-        margin-right: 0;
-    }
-    .sbar_collapsed .nav-btn {
-        margin-right: 15px;
+    .nav-btn {
         position: fixed;
         z-index: 99;
-        left: 306px;
+        left: 304px;
         background: #303641;
         padding: 14px;
         top: 0;
         margin: 0;
     }
-    .sbar_collapsed .nav-btn span {
+    .nav-btn span {
         background: #fffbfb;
+    }
+    .sbar_collapsed .sidebar-menu {
+        left: -90%;
+    }
+    .sbar_collapsed .nav-btn {
+        position: initial;
+        background: none;
+        padding: 0;
+        margin: 10px 30px 0 0;
+    }
+    .sbar_collapsed .nav-btn span {
+        background: #b3aaaa;
+    }
+    .sbar_collapsed .logo a span {
+        display: block;
+    }
+    .minisidebar.main-menu {
+        margin-right: 0;
     }
     /* main content */
     .main-content-inner {
@@ -279,34 +285,37 @@
     /* dashboard one */
     /* sidebar */
     .sidebar-menu {
-        position: fixed;
-        left: -90%;
-        top: 0;
-        height: 100vh;
         width: 306px;
     }
-    .sbar_collapsed .logo a span {
-        display: block;
-    }
-    .sbar_collapsed .sidebar-menu {
-        width: 306px;
-        left: 0;
-    }
-    .minisidebar.main-menu {
-        margin-right: 0;
-    }
-    .sbar_collapsed .nav-btn {
-        margin-right: 15px;
+    .nav-btn {
         position: fixed;
         z-index: 99;
-        left: 306px;
+        left: 304px;
         background: #303641;
         padding: 14px;
         top: 0;
         margin: 0;
     }
-    .sbar_collapsed .nav-btn span {
+    .nav-btn span {
         background: #fffbfb;
+    }
+    .sbar_collapsed .sidebar-menu {
+        left: -90%;
+    }
+    .sbar_collapsed .nav-btn {
+        position: initial;
+        background: none;
+        padding: 0;
+        margin: 10px 30px 0 0;
+    }
+    .sbar_collapsed .nav-btn span {
+        background: #b3aaaa;
+    }
+    .sbar_collapsed .logo a span {
+        display: block;
+    }
+    .minisidebar.main-menu {
+        margin-right: 0;
     }
     .sbar_collapsed .metismenu li a span,
     .sbar_collapsed .metismenu li a:after,
@@ -421,34 +430,37 @@
     }
     /* sidebar */
     .sidebar-menu {
-        position: fixed;
-        left: -90%;
-        top: 0;
-        height: 100vh;
         width: 365px;
     }
-    .sbar_collapsed .logo a span {
-        display: block;
-    }
-    .sbar_collapsed .sidebar-menu {
-        width: 365px;
-        left: 0;
-    }
-    .minisidebar.main-menu {
-        margin-right: 0;
-    }
-    .sbar_collapsed .nav-btn {
-        margin-right: 15px;
+    .nav-btn {
         position: fixed;
         z-index: 99;
-        left: 364px;
+        left: 363px;
         background: #303641;
         padding: 14px;
         top: 0;
         margin: 0;
     }
-    .sbar_collapsed .nav-btn span {
+    .nav-btn span {
         background: #fffbfb;
+    }
+    .sbar_collapsed .sidebar-menu {
+        left: -90%;
+    }
+    .sbar_collapsed .nav-btn {
+        position: initial;
+        background: none;
+        padding: 0;
+        margin: 10px 30px 0 0;
+    }
+    .sbar_collapsed .nav-btn span {
+        background: #b3aaaa;
+    }
+    .sbar_collapsed .logo a span {
+        display: block;
+    }
+    .minisidebar.main-menu {
+        margin-right: 0;
     }
     /* main content */
     .main-content-inner {
@@ -533,34 +545,37 @@
     /* dashboard one */
     /* sidebar */
     .sidebar-menu {
+        width: calc(100% - 48px);
+    }
+    .nav-btn {
         position: fixed;
-        left: -90%;
+        z-index: 99;
+        right: 0;
+        background: #303641;
+        padding: 14px;
         top: 0;
-        height: 100vh;
-        width: 90%;
+        margin: 0;
+    }
+    .nav-btn span {
+        background: #fffbfb;
+    }
+    .sbar_collapsed .sidebar-menu {
+        left: -100%;
+    }
+    .sbar_collapsed .nav-btn {
+        position: initial;
+        background: none;
+        padding: 0;
+        margin: 10px 30px 0 0;
+    }
+    .sbar_collapsed .nav-btn span {
+        background: #b3aaaa;
     }
     .sbar_collapsed .logo a span {
         display: block;
     }
-    .sbar_collapsed .sidebar-menu {
-        width: 85%;
-        left: 0;
-    }
     .minisidebar.main-menu {
         margin-right: 0;
-    }
-    .sbar_collapsed .nav-btn {
-        margin-right: 15px;
-        position: fixed;
-        z-index: 99;
-        right: 0;
-        top: 0;
-        background: #303641;
-        margin: 0;
-        padding: 14px;
-    }
-    .sbar_collapsed .nav-btn span {
-        background: #fffbfb;
     }
     /* main content */
     .main-content-inner {
@@ -576,9 +591,6 @@
     /* hedaer */
     .search-box input {
         width: 223px;
-    }
-    .nav-btn {
-        margin-right: 15px;
     }
     .notification-area {
         text-align: center;
