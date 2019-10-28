@@ -402,8 +402,7 @@
 }
 
 .nav-btn {
-    margin-right: 30px;
-    margin-top: 10px;
+    margin: 10px 30px 0 0;
     cursor: pointer;
 }
 
@@ -419,18 +418,23 @@
     box-shadow: 0 0 0 4px rgba(99, 96, 96, 0.03);
 }
 
-.sbar_collapsed .nav-btn span:nth-child(2) {
+.nav-btn span:nth-child(2) {
     opacity: 0;
 }
 
-.sbar_collapsed .nav-btn span:first-child {
+.nav-btn span:first-child {
     -webkit-transform: rotate(45deg)translate(5px, 5px);
             transform: rotate(45deg)translate(5px, 5px);
 }
 
-.sbar_collapsed .nav-btn span:last-child {
+.nav-btn span:last-child {
     -webkit-transform: rotate(-45deg)translate(3px, -3px);
             transform: rotate(-45deg)translate(3px, -3px);
+}
+
+.sbar_collapsed .nav-btn span {
+    transform: none;
+    opacity: 1;
 }
 
 .search-box form {
