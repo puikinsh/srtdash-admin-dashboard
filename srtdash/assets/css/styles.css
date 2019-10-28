@@ -1496,7 +1496,7 @@ table.dbkit-table tr td {
     opacity: 0;
 }
 
-@-webkit-keyframes "pulse" {
+@-webkit-keyframes pulse {
     0% {
         -webkit-transform: scale(0);
         opacity: 0.0;
@@ -2381,9 +2381,12 @@ table.dataTable thead td {
 .form-gp i {
     position: absolute;
     right: 5px;
-    bottom: 15px;
     color: #7e74ff;
     font-size: 16px;
+}
+
+.form-gp.has-error, .form-gp.has-error label, .form-gp.has-error input, .form-gp.has-error input::placeholder, .form-gp.has-error i {
+    color: var(--red);
 }
 
 .rmber-area {
