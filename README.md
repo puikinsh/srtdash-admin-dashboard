@@ -1,4 +1,4 @@
-# SRTdash admin dashboard
+# SRTdash admin dashboard RTL
 Free admin dashboard template
 
 # Preview
