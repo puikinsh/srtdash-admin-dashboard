@@ -1,0 +1,78 @@
+{
+  "name": "metismenu",
+  "version": "3.0.7",
+  "description": "A collapsible jQuery menu plugin",
+  "main": "dist/metisMenu.js",
+  "module": "dist/metisMenu.esm.js",
+  "browser": "dist/metisMenu.min.js",
+  "unpkg": "dist/metisMenu.min.js",
+  "jsdelivr": "dist/metisMenu.min.js",
+  "typings": "types/metismenu.d.ts",
+  "style": "dist/metisMenu.css",
+  "sass": "src/metisMenu.scss",
+  "files": [
+    "dist",
+    "src",
+    "types"
+  ],
+  "scripts": {
+    "js:dev": "rollup -c -w",
+    "js:prod": "rollup -c",
+    "js:umd:min": "terser --compress typeofs=false --mangle --comments \"/^!/\" --source-map \"content=dist/metisMenu.js.map,includeSources,url=metisMenu.min.js.map\" --output dist/metisMenu.min.js dist/metisMenu.js",
+    "js:esm:min": "terser --compress typeofs=false --mangle --comments \"/^!/\" --source-map \"content=dist/metisMenu.esm.js.map,includeSources,url=metisMenu.esm.min.js.map\" --output dist/metisMenu.esm.min.js dist/metisMenu.esm.js",
+    "css:dev": "sass src:demo/assets/css -w",
+    "css:prod": "sass src:dist",
+    "css:min": "sass src/metisMenu.scss dist/metisMenu.min.css -s compressed",
+    "build": "npm run js:prod && npm run js:umd:min && npm run js:esm:min && npm run css:prod && npm run css:min",
+    "test": "eslint src/*.js"
+  },
+  "repository": "onokumus/metismenu",
+  "keywords": [
+    "accordion",
+    "jquery",
+    "menu",
+    "metis",
+    "metisMenu",
+    "toggle"
+  ],
+  "author": "Osman Nuri Okumus <onokumus@gmail.com> (https://github.com/onokumus)",
+  "contributors": [
+    "Rein de Vries <info@reinos.nl> (https://github.com/reinos/)",
+    "Arthur CHAN <arthur@talkgoal.com> (http://catchtop.com)",
+    "Andrew Eastwood (https://github.com/AndrewEastwood)",
+    "Marcelo Tosco <capy.net@gmail.com> (http://ecapy.com)",
+    "Radoslav Štofko (http://www.stoweb.cz)",
+    "Umut Karcı <cediddi@gmail.com> (https://github.com/cediddi)",
+    "Chris Wiggins <chris@wiggins.nz> (https://github.com/chriswiggins)",
+    "Jacob Magnusson <m@jacobian.se> (https://github.com/jmagnusson)",
+    "QQ <sinabs@gmail.com> (https://github.com/sinabs)",
+    "roman <rgnevashev@gmail.com> (https://github.com/rgnevashev)",
+    "diegozhu <zhuhaiyang55@gmail.com> (http://sae.zhuhaiyang.me)",
+    "WoMayr (https://github.com/WoMayr)",
+    "719media (https://github.com/719media)",
+    "Boris Burkov (Boris Burkov)",
+    "Matt Dziuban (http://mattdziuban.com)",
+    "Valerio Belli (https://github.com/DrugoLebowski)",
+    "Diogo Pereira <diogopereira@pereiradiogo.com> (http://pereiradiogo.com)",
+    "Nicolas Igot <nicolasigot@gmail.com> (http://www.igot-web.com)"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/onokumus/metismenu/issues"
+  },
+  "homepage": "https://github.com/onokumus/metismenu#readme",
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^13.0.0",
+    "@types/jquery": "^3.5.5",
+    "cross-env": "^7.0.3",
+    "eslint": "^7.26.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.23.2",
+    "rollup": "^2.48.0",
+    "sass": "^1.32.13",
+    "terser": "^5.7.0"
+  },
+  "peerDependencies": {
+    "jquery": "^3.4.1"
+  }
+}

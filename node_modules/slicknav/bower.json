@@ -1,0 +1,21 @@
+{
+  "name": "slicknav",
+  "version": "1.0.8",
+  "authors": [
+    "Josh Cope"
+  ],
+  "main": [
+    "dist/jquery.slicknav.js",
+    "dist/slicknav.css"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": ">=1.7.0"
+  }
+}

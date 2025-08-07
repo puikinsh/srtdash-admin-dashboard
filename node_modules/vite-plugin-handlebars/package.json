@@ -1,0 +1,52 @@
+{
+  "name": "vite-plugin-handlebars",
+  "version": "2.0.0",
+  "description": "Vite plugin for Handlebars support in HTML",
+  "type": "module",
+  "exports": "./dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "repository": "git@github.com:alexlafroscia/vite-plugin-handlebars.git",
+  "author": "Alex LaFroscia <alex@lafroscia.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "lint": "prettier --check .",
+    "test": "vitest",
+    "release": "standard-version",
+    "_postinstall": "husky install",
+    "prepack": "yarn build && pinst --disable",
+    "postpack": "pinst --enable"
+  },
+  "dependencies": {
+    "handlebars": "^4.7.6",
+    "vite": "^5.0.0"
+  },
+  "devDependencies": {
+    "@movable/prettier-config": "^0.3.6",
+    "@tsconfig/node20": "^20.1.2",
+    "@types/node": "^20.10.6",
+    "file-fixture-factory": "^4.0.1",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.2.0",
+    "pinst": "^3.0.0",
+    "prettier": "^3.1.1",
+    "standard-version": "^9.1.0",
+    "typescript": "^5.3.3",
+    "vitest": "^1.1.0"
+  },
+  "lint-staged": {
+    "*.{js,ts,json,md,yml}": "prettier --write"
+  },
+  "standard-version": {
+    "scripts": {
+      "postchangelog": "prettier --write CHANGELOG.md"
+    }
+  },
+  "volta": {
+    "node": "20.10.0",
+    "yarn": "1.22.10"
+  },
+  "packageManager": "yarn@4.0.2"
+}

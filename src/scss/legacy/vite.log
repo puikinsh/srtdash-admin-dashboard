@@ -1,0 +1,44 @@
+
+> srtdash-admin-modern@3.0.0 dev
+> vite
+
+
+  VITE v7.1.0  ready in 400 ms
+
+  ➜  Local:   http://localhost:3000/
+  ➜  Network: use --host to expose
+2:36:14 PM [vite] (client) Failed to load source map for /Users/silkalns/Projects/srtdash-admin-dashboard/srtdash/assets/css/bootstrap.min.css.
+Error: An error occurred while trying to read the map file at bootstrap.min.css.map
+Error: ENOENT: no such file or directory, open '/Users/silkalns/Projects/srtdash-admin-dashboard/srtdash/assets/css/bootstrap.min.css.map'
+    at async open (node:internal/fs/promises:640:25)
+    at async Object.readFile (node:internal/fs/promises:1277:14)
+    at async extractSourcemapFromFile (file:///Users/silkalns/Projects/srtdash-admin-dashboard/node_modules/vite/dist/node/chunks/dep-CZAfWeT9.js:8355:65)
+    at async loadAndTransform (file:///Users/silkalns/Projects/srtdash-admin-dashboard/node_modules/vite/dist/node/chunks/dep-CZAfWeT9.js:26500:22)
+2:36:14 PM [vite] (client) Failed to load source map for /Users/silkalns/Projects/srtdash-admin-dashboard/srtdash/assets/css/metisMenu.css.
+Error: An error occurred while trying to read the map file at metisMenu.css.map
+Error: ENOENT: no such file or directory, open '/Users/silkalns/Projects/srtdash-admin-dashboard/srtdash/assets/css/metisMenu.css.map'
+    at async open (node:internal/fs/promises:640:25)
+    at async Object.readFile (node:internal/fs/promises:1277:14)
+    at async extractSourcemapFromFile (file:///Users/silkalns/Projects/srtdash-admin-dashboard/node_modules/vite/dist/node/chunks/dep-CZAfWeT9.js:8355:65)
+    at async loadAndTransform (file:///Users/silkalns/Projects/srtdash-admin-dashboard/node_modules/vite/dist/node/chunks/dep-CZAfWeT9.js:26500:22)
+2:36:14 PM [vite] (client) Failed to load source map for /Users/silkalns/Projects/srtdash-admin-dashboard/srtdash/assets/js/popper.min.js.
+Error: An error occurred while trying to read the map file at popper.min.js.map
+Error: ENOENT: no such file or directory, open '/Users/silkalns/Projects/srtdash-admin-dashboard/srtdash/assets/js/popper.min.js.map'
+    at async open (node:internal/fs/promises:640:25)
+    at async Object.readFile (node:internal/fs/promises:1277:14)
+    at async extractSourcemapFromFile (file:///Users/silkalns/Projects/srtdash-admin-dashboard/node_modules/vite/dist/node/chunks/dep-CZAfWeT9.js:8355:65)
+    at async loadAndTransform (file:///Users/silkalns/Projects/srtdash-admin-dashboard/node_modules/vite/dist/node/chunks/dep-CZAfWeT9.js:26500:22)
+2:36:14 PM [vite] (client) Failed to load source map for /Users/silkalns/Projects/srtdash-admin-dashboard/srtdash/assets/js/bootstrap.min.js.
+Error: An error occurred while trying to read the map file at bootstrap.min.js.map
+Error: ENOENT: no such file or directory, open '/Users/silkalns/Projects/srtdash-admin-dashboard/srtdash/assets/js/bootstrap.min.js.map'
+    at async open (node:internal/fs/promises:640:25)
+    at async Object.readFile (node:internal/fs/promises:1277:14)
+    at async extractSourcemapFromFile (file:///Users/silkalns/Projects/srtdash-admin-dashboard/node_modules/vite/dist/node/chunks/dep-CZAfWeT9.js:8355:65)
+    at async loadAndTransform (file:///Users/silkalns/Projects/srtdash-admin-dashboard/node_modules/vite/dist/node/chunks/dep-CZAfWeT9.js:26500:22)
+2:36:14 PM [vite] (client) Failed to load source map for /Users/silkalns/Projects/srtdash-admin-dashboard/srtdash/assets/js/metisMenu.min.js.
+Error: An error occurred while trying to read the map file at metisMenu.min.js.map
+Error: ENOENT: no such file or directory, open '/Users/silkalns/Projects/srtdash-admin-dashboard/srtdash/assets/js/metisMenu.min.js.map'
+    at async open (node:internal/fs/promises:640:25)
+    at async Object.readFile (node:internal/fs/promises:1277:14)
+    at async extractSourcemapFromFile (file:///Users/silkalns/Projects/srtdash-admin-dashboard/node_modules/vite/dist/node/chunks/dep-CZAfWeT9.js:8355:65)
+    at async loadAndTransform (file:///Users/silkalns/Projects/srtdash-admin-dashboard/node_modules/vite/dist/node/chunks/dep-CZAfWeT9.js:26500:22)

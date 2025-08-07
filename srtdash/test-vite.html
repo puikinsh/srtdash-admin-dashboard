@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+    {{> head title="Test Vite Page"}}
+</head>
+<body>
+    {{> preloader}}
+    
+    <div class="page-container">
+        {{> sidebar}}
+        
+        <div class="main-content">
+            {{> header}}
+            
+            <div class="page-title-area">
+                <div class="row align-items-center">
+                    <div class="col-sm-6">
+                        <div class="breadcrumbs-area clearfix">
+                            <h4 class="page-title pull-left">Test Page</h4>
+                            <ul class="breadcrumbs pull-left">
+                                <li><a href="index.html">Home</a></li>
+                                <li><span>Test</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="main-content-inner">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="header-title">Vite + Bootstrap 5 Migration Test</h4>
+                                <p>This is a test page to verify that:</p>
+                                <ul>
+                                    <li>Vite is serving files correctly</li>
+                                    <li>Handlebars partials are working</li>
+                                    <li>Bootstrap 5 is loaded</li>
+                                    <li>SCSS compilation is working</li>
+                                    <li>JavaScript modules are loading</li>
+                                </ul>
+                                
+                                <h5 class="mt-4">Bootstrap 5 Components Test</h5>
+                                
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                    Launch demo modal
+                                </button>
+                                
+                                <!-- Dropdown -->
+                                <div class="dropdown d-inline-block ms-2">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Dropdown button
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    </ul>
+                                </div>
+                                
+                                <!-- Tooltip -->
+                                <button type="button" class="btn btn-info ms-2" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top">
+                                    Tooltip test
+                                </button>
+                                
+                                <!-- Modal -->
+                                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                Bootstrap 5 modal is working!
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                <button type="button" class="btn btn-primary">Save changes</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="alert alert-success mt-4" role="alert">
+                                    <strong>Success!</strong> If you can see this styled alert, Bootstrap 5 CSS is working.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        {{> footer}}
+    </div>
+    
+    {{> scripts}}
+</body>
+</html>

@@ -1,0 +1,31 @@
+// Variables and customization
+@import "variables";
+
+// Bootstrap 5
+@import "bootstrap/scss/bootstrap";
+
+// Font Awesome
+@import "@fortawesome/fontawesome-free/css/all.css";
+
+// Components
+@import "components/sidebar";
+@import "components/header";
+@import "components/footer";
+@import "components/cards";
+@import "components/preloader";
+
+// Layouts
+@import "layouts/dashboard";
+@import "layouts/auth";
+
+// Utilities
+@import "utilities";
+
+// Third-party styles
+@import "legacy/metisMenu";
+@import "legacy/themify-icons";
+
+// Legacy styles (to be refactored)
+@import "legacy/default-css";
+@import "legacy/styles";
+@import "legacy/responsive";

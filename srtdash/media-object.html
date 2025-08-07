@@ -183,7 +183,7 @@
                             <li id="full-view"><i class="ti-fullscreen"></i></li>
                             <li id="full-view-exit"><i class="ti-zoom-out"></i></li>
                             <li class="dropdown">
-                                <i class="ti-bell dropdown-toggle" data-toggle="dropdown">
+                                <i class="ti-bell dropdown-toggle" data-bs-toggle="dropdown">
                                     <span>2</span>
                                 </i>
                                 <div class="dropdown-menu bell-notify-box notify-box">
@@ -242,7 +242,7 @@
                                 </div>
                             </li>
                             <li class="dropdown">
-                                <i class="fa fa-envelope-o dropdown-toggle" data-toggle="dropdown"><span>3</span></i>
+                                <i class="fa fa-envelope-o dropdown-toggle" data-bs-toggle="dropdown"><span>3</span></i>
                                 <div class="dropdown-menu notify-box nt-enveloper-box">
                                     <span class="notify-title">You have 3 new notifications <a href="#">view all</a></span>
                                     <div class="nofity-list">
@@ -342,7 +342,7 @@
                     <div class="col-sm-6 clearfix">
                         <div class="user-profile pull-right">
                             <img class="avatar user-thumb" src="assets/images/author/avatar.png" alt="avatar">
-                            <h4 class="user-name dropdown-toggle" data-toggle="dropdown">Kumkum Rai <i class="fa fa-angle-down"></i></h4>
+                            <h4 class="user-name dropdown-toggle" data-bs-toggle="dropdown">Kumkum Rai <i class="fa fa-angle-down"></i></h4>
                             <div class="dropdown-menu">
                                 <a class="dropdown-item" href="#">Message</a>
                                 <a class="dropdown-item" href="#">Settings</a>
@@ -358,33 +358,15 @@
                     <div class="col-lg-6 mt-5">
                         <div class="card">
                             <div class="card-body">
-                                <div class="media mb-5">
-                                    <img class="img-fluid mr-4" src="assets/images/media/media1.jpg" alt="image">
-                                    <div class="media-body">
+                                <div class="d-flex mb-5">
+                                    <img class="img-fluid me-4" src="assets/images/media/media1.jpg" alt="image">
+                                    <div class="d-flex-body">
                                         <h4 class="mb-3">Media heading</h4> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
                                     </div>
                                 </div>
-                                <div class="media">
-                                    <img class="img-fluid mr-4" src="assets/images/media/media2.jpg" alt="">
-                                    <div class="media-body">
-                                        <h4 class="mb-3">Media heading</h4> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 mt-5">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="media mb-5">
-                                    <img class="img-fluid mr-4" src="assets/images/media/media1.jpg" alt="image">
-                                    <div class="media-body">
-                                        <h4 class="mb-3">Media heading</h4> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
-                                    </div>
-                                </div>
-                                <div class="media mt-5 child-media">
-                                    <img class="img-fluid mr-4" src="assets/images/media/media2.jpg" alt="">
-                                    <div class="media-body">
+                                <div class="d-flex">
+                                    <img class="img-fluid me-4" src="assets/images/media/media2.jpg" alt="">
+                                    <div class="d-flex-body">
                                         <h4 class="mb-3">Media heading</h4> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
                                     </div>
                                 </div>
@@ -394,15 +376,33 @@
                     <div class="col-lg-6 mt-5">
                         <div class="card">
                             <div class="card-body">
-                                <div class="media mb-5">
-                                    <img class="align-self-center img-fluid mr-4" src="assets/images/media/media1.jpg" alt="image">
-                                    <div class="media-body">
+                                <div class="d-flex mb-5">
+                                    <img class="img-fluid me-4" src="assets/images/media/media1.jpg" alt="image">
+                                    <div class="d-flex-body">
+                                        <h4 class="mb-3">Media heading</h4> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+                                    </div>
+                                </div>
+                                <div class="media mt-5 child-d-flex">
+                                    <img class="img-fluid me-4" src="assets/images/media/media2.jpg" alt="">
+                                    <div class="d-flex-body">
+                                        <h4 class="mb-3">Media heading</h4> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mt-5">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-flex mb-5">
+                                    <img class="align-self-center img-fluid me-4" src="assets/images/media/media1.jpg" alt="image">
+                                    <div class="d-flex-body">
                                         <h4 class="mb-3">Center-aligned media</h4> Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate architecto ea atque eum adipisci aspernatur, repellat commodi dignissimos delectus aliquam qui fugiat neque ut ipsa nihil quia voluptatum ratione tenetur, rem, cumque rerum quae hic eveniet! Eius vitae excepturi quae? Aperiam doloremque consequuntur qui dignissimos et ad voluptate maiores modi.
                                     </div>
                                 </div>
-                                <div class="media">
-                                    <img class="align-self-center img-fluid mr-4" src="assets/images/media/media2.jpg" alt="">
-                                    <div class="media-body">
+                                <div class="d-flex">
+                                    <img class="align-self-center img-fluid me-4" src="assets/images/media/media2.jpg" alt="">
+                                    <div class="d-flex-body">
                                         <h4 class="mb-3">Center-aligned media</h4> Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae suscipit ad voluptate labore, quo velit omnis voluptatibus fugit sunt molestias veritatis dicta similique perspiciatis tempora iste soluta natus non eius at ratione sit, ullam debitis deleniti. Magnam quasi blanditiis esse dolor sed tenetur eum repellendus odit. Impedit nobis ipsa sit veritatis enim! Asperiores exercitationem deserunt non quidem, error eum voluptatem.
                                     </div>
                                 </div>
@@ -412,15 +412,15 @@
                     <div class="col-lg-6 mt-5">
                         <div class="card">
                             <div class="card-body">
-                                <div class="media mb-5">
-                                    <img class="align-self-end img-fluid mr-4" src="assets/images/media/media1.jpg" alt="image">
-                                    <div class="media-body">
+                                <div class="d-flex mb-5">
+                                    <img class="align-self-end img-fluid me-4" src="assets/images/media/media1.jpg" alt="image">
+                                    <div class="d-flex-body">
                                         <h4 class="mb-3">Bottom-aligned media</h4> Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate architecto ea atque eum adipisci aspernatur, repellat commodi dignissimos delectus aliquam qui fugiat neque ut ipsa nihil quia voluptatum ratione tenetur, rem, cumque rerum quae hic eveniet! Eius vitae excepturi quae? Aperiam doloremque consequuntur qui dignissimos et ad voluptate maiores modi.
                                     </div>
                                 </div>
-                                <div class="media">
-                                    <img class="align-self-end img-fluid mr-4" src="assets/images/media/media2.jpg" alt="">
-                                    <div class="media-body">
+                                <div class="d-flex">
+                                    <img class="align-self-end img-fluid me-4" src="assets/images/media/media2.jpg" alt="">
+                                    <div class="d-flex-body">
                                         <h4 class="mb-3">Bottom-aligned media</h4> Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae suscipit ad voluptate labore, quo velit omnis voluptatibus fugit sunt molestias veritatis dicta similique perspiciatis tempora iste soluta natus non eius at ratione sit, ullam debitis deleniti. Magnam quasi blanditiis esse dolor sed tenetur eum repellendus odit. Impedit nobis ipsa sit veritatis enim! Asperiores exercitationem deserunt non quidem, error eum voluptatem.
                                     </div>
                                 </div>
@@ -430,17 +430,17 @@
                     <div class="col-lg-6 mt-5">
                         <div class="card">
                             <div class="card-body">
-                                <div class="media mb-5">
-                                    <div class="media-body">
+                                <div class="d-flex mb-5">
+                                    <div class="d-flex-body">
                                         <h4 class="mb-3">Media object</h4> Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate architecto ea atque eum adipisci aspernatur, repellat commodi dignissimos delectus aliquam qui fugiat neque.
                                     </div>
-                                    <img class="img-fluid ml-4" src="assets/images/media/media1.jpg" alt="image">
+                                    <img class="img-fluid ms-4" src="assets/images/media/media1.jpg" alt="image">
                                 </div>
-                                <div class="media">
-                                    <div class="media-body">
+                                <div class="d-flex">
+                                    <div class="d-flex-body">
                                         <h4 class="mb-3">Media object</h4> Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae suscipit ad voluptate labore, quo velit omnis voluptatibus fugit sunt molestias veritatis dicta similique.
                                     </div>
-                                    <img class="img-fluid ml-4" src="assets/images/media/media2.jpg" alt="">
+                                    <img class="img-fluid ms-4" src="assets/images/media/media2.jpg" alt="">
                                 </div>
                             </div>
                         </div>
@@ -449,15 +449,15 @@
                         <div class="card">
                             <div class="card-body">
                                 <ul class="list-unstyled">
-                                    <li class="media mb-4">
-                                        <img class="img-fluid mr-4" src="assets/images/media/media1.jpg" alt="image">
-                                        <div class="media-body">
+                                    <li class="d-flex mb-4">
+                                        <img class="img-fluid me-4" src="assets/images/media/media1.jpg" alt="image">
+                                        <div class="d-flex-body">
                                             <h5 class="mb-3">List-based media object</h5> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
                                         </div>
                                     </li>
-                                    <li class="media">
-                                        <img class="img-fluid mr-4" src="assets/images/media/media1.jpg" alt="image">
-                                        <div class="media-body">
+                                    <li class="d-flex">
+                                        <img class="img-fluid me-4" src="assets/images/media/media1.jpg" alt="image">
+                                        <div class="d-flex-body">
                                             <h5 class="mb-3">List-based media object</h5> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
                                         </div>
                                     </li>
@@ -480,10 +480,10 @@
     <!-- page container area end -->
     <!-- offset area start -->
     <div class="offset-area">
-        <div class="offset-close"><i class="ti-close"></i></div>
+        <div class="offset-btn-close"><i class="ti-btn-close"></i></div>
         <ul class="nav offset-menu-tab">
-            <li><a class="active" data-toggle="tab" href="#activity">Activity</a></li>
-            <li><a data-toggle="tab" href="#settings">Settings</a></li>
+            <li><a class="active" data-bs-toggle="tab" href="#activity">Activity</a></li>
+            <li><a data-bs-toggle="tab" href="#settings">Settings</a></li>
         </ul>
         <div class="offset-content tab-content">
             <div id="activity" class="tab-pane fade in show active">

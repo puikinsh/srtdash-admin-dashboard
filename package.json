@@ -1,0 +1,29 @@
+{
+  "name": "srtdash-admin-modern",
+  "version": "3.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --ext .js,.jsx",
+    "format": "prettier --write ."
+  },
+  "devDependencies": {
+    "eslint": "^9.32.0",
+    "eslint-config-prettier": "^10.1.8",
+    "prettier": "^3.6.2",
+    "sass": "^1.90.0",
+    "vite": "^7.0.6",
+    "vite-plugin-handlebars": "^2.0.0"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^7.0.0",
+    "@popperjs/core": "^2.11.8",
+    "bootstrap": "^5.3.7",
+    "chart.js": "^4.5.0",
+    "metismenu": "^3.0.7",
+    "owl.carousel": "^2.3.4",
+    "slicknav": "^1.0.8"
+  }
+}

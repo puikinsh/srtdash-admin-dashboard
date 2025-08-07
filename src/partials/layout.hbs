@@ -1,0 +1,50 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    {{> head title=title}}
+</head>
+<body>
+    {{> preloader}}
+    
+    <!-- page container area start -->
+    <div class="page-container">
+        {{> sidebar}}
+        
+        <!-- main content area start -->
+        <div class="main-content">
+            {{> header}}
+            
+            <!-- page title area start -->
+            {{#if pageTitle}}
+            <div class="page-title-area">
+                <div class="row align-items-center">
+                    <div class="col-sm-6">
+                        <div class="breadcrumbs-area clearfix">
+                            <h4 class="page-title pull-left">{{pageTitle}}</h4>
+                            {{#if breadcrumbs}}
+                            <ul class="breadcrumbs pull-left">
+                                {{#each breadcrumbs}}
+                                <li><a href="{{this.url}}">{{this.name}}</a></li>
+                                {{/each}}
+                            </ul>
+                            {{/if}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{/if}}
+            <!-- page title area end -->
+            
+            <div class="main-content-inner">
+                {{{body}}}
+            </div>
+        </div>
+        <!-- main content area end -->
+        
+        {{> footer}}
+    </div>
+    <!-- page container area end -->
+    
+    {{> scripts pageScript=pageScript}}
+</body>
+</html>

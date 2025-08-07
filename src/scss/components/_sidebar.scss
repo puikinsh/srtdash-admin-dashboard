@@ -1,0 +1,147 @@
+// Sidebar styles
+.sidebar-menu {
+  width: $sidebar-width;
+  background: #fff;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  z-index: $zindex-sidebar;
+  box-shadow: $box-shadow-sm;
+  transition: $transition-base;
+  
+  .sidebar-header {
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #e9ecef;
+    
+    .logo {
+      img {
+        max-width: 150px;
+        height: auto;
+      }
+    }
+  }
+  
+  .main-menu {
+    padding: 20px 0;
+    
+    .metismenu {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      
+      li {
+        position: relative;
+        
+        a {
+          display: flex;
+          align-items: center;
+          padding: 12px 20px;
+          color: $dark;
+          text-decoration: none;
+          transition: $transition-base;
+          
+          i {
+            font-size: 18px;
+            width: 30px;
+            text-align: center;
+            margin-right: 10px;
+          }
+          
+          span {
+            flex: 1;
+            text-transform: capitalize;
+          }
+          
+          &:hover {
+            background: $light;
+            color: $primary;
+          }
+        }
+        
+        &.active > a {
+          background: $light;
+          color: $primary;
+          font-weight: 600;
+        }
+        
+        ul {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          background: rgba($light, 0.5);
+          
+          li a {
+            padding-left: 60px;
+            font-size: 0.875rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Collapsed sidebar
+.sbar_collapsed {
+  .sidebar-menu {
+    width: $sidebar-collapsed-width;
+    
+    .sidebar-header .logo {
+      img {
+        max-width: 40px;
+      }
+    }
+    
+    .metismenu {
+      li a {
+        span {
+          display: none;
+        }
+        
+        i {
+          margin: 0 auto;
+        }
+      }
+      
+      ul {
+        display: none !important;
+      }
+    }
+  }
+  
+  .main-content {
+    margin-left: $sidebar-collapsed-width;
+  }
+}
+
+// Mobile sidebar
+@media (max-width: 767px) {
+  .sidebar-menu {
+    transform: translateX(-100%);
+    
+    .sidebar-mobile-open & {
+      transform: translateX(0);
+    }
+  }
+  
+  .sidebar-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: $zindex-modal-backdrop;
+    
+    &.show {
+      display: block;
+    }
+  }
+  
+  .main-content {
+    margin-left: 0 !important;
+  }
+}

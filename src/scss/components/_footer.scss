@@ -1,0 +1,26 @@
+// Footer styles
+footer {
+  background: #fff;
+  border-top: 1px solid #e9ecef;
+  padding: 20px 30px;
+  margin-top: auto;
+  
+  .footer-area {
+    text-align: center;
+    
+    p {
+      margin: 0;
+      color: #999;
+      font-size: 0.875rem;
+      
+      a {
+        color: $primary;
+        text-decoration: none;
+        
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

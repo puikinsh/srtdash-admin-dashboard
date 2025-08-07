@@ -1,0 +1,125 @@
+// Authentication pages layout
+.login-area {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, $primary 0%, lighten($primary, 20%) 100%);
+  
+  .login-box {
+    background: #fff;
+    border-radius: $border-radius-lg;
+    box-shadow: $box-shadow-lg;
+    max-width: 450px;
+    width: 100%;
+    padding: 40px;
+    
+    .login-form-head {
+      text-align: center;
+      margin-bottom: 30px;
+      
+      h4 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: $dark;
+        margin-bottom: 10px;
+      }
+      
+      p {
+        color: #999;
+        margin: 0;
+      }
+    }
+    
+    .form-gp {
+      position: relative;
+      margin-bottom: 20px;
+      
+      label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: 500;
+        color: $dark;
+      }
+      
+      input {
+        width: 100%;
+        padding: 10px 40px 10px 15px;
+        border: 1px solid #e9ecef;
+        border-radius: $border-radius;
+        transition: $transition-base;
+        
+        &:focus {
+          border-color: $primary;
+          outline: none;
+          box-shadow: 0 0 0 0.2rem rgba($primary, 0.25);
+        }
+      }
+      
+      i {
+        position: absolute;
+        right: 15px;
+        top: 38px;
+        color: #999;
+      }
+    }
+    
+    .submit-btn-area {
+      button {
+        width: 100%;
+        padding: 12px;
+        background: $primary;
+        color: #fff;
+        border: none;
+        border-radius: $border-radius;
+        font-weight: 500;
+        cursor: pointer;
+        transition: $transition-base;
+        
+        &:hover {
+          background: darken($primary, 10%);
+        }
+      }
+    }
+    
+    .login-other {
+      margin-top: 20px;
+      
+      a {
+        display: block;
+        padding: 10px;
+        text-align: center;
+        border: 1px solid #e9ecef;
+        border-radius: $border-radius;
+        text-decoration: none;
+        color: $dark;
+        transition: $transition-base;
+        
+        &:hover {
+          border-color: $primary;
+          color: $primary;
+        }
+        
+        &.fb-login {
+          background: #3b5998;
+          color: #fff;
+          border-color: #3b5998;
+          
+          &:hover {
+            background: darken(#3b5998, 10%);
+          }
+        }
+        
+        &.google-login {
+          background: #db4437;
+          color: #fff;
+          border-color: #db4437;
+          
+          &:hover {
+            background: darken(#db4437, 10%);
+          }
+        }
+      }
+    }
+  }
+}

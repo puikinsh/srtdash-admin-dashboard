@@ -1,0 +1,72 @@
+// Dashboard layout
+.page-container {
+  display: flex;
+  min-height: 100vh;
+  background: $light;
+}
+
+.main-content {
+  flex: 1;
+  margin-left: $sidebar-width;
+  display: flex;
+  flex-direction: column;
+  transition: $transition-base;
+  
+  .main-content-inner {
+    flex: 1;
+    padding: 30px;
+  }
+}
+
+// Offset area (settings panel)
+.offset-area {
+  position: fixed;
+  right: -350px;
+  top: 0;
+  width: 350px;
+  height: 100vh;
+  background: #fff;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+  z-index: $zindex-modal;
+  transition: $transition-base;
+  overflow-y: auto;
+  
+  &.show_hide {
+    right: 0;
+  }
+  
+  .offset-close {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    cursor: pointer;
+    font-size: 20px;
+    color: $dark;
+    
+    &:hover {
+      color: $primary;
+    }
+  }
+  
+  .offset-menu-tab {
+    padding: 20px;
+    border-bottom: 1px solid #e9ecef;
+  }
+  
+  .offset-content {
+    padding: 20px;
+  }
+}
+
+// Responsive
+@media (max-width: 991px) {
+  .main-content {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .main-content-inner {
+    padding: 15px;
+  }
+}

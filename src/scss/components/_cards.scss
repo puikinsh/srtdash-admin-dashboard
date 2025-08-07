@@ -1,0 +1,61 @@
+// Card styles
+.card {
+  border: none;
+  box-shadow: $box-shadow-sm;
+  margin-bottom: 30px;
+  transition: $transition-base;
+  
+  &:hover {
+    box-shadow: $box-shadow;
+  }
+  
+  .card-body {
+    padding: 25px;
+  }
+  
+  .header-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: $dark;
+    margin-bottom: 20px;
+  }
+}
+
+// Single report cards
+.single-report {
+  background: #fff;
+  padding: 20px;
+  border-radius: $border-radius;
+  box-shadow: $box-shadow-sm;
+  transition: $transition-base;
+  
+  &:hover {
+    box-shadow: $box-shadow;
+    transform: translateY(-2px);
+  }
+  
+  .s-report-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    .icon {
+      font-size: 2rem;
+      color: $primary;
+    }
+    
+    .s-report-title {
+      h4 {
+        font-size: 1rem;
+        margin: 0;
+        color: $dark;
+      }
+      
+      p {
+        margin: 5px 0 0;
+        color: #999;
+        font-size: 0.75rem;
+      }
+    }
+  }
+}

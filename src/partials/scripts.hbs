@@ -1,0 +1,12 @@
+<!-- Scripts -->
+<script type="module" src="/src/js/main.js"></script>
+
+{{#if pageScript}}
+<script type="module">
+  // Load page-specific module if it exists
+  const pageName = '{{pageScript}}';
+  import(`/src/js/pages/${pageName}.js`).catch(() => {
+    // Page-specific script not found, that's okay
+  });
+</script>
+{{/if}}
