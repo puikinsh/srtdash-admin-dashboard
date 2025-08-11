@@ -1,0 +1,336 @@
+// Icon fixes for clean appearance
+// Fixes pixelation and background artifacts
+
+// General icon improvements
+.notification-area {
+  li {
+    position: relative;
+    
+    > i {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      font-size: 24px !important;
+      color: #6c757d;
+      background: transparent;
+      border-radius: 50%;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      
+      // Remove any text shadows or background artifacts
+      text-shadow: none !important;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      
+      // Ensure clean rendering
+      transform: translateZ(0);
+      backface-visibility: hidden;
+      
+      &:hover {
+        color: $primary;
+        background: rgba($primary, 0.1);
+      }
+      
+      // Notification badge
+      span {
+        position: absolute;
+        top: -5px;
+        right: -5px;
+        min-width: 18px;
+        height: 18px;
+        line-height: 18px;
+        padding: 0 5px;
+        background: $danger;
+        color: #fff;
+        font-size: 10px;
+        font-weight: 600;
+        border-radius: 9px;
+        text-align: center;
+        font-family: $font-family-base;
+      }
+    }
+    
+    // Dropdown toggle specific styles
+    &.dropdown {
+      .dropdown-toggle {
+        &::after {
+          display: none; // Hide Bootstrap's default caret
+        }
+      }
+    }
+    
+    // Settings button
+    &.settings-btn {
+      i {
+        &:hover {
+          animation: rotate 2s ease-in-out;
+        }
+      }
+      
+      &.active i {
+        color: $primary;
+        background: rgba($primary, 0.1);
+      }
+    }
+    
+    // Fullscreen buttons
+    &#full-view, &#full-view-exit {
+      i {
+        font-size: 24px !important;
+      }
+    }
+  }
+}
+
+// Hamburger menu clean style
+.nav-btn {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  padding: 5px;
+  box-shadow: none !important;
+  
+  span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background-color: #6c757d;
+    margin: 3px 0;
+    transition: all 0.3s ease;
+    border-radius: 1px;
+    box-shadow: none !important;
+    
+    // Ensure clean edges
+    transform: translateZ(0);
+    backface-visibility: hidden;
+  }
+  
+  &:hover span {
+    background-color: $primary;
+  }
+  
+  // Animated hamburger when sidebar is collapsed
+  .sbar_collapsed & {
+    span {
+      &:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+      }
+      
+      &:nth-child(2) {
+        opacity: 0;
+      }
+      
+      &:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+      }
+    }
+  }
+}
+
+// Fix notification dropdown icons
+.notify-thumb {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+  
+  i {
+    font-size: 16px !important;
+    color: #fff !important;
+    background: transparent !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    text-shadow: none !important;
+    
+    &.btn-danger {
+      background-color: $danger !important;
+      padding: 8px !important;
+      border-radius: 50%;
+    }
+    
+    &.btn-info {
+      background-color: $info !important;
+      padding: 8px !important;
+      border-radius: 50%;
+    }
+    
+    &.btn-primary {
+      background-color: $primary !important;
+      padding: 8px !important;
+      border-radius: 50%;
+    }
+  }
+}
+
+// Search box icon
+.search-box {
+  position: relative;
+  
+  i {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #6c757d;
+    font-size: 18px !important;  // Slightly smaller for search box
+    pointer-events: none;
+    text-shadow: none !important;
+    
+    // Clean rendering
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  input:focus + i {
+    color: $primary;
+  }
+}
+
+// User profile dropdown
+.user-profile {
+  .user-name {
+    display: inline-flex;
+    align-items: center;
+    
+    i {
+      margin-left: 5px;
+      font-size: 12px;
+      transition: transform 0.3s ease;
+      
+      // Clean rendering
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    
+    &[aria-expanded="true"] i {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+// Offset area (settings panel) icons
+.offset-area {
+  .offset-close {
+    i {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      height: 30px;
+      font-size: 20px;
+      color: #6c757d;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      
+      // Clean rendering
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      
+      &:hover {
+        color: $danger;
+        transform: rotate(90deg);
+      }
+    }
+  }
+}
+
+// Animation for settings icon
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+// Ensure all Themify icons render cleanly
+[class^="ti-"], [class*=" ti-"] {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  speak: none;
+  
+  // Remove any background images or gradients that might cause artifacts
+  background-image: none !important;
+  background-color: transparent !important;
+  text-shadow: none !important;
+}
+
+// Font Awesome icons clean rendering
+.fa, .fas, .far, .fal, .fab {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  background: transparent !important;
+  text-shadow: none !important;
+}
+
+// Global text-shadow removal and size setting for all icons in header
+.header-area,
+.notification-area,
+.page-title-area {
+  i[class^="ti-"], 
+  i[class*=" ti-"],
+  i[class^="fa"],
+  i[class*=" fa"] {
+    text-shadow: none !important;
+    font-size: 24px !important;
+  }
+}
+
+// Ensure consistent sizing across all header icons
+.header-area {
+  .notification-area li > i,
+  .search-box i,
+  .user-profile i {
+    font-size: 24px !important;
+  }
+}
+
+// Override the problematic text-shadow and size from line 505 in styles.scss
+.notification-area li > i {
+  text-shadow: none !important;
+  font-size: 24px !important;
+}
+
+// Also remove from dropdown icons and set size
+.notification-area .dropdown i {
+  text-shadow: none !important;
+  font-size: 24px !important;
+}
+
+// Force 24px on all notification area icons (overriding the 26px from legacy styles)
+.notification-area li > i,
+.notification-area li i.dropdown-toggle {
+  font-size: 24px !important;
+}
+
+// Ensure no text-shadow on specific problem icons
+.ti-fullscreen,
+.ti-zoom-out,
+.ti-bell,
+.ti-settings,
+.fa-envelope-o,
+.ti-search,
+.nav-btn {
+  text-shadow: none !important;
+  
+  * {
+    text-shadow: none !important;
+  }
+}

@@ -44,11 +44,14 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       scss: {
-        api: 'modern-compiler'
+        api: 'modern-compiler',
+        silenceDeprecations: ['legacy-js-api']
       }
-    }
+    },
+    devSourcemap: false  // Disable CSS source maps in development
   },
   build: {
+    sourcemap: false,
     outDir: '../dist',
     emptyOutDir: true,
     rollupOptions: { 
@@ -72,6 +75,7 @@ export default defineConfig({
   },
   resolve: {
     alias: {
+      '/src': resolve(__dirname, './src'),
       '@': resolve(__dirname, './src'),
       '@scss': resolve(__dirname, './src/scss'),
       '@js': resolve(__dirname, './src/js'),

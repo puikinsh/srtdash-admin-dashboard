@@ -1,6 +1,7 @@
 // Bootstrap 5 and core dependencies
 import * as bootstrap from 'bootstrap';
 import '@fortawesome/fontawesome-free/css/all.css';
+import './fixes.js';
 
 // Initialize Bootstrap components
 document.addEventListener('DOMContentLoaded', function() {
@@ -70,22 +71,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
   
-  // Settings panel toggle
-  const settingsBtn = document.querySelector('.settings-btn');
-  const offsetArea = document.querySelector('.offset-area');
-  const offsetClose = document.querySelector('.offset-btn-close');
-  
-  if (settingsBtn && offsetArea) {
-    settingsBtn.addEventListener('click', function() {
-      offsetArea.classList.add('show_hide');
-    });
-  }
-  
-  if (offsetClose && offsetArea) {
-    offsetClose.addEventListener('click', function() {
-      offsetArea.classList.remove('show_hide');
-    });
-  }
   
   // Search box functionality
   const searchBox = document.querySelector('.search-box input');

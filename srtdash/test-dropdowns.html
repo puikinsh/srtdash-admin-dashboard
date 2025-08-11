@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Dropdowns</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/themify-icons.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <style>
+        .notification-area { list-style: none; padding: 0; display: flex; gap: 20px; }
+        .notification-area li { position: relative; }
+        .offset-area { 
+            position: fixed; 
+            right: -350px; 
+            top: 0; 
+            width: 350px; 
+            height: 100vh; 
+            background: #fff; 
+            box-shadow: -2px 0 10px rgba(0,0,0,0.1); 
+            transition: right 0.3s; 
+            z-index: 1050;
+        }
+        .offset-area.show_hide { right: 0; }
+        .offset-close { cursor: pointer; padding: 10px; }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Testing Dropdowns</h2>
+        
+        <ul class="notification-area">
+            <li class="dropdown">
+                <i class="ti-bell dropdown-toggle" data-bs-toggle="dropdown">
+                    <span class="badge bg-danger">2</span>
+                </i>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Notification 1</a>
+                    <a class="dropdown-item" href="#">Notification 2</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <i class="fa fa-envelope-o dropdown-toggle" data-bs-toggle="dropdown">
+                    <span class="badge bg-danger">3</span>
+                </i>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Message 1</a>
+                    <a class="dropdown-item" href="#">Message 2</a>
+                </div>
+            </li>
+            <li class="settings-btn">
+                <i class="ti-settings"></i>
+            </li>
+        </ul>
+    </div>
+    
+    <div class="offset-area">
+        <div class="offset-close">Close X</div>
+        <div class="offset-btn-close">Close Button</div>
+        <div class="p-3">
+            <h4>Settings Panel</h4>
+            <p>This is the settings panel content.</p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Test basic functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM loaded');
+            
+            // Initialize all dropdowns manually
+            const dropdowns = document.querySelectorAll('[data-bs-toggle="dropdown"]');
+            dropdowns.forEach(dropdown => {
+                new bootstrap.Dropdown(dropdown);
+                console.log('Dropdown initialized:', dropdown);
+            });
+            
+            // Settings panel
+            const settingsBtn = document.querySelector('.settings-btn');
+            const offsetArea = document.querySelector('.offset-area');
+            const closeButtons = document.querySelectorAll('.offset-close, .offset-btn-close');
+            
+            if (settingsBtn) {
+                settingsBtn.addEventListener('click', function() {
+                    console.log('Settings clicked');
+                    offsetArea.classList.toggle('show_hide');
+                });
+            }
+            
+            closeButtons.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    console.log('Close clicked');
+                    offsetArea.classList.remove('show_hide');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

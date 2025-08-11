@@ -1,0 +1,1145 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Form - srtdash</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/png" href="assets/images/icon/favicon.ico">
+    <!-- amchart css -->
+    <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
+    <!-- others css -->
+    <!-- modernizr css -->
+    <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/css/styles-7Tr2JQDF.css">
+  <link rel="stylesheet" crossorigin href="./assets/css/responsive-CB_u9RJp.css">
+  <link rel="stylesheet" crossorigin href="./assets/css/slicknav-Cilffaa_.css">
+</head>
+
+<body>
+    <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <!-- preloader area start -->
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+    <!-- preloader area end -->
+    <!-- page container area start -->
+    <div class="page-container">
+        <!-- sidebar menu area start -->
+        <div class="sidebar-menu">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <a href="index.html"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAABeCAYAAACZ4CkLAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6ODJEODNDMjZDMUE5MTFFODhEQzdGODIzNkQ2Q0IyQ0EiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6ODJEODNDMjdDMUE5MTFFODhEQzdGODIzNkQ2Q0IyQ0EiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4MkQ4M0MyNEMxQTkxMUU4OERDN0Y4MjM2RDZDQjJDQSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4MkQ4M0MyNUMxQTkxMUU4OERDN0Y4MjM2RDZDQjJDQSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PjuVdAQAAAvDSURBVHja7J2BUeM6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" alt="logo"></a>
+                </div>
+            </div>
+            <div class="main-menu">
+                <div class="menu-inner">
+                    <nav>
+                        <ul class="metismenu" id="menu">
+                            <li>
+                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-dashboard"></i><span>dashboard</span></a>
+                                <ul class="collapse">
+                                    <li><a href="index.html">ICO dashboard</a></li>
+                                    <li><a href="index2.html">Ecommerce dashboard</a></li>
+                                    <li><a href="index3.html">SEO dashboard</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-layout-sidebar-left"></i><span>Sidebar
+                                        Types
+                                    </span></a>
+                                <ul class="collapse">
+                                    <li><a href="index.html">Left Sidebar</a></li>
+                                    <li><a href="index3-horizontalmenu.html">Horizontal Sidebar</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-pie-chart"></i><span>Charts</span></a>
+                                <ul class="collapse">
+                                    <li><a href="barchart.html">bar chart</a></li>
+                                    <li><a href="linechart.html">line Chart</a></li>
+                                    <li><a href="piechart.html">pie chart</a></li>
+                                </ul>
+                            </li>
+                            <li class="active">
+                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-palette"></i><span>UI Features</span></a>
+                                <ul class="collapse">
+                                    <li><a href="accordion.html">Accordion</a></li>
+                                    <li><a href="alert.html">Alert</a></li>
+                                    <li><a href="badge.html">Badge</a></li>
+                                    <li><a href="button.html">Button</a></li>
+                                    <li><a href="button-group.html">Button Group</a></li>
+                                    <li><a href="cards.html">Cards</a></li>
+                                    <li><a href="dropdown.html">Dropdown</a></li>
+                                    <li><a href="list-group.html">List Group</a></li>
+                                    <li><a href="media-object.html">Media Object</a></li>
+                                    <li><a href="modal.html">Modal</a></li>
+                                    <li><a href="pagination.html">Pagination</a></li>
+                                    <li><a href="popovers.html">Popover</a></li>
+                                    <li><a href="progressbar.html">Progressbar</a></li>
+                                    <li><a href="tab.html">Tab</a></li>
+                                    <li><a href="typography.html">Typography</a></li>
+                                    <li class="active"><a href="form.html">Form</a></li>
+                                    <li><a href="grid.html">grid system</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-slice"></i><span>icons</span></a>
+                                <ul class="collapse">
+                                    <li><a href="fontawesome.html">fontawesome icons</a></li>
+                                    <li><a href="themify.html">themify icons</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)" aria-expanded="true"><i class="fa fa-table"></i>
+                                    <span>Tables</span></a>
+                                <ul class="collapse">
+                                    <li><a href="table-basic.html">basic table</a></li>
+                                    <li><a href="table-layout.html">table layout</a></li>
+                                    <li><a href="datatable.html">datatable</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="maps.html"><i class="ti-map-alt"></i> <span>maps</span></a></li>
+                            <li><a href="invoice.html"><i class="ti-receipt"></i> <span>Invoice Summary</span></a></li>
+                            <li>
+                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-layers-alt"></i> <span>Pages</span></a>
+                                <ul class="collapse">
+                                    <li><a href="login.html">Login</a></li>
+                                    <li><a href="login2.html">Login 2</a></li>
+                                    <li><a href="login3.html">Login 3</a></li>
+                                    <li><a href="register.html">Register</a></li>
+                                    <li><a href="register2.html">Register 2</a></li>
+                                    <li><a href="register3.html">Register 3</a></li>
+                                    <li><a href="register4.html">Register 4</a></li>
+                                    <li><a href="screenlock.html">Lock Screen</a></li>
+                                    <li><a href="screenlock2.html">Lock Screen 2</a></li>
+                                    <li><a href="reset-pass.html">reset password</a></li>
+                                    <li><a href="pricing.html">Pricing</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)" aria-expanded="true"><i class="fa fa-exclamation-triangle"></i>
+                                    <span>Error</span></a>
+                                <ul class="collapse">
+                                    <li><a href="404.html">Error 404</a></li>
+                                    <li><a href="403.html">Error 403</a></li>
+                                    <li><a href="500.html">Error 500</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)" aria-expanded="true"><i class="fa fa-align-left"></i> <span>Multi
+                                        level menu</span></a>
+                                <ul class="collapse">
+                                    <li><a href="#">Item level (1)</a></li>
+                                    <li><a href="#">Item level (1)</a></li>
+                                    <li><a href="#" aria-expanded="true">Item level (1)</a>
+                                        <ul class="collapse">
+                                            <li><a href="#">Item level (2)</a></li>
+                                            <li><a href="#">Item level (2)</a></li>
+                                            <li><a href="#">Item level (2)</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Item level (1)</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <!-- sidebar menu area end -->
+        <!-- main content area start -->
+        <div class="main-content">
+            <!-- header area start -->
+            <div class="header-area">
+                <div class="row align-items-center">
+                    <!-- nav and search button -->
+                    <div class="col-md-6 col-sm-8 clearfix">
+                        <div class="nav-btn pull-left">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div class="search-box pull-left">
+                            <form action="#">
+                                <input type="text" name="search" placeholder="Search..." required>
+                                <i class="ti-search"></i>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- profile info & task notification -->
+                    <div class="col-md-6 col-sm-4 clearfix">
+                        <ul class="notification-area pull-right">
+                            <li id="full-view"><i class="ti-fullscreen"></i></li>
+                            <li id="full-view-exit"><i class="ti-zoom-out"></i></li>
+                            <li class="dropdown">
+                                <i class="ti-bell dropdown-toggle" data-bs-toggle="dropdown">
+                                    <span>2</span>
+                                </i>
+                                <div class="dropdown-menu bell-notify-box notify-box">
+                                    <span class="notify-title">You have 3 new notifications <a href="#">view all</a></span>
+                                    <div class="nofity-list">
+                                        <a href="#" class="notify-item">
+                                            <div class="notify-thumb"><i class="ti-key btn-danger"></i></div>
+                                            <div class="notify-text">
+                                                <p>You have Changed Your Password</p>
+                                                <span>Just Now</span>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="notify-item">
+                                            <div class="notify-thumb"><i class="ti-comments-smiley btn-info"></i></div>
+                                            <div class="notify-text">
+                                                <p>New Commetns On Post</p>
+                                                <span>30 Seconds ago</span>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="notify-item">
+                                            <div class="notify-thumb"><i class="ti-key btn-primary"></i></div>
+                                            <div class="notify-text">
+                                                <p>Some special like you</p>
+                                                <span>Just Now</span>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="notify-item">
+                                            <div class="notify-thumb"><i class="ti-comments-smiley btn-info"></i></div>
+                                            <div class="notify-text">
+                                                <p>New Commetns On Post</p>
+                                                <span>30 Seconds ago</span>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="notify-item">
+                                            <div class="notify-thumb"><i class="ti-key btn-primary"></i></div>
+                                            <div class="notify-text">
+                                                <p>Some special like you</p>
+                                                <span>Just Now</span>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="notify-item">
+                                            <div class="notify-thumb"><i class="ti-key btn-danger"></i></div>
+                                            <div class="notify-text">
+                                                <p>You have Changed Your Password</p>
+                                                <span>Just Now</span>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="notify-item">
+                                            <div class="notify-thumb"><i class="ti-key btn-danger"></i></div>
+                                            <div class="notify-text">
+                                                <p>You have Changed Your Password</p>
+                                                <span>Just Now</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="dropdown">
+                                <i class="fa fa-envelope-o dropdown-toggle" data-bs-toggle="dropdown"><span>3</span></i>
+                                <div class="dropdown-menu notify-box nt-enveloper-box">
+                                    <span class="notify-title">You have 3 new notifications <a href="#">view all</a></span>
+                                    <div class="nofity-list">
+                                        <a href="#" class="notify-item">
+                                            <div class="notify-thumb">
+                                                <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAAQABAAD/2wBDAAMCAgICAgMCAgIDAwMDBAYEBAQEBAgGBgUGCQgKCgkICQkKDA8MCgsOCwkJDRENDg8QEBEQCgwSExIQEw8QEBD/wAALCABQAFABAREA/8QAGgABAAMAAwAAAAAAAAAAAAAAAAEGBwMFCP/EACYQAAAHAAMAAgICAwAAAAAAAAABAgMEBQYHERITIRQiCBUXIzH/2gAIAQEAAD8A9QAAAAAAAAAAAAAAAAAAAAAAAAAAAAzH+QGzvMTlaiZS3K6hFhfQ66dOjxES5keK4S/SosZRK+d41JQRIJDhklS1EhXkZ5mOWOQNVS0+UrNcr83Qbafn4WhfrWWp7dZEhrlOOvQ1IJDMozaU0SHGk/qpDhtl2RHas9zHJxcm8y3J82VZHn9RHoF6JEZlplLMuKzIiPzCSaUtdqfJhS0I8e/BmSCUfXSb7nKTbMYuxy97e5jMaSXZtHaQ6ZqwspiI6CNh2LE8PrVGd/2KN34TUSUtmZIJwlDixfI/JXJ8HAZeLr2qSfd0trf2lzXxIzzzkaLLbjRkobcJ1lpx35kLdSaTNCkLQXk++tO4b11zr8c47pVsuXNNa2NDYPMN/G3IehynGDeSns/JOE2lfn/hGoyL6IXkAAUTlDE6HSS8vp8hIriu8jaLsYsayUtMSWlyM7HdaWtCVKbPw8ZpcJKvKkl+pkZikf4X3yrB3kz8/Pt7tWnb0TcJDj39WlpNf/XqiG94+QzUwalG98Xfvz+nRdHE/hHbaikuanU2dM0XIN+ix2X4Tzx/HWsx2mWoERSmyNfpMdpC3VfGZEt00p7NPU03FXLmUl5u/q7LNXdrk4E/Mx0WUl9hE6mdcYXHdccbZUbMpBR20rJKHELLs+0mf1FJwtvsRJp9tl7DP2GsQ9druIsxx6LXyEWkpEpxtlxCHFtk06034M0K9l778mr60TivEzMFkU1NrPZnWs2dNt7OSyg0NOTJchyQ94Sf2SCU4aU9/flJd/Yt4AAAAAAAAAAAAAAAAAAAAAAAAAAAP//Z" alt="image">
+                                            </div>
+                                            <div class="notify-text">
+                                                <p>Aglae Mayer</p>
+                                                <span class="msg">Hey I am waiting for you...</span>
+                                                <span>3:15 PM</span>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="notify-item">
+                                            <div class="notify-thumb">
+                                                <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAAQABAAD/2wBDAAMCAgICAgMCAgIDAwMDBAYEBAQEBAgGBgUGCQgKCgkICQkKDA8MCgsOCwkJDRENDg8QEBEQCgwSExIQEw8QEBD/wAALCABQAFABAREA/8QAGgABAAMAAwAAAAAAAAAAAAAAAAEGBwMFCP/EACYQAAAHAAMAAgICAwAAAAAAAAABAgMEBQYHERITIRQiCBUXIzH/2gAIAQEAAD8A9QAAAAAAAAAAAAAAAAAAAAAAAAAAAAzH+QGzvMTlaiZS3K6hFhfQ66dOjxES5keK4S/SosZRK+d41JQRIJDhklS1EhXkZ5mOWOQNVS0+UrNcr83Qbafn4WhfrWWp7dZEhrlOOvQ1IJDMozaU0SHGk/qpDhtl2RHas9zHJxcm8y3J82VZHn9RHoF6JEZlplLMuKzIiPzCSaUtdqfJhS0I8e/BmSCUfXSb7nKTbMYuxy97e5jMaSXZtHaQ6ZqwspiI6CNh2LE8PrVGd/2KN34TUSUtmZIJwlDixfI/JXJ8HAZeLr2qSfd0trf2lzXxIzzzkaLLbjRkobcJ1lpx35kLdSaTNCkLQXk++tO4b11zr8c47pVsuXNNa2NDYPMN/G3IehynGDeSns/JOE2lfn/hGoyL6IXkAAUTlDE6HSS8vp8hIriu8jaLsYsayUtMSWlyM7HdaWtCVKbPw8ZpcJKvKkl+pkZikf4X3yrB3kz8/Pt7tWnb0TcJDj39WlpNf/XqiG94+QzUwalG98Xfvz+nRdHE/hHbaikuanU2dM0XIN+ix2X4Tzx/HWsx2mWoERSmyNfpMdpC3VfGZEt00p7NPU03FXLmUl5u/q7LNXdrk4E/Mx0WUl9hE6mdcYXHdccbZUbMpBR20rJKHELLs+0mf1FJwtvsRJp9tl7DP2GsQ9druIsxx6LXyEWkpEpxtlxCHFtk06034M0K9l778mr60TivEzMFkU1NrPZnWs2dNt7OSyg0NOTJchyQ94Sf2SCU4aU9/flJd/Yt4AAAAAAAAAAAAAAAAAAAAAAAAAAAP//Z" alt="image">
+                                            </div>
+                                            <div class="notify-text">
+                                                <p>Aglae Mayer</p>
+                                                <span class="msg">When you can connect with me...</span>
+                                                <span>3:15 PM</span>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="notify-item">
+                                            <div class="notify-thumb">
+                                                <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAAQABAAD/2wBDAAMCAgICAgMCAgIDAwMDBAYEBAQEBAgGBgUGCQgKCgkICQkKDA8MCgsOCwkJDRENDg8QEBEQCgwSExIQEw8QEBD/wAALCABQAFABAREA/8QAGgABAAMAAwAAAAAAAAAAAAAAAAEGBwMFCP/EACYQAAAHAAMAAgICAwAAAAAAAAABAgMEBQYHERITIRQiCBUXIzH/2gAIAQEAAD8A9QAAAAAAAAAAAAAAAAAAAAAAAAAAAAzH+QGzvMTlaiZS3K6hFhfQ66dOjxES5keK4S/SosZRK+d41JQRIJDhklS1EhXkZ5mOWOQNVS0+UrNcr83Qbafn4WhfrWWp7dZEhrlOOvQ1IJDMozaU0SHGk/qpDhtl2RHas9zHJxcm8y3J82VZHn9RHoF6JEZlplLMuKzIiPzCSaUtdqfJhS0I8e/BmSCUfXSb7nKTbMYuxy97e5jMaSXZtHaQ6ZqwspiI6CNh2LE8PrVGd/2KN34TUSUtmZIJwlDixfI/JXJ8HAZeLr2qSfd0trf2lzXxIzzzkaLLbjRkobcJ1lpx35kLdSaTNCkLQXk++tO4b11zr8c47pVsuXNNa2NDYPMN/G3IehynGDeSns/JOE2lfn/hGoyL6IXkAAUTlDE6HSS8vp8hIriu8jaLsYsayUtMSWlyM7HdaWtCVKbPw8ZpcJKvKkl+pkZikf4X3yrB3kz8/Pt7tWnb0TcJDj39WlpNf/XqiG94+QzUwalG98Xfvz+nRdHE/hHbaikuanU2dM0XIN+ix2X4Tzx/HWsx2mWoERSmyNfpMdpC3VfGZEt00p7NPU03FXLmUl5u/q7LNXdrk4E/Mx0WUl9hE6mdcYXHdccbZUbMpBR20rJKHELLs+0mf1FJwtvsRJp9tl7DP2GsQ9druIsxx6LXyEWkpEpxtlxCHFtk06034M0K9l778mr60TivEzMFkU1NrPZnWs2dNt7OSyg0NOTJchyQ94Sf2SCU4aU9/flJd/Yt4AAAAAAAAAAAAAAAAAAAAAAAAAAAP//Z" alt="image">
+                                            </div>
+                                            <div class="notify-text">
+                                                <p>Aglae Mayer</p>
+                                                <span class="msg">I missed you so much...</span>
+                                                <span>3:15 PM</span>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="notify-item">
+                                            <div class="notify-thumb">
+                                                <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAAQABAAD/2wBDAAMCAgICAgMCAgIDAwMDBAYEBAQEBAgGBgUGCQgKCgkICQkKDA8MCgsOCwkJDRENDg8QEBEQCgwSExIQEw8QEBD/wAALCABQAFABAREA/8QAGgABAAMAAwAAAAAAAAAAAAAAAAEGBwMFCP/EACYQAAAHAAMAAgICAwAAAAAAAAABAgMEBQYHERITIRQiCBUXIzH/2gAIAQEAAD8A9QAAAAAAAAAAAAAAAAAAAAAAAAAAAAzH+QGzvMTlaiZS3K6hFhfQ66dOjxES5keK4S/SosZRK+d41JQRIJDhklS1EhXkZ5mOWOQNVS0+UrNcr83Qbafn4WhfrWWp7dZEhrlOOvQ1IJDMozaU0SHGk/qpDhtl2RHas9zHJxcm8y3J82VZHn9RHoF6JEZlplLMuKzIiPzCSaUtdqfJhS0I8e/BmSCUfXSb7nKTbMYuxy97e5jMaSXZtHaQ6ZqwspiI6CNh2LE8PrVGd/2KN34TUSUtmZIJwlDixfI/JXJ8HAZeLr2qSfd0trf2lzXxIzzzkaLLbjRkobcJ1lpx35kLdSaTNCkLQXk++tO4b11zr8c47pVsuXNNa2NDYPMN/G3IehynGDeSns/JOE2lfn/hGoyL6IXkAAUTlDE6HSS8vp8hIriu8jaLsYsayUtMSWlyM7HdaWtCVKbPw8ZpcJKvKkl+pkZikf4X3yrB3kz8/Pt7tWnb0TcJDj39WlpNf/XqiG94+QzUwalG98Xfvz+nRdHE/hHbaikuanU2dM0XIN+ix2X4Tzx/HWsx2mWoERSmyNfpMdpC3VfGZEt00p7NPU03FXLmUl5u/q7LNXdrk4E/Mx0WUl9hE6mdcYXHdccbZUbMpBR20rJKHELLs+0mf1FJwtvsRJp9tl7DP2GsQ9druIsxx6LXyEWkpEpxtlxCHFtk06034M0K9l778mr60TivEzMFkU1NrPZnWs2dNt7OSyg0NOTJchyQ94Sf2SCU4aU9/flJd/Yt4AAAAAAAAAAAAAAAAAAAAAAAAAAAP//Z" alt="image">
+                                            </div>
+                                            <div class="notify-text">
+                                                <p>Aglae Mayer</p>
+                                                <span class="msg">Your product is completely Ready...</span>
+                                                <span>3:15 PM</span>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="notify-item">
+                                            <div class="notify-thumb">
+                                                <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAAQABAAD/2wBDAAMCAgICAgMCAgIDAwMDBAYEBAQEBAgGBgUGCQgKCgkICQkKDA8MCgsOCwkJDRENDg8QEBEQCgwSExIQEw8QEBD/wAALCABQAFABAREA/8QAGgABAAMAAwAAAAAAAAAAAAAAAAEGBwMFCP/EACYQAAAHAAMAAgICAwAAAAAAAAABAgMEBQYHERITIRQiCBUXIzH/2gAIAQEAAD8A9QAAAAAAAAAAAAAAAAAAAAAAAAAAAAzH+QGzvMTlaiZS3K6hFhfQ66dOjxES5keK4S/SosZRK+d41JQRIJDhklS1EhXkZ5mOWOQNVS0+UrNcr83Qbafn4WhfrWWp7dZEhrlOOvQ1IJDMozaU0SHGk/qpDhtl2RHas9zHJxcm8y3J82VZHn9RHoF6JEZlplLMuKzIiPzCSaUtdqfJhS0I8e/BmSCUfXSb7nKTbMYuxy97e5jMaSXZtHaQ6ZqwspiI6CNh2LE8PrVGd/2KN34TUSUtmZIJwlDixfI/JXJ8HAZeLr2qSfd0trf2lzXxIzzzkaLLbjRkobcJ1lpx35kLdSaTNCkLQXk++tO4b11zr8c47pVsuXNNa2NDYPMN/G3IehynGDeSns/JOE2lfn/hGoyL6IXkAAUTlDE6HSS8vp8hIriu8jaLsYsayUtMSWlyM7HdaWtCVKbPw8ZpcJKvKkl+pkZikf4X3yrB3kz8/Pt7tWnb0TcJDj39WlpNf/XqiG94+QzUwalG98Xfvz+nRdHE/hHbaikuanU2dM0XIN+ix2X4Tzx/HWsx2mWoERSmyNfpMdpC3VfGZEt00p7NPU03FXLmUl5u/q7LNXdrk4E/Mx0WUl9hE6mdcYXHdccbZUbMpBR20rJKHELLs+0mf1FJwtvsRJp9tl7DP2GsQ9druIsxx6LXyEWkpEpxtlxCHFtk06034M0K9l778mr60TivEzMFkU1NrPZnWs2dNt7OSyg0NOTJchyQ94Sf2SCU4aU9/flJd/Yt4AAAAAAAAAAAAAAAAAAAAAAAAAAAP//Z" alt="image">
+                                            </div>
+                                            <div class="notify-text">
+                                                <p>Aglae Mayer</p>
+                                                <span class="msg">Hey I am waiting for you...</span>
+                                                <span>3:15 PM</span>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="notify-item">
+                                            <div class="notify-thumb">
+                                                <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAAQABAAD/2wBDAAMCAgICAgMCAgIDAwMDBAYEBAQEBAgGBgUGCQgKCgkICQkKDA8MCgsOCwkJDRENDg8QEBEQCgwSExIQEw8QEBD/wAALCABQAFABAREA/8QAGgABAAMAAwAAAAAAAAAAAAAAAAEGBwMFCP/EACYQAAAHAAMAAgICAwAAAAAAAAABAgMEBQYHERITIRQiCBUXIzH/2gAIAQEAAD8A9QAAAAAAAAAAAAAAAAAAAAAAAAAAAAzH+QGzvMTlaiZS3K6hFhfQ66dOjxES5keK4S/SosZRK+d41JQRIJDhklS1EhXkZ5mOWOQNVS0+UrNcr83Qbafn4WhfrWWp7dZEhrlOOvQ1IJDMozaU0SHGk/qpDhtl2RHas9zHJxcm8y3J82VZHn9RHoF6JEZlplLMuKzIiPzCSaUtdqfJhS0I8e/BmSCUfXSb7nKTbMYuxy97e5jMaSXZtHaQ6ZqwspiI6CNh2LE8PrVGd/2KN34TUSUtmZIJwlDixfI/JXJ8HAZeLr2qSfd0trf2lzXxIzzzkaLLbjRkobcJ1lpx35kLdSaTNCkLQXk++tO4b11zr8c47pVsuXNNa2NDYPMN/G3IehynGDeSns/JOE2lfn/hGoyL6IXkAAUTlDE6HSS8vp8hIriu8jaLsYsayUtMSWlyM7HdaWtCVKbPw8ZpcJKvKkl+pkZikf4X3yrB3kz8/Pt7tWnb0TcJDj39WlpNf/XqiG94+QzUwalG98Xfvz+nRdHE/hHbaikuanU2dM0XIN+ix2X4Tzx/HWsx2mWoERSmyNfpMdpC3VfGZEt00p7NPU03FXLmUl5u/q7LNXdrk4E/Mx0WUl9hE6mdcYXHdccbZUbMpBR20rJKHELLs+0mf1FJwtvsRJp9tl7DP2GsQ9druIsxx6LXyEWkpEpxtlxCHFtk06034M0K9l778mr60TivEzMFkU1NrPZnWs2dNt7OSyg0NOTJchyQ94Sf2SCU4aU9/flJd/Yt4AAAAAAAAAAAAAAAAAAAAAAAAAAAP//Z" alt="image">
+                                            </div>
+                                            <div class="notify-text">
+                                                <p>Aglae Mayer</p>
+                                                <span class="msg">Hey I am waiting for you...</span>
+                                                <span>3:15 PM</span>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="notify-item">
+                                            <div class="notify-thumb">
+                                                <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAAQABAAD/2wBDAAMCAgICAgMCAgIDAwMDBAYEBAQEBAgGBgUGCQgKCgkICQkKDA8MCgsOCwkJDRENDg8QEBEQCgwSExIQEw8QEBD/wAALCABQAFABAREA/8QAGgABAAMAAwAAAAAAAAAAAAAAAAEGBwMFCP/EACYQAAAHAAMAAgICAwAAAAAAAAABAgMEBQYHERITIRQiCBUXIzH/2gAIAQEAAD8A9QAAAAAAAAAAAAAAAAAAAAAAAAAAAAzH+QGzvMTlaiZS3K6hFhfQ66dOjxES5keK4S/SosZRK+d41JQRIJDhklS1EhXkZ5mOWOQNVS0+UrNcr83Qbafn4WhfrWWp7dZEhrlOOvQ1IJDMozaU0SHGk/qpDhtl2RHas9zHJxcm8y3J82VZHn9RHoF6JEZlplLMuKzIiPzCSaUtdqfJhS0I8e/BmSCUfXSb7nKTbMYuxy97e5jMaSXZtHaQ6ZqwspiI6CNh2LE8PrVGd/2KN34TUSUtmZIJwlDixfI/JXJ8HAZeLr2qSfd0trf2lzXxIzzzkaLLbjRkobcJ1lpx35kLdSaTNCkLQXk++tO4b11zr8c47pVsuXNNa2NDYPMN/G3IehynGDeSns/JOE2lfn/hGoyL6IXkAAUTlDE6HSS8vp8hIriu8jaLsYsayUtMSWlyM7HdaWtCVKbPw8ZpcJKvKkl+pkZikf4X3yrB3kz8/Pt7tWnb0TcJDj39WlpNf/XqiG94+QzUwalG98Xfvz+nRdHE/hHbaikuanU2dM0XIN+ix2X4Tzx/HWsx2mWoERSmyNfpMdpC3VfGZEt00p7NPU03FXLmUl5u/q7LNXdrk4E/Mx0WUl9hE6mdcYXHdccbZUbMpBR20rJKHELLs+0mf1FJwtvsRJp9tl7DP2GsQ9druIsxx6LXyEWkpEpxtlxCHFtk06034M0K9l778mr60TivEzMFkU1NrPZnWs2dNt7OSyg0NOTJchyQ94Sf2SCU4aU9/flJd/Yt4AAAAAAAAAAAAAAAAAAAAAAAAAAAP//Z" alt="image">
+                                            </div>
+                                            <div class="notify-text">
+                                                <p>Aglae Mayer</p>
+                                                <span class="msg">Hey I am waiting for you...</span>
+                                                <span>3:15 PM</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="settings-btn">
+                                <i class="ti-settings"></i>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- header area end -->
+            <!-- page title area start -->
+            <div class="page-title-area">
+                <div class="row align-items-center">
+                    <div class="col-sm-6">
+                        <div class="breadcrumbs-area clearfix">
+                            <h4 class="page-title pull-left">Dashboard</h4>
+                            <ul class="breadcrumbs pull-left">
+                                <li><a href="index.html">Home</a></li>
+                                <li><span>Form</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 clearfix">
+                        <div class="user-profile pull-right">
+                            <img class="avatar user-thumb" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAMAAADW3miqAAABhlBMVEX///9nSTf8zJvCs5ZTOyrf2tf8yplpSznAsZXgs4i2jmyog2NsTjtqTTr49vXUzcjCuLGwo5z4yJj0xpf8x5XmuY2gj4aUcVV3XU6CYUn8/Pz6+fjz8vLz8e/p5Nnb1NHEu7bQxK21pp/8yZa7rJHrvZD8wo6ikojbsIaekXvEm3aRb1R7Y1JyVkVtU0NwUT339fHm39O+sqzNwqr5yZrvwJPJrJL8xZHPsY6nl460p42mlozjtYqpnob6uIX6toTWq4Kil3+biX6fk3yZhnzLoXq8lXGsh2aFb2GjfmB5WUNzVUFgSDfw7ezv7evs6eHk4N7j39zh3NnOyMXLw77KwbzXzrvXzbvRxbG0qKDHuZ6uoJi9rZfowJX2w5Oqm5Opm5Khlo/VtI6wpY77vYvVrIa6o4WYjIOei4LJo4GwnYHQpn+kln2Xg3nFnHejiHaVgna/l3OoiHC6km+Md2uDdGqxi2mQf2mRe2V5aF2BaVt/ZliFZVFoU0FhTT9UPS07JRk7JBnlPbJ0AAAByElEQVQ4y8XTZXPbQBCA4duVbFlgZrsx27ET2+EGGmgYy8zMzEz/vHtSO3PRXT7n/aC5uXm0I2lO7DAL3NrqQ7i7Ejt5IDnzHv5nrAUUIHKWjRsgljkioehsDXzlpGG3v4JU36diBijKFUUzCOpiIjpdU6NvBVFdAHUVEY2DulxEQHFQF74ioFngDe/QZSQvoGsvBHTMvW1q8tl2fjdhWtmdbNZFcekbZJMbH9PIS76z5keAGmT+SRvr25ubLnpp25YN1Gvme3DjOIqtc7QiohhtWE08OjzpAlokTP4CGRGVacNEzP1Je6j7O40m7dVEFHEAmojtIfQyaTFFqMzEXgHM4/6SAN/Zvk704AG61TEYRF4Twv5jV3beemi61fIWT4zzzN+Wk0CKT/FG5ftMKgNvkLq/tLi0yBdt/YOM1sDxvmYKeWlD/yKZQq8HYSuB/xra0/d+ST9VMRrl58S+Wa+nUraj63olSshfBR4TawdT0y0ij/Q4kyt0M4Hdz527iHij8+nHuTs/Iwo1cOq6pi08TyI+XQ5pjdKAylS1kKaFlh/iTKehUZeLClWqkgk1VmdW54hUS0zd6NjFiatzC/cmLo2Nivt/AY2zNIgEWqR4AAAAAElFTkSuQmCC" alt="avatar">
+                            <h4 class="user-name dropdown-toggle" data-bs-toggle="dropdown">Aigars <i class="fa fa-angle-down"></i></h4>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Message</a>
+                                <a class="dropdown-item" href="#">Settings</a>
+                                <a class="dropdown-item" href="#">Log Out</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- page title area end -->
+            <div class="main-content-inner">
+                <div class="row">
+                    <div class="col-lg-6 col-ms-12">
+                        <div class="row">
+                            <!-- Textual inputs start -->
+                            <div class="col-12 mt-5">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="header-title">Textual inputs</h4>
+                                        <p class="text-muted font-14 mb-4">Here are examples of <code>.form-control</code> applied to each textual HTML5 <code>&lt;input&gt;</code> <code>type</code>.</p>
+                                        <div class="mb-3">
+                                            <label for="example-text-input" class="col-form-label">Text</label>
+                                            <input class="form-control" type="text" value="Carlos Rath" id="example-text-input">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="example-search-input" class="col-form-label">Search</label>
+                                            <input class="form-control" type="search" value="Where is google office" id="example-search-input">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="example-email-input" class="col-form-label">Email</label>
+                                            <input class="form-control" type="email" value="name@example.com" id="example-email-input">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="example-url-input" class="col-form-label">URL</label>
+                                            <input class="form-control" type="url" value="https://getbootstrap.com" id="example-url-input">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="example-tel-input" class="col-form-label">Telephone</label>
+                                            <input class="form-control" type="tel" value="+880-1233456789" id="example-tel-input">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="inputPassword" class="">Password</label>
+                                            <input type="password" class="form-control" id="inputPassword" value="inputPassword" placeholder="Password">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="example-number-input" class="col-form-label">Number</label>
+                                            <input class="form-control" type="number" value="42" id="example-number-input">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="example-datetime-local-input" class="col-form-label">Date and time</label>
+                                            <input class="form-control" type="datetime-local" value="2018-07-19T15:30:00" id="example-datetime-local-input">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="example-date-input" class="col-form-label">Date</label>
+                                            <input class="form-control" type="date" value="2018-03-05" id="example-date-input">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="example-month-input" class="col-form-label">Month</label>
+                                            <input class="form-control" type="month" value="2018-05" id="example-month-input">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="example-week-input" class="col-form-label">Week</label>
+                                            <input class="form-control" type="week" value="2018-W32" id="example-week-input">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="example-time-input" class="col-form-label">Time</label>
+                                            <input class="form-control" type="time" value="13:45:00" id="example-time-input">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="col-form-label">Select</label>
+                                            <select class="form-control">
+                                                <option>Select</option>
+                                                <option>Large select</option>
+                                                <option>Small select</option>
+                                            </select>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="col-form-label">Custom Select</label>
+                                            <select class="form-select">
+                                                <option selected="selected">Open this select menu</option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                            </select>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="example-text-input-lg" class="col-form-label">Large</label>
+                                            <input class="form-control form-control-lg" type="text" placeholder=".form-control-lg" id="example-text-input-lg">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="example-text-input-sm" class="col-form-label">Small</label>
+                                            <input class="form-control form-control-sm" type="text" placeholder=".form-control-sm" id="example-text-input-sm">
+                                        </div>
+                                        <div class="mb-3 has-primary">
+                                            <label for="inputHorizontalPrimary" class="col-form-label">Email</label>
+                                            <input type="email" class="form-control form-control-primary" id="inputHorizontalPrimary" placeholder="name@example.com">
+                                            <div class="form-control-feedback">Primary! You've done it.</div>
+                                            <small class="form-text text-muted">Example help text that remains unchanged.</small>
+                                        </div>
+                                        <div class="mb-3 has-warning">
+                                            <label for="inputHorizontalWarning" class="col-form-label">Email</label>
+                                            <input type="email" class="form-control form-control-warning" id="inputHorizontalWarning" placeholder="name@example.com">
+                                            <div class="form-control-feedback">Shucks, check the formatting of that and try again.
+                                            </div><small class="form-text text-muted">Example help text that remains unchanged.
+                                            </small>
+                                        </div>
+                                        <div class="mb-3 mb-0 has-danger">
+                                            <label for="inputHorizontalDnger" class="col-form-label">Email</label>
+                                            <input type="email" class="form-control form-control-danger" id="inputHorizontalDnger" placeholder="name@example.com">
+                                            <div class="form-control-feedback">Sorry, that username's taken. Try another?</div><small class="form-text text-muted">Example help text that remains unchanged.</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Textual inputs end -->
+                            <!-- Radios start -->
+                            <div class="col-12 mt-5">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="header-title">Radios</h4>
+                                        <p class="text-muted mb-3">For even more customization and cross browser consistency, use our completely custom form elements to replace the browser defaults. They’re built on top of semantic and accessible markup, so they’re solid replacements for any default form control.</p>
+                                        <form action="#">
+                                            <b class="text-muted mb-3 d-block">Radios:</b>
+                                            <div class="form-check custom-radio">
+                                                <input type="radio" checked id="customRadio1" name="customRadio" class="form-check-input">
+                                                <label class="form-check-label" for="customRadio1">Checked Radios</label>
+                                            </div>
+                                            <div class="form-check custom-radio">
+                                                <input type="radio" id="customRadio2" name="customRadio" class="form-check-input">
+                                                <label class="form-check-label" for="customRadio2">Unchecked Radios</label>
+                                            </div>
+                                            <div class="form-check custom-radio">
+                                                <input type="radio" checked disabled id="customRadio3" name="customRadio33" class="form-check-input">
+                                                <label class="form-check-label" for="customRadio3">Disabled Radios</label>
+                                            </div>
+                                            <b class="text-muted mb-3 mt-4 d-block">Inline Radios:</b>
+                                            <div class="custom-control custom-radio form-check-inline">
+                                                <input type="radio" checked id="customRadio4" name="customRadio2" class="form-check-input">
+                                                <label class="form-check-label" for="customRadio4">Checked Radios</label>
+                                            </div>
+                                            <div class="custom-control custom-radio form-check-inline">
+                                                <input type="radio" id="customRadio5" name="customRadio2" class="form-check-input">
+                                                <label class="form-check-label" for="customRadio5">Unchecked Radios</label>
+                                            </div>
+                                            <div class="custom-control custom-radio form-check-inline">
+                                                <input type="radio" checked disabled id="customRadio6" name="customRadio3" class="form-check-input">
+                                                <label class="form-check-label" for="customRadio6">Disabled Radios</label>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Radios end -->
+                            <!-- Checkboxes start -->
+                            <div class="col-12 mt-5">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="header-title">Checkboxes</h4>
+                                        <p class="text-muted mb-3">For even more customization and cross browser consistency, use our completely custom form elements to replace the browser defaults. They’re built on top of semantic and accessible markup, so they’re solid replacements for any default form control.</p>
+                                        <form action="#">
+                                            <b class="text-muted mb-3 d-block">Checkbox:</b>
+                                            <div class="form-check custom-checkbox">
+                                                <input type="checkbox" checked class="form-check-input" id="customCheck1">
+                                                <label class="form-check-label" for="customCheck1">checked Checkbox</label>
+                                            </div>
+                                            <div class="form-check custom-checkbox">
+                                                <input type="checkbox" class="form-check-input" id="customCheck2">
+                                                <label class="form-check-label" for="customCheck2">Unchecked Checkbox</label>
+                                            </div>
+                                            <div class="mb-3"></div>
+                                            <div class="form-check custom-checkbox">
+                                                <input type="checkbox" checked disabled class="form-check-input" id="customCheck3">
+                                                <label class="form-check-label" for="customCheck3">checked Checkbox</label>
+                                            </div>
+                                            <div class="form-check custom-checkbox">
+                                                <input type="checkbox" disabled class="form-check-input" id="customCheck4">
+                                                <label class="form-check-label" for="customCheck4">Unchecked Checkbox</label>
+                                            </div>
+                                            <b class="text-muted mb-3 mt-4 d-block">Inline Checkbox:</b>
+                                            <div class="custom-control custom-checkbox form-check-inline">
+                                                <input type="checkbox" checked class="form-check-input" id="customCheck5">
+                                                <label class="form-check-label" for="customCheck5">checked Checkbox</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox form-check-inline">
+                                                <input type="checkbox" class="form-check-input" id="customCheck6">
+                                                <label class="form-check-label" for="customCheck6">Unchecked Checkbox</label>
+                                            </div>
+                                            <div class="mb-3"></div>
+                                            <div class="custom-control custom-checkbox form-check-inline">
+                                                <input type="checkbox" checked disabled class="form-check-input" id="customCheck7">
+                                                <label class="form-check-label" for="customCheck7">checked Checkbox</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox form-check-inline">
+                                                <input type="checkbox" disabled class="form-check-input" id="customCheck8">
+                                                <label class="form-check-label" for="customCheck8">Unchecked Checkbox</label>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Checkboxes end -->
+                            <!-- button with dropdown start -->
+                            <div class="col-12 mt-5">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="header-title">Buttons with dropdowns</h4>
+                                        <p class="text-muted mb-3">For even more customization and cross browser consistency, use our completely custom form elements to replace the browser defaults. They’re built on top of semantic and accessible markup, so they’re solid replacements for any default form control.</p>
+                                        <form action="#">
+                                            <div class="input-group mb-3">
+                                                <div class="input-group-text">
+                                                    <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</button>
+                                                    <div class="dropdown-menu">
+                                                        <a class="dropdown-item" href="#">Action</a>
+                                                        <a class="dropdown-item" href="#">Another action</a>
+                                                        <a class="dropdown-item" href="#">Something else here</a>
+                                                        <div role="separator" class="dropdown-divider"></div>
+                                                        <a class="dropdown-item" href="#">Separated link</a>
+                                                    </div>
+                                                </div>
+                                                <input type="text" class="form-control" aria-label="Text input with dropdown button">
+                                            </div>
+                                            <div class="input-group mb-3">
+                                                <input type="text" class="form-control" aria-label="Text input with dropdown button">
+                                                <div class="input-group-text">
+                                                    <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</button>
+                                                    <div class="dropdown-menu">
+                                                        <a class="dropdown-item" href="#">Action</a>
+                                                        <a class="dropdown-item" href="#">Another action</a>
+                                                        <a class="dropdown-item" href="#">Something else here</a>
+                                                        <div role="separator" class="dropdown-divider"></div>
+                                                        <a class="dropdown-item" href="#">Separated link</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="input-group mb-3">
+                                                <div class="input-group-text">
+                                                    <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</button>
+                                                    <div class="dropdown-menu">
+                                                        <a class="dropdown-item" href="#">Action</a>
+                                                        <a class="dropdown-item" href="#">Another action</a>
+                                                        <a class="dropdown-item" href="#">Something else here</a>
+                                                        <div role="separator" class="dropdown-divider"></div>
+                                                        <a class="dropdown-item" href="#">Separated link</a>
+                                                    </div>
+                                                </div>
+                                                <input type="text" class="form-control" aria-label="Text input with dropdown button">
+                                            </div>
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" aria-label="Text input with dropdown button">
+                                                <div class="input-group-text">
+                                                    <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</button>
+                                                    <div class="dropdown-menu">
+                                                        <a class="dropdown-item" href="#">Action</a>
+                                                        <a class="dropdown-item" href="#">Another action</a>
+                                                        <a class="dropdown-item" href="#">Something else here</a>
+                                                        <div role="separator" class="dropdown-divider"></div>
+                                                        <a class="dropdown-item" href="#">Separated link</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- button with dropdown end -->
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-ms-12">
+                        <div class="row">
+                            <!-- basic form start -->
+                            <div class="col-12 mt-5">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="header-title">Basic form</h4>
+                                        <form>
+                                            <div class="mb-3">
+                                                <label for="exampleInputEmail1">Email address</label>
+                                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                                                <small id="emailHelp" class="form-text text-muted">We'll never share your
+                                                    email with anyone else.</small>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="exampleInputPassword1">Password</label>
+                                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                                            </div>
+                                            <div class="form-check">
+                                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                                            </div>
+                                            <button type="submit" class="btn btn-primary mt-4 pe-4 ps-4">Submit</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- basic form end -->
+                            <!-- basic form start -->
+                            <div class="col-12 mt-5">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="header-title">Inline form</h4>
+                                        <form>
+                                            <div class="row align-items-center">
+                                                <div class="col-sm-3 my-1">
+                                                    <label class="sr-only" for="inlineFormInputName">Name</label>
+                                                    <input type="text" class="form-control" id="inlineFormInputName" placeholder="Jane Doe">
+                                                </div>
+                                                <div class="col-sm-3 my-1">
+                                                    <label class="sr-only" for="inlineFormInputGroupUsername">Username</label>
+                                                    <div class="input-group">
+                                                        <div class="input-group-text">
+                                                            <div class="input-group-text">@</div>
+                                                        </div>
+                                                        <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Username">
+                                                    </div>
+                                                </div>
+                                                <div class="col-auto my-1">
+                                                    <div class="form-check">
+                                                        <div class="form-check custom-checkbox me-sm-2">
+                                                            <input type="checkbox" class="form-check-input" id="customControlAutosizing">
+                                                            <label class="form-check-label" for="customControlAutosizing">Remember me
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-auto my-1">
+                                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- basic form end -->
+                            <!-- Input Sizes start -->
+                            <div class="col-12 mt-5">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="header-title">Input Sizes</h4>
+                                        <input class="form-control form-control-lg mb-4" type="text" placeholder=".form-control-lg">
+                                        <input class="form-control mb-4" type="text" placeholder="Default input">
+                                        <input class="form-control form-control-sm" type="text" placeholder=".form-control-sm">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Input Sizes end -->
+                            <!-- Input Sizes Rounded start -->
+                            <div class="col-12 mt-5">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="header-title">Input Sizes Rounded</h4>
+                                        <input class="form-control form-control-lg input-rounded mb-4" type="text" placeholder=".form-control-lg">
+                                        <input class="form-control mb-4 input-rounded" type="text" placeholder="Default input">
+                                        <input class="form-control form-control-sm input-rounded" type="text" placeholder=".form-control-sm">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Input Sizes Rounded end -->
+                            <!-- Input Grid start -->
+                            <div class="col-12 mt-5">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="header-title">Input Grid</h4>
+                                        <form class="form-horizontal">
+                                            <div class="mb-3 row">
+                                                <div class="col-sm-3">
+                                                    <input type="text" class="form-control" placeholder=".col-sm-3">
+                                                </div>
+                                            </div>
+                                            <div class="mb-3 row">
+                                                <div class="col-sm-6">
+                                                    <input type="text" class="form-control" placeholder=".col-sm-6">
+                                                </div>
+                                            </div>
+                                            <div class="mb-3 row">
+                                                <div class="col-sm-9">
+                                                    <input type="text" class="form-control" placeholder=".col-sm-9">
+                                                </div>
+                                            </div>
+                                            <div class="mb-3 row">
+                                                <div class="col-sm-12">
+                                                    <input type="text" class="form-control" placeholder=".col-sm-12">
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Input Grid end -->
+                            <!-- Disabled forms start -->
+                            <div class="col-12 mt-5">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="header-title">Disabled forms</h4>
+                                        <form>
+                                            <fieldset disabled>
+                                                <div class="mb-3">
+                                                    <label for="disabledTextInput">Disabled input</label>
+                                                    <input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="disabledSelect">Disabled select menu</label>
+                                                    <select id="disabledSelect" class="form-control">
+                                                        <option>Disabled select</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="disabledFieldsetCheck" disabled>
+                                                    <label class="form-check-label" for="disabledFieldsetCheck">
+                                                        Can't check this
+                                                    </label>
+                                                </div>
+                                                <button type="submit" class="btn btn-primary mt-4 ps-4 pe-4">Submit</button>
+                                            </fieldset>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Disabled forms end -->
+                            <!-- Server side start -->
+                            <div class="col-12">
+                                <div class="card mt-5">
+                                    <div class="card-body">
+                                        <h4 class="header-title">Server side</h4>
+                                        <form class="needs-validation" novalidate="">
+                                            <div class="row">
+                                                <div class="col-md-4 mb-3">
+                                                    <label for="validationCustom01">First name</label>
+                                                    <input type="text" class="form-control" id="validationCustom01" placeholder="First name" value="Mark" required="">
+                                                    <div class="valid-feedback">
+                                                        Looks good!
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 mb-3">
+                                                    <label for="validationCustom02">Last name</label>
+                                                    <input type="text" class="form-control" id="validationCustom02" placeholder="Last name" value="Otto" required="">
+                                                    <div class="valid-feedback">
+                                                        Looks good!
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 mb-3">
+                                                    <label for="validationCustomUsername">Username</label>
+                                                    <div class="input-group">
+                                                        <div class="input-group-text">
+                                                            <span class="input-group-text" id="inputGroupPrepend">@</span>
+                                                        </div>
+                                                        <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required="">
+                                                        <div class="invalid-feedback">
+                                                            Please choose a username.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6 mb-3">
+                                                    <label for="validationCustom03">City</label>
+                                                    <input type="text" class="form-control" id="validationCustom03" placeholder="City" required="">
+                                                    <div class="invalid-feedback">
+                                                        Please provide a valid city.
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3 mb-3">
+                                                    <label for="validationCustom04">State</label>
+                                                    <input type="text" class="form-control" id="validationCustom04" placeholder="State" required="">
+                                                    <div class="invalid-feedback">
+                                                        Please provide a valid state.
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3 mb-3">
+                                                    <label for="validationCustom05">Zip</label>
+                                                    <input type="text" class="form-control" id="validationCustom05" placeholder="Zip" required="">
+                                                    <div class="invalid-feedback">
+                                                        Please provide a valid zip.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="mb-3">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required="">
+                                                    <label class="form-check-label" for="invalidCheck">
+                                                        Agree to terms and conditions
+                                                    </label>
+                                                    <div class="invalid-feedback">
+                                                        You must agree before submitting.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <button class="btn btn-primary" type="submit">Submit form</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Server side end -->
+                            <!-- Input Group start -->
+                            <div class="col-12">
+                                <div class="card mt-5">
+                                    <div class="card-body">
+                                        <h4 class="header-title">Input Group</h4>
+                                        <form action="#">
+                                            <div class="input-group mb-3">
+                                                <div class="input-group-text">
+                                                    <span class="input-group-text" id="basic-addon1">@</span>
+                                                </div>
+                                                <input type="text" id="username" name="username" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                                            </div>
+                                            <div class="input-group mb-3">
+                                                <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                                <div class="input-group-text">
+                                                    <span class="input-group-text" id="basic-addon2">@example.com</span>
+                                                </div>
+                                            </div>
+                                            <label for="basic-url">Your vanity URL</label>
+                                            <div class="input-group mb-3">
+                                                <div class="input-group-text">
+                                                    <span class="input-group-text" id="basic-addon3">https://</span>
+                                                </div>
+                                                <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+                                            </div>
+                                            <div class="input-group mb-3">
+                                                <div class="input-group-text">
+                                                    <span class="input-group-text">$</span>
+                                                </div>
+                                                <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                                                <div class="input-group-text">
+                                                    <span class="input-group-text">.00</span>
+                                                </div>
+                                            </div>
+                                            <div class="input-group mb-3">
+                                                <div class="input-group-text">
+                                                    <span class="input-group-text">With textarea</span>
+                                                </div>
+                                                <textarea class="form-control" aria-label="With textarea"></textarea>
+                                            </div>
+                                            <div class="input-group mb-3">
+                                                <div class="input-group-text">
+                                                    <span class="input-group-text">$</span>
+                                                    <span class="input-group-text">0.00</span>
+                                                </div>
+                                                <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                                            </div>
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                                                <div class="input-group-text">
+                                                    <span class="input-group-text">$</span>
+                                                    <span class="input-group-text">0.00</span>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Input Group end -->
+                            <!-- Custom file input start -->
+                            <div class="col-12">
+                                <div class="card mt-5">
+                                    <div class="card-body">
+                                        <h4 class="header-title">Custom file input</h4>
+                                        <form action="#">
+                                            <div class="input-group mb-3">
+                                                <div class="input-group-text">
+                                                    <span class="input-group-text">Upload</span>
+                                                </div>
+                                                <div class="form-file">
+                                                    <input type="file" class="form-file-input" id="inputGroupFile01">
+                                                    <label class="form-file-label" for="inputGroupFile01">Choose file</label>
+                                                </div>
+                                            </div>
+                                            <div class="input-group mb-3">
+                                                <div class="form-file">
+                                                    <input type="file" class="form-file-input" id="inputGroupFile02">
+                                                    <label class="form-file-label" for="inputGroupFile02">Choose file</label>
+                                                </div>
+                                                <div class="input-group-text">
+                                                    <span class="input-group-text">Upload</span>
+                                                </div>
+                                            </div>
+                                            <div class="input-group mb-3">
+                                                <div class="input-group-text">
+                                                    <button class="btn btn-outline-secondary" type="button">Button</button>
+                                                </div>
+                                                <div class="form-file">
+                                                    <input type="file" class="form-file-input" id="inputGroupFile03">
+                                                    <label class="form-file-label" for="inputGroupFile03">Choose file</label>
+                                                </div>
+                                            </div>
+                                            <div class="input-group">
+                                                <div class="form-file">
+                                                    <input type="file" class="form-file-input" id="inputGroupFile04">
+                                                    <label class="form-file-label" for="inputGroupFile04">Choose file</label>
+                                                </div>
+                                                <div class="input-group-text">
+                                                    <button class="btn btn-outline-secondary" type="button">Button</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Custom file input end -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- main content area end -->
+        <!-- footer area start-->
+        <footer>
+            <div class="footer-area">
+                <p>© Copyright 2025. All right reserved. Template by <a href="https://colorlib.com/wp/">Colorlib</a>.</p>
+            </div>
+        </footer>
+        <!-- footer area end-->
+    </div>
+    <!-- page container area end -->
+    <!-- offset area start -->
+    <div class="offset-area">
+        <div class="offset-btn-close"><i class="ti-btn-close"></i></div>
+        <ul class="nav offset-menu-tab">
+            <li><a class="active" data-bs-toggle="tab" href="#activity">Activity</a></li>
+            <li><a data-bs-toggle="tab" href="#settings">Settings</a></li>
+        </ul>
+        <div class="offset-content tab-content">
+            <div id="activity" class="tab-pane fade in show active">
+                <div class="recent-activity">
+                    <div class="timeline-task">
+                        <div class="icon bg1">
+                            <i class="fa fa-envelope"></i>
+                        </div>
+                        <div class="tm-title">
+                            <h4>Rashed sent you an email</h4>
+                            <span class="time"><i class="ti-time"></i>09:35</span>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse distinctio itaque at.
+                        </p>
+                    </div>
+                    <div class="timeline-task">
+                        <div class="icon bg2">
+                            <i class="fa fa-check"></i>
+                        </div>
+                        <div class="tm-title">
+                            <h4>Added</h4>
+                            <span class="time"><i class="ti-time"></i>7 Minutes Ago</span>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur.
+                        </p>
+                    </div>
+                    <div class="timeline-task">
+                        <div class="icon bg2">
+                            <i class="fa fa-exclamation-triangle"></i>
+                        </div>
+                        <div class="tm-title">
+                            <h4>You missed you Password!</h4>
+                            <span class="time"><i class="ti-time"></i>09:20 Am</span>
+                        </div>
+                    </div>
+                    <div class="timeline-task">
+                        <div class="icon bg3">
+                            <i class="fa fa-bomb"></i>
+                        </div>
+                        <div class="tm-title">
+                            <h4>Member waiting for you Attention</h4>
+                            <span class="time"><i class="ti-time"></i>09:35</span>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse distinctio itaque at.
+                        </p>
+                    </div>
+                    <div class="timeline-task">
+                        <div class="icon bg3">
+                            <i class="ti-signal"></i>
+                        </div>
+                        <div class="tm-title">
+                            <h4>You Added Kaji Patha few minutes ago</h4>
+                            <span class="time"><i class="ti-time"></i>01 minutes ago</span>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse distinctio itaque at.
+                        </p>
+                    </div>
+                    <div class="timeline-task">
+                        <div class="icon bg1">
+                            <i class="fa fa-envelope"></i>
+                        </div>
+                        <div class="tm-title">
+                            <h4>Ratul Hamba sent you an email</h4>
+                            <span class="time"><i class="ti-time"></i>09:35</span>
+                        </div>
+                        <p>Hello sir , where are you, i am egerly waiting for you.
+                        </p>
+                    </div>
+                    <div class="timeline-task">
+                        <div class="icon bg2">
+                            <i class="fa fa-exclamation-triangle"></i>
+                        </div>
+                        <div class="tm-title">
+                            <h4>Rashed sent you an email</h4>
+                            <span class="time"><i class="ti-time"></i>09:35</span>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse distinctio itaque at.
+                        </p>
+                    </div>
+                    <div class="timeline-task">
+                        <div class="icon bg2">
+                            <i class="fa fa-exclamation-triangle"></i>
+                        </div>
+                        <div class="tm-title">
+                            <h4>Rashed sent you an email</h4>
+                            <span class="time"><i class="ti-time"></i>09:35</span>
+                        </div>
+                    </div>
+                    <div class="timeline-task">
+                        <div class="icon bg3">
+                            <i class="fa fa-bomb"></i>
+                        </div>
+                        <div class="tm-title">
+                            <h4>Rashed sent you an email</h4>
+                            <span class="time"><i class="ti-time"></i>09:35</span>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse distinctio itaque at.
+                        </p>
+                    </div>
+                    <div class="timeline-task">
+                        <div class="icon bg3">
+                            <i class="ti-signal"></i>
+                        </div>
+                        <div class="tm-title">
+                            <h4>Rashed sent you an email</h4>
+                            <span class="time"><i class="ti-time"></i>09:35</span>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse distinctio itaque at.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div id="settings" class="tab-pane fade">
+                <div class="offset-settings">
+                    <h4>General Settings</h4>
+                    <div class="settings-list">
+                        <div class="s-settings">
+                            <div class="s-sw-title">
+                                <h5>Notifications</h5>
+                                <div class="s-swtich">
+                                    <input type="checkbox" id="switch1" />
+                                    <label for="switch1">Toggle</label>
+                                </div>
+                            </div>
+                            <p>Keep it 'On' When you want to get all the notification.</p>
+                        </div>
+                        <div class="s-settings">
+                            <div class="s-sw-title">
+                                <h5>Show recent activity</h5>
+                                <div class="s-swtich">
+                                    <input type="checkbox" id="switch2" />
+                                    <label for="switch2">Toggle</label>
+                                </div>
+                            </div>
+                            <p>The for attribute is necessary to bind our custom checkbox with the input.</p>
+                        </div>
+                        <div class="s-settings">
+                            <div class="s-sw-title">
+                                <h5>Show your emails</h5>
+                                <div class="s-swtich">
+                                    <input type="checkbox" id="switch3" />
+                                    <label for="switch3">Toggle</label>
+                                </div>
+                            </div>
+                            <p>Show email so that easily find you.</p>
+                        </div>
+                        <div class="s-settings">
+                            <div class="s-sw-title">
+                                <h5>Show Task statistics</h5>
+                                <div class="s-swtich">
+                                    <input type="checkbox" id="switch4" />
+                                    <label for="switch4">Toggle</label>
+                                </div>
+                            </div>
+                            <p>The for attribute is necessary to bind our custom checkbox with the input.</p>
+                        </div>
+                        <div class="s-settings">
+                            <div class="s-sw-title">
+                                <h5>Notifications</h5>
+                                <div class="s-swtich">
+                                    <input type="checkbox" id="switch5" />
+                                    <label for="switch5">Toggle</label>
+                                </div>
+                            </div>
+                            <p>Use checkboxes when looking for yes or no answers.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- offset area end -->
+    <!-- jquery latest version -->
+    <script src="assets/js/vendor/jquery-2.2.4.min.js"></script>
+    <!-- bootstrap 4 js -->
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/metisMenu.min.js"></script>
+    <script src="assets/js/jquery.slimscroll.min.js"></script>
+    <script src="assets/js/jquery.slicknav.min.js"></script>
+
+    <!-- others plugins -->
+    <script src="assets/js/plugins.js"></script>
+    <script src="assets/js/scripts.js"></script>
+</body>
+
+</html>

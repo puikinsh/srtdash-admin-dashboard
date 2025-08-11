@@ -1,0 +1,749 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>srtdash - SEO Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/png" href="assets/images/icon/favicon.ico">
+    <!-- amchart css -->
+    <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
+    <!-- others css -->
+    <!-- modernizr css -->
+    <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/css/styles-7Tr2JQDF.css">
+  <link rel="stylesheet" crossorigin href="./assets/css/responsive-CB_u9RJp.css">
+  <link rel="stylesheet" crossorigin href="./assets/css/slicknav-Cilffaa_.css">
+</head>
+
+<body class="body-bg">
+    <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <!-- preloader area start -->
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+    <!-- preloader area end -->
+    <!-- main wrapper start -->
+    <div class="horizontal-main-wrapper">
+        <!-- main header area start -->
+        <div class="mainheader-area">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-3">
+                        <div class="logo">
+                            <a href="index.html"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAABeCAYAAACZ4CkLAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QTQwQzUxQUVDMUE5MTFFODgyNkU4RjQ5Q0RDODQ3RkMiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QTQwQzUxQUZDMUE5MTFFODgyNkU4RjQ5Q0RDODQ3RkMiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpBNDBDNTFBQ0MxQTkxMUU4ODI2RThGNDlDREM4NDdGQyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpBNDBDNTFBREMxQTkxMUU4ODI2RThGNDlDREM4NDdGQyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PnXR6ooAAAw3SURBVHja7J3RVeM4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" alt="logo"></a>
+                        </div>
+                    </div>
+                    <!-- profile info & task notification -->
+                    <div class="col-md-9 clearfix text-end">
+                        <div class="d-md-inline-block d-block me-md-4">
+                            <ul class="notification-area">
+                                <li id="full-view"><i class="ti-fullscreen"></i></li>
+                                <li id="full-view-exit"><i class="ti-zoom-out"></i></li>
+                                <li class="dropdown">
+                                    <i class="ti-bell dropdown-toggle" data-bs-toggle="dropdown">
+                                        <span>2</span>
+                                    </i>
+                                    <div class="dropdown-menu bell-notify-box notify-box">
+                                        <span class="notify-title">You have 3 new notifications <a href="#">view all</a></span>
+                                        <div class="nofity-list">
+                                            <a href="#" class="notify-item">
+                                                <div class="notify-thumb"><i class="ti-key btn-danger"></i></div>
+                                                <div class="notify-text">
+                                                    <p>You have Changed Your Password</p>
+                                                    <span>Just Now</span>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="notify-item">
+                                                <div class="notify-thumb"><i class="ti-comments-smiley btn-info"></i></div>
+                                                <div class="notify-text">
+                                                    <p>New Commetns On Post</p>
+                                                    <span>30 Seconds ago</span>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="notify-item">
+                                                <div class="notify-thumb"><i class="ti-key btn-primary"></i></div>
+                                                <div class="notify-text">
+                                                    <p>Some special like you</p>
+                                                    <span>Just Now</span>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="notify-item">
+                                                <div class="notify-thumb"><i class="ti-comments-smiley btn-info"></i></div>
+                                                <div class="notify-text">
+                                                    <p>New Commetns On Post</p>
+                                                    <span>30 Seconds ago</span>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="notify-item">
+                                                <div class="notify-thumb"><i class="ti-key btn-primary"></i></div>
+                                                <div class="notify-text">
+                                                    <p>Some special like you</p>
+                                                    <span>Just Now</span>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="notify-item">
+                                                <div class="notify-thumb"><i class="ti-key btn-danger"></i></div>
+                                                <div class="notify-text">
+                                                    <p>You have Changed Your Password</p>
+                                                    <span>Just Now</span>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="notify-item">
+                                                <div class="notify-thumb"><i class="ti-key btn-danger"></i></div>
+                                                <div class="notify-text">
+                                                    <p>You have Changed Your Password</p>
+                                                    <span>Just Now</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="dropdown">
+                                    <i class="fa fa-envelope-o dropdown-toggle" data-bs-toggle="dropdown"><span>3</span></i>
+                                    <div class="dropdown-menu notify-box nt-enveloper-box">
+                                        <span class="notify-title">You have 3 new notifications <a href="#">view all</a></span>
+                                        <div class="nofity-list">
+                                            <a href="#" class="notify-item">
+                                                <div class="notify-thumb">
+                                                    <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAAQABAAD/2wBDAAMCAgICAgMCAgIDAwMDBAYEBAQEBAgGBgUGCQgKCgkICQkKDA8MCgsOCwkJDRENDg8QEBEQCgwSExIQEw8QEBD/wAALCABQAFABAREA/8QAGgABAAMAAwAAAAAAAAAAAAAAAAEGBwMFCP/EACYQAAAHAAMAAgICAwAAAAAAAAABAgMEBQYHERITIRQiCBUXIzH/2gAIAQEAAD8A9QAAAAAAAAAAAAAAAAAAAAAAAAAAAAzH+QGzvMTlaiZS3K6hFhfQ66dOjxES5keK4S/SosZRK+d41JQRIJDhklS1EhXkZ5mOWOQNVS0+UrNcr83Qbafn4WhfrWWp7dZEhrlOOvQ1IJDMozaU0SHGk/qpDhtl2RHas9zHJxcm8y3J82VZHn9RHoF6JEZlplLMuKzIiPzCSaUtdqfJhS0I8e/BmSCUfXSb7nKTbMYuxy97e5jMaSXZtHaQ6ZqwspiI6CNh2LE8PrVGd/2KN34TUSUtmZIJwlDixfI/JXJ8HAZeLr2qSfd0trf2lzXxIzzzkaLLbjRkobcJ1lpx35kLdSaTNCkLQXk++tO4b11zr8c47pVsuXNNa2NDYPMN/G3IehynGDeSns/JOE2lfn/hGoyL6IXkAAUTlDE6HSS8vp8hIriu8jaLsYsayUtMSWlyM7HdaWtCVKbPw8ZpcJKvKkl+pkZikf4X3yrB3kz8/Pt7tWnb0TcJDj39WlpNf/XqiG94+QzUwalG98Xfvz+nRdHE/hHbaikuanU2dM0XIN+ix2X4Tzx/HWsx2mWoERSmyNfpMdpC3VfGZEt00p7NPU03FXLmUl5u/q7LNXdrk4E/Mx0WUl9hE6mdcYXHdccbZUbMpBR20rJKHELLs+0mf1FJwtvsRJp9tl7DP2GsQ9druIsxx6LXyEWkpEpxtlxCHFtk06034M0K9l778mr60TivEzMFkU1NrPZnWs2dNt7OSyg0NOTJchyQ94Sf2SCU4aU9/flJd/Yt4AAAAAAAAAAAAAAAAAAAAAAAAAAAP//Z" alt="image">
+                                                </div>
+                                                <div class="notify-text">
+                                                    <p>Aglae Mayer</p>
+                                                    <span class="msg">Hey I am waiting for you...</span>
+                                                    <span>3:15 PM</span>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="notify-item">
+                                                <div class="notify-thumb">
+                                                    <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAAQABAAD/2wBDAAMCAgICAgMCAgIDAwMDBAYEBAQEBAgGBgUGCQgKCgkICQkKDA8MCgsOCwkJDRENDg8QEBEQCgwSExIQEw8QEBD/wAALCABQAFABAREA/8QAGgABAAMAAwAAAAAAAAAAAAAAAAEGBwMFCP/EACYQAAAHAAMAAgICAwAAAAAAAAABAgMEBQYHERITIRQiCBUXIzH/2gAIAQEAAD8A9QAAAAAAAAAAAAAAAAAAAAAAAAAAAAzH+QGzvMTlaiZS3K6hFhfQ66dOjxES5keK4S/SosZRK+d41JQRIJDhklS1EhXkZ5mOWOQNVS0+UrNcr83Qbafn4WhfrWWp7dZEhrlOOvQ1IJDMozaU0SHGk/qpDhtl2RHas9zHJxcm8y3J82VZHn9RHoF6JEZlplLMuKzIiPzCSaUtdqfJhS0I8e/BmSCUfXSb7nKTbMYuxy97e5jMaSXZtHaQ6ZqwspiI6CNh2LE8PrVGd/2KN34TUSUtmZIJwlDixfI/JXJ8HAZeLr2qSfd0trf2lzXxIzzzkaLLbjRkobcJ1lpx35kLdSaTNCkLQXk++tO4b11zr8c47pVsuXNNa2NDYPMN/G3IehynGDeSns/JOE2lfn/hGoyL6IXkAAUTlDE6HSS8vp8hIriu8jaLsYsayUtMSWlyM7HdaWtCVKbPw8ZpcJKvKkl+pkZikf4X3yrB3kz8/Pt7tWnb0TcJDj39WlpNf/XqiG94+QzUwalG98Xfvz+nRdHE/hHbaikuanU2dM0XIN+ix2X4Tzx/HWsx2mWoERSmyNfpMdpC3VfGZEt00p7NPU03FXLmUl5u/q7LNXdrk4E/Mx0WUl9hE6mdcYXHdccbZUbMpBR20rJKHELLs+0mf1FJwtvsRJp9tl7DP2GsQ9druIsxx6LXyEWkpEpxtlxCHFtk06034M0K9l778mr60TivEzMFkU1NrPZnWs2dNt7OSyg0NOTJchyQ94Sf2SCU4aU9/flJd/Yt4AAAAAAAAAAAAAAAAAAAAAAAAAAAP//Z" alt="image">
+                                                </div>
+                                                <div class="notify-text">
+                                                    <p>Aglae Mayer</p>
+                                                    <span class="msg">When you can connect with me...</span>
+                                                    <span>3:15 PM</span>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="notify-item">
+                                                <div class="notify-thumb">
+                                                    <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAAQABAAD/2wBDAAMCAgICAgMCAgIDAwMDBAYEBAQEBAgGBgUGCQgKCgkICQkKDA8MCgsOCwkJDRENDg8QEBEQCgwSExIQEw8QEBD/wAALCABQAFABAREA/8QAGgABAAMAAwAAAAAAAAAAAAAAAAEGBwMFCP/EACYQAAAHAAMAAgICAwAAAAAAAAABAgMEBQYHERITIRQiCBUXIzH/2gAIAQEAAD8A9QAAAAAAAAAAAAAAAAAAAAAAAAAAAAzH+QGzvMTlaiZS3K6hFhfQ66dOjxES5keK4S/SosZRK+d41JQRIJDhklS1EhXkZ5mOWOQNVS0+UrNcr83Qbafn4WhfrWWp7dZEhrlOOvQ1IJDMozaU0SHGk/qpDhtl2RHas9zHJxcm8y3J82VZHn9RHoF6JEZlplLMuKzIiPzCSaUtdqfJhS0I8e/BmSCUfXSb7nKTbMYuxy97e5jMaSXZtHaQ6ZqwspiI6CNh2LE8PrVGd/2KN34TUSUtmZIJwlDixfI/JXJ8HAZeLr2qSfd0trf2lzXxIzzzkaLLbjRkobcJ1lpx35kLdSaTNCkLQXk++tO4b11zr8c47pVsuXNNa2NDYPMN/G3IehynGDeSns/JOE2lfn/hGoyL6IXkAAUTlDE6HSS8vp8hIriu8jaLsYsayUtMSWlyM7HdaWtCVKbPw8ZpcJKvKkl+pkZikf4X3yrB3kz8/Pt7tWnb0TcJDj39WlpNf/XqiG94+QzUwalG98Xfvz+nRdHE/hHbaikuanU2dM0XIN+ix2X4Tzx/HWsx2mWoERSmyNfpMdpC3VfGZEt00p7NPU03FXLmUl5u/q7LNXdrk4E/Mx0WUl9hE6mdcYXHdccbZUbMpBR20rJKHELLs+0mf1FJwtvsRJp9tl7DP2GsQ9druIsxx6LXyEWkpEpxtlxCHFtk06034M0K9l778mr60TivEzMFkU1NrPZnWs2dNt7OSyg0NOTJchyQ94Sf2SCU4aU9/flJd/Yt4AAAAAAAAAAAAAAAAAAAAAAAAAAAP//Z" alt="image">
+                                                </div>
+                                                <div class="notify-text">
+                                                    <p>Aglae Mayer</p>
+                                                    <span class="msg">I missed you so much...</span>
+                                                    <span>3:15 PM</span>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="notify-item">
+                                                <div class="notify-thumb">
+                                                    <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAAQABAAD/2wBDAAMCAgICAgMCAgIDAwMDBAYEBAQEBAgGBgUGCQgKCgkICQkKDA8MCgsOCwkJDRENDg8QEBEQCgwSExIQEw8QEBD/wAALCABQAFABAREA/8QAGgABAAMAAwAAAAAAAAAAAAAAAAEGBwMFCP/EACYQAAAHAAMAAgICAwAAAAAAAAABAgMEBQYHERITIRQiCBUXIzH/2gAIAQEAAD8A9QAAAAAAAAAAAAAAAAAAAAAAAAAAAAzH+QGzvMTlaiZS3K6hFhfQ66dOjxES5keK4S/SosZRK+d41JQRIJDhklS1EhXkZ5mOWOQNVS0+UrNcr83Qbafn4WhfrWWp7dZEhrlOOvQ1IJDMozaU0SHGk/qpDhtl2RHas9zHJxcm8y3J82VZHn9RHoF6JEZlplLMuKzIiPzCSaUtdqfJhS0I8e/BmSCUfXSb7nKTbMYuxy97e5jMaSXZtHaQ6ZqwspiI6CNh2LE8PrVGd/2KN34TUSUtmZIJwlDixfI/JXJ8HAZeLr2qSfd0trf2lzXxIzzzkaLLbjRkobcJ1lpx35kLdSaTNCkLQXk++tO4b11zr8c47pVsuXNNa2NDYPMN/G3IehynGDeSns/JOE2lfn/hGoyL6IXkAAUTlDE6HSS8vp8hIriu8jaLsYsayUtMSWlyM7HdaWtCVKbPw8ZpcJKvKkl+pkZikf4X3yrB3kz8/Pt7tWnb0TcJDj39WlpNf/XqiG94+QzUwalG98Xfvz+nRdHE/hHbaikuanU2dM0XIN+ix2X4Tzx/HWsx2mWoERSmyNfpMdpC3VfGZEt00p7NPU03FXLmUl5u/q7LNXdrk4E/Mx0WUl9hE6mdcYXHdccbZUbMpBR20rJKHELLs+0mf1FJwtvsRJp9tl7DP2GsQ9druIsxx6LXyEWkpEpxtlxCHFtk06034M0K9l778mr60TivEzMFkU1NrPZnWs2dNt7OSyg0NOTJchyQ94Sf2SCU4aU9/flJd/Yt4AAAAAAAAAAAAAAAAAAAAAAAAAAAP//Z" alt="image">
+                                                </div>
+                                                <div class="notify-text">
+                                                    <p>Aglae Mayer</p>
+                                                    <span class="msg">Your product is completely Ready...</span>
+                                                    <span>3:15 PM</span>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="notify-item">
+                                                <div class="notify-thumb">
+                                                    <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAAQABAAD/2wBDAAMCAgICAgMCAgIDAwMDBAYEBAQEBAgGBgUGCQgKCgkICQkKDA8MCgsOCwkJDRENDg8QEBEQCgwSExIQEw8QEBD/wAALCABQAFABAREA/8QAGgABAAMAAwAAAAAAAAAAAAAAAAEGBwMFCP/EACYQAAAHAAMAAgICAwAAAAAAAAABAgMEBQYHERITIRQiCBUXIzH/2gAIAQEAAD8A9QAAAAAAAAAAAAAAAAAAAAAAAAAAAAzH+QGzvMTlaiZS3K6hFhfQ66dOjxES5keK4S/SosZRK+d41JQRIJDhklS1EhXkZ5mOWOQNVS0+UrNcr83Qbafn4WhfrWWp7dZEhrlOOvQ1IJDMozaU0SHGk/qpDhtl2RHas9zHJxcm8y3J82VZHn9RHoF6JEZlplLMuKzIiPzCSaUtdqfJhS0I8e/BmSCUfXSb7nKTbMYuxy97e5jMaSXZtHaQ6ZqwspiI6CNh2LE8PrVGd/2KN34TUSUtmZIJwlDixfI/JXJ8HAZeLr2qSfd0trf2lzXxIzzzkaLLbjRkobcJ1lpx35kLdSaTNCkLQXk++tO4b11zr8c47pVsuXNNa2NDYPMN/G3IehynGDeSns/JOE2lfn/hGoyL6IXkAAUTlDE6HSS8vp8hIriu8jaLsYsayUtMSWlyM7HdaWtCVKbPw8ZpcJKvKkl+pkZikf4X3yrB3kz8/Pt7tWnb0TcJDj39WlpNf/XqiG94+QzUwalG98Xfvz+nRdHE/hHbaikuanU2dM0XIN+ix2X4Tzx/HWsx2mWoERSmyNfpMdpC3VfGZEt00p7NPU03FXLmUl5u/q7LNXdrk4E/Mx0WUl9hE6mdcYXHdccbZUbMpBR20rJKHELLs+0mf1FJwtvsRJp9tl7DP2GsQ9druIsxx6LXyEWkpEpxtlxCHFtk06034M0K9l778mr60TivEzMFkU1NrPZnWs2dNt7OSyg0NOTJchyQ94Sf2SCU4aU9/flJd/Yt4AAAAAAAAAAAAAAAAAAAAAAAAAAAP//Z" alt="image">
+                                                </div>
+                                                <div class="notify-text">
+                                                    <p>Aglae Mayer</p>
+                                                    <span class="msg">Hey I am waiting for you...</span>
+                                                    <span>3:15 PM</span>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="notify-item">
+                                                <div class="notify-thumb">
+                                                    <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAAQABAAD/2wBDAAMCAgICAgMCAgIDAwMDBAYEBAQEBAgGBgUGCQgKCgkICQkKDA8MCgsOCwkJDRENDg8QEBEQCgwSExIQEw8QEBD/wAALCABQAFABAREA/8QAGgABAAMAAwAAAAAAAAAAAAAAAAEGBwMFCP/EACYQAAAHAAMAAgICAwAAAAAAAAABAgMEBQYHERITIRQiCBUXIzH/2gAIAQEAAD8A9QAAAAAAAAAAAAAAAAAAAAAAAAAAAAzH+QGzvMTlaiZS3K6hFhfQ66dOjxES5keK4S/SosZRK+d41JQRIJDhklS1EhXkZ5mOWOQNVS0+UrNcr83Qbafn4WhfrWWp7dZEhrlOOvQ1IJDMozaU0SHGk/qpDhtl2RHas9zHJxcm8y3J82VZHn9RHoF6JEZlplLMuKzIiPzCSaUtdqfJhS0I8e/BmSCUfXSb7nKTbMYuxy97e5jMaSXZtHaQ6ZqwspiI6CNh2LE8PrVGd/2KN34TUSUtmZIJwlDixfI/JXJ8HAZeLr2qSfd0trf2lzXxIzzzkaLLbjRkobcJ1lpx35kLdSaTNCkLQXk++tO4b11zr8c47pVsuXNNa2NDYPMN/G3IehynGDeSns/JOE2lfn/hGoyL6IXkAAUTlDE6HSS8vp8hIriu8jaLsYsayUtMSWlyM7HdaWtCVKbPw8ZpcJKvKkl+pkZikf4X3yrB3kz8/Pt7tWnb0TcJDj39WlpNf/XqiG94+QzUwalG98Xfvz+nRdHE/hHbaikuanU2dM0XIN+ix2X4Tzx/HWsx2mWoERSmyNfpMdpC3VfGZEt00p7NPU03FXLmUl5u/q7LNXdrk4E/Mx0WUl9hE6mdcYXHdccbZUbMpBR20rJKHELLs+0mf1FJwtvsRJp9tl7DP2GsQ9druIsxx6LXyEWkpEpxtlxCHFtk06034M0K9l778mr60TivEzMFkU1NrPZnWs2dNt7OSyg0NOTJchyQ94Sf2SCU4aU9/flJd/Yt4AAAAAAAAAAAAAAAAAAAAAAAAAAAP//Z" alt="image">
+                                                </div>
+                                                <div class="notify-text">
+                                                    <p>Aglae Mayer</p>
+                                                    <span class="msg">Hey I am waiting for you...</span>
+                                                    <span>3:15 PM</span>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="notify-item">
+                                                <div class="notify-thumb">
+                                                    <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAAQABAAD/2wBDAAMCAgICAgMCAgIDAwMDBAYEBAQEBAgGBgUGCQgKCgkICQkKDA8MCgsOCwkJDRENDg8QEBEQCgwSExIQEw8QEBD/wAALCABQAFABAREA/8QAGgABAAMAAwAAAAAAAAAAAAAAAAEGBwMFCP/EACYQAAAHAAMAAgICAwAAAAAAAAABAgMEBQYHERITIRQiCBUXIzH/2gAIAQEAAD8A9QAAAAAAAAAAAAAAAAAAAAAAAAAAAAzH+QGzvMTlaiZS3K6hFhfQ66dOjxES5keK4S/SosZRK+d41JQRIJDhklS1EhXkZ5mOWOQNVS0+UrNcr83Qbafn4WhfrWWp7dZEhrlOOvQ1IJDMozaU0SHGk/qpDhtl2RHas9zHJxcm8y3J82VZHn9RHoF6JEZlplLMuKzIiPzCSaUtdqfJhS0I8e/BmSCUfXSb7nKTbMYuxy97e5jMaSXZtHaQ6ZqwspiI6CNh2LE8PrVGd/2KN34TUSUtmZIJwlDixfI/JXJ8HAZeLr2qSfd0trf2lzXxIzzzkaLLbjRkobcJ1lpx35kLdSaTNCkLQXk++tO4b11zr8c47pVsuXNNa2NDYPMN/G3IehynGDeSns/JOE2lfn/hGoyL6IXkAAUTlDE6HSS8vp8hIriu8jaLsYsayUtMSWlyM7HdaWtCVKbPw8ZpcJKvKkl+pkZikf4X3yrB3kz8/Pt7tWnb0TcJDj39WlpNf/XqiG94+QzUwalG98Xfvz+nRdHE/hHbaikuanU2dM0XIN+ix2X4Tzx/HWsx2mWoERSmyNfpMdpC3VfGZEt00p7NPU03FXLmUl5u/q7LNXdrk4E/Mx0WUl9hE6mdcYXHdccbZUbMpBR20rJKHELLs+0mf1FJwtvsRJp9tl7DP2GsQ9druIsxx6LXyEWkpEpxtlxCHFtk06034M0K9l778mr60TivEzMFkU1NrPZnWs2dNt7OSyg0NOTJchyQ94Sf2SCU4aU9/flJd/Yt4AAAAAAAAAAAAAAAAAAAAAAAAAAAP//Z" alt="image">
+                                                </div>
+                                                <div class="notify-text">
+                                                    <p>Aglae Mayer</p>
+                                                    <span class="msg">Hey I am waiting for you...</span>
+                                                    <span>3:15 PM</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="settings-btn">
+                                    <i class="ti-settings"></i>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="clearfix d-md-inline-block d-block">
+                            <div class="user-profile m-0">
+                                <img class="avatar user-thumb" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAMAAADW3miqAAABhlBMVEX///9nSTf8zJvCs5ZTOyrf2tf8yplpSznAsZXgs4i2jmyog2NsTjtqTTr49vXUzcjCuLGwo5z4yJj0xpf8x5XmuY2gj4aUcVV3XU6CYUn8/Pz6+fjz8vLz8e/p5Nnb1NHEu7bQxK21pp/8yZa7rJHrvZD8wo6ikojbsIaekXvEm3aRb1R7Y1JyVkVtU0NwUT339fHm39O+sqzNwqr5yZrvwJPJrJL8xZHPsY6nl460p42mlozjtYqpnob6uIX6toTWq4Kil3+biX6fk3yZhnzLoXq8lXGsh2aFb2GjfmB5WUNzVUFgSDfw7ezv7evs6eHk4N7j39zh3NnOyMXLw77KwbzXzrvXzbvRxbG0qKDHuZ6uoJi9rZfowJX2w5Oqm5Opm5Khlo/VtI6wpY77vYvVrIa6o4WYjIOei4LJo4GwnYHQpn+kln2Xg3nFnHejiHaVgna/l3OoiHC6km+Md2uDdGqxi2mQf2mRe2V5aF2BaVt/ZliFZVFoU0FhTT9UPS07JRk7JBnlPbJ0AAAByElEQVQ4y8XTZXPbQBCA4duVbFlgZrsx27ET2+EGGmgYy8zMzEz/vHtSO3PRXT7n/aC5uXm0I2lO7DAL3NrqQ7i7Ejt5IDnzHv5nrAUUIHKWjRsgljkioehsDXzlpGG3v4JU36diBijKFUUzCOpiIjpdU6NvBVFdAHUVEY2DulxEQHFQF74ioFngDe/QZSQvoGsvBHTMvW1q8tl2fjdhWtmdbNZFcekbZJMbH9PIS76z5keAGmT+SRvr25ubLnpp25YN1Gvme3DjOIqtc7QiohhtWE08OjzpAlokTP4CGRGVacNEzP1Je6j7O40m7dVEFHEAmojtIfQyaTFFqMzEXgHM4/6SAN/Zvk704AG61TEYRF4Twv5jV3beemi61fIWT4zzzN+Wk0CKT/FG5ftMKgNvkLq/tLi0yBdt/YOM1sDxvmYKeWlD/yKZQq8HYSuB/xra0/d+ST9VMRrl58S+Wa+nUraj63olSshfBR4TawdT0y0ij/Q4kyt0M4Hdz527iHij8+nHuTs/Iwo1cOq6pi08TyI+XQ5pjdKAylS1kKaFlh/iTKehUZeLClWqkgk1VmdW54hUS0zd6NjFiatzC/cmLo2Nivt/AY2zNIgEWqR4AAAAAElFTkSuQmCC" alt="avatar">
+                                <h4 class="user-name dropdown-toggle" data-bs-toggle="dropdown">Aigars <i class="fa fa-angle-down"></i></h4>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#">Message</a>
+                                    <a class="dropdown-item" href="#">Settings</a>
+                                    <a class="dropdown-item" href="#">Log Out</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- main header area end -->
+        <!-- header area start -->
+        <div class="header-area header-bottom">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-9  d-none d-lg-block">
+                        <div class="horizontal-menu">
+                            <nav>
+                                <ul id="nav_menu">
+                                    <li>
+                                        <a href="javascript:void(0)"><i class="ti-dashboard"></i><span>dashboard</span></a>
+                                        <ul class="submenu">
+                                            <li><a href="index.html">ICO dashboard</a></li>
+                                            <li><a href="index2.html">Ecommerce dashboard</a></li>
+                                            <li><a href="index3.html">SEO dashboard</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="active">
+                                        <a href="javascript:void(0)"><i class="ti-layout-sidebar-left"></i><span>Sidebar
+                                                Types</span></a>
+                                        <ul class="submenu">
+                                            <li><a href="index.html">Left Sidebar</a></li>
+                                            <li class="active"><a href="index3-horizontalmenu.html">Horizontal Sidebar</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)"><i class="ti-pie-chart"></i><span>Charts</span></a>
+                                        <ul class="submenu">
+                                            <li><a href="barchart.html">bar chart</a></li>
+                                            <li><a href="linechart.html">line Chart</a></li>
+                                            <li><a href="piechart.html">pie chart</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="mega-menu">
+                                        <a href="javascript:void(0)"><i class="ti-palette"></i><span>UI Features</span></a>
+                                        <ul class="submenu">
+                                            <li><a href="accordion.html">Accordion</a></li>
+                                            <li><a href="alert.html">Alert</a></li>
+                                            <li><a href="badge.html">Badge</a></li>
+                                            <li><a href="button.html">Button</a></li>
+                                            <li><a href="button-group.html">Button Group</a></li>
+                                            <li><a href="cards.html">Cards</a></li>
+                                            <li><a href="dropdown.html">Dropdown</a></li>
+                                            <li><a href="list-group.html">List Group</a></li>
+                                            <li><a href="media-object.html">Media Object</a></li>
+                                            <li><a href="modal.html">Modal</a></li>
+                                            <li><a href="pagination.html">Pagination</a></li>
+                                            <li><a href="popovers.html">Popover</a></li>
+                                            <li><a href="progressbar.html">Progressbar</a></li>
+                                            <li><a href="tab.html">Tab</a></li>
+                                            <li><a href="typography.html">Typography</a></li>
+                                            <li><a href="form.html">Form</a></li>
+                                            <li><a href="grid.html">grid system</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="mega-menu">
+                                        <a href="javascript:void(0)"><i class="ti-layers-alt"></i> <span>Pages</span></a>
+                                        <ul class="submenu">
+                                            <li><a href="login.html">Login</a></li>
+                                            <li><a href="login2.html">Login 2</a></li>
+                                            <li><a href="login3.html">Login 3</a></li>
+                                            <li><a href="register.html">Register</a></li>
+                                            <li><a href="register2.html">Register 2</a></li>
+                                            <li><a href="register3.html">Register 3</a></li>
+                                            <li><a href="register4.html">Register 4</a></li>
+                                            <li><a href="screenlock.html">Lock Screen</a></li>
+                                            <li><a href="screenlock2.html">Lock Screen 2</a></li>
+                                            <li><a href="reset-pass.html">reset password</a></li>
+                                            <li><a href="pricing.html">Pricing</a></li>
+                                            <li><a href="404.html">Error 404</a></li>
+                                            <li><a href="500.html">Error 500</a></li>
+                                            <li><a href="invoice.html"><i class="ti-receipt"></i> <span>Invoice Summary</span></a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)"><i class="ti-slice"></i><span>icons</span></a>
+                                        <ul class="submenu">
+                                            <li><a href="fontawesome.html">fontawesome icons</a></li>
+                                            <li><a href="themify.html">themify icons</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)"><i class="fa fa-table"></i>
+                                            <span>Tables</span></a>
+                                        <ul class="submenu">
+                                            <li><a href="table-basic.html">basic table</a></li>
+                                            <li><a href="table-layout.html">table layout</a></li>
+                                            <li><a href="datatable.html">datatable</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="maps.html"><i class="ti-map-alt"></i> <span>maps</span></a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <!-- nav and search button -->
+                    <div class="col-lg-3 clearfix">
+                        <div class="search-box">
+                            <form action="#">
+                                <input type="text" name="search" placeholder="Search..." required>
+                                <i class="ti-search"></i>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- mobile_menu -->
+                    <div class="col-12 d-block d-lg-none">
+                        <div id="mobile_menu"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- header area end -->
+        <!-- page title area end -->
+        <div class="main-content-inner">
+            <div class="container">
+                <div class="row">
+                    <!-- seo fact area start -->
+                    <div class="col-lg-8">
+                        <div class="row">
+                            <div class="col-md-6 mt-5 mb-3">
+                                <div class="card">
+                                    <div class="seo-fact sbg1">
+                                        <div class="p-4 d-flex justify-content-between align-items-center">
+                                            <div class="seofct-icon"><i class="ti-thumb-up"></i> Likes</div>
+                                            <h2>2,315</h2>
+                                        </div>
+                                        <canvas id="seolinechart1" height="50"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mt-md-5 mb-3">
+                                <div class="card">
+                                    <div class="seo-fact sbg2">
+                                        <div class="p-4 d-flex justify-content-between align-items-center">
+                                            <div class="seofct-icon"><i class="ti-share"></i> Share</div>
+                                            <h2>3,984</h2>
+                                        </div>
+                                        <canvas id="seolinechart2" height="50"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3 mb-lg-0">
+                                <div class="card">
+                                    <div class="seo-fact sbg3">
+                                        <div class="p-4 d-flex justify-content-between align-items-center">
+                                            <div class="seofct-icon">Impressions</div>
+                                            <canvas id="seolinechart3" height="60"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card">
+                                    <div class="seo-fact sbg4">
+                                        <div class="p-4 d-flex justify-content-between align-items-center">
+                                            <div class="seofct-icon">New Users</div>
+                                            <canvas id="seolinechart4" height="60"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- seo fact area end -->
+                    <!-- Social Campain area start -->
+                    <div class="col-lg-4 mt-5">
+                        <div class="card">
+                            <div class="card-body pb-0">
+                                <h4 class="header-title">Social ads Campain</h4>
+                                <div id="socialads" style="height: 245px;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Social Campain area end -->
+                    <!-- Statistics area start -->
+                    <div class="col-lg-8 mt-5">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="header-title">User Statistics</h4>
+                                <div id="user-statistics"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Statistics area end -->
+                    <!-- Advertising area start -->
+                    <div class="col-lg-4 mt-5">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="header-title">Advertising & Marketing</h4>
+                                <canvas id="seolinechart8" height="233"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Advertising area end -->
+                    <!-- sales area start -->
+                    <div class="col-xl-8 col-lg-8 mt-5">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="header-title">Sales</h4>
+                                <div id="salesanalytic"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- sales area end -->
+                    <!-- timeline area start -->
+                    <div class="col-xl-4 col-lg-4 mt-5">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="header-title">Timeline</h4>
+                                <div class="timeline-area">
+                                    <div class="timeline-task">
+                                        <div class="icon bg1">
+                                            <i class="fa fa-envelope"></i>
+                                        </div>
+                                        <div class="tm-title">
+                                            <h4>Rashed sent you an email</h4>
+                                            <span class="time"><i class="ti-time"></i>09:35</span>
+                                        </div>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse distinctio itaque at.
+                                        </p>
+                                    </div>
+                                    <div class="timeline-task">
+                                        <div class="icon bg2">
+                                            <i class="fa fa-exclamation-triangle"></i>
+                                        </div>
+                                        <div class="tm-title">
+                                            <h4>Rashed sent you an email</h4>
+                                            <span class="time"><i class="ti-time"></i>09:35</span>
+                                        </div>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse distinctio itaque at.
+                                        </p>
+                                    </div>
+                                    <div class="timeline-task">
+                                        <div class="icon bg2">
+                                            <i class="fa fa-exclamation-triangle"></i>
+                                        </div>
+                                        <div class="tm-title">
+                                            <h4>Rashed sent you an email</h4>
+                                            <span class="time"><i class="ti-time"></i>09:35</span>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-task">
+                                        <div class="icon bg3">
+                                            <i class="fa fa-bomb"></i>
+                                        </div>
+                                        <div class="tm-title">
+                                            <h4>Rashed sent you an email</h4>
+                                            <span class="time"><i class="ti-time"></i>09:35</span>
+                                        </div>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse distinctio itaque at.
+                                        </p>
+                                    </div>
+                                    <div class="timeline-task">
+                                        <div class="icon bg3">
+                                            <i class="ti-signal"></i>
+                                        </div>
+                                        <div class="tm-title">
+                                            <h4>Rashed sent you an email</h4>
+                                            <span class="time"><i class="ti-time"></i>09:35</span>
+                                        </div>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse distinctio itaque at.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- timeline area end -->
+                    <!-- map area start -->
+                    <div class="col-lg-5 mt-5">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="header-title">Marketing Area</h4>
+                                <div id="seomap"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- map area end -->
+                    <!-- testimonial area start -->
+                    <div class="col-lg-7 mt-5">
+                        <div class="card">
+                            <div class="card-body bg1">
+                                <h4 class="header-title text-white">Client Feadback</h4>
+                                <div class="testimonial-carousel owl-carousel">
+                                    <div class="tst-item">
+                                        <div class="tstu-img">
+                                            <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAAQABAAD/2wBDAAMCAgICAgMCAgIDAwMDBAYEBAQEBAgGBgUGCQgKCgkICQkKDA8MCgsOCwkJDRENDg8QEBEQCgwSExIQEw8QEBD/wAALCABLAEsBAREA/8QAGQABAQEBAQEAAAAAAAAAAAAAAAUGCAMH/8QAIxAAAQQCAwEBAAMBAAAAAAAAAQACAwQFBgcREhMUFRYhI//aAAgBAQAAPwDqBEREREREREREREREREREREREREREWD5qj1+roeR2XY7exRV8FDJcZFhM3bxs9mXz5ZD7rSMc8vcWta1xI9OH+L5dZ4h5QkwunaVV5amiycFPIZjNx3toyrrU1iR0IjjiMFmOw+rCXSRhzpugTG4h7ie/LE88bbQo8f67icbimv3qkyniJMnkJ7b8fdrz/K2+3LLL9bUTmkGF4LXvkDWOPcjSNHyDpcWe5bwGtYDat0oXrxdsGblqbXkoq9fH13MYIY6zZxC0zyuazoN6DGzkD0AVApUdz1fkHF8h7FuTNiw2y7haxVStjNlyboqccskzK3/H7inKIxGGSRfAeXB7vbi3pdHIiIpmxa3hdsxn8PsFL9VP9Na38vo9gMsEzJ4iS0gkCSNjuu+j10QQSDO2/jrUt5lp2NioWXWaDZWVrVO/YpWI45ABJGJa72PMb/LfTC7y7yOwegp8/DPGVincoSapA2vdx9TFuZHNKwQ1ari6vHB5cPzhjz7Bi8H2A7v0AVoINZwlbYrG2RUyMtaowY2Wy6V7i6tC+WSNnknyOnTSEkDs+h2T0OomP4k4/wAXs39tpYFzMgLU16NpuWH1obUwIlnirOeYIpXhz/UjGBzvbuyfR716IiIiIiIiIiIiIiIiIiIiIiIiIiIi/9k=" alt="author image">
+                                        </div>
+                                        <div class="tstu-content">
+                                            <h4 class="tstu-name">Abel Franecki</h4>
+                                            <span class="profsn">Designer</span>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae laborum ut nihil numquam a aliquam alias necessitatibus ipsa soluta quam!</p>
+                                        </div>
+                                    </div>
+                                    <div class="tst-item">
+                                        <div class="tstu-img">
+                                            <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAAQABAAD/2wBDAAMCAgICAgMCAgIDAwMDBAYEBAQEBAgGBgUGCQgKCgkICQkKDA8MCgsOCwkJDRENDg8QEBEQCgwSExIQEw8QEBD/wAALCABLAEsBAREA/8QAGQABAQEBAQEAAAAAAAAAAAAAAAUGCAMH/8QAIxAAAQQCAwEBAAMBAAAAAAAAAQACAwQFBgcREhMUFRYhI//aAAgBAQAAPwDqBEREREREREREREREREREREREREREWD5qj1+roeR2XY7exRV8FDJcZFhM3bxs9mXz5ZD7rSMc8vcWta1xI9OH+L5dZ4h5QkwunaVV5amiycFPIZjNx3toyrrU1iR0IjjiMFmOw+rCXSRhzpugTG4h7ie/LE88bbQo8f67icbimv3qkyniJMnkJ7b8fdrz/K2+3LLL9bUTmkGF4LXvkDWOPcjSNHyDpcWe5bwGtYDat0oXrxdsGblqbXkoq9fH13MYIY6zZxC0zyuazoN6DGzkD0AVApUdz1fkHF8h7FuTNiw2y7haxVStjNlyboqccskzK3/H7inKIxGGSRfAeXB7vbi3pdHIiIpmxa3hdsxn8PsFL9VP9Na38vo9gMsEzJ4iS0gkCSNjuu+j10QQSDO2/jrUt5lp2NioWXWaDZWVrVO/YpWI45ABJGJa72PMb/LfTC7y7yOwegp8/DPGVincoSapA2vdx9TFuZHNKwQ1ari6vHB5cPzhjz7Bi8H2A7v0AVoINZwlbYrG2RUyMtaowY2Wy6V7i6tC+WSNnknyOnTSEkDs+h2T0OomP4k4/wAXs39tpYFzMgLU16NpuWH1obUwIlnirOeYIpXhz/UjGBzvbuyfR716IiIiIiIiIiIiIiIiIiIiIiIiIiIi/9k=" alt="author image">
+                                        </div>
+                                        <div class="tstu-content">
+                                            <h4 class="tstu-name">Abel Franecki</h4>
+                                            <span class="profsn">Designer</span>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae laborum ut nihil numquam a aliquam alias necessitatibus ipsa soluta quam!</p>
+                                        </div>
+                                    </div>
+                                    <div class="tst-item">
+                                        <div class="tstu-img">
+                                            <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAAQABAAD/2wBDAAMCAgICAgMCAgIDAwMDBAYEBAQEBAgGBgUGCQgKCgkICQkKDA8MCgsOCwkJDRENDg8QEBEQCgwSExIQEw8QEBD/wAALCABLAEsBAREA/8QAGQABAQEBAQEAAAAAAAAAAAAAAAUGCAMH/8QAIxAAAQQCAwEBAAMBAAAAAAAAAQACAwQFBgcREhMUFRYhI//aAAgBAQAAPwDqBEREREREREREREREREREREREREREWD5qj1+roeR2XY7exRV8FDJcZFhM3bxs9mXz5ZD7rSMc8vcWta1xI9OH+L5dZ4h5QkwunaVV5amiycFPIZjNx3toyrrU1iR0IjjiMFmOw+rCXSRhzpugTG4h7ie/LE88bbQo8f67icbimv3qkyniJMnkJ7b8fdrz/K2+3LLL9bUTmkGF4LXvkDWOPcjSNHyDpcWe5bwGtYDat0oXrxdsGblqbXkoq9fH13MYIY6zZxC0zyuazoN6DGzkD0AVApUdz1fkHF8h7FuTNiw2y7haxVStjNlyboqccskzK3/H7inKIxGGSRfAeXB7vbi3pdHIiIpmxa3hdsxn8PsFL9VP9Na38vo9gMsEzJ4iS0gkCSNjuu+j10QQSDO2/jrUt5lp2NioWXWaDZWVrVO/YpWI45ABJGJa72PMb/LfTC7y7yOwegp8/DPGVincoSapA2vdx9TFuZHNKwQ1ari6vHB5cPzhjz7Bi8H2A7v0AVoINZwlbYrG2RUyMtaowY2Wy6V7i6tC+WSNnknyOnTSEkDs+h2T0OomP4k4/wAXs39tpYFzMgLU16NpuWH1obUwIlnirOeYIpXhz/UjGBzvbuyfR716IiIiIiIiIiIiIiIiIiIiIiIiIiIi/9k=" alt="author image">
+                                        </div>
+                                        <div class="tstu-content">
+                                            <h4 class="tstu-name">Abel Franecki</h4>
+                                            <span class="profsn">Designer</span>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae laborum ut nihil numquam a aliquam alias necessitatibus ipsa soluta quam!</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- testimonial area end -->
+                </div>
+            </div>
+        </div>
+        <!-- main content area end -->
+        <!-- footer area start-->
+        <footer>
+            <div class="footer-area">
+                <p>© Copyright 2025. All right reserved. Template by <a href="https://colorlib.com/wp/">Colorlib</a>.</p>
+            </div>
+        </footer>
+        <!-- footer area end-->
+    </div>
+    <!-- main wrapper start -->
+    <!-- offset area start -->
+    <div class="offset-area">
+        <div class="offset-btn-close"><i class="ti-btn-close"></i></div>
+        <ul class="nav offset-menu-tab">
+            <li><a class="active" data-bs-toggle="tab" href="#activity">Activity</a></li>
+            <li><a data-bs-toggle="tab" href="#settings">Settings</a></li>
+        </ul>
+        <div class="offset-content tab-content">
+            <div id="activity" class="tab-pane fade in show active">
+                <div class="recent-activity">
+                    <div class="timeline-task">
+                        <div class="icon bg1">
+                            <i class="fa fa-envelope"></i>
+                        </div>
+                        <div class="tm-title">
+                            <h4>Rashed sent you an email</h4>
+                            <span class="time"><i class="ti-time"></i>09:35</span>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse distinctio itaque at.
+                        </p>
+                    </div>
+                    <div class="timeline-task">
+                        <div class="icon bg2">
+                            <i class="fa fa-check"></i>
+                        </div>
+                        <div class="tm-title">
+                            <h4>Added</h4>
+                            <span class="time"><i class="ti-time"></i>7 Minutes Ago</span>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur.
+                        </p>
+                    </div>
+                    <div class="timeline-task">
+                        <div class="icon bg2">
+                            <i class="fa fa-exclamation-triangle"></i>
+                        </div>
+                        <div class="tm-title">
+                            <h4>You missed you Password!</h4>
+                            <span class="time"><i class="ti-time"></i>09:20 Am</span>
+                        </div>
+                    </div>
+                    <div class="timeline-task">
+                        <div class="icon bg3">
+                            <i class="fa fa-bomb"></i>
+                        </div>
+                        <div class="tm-title">
+                            <h4>Member waiting for you Attention</h4>
+                            <span class="time"><i class="ti-time"></i>09:35</span>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse distinctio itaque at.
+                        </p>
+                    </div>
+                    <div class="timeline-task">
+                        <div class="icon bg3">
+                            <i class="ti-signal"></i>
+                        </div>
+                        <div class="tm-title">
+                            <h4>You Added Kaji Patha few minutes ago</h4>
+                            <span class="time"><i class="ti-time"></i>01 minutes ago</span>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse distinctio itaque at.
+                        </p>
+                    </div>
+                    <div class="timeline-task">
+                        <div class="icon bg1">
+                            <i class="fa fa-envelope"></i>
+                        </div>
+                        <div class="tm-title">
+                            <h4>Ratul Hamba sent you an email</h4>
+                            <span class="time"><i class="ti-time"></i>09:35</span>
+                        </div>
+                        <p>Hello sir , where are you, i am egerly waiting for you.
+                        </p>
+                    </div>
+                    <div class="timeline-task">
+                        <div class="icon bg2">
+                            <i class="fa fa-exclamation-triangle"></i>
+                        </div>
+                        <div class="tm-title">
+                            <h4>Rashed sent you an email</h4>
+                            <span class="time"><i class="ti-time"></i>09:35</span>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse distinctio itaque at.
+                        </p>
+                    </div>
+                    <div class="timeline-task">
+                        <div class="icon bg2">
+                            <i class="fa fa-exclamation-triangle"></i>
+                        </div>
+                        <div class="tm-title">
+                            <h4>Rashed sent you an email</h4>
+                            <span class="time"><i class="ti-time"></i>09:35</span>
+                        </div>
+                    </div>
+                    <div class="timeline-task">
+                        <div class="icon bg3">
+                            <i class="fa fa-bomb"></i>
+                        </div>
+                        <div class="tm-title">
+                            <h4>Rashed sent you an email</h4>
+                            <span class="time"><i class="ti-time"></i>09:35</span>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse distinctio itaque at.
+                        </p>
+                    </div>
+                    <div class="timeline-task">
+                        <div class="icon bg3">
+                            <i class="ti-signal"></i>
+                        </div>
+                        <div class="tm-title">
+                            <h4>Rashed sent you an email</h4>
+                            <span class="time"><i class="ti-time"></i>09:35</span>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse distinctio itaque at.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div id="settings" class="tab-pane fade">
+                <div class="offset-settings">
+                    <h4>General Settings</h4>
+                    <div class="settings-list">
+                        <div class="s-settings">
+                            <div class="s-sw-title">
+                                <h5>Notifications</h5>
+                                <div class="s-swtich">
+                                    <input type="checkbox" id="switch1" />
+                                    <label for="switch1">Toggle</label>
+                                </div>
+                            </div>
+                            <p>Keep it 'On' When you want to get all the notification.</p>
+                        </div>
+                        <div class="s-settings">
+                            <div class="s-sw-title">
+                                <h5>Show recent activity</h5>
+                                <div class="s-swtich">
+                                    <input type="checkbox" id="switch2" />
+                                    <label for="switch2">Toggle</label>
+                                </div>
+                            </div>
+                            <p>The for attribute is necessary to bind our custom checkbox with the input.</p>
+                        </div>
+                        <div class="s-settings">
+                            <div class="s-sw-title">
+                                <h5>Show your emails</h5>
+                                <div class="s-swtich">
+                                    <input type="checkbox" id="switch3" />
+                                    <label for="switch3">Toggle</label>
+                                </div>
+                            </div>
+                            <p>Show email so that easily find you.</p>
+                        </div>
+                        <div class="s-settings">
+                            <div class="s-sw-title">
+                                <h5>Show Task statistics</h5>
+                                <div class="s-swtich">
+                                    <input type="checkbox" id="switch4" />
+                                    <label for="switch4">Toggle</label>
+                                </div>
+                            </div>
+                            <p>The for attribute is necessary to bind our custom checkbox with the input.</p>
+                        </div>
+                        <div class="s-settings">
+                            <div class="s-sw-title">
+                                <h5>Notifications</h5>
+                                <div class="s-swtich">
+                                    <input type="checkbox" id="switch5" />
+                                    <label for="switch5">Toggle</label>
+                                </div>
+                            </div>
+                            <p>Use checkboxes when looking for yes or no answers.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- offset area end -->
+    <!-- jquery latest version -->
+    <script src="assets/js/vendor/jquery-2.2.4.min.js"></script>
+    <!-- bootstrap 4 js -->
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/metisMenu.min.js"></script>
+    <script src="assets/js/jquery.slimscroll.min.js"></script>
+    <script src="assets/js/jquery.slicknav.min.js"></script>
+
+    <!-- start chart js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+    <!-- start highcharts js -->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <!-- start amcharts -->
+    <script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+    <script src="https://www.amcharts.com/lib/3/ammap.js"></script>
+    <script src="https://www.amcharts.com/lib/3/maps/js/worldLow.js"></script>
+    <script src="https://www.amcharts.com/lib/3/serial.js"></script>
+    <script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
+    <script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
+    <!-- all line chart activation -->
+    <script src="assets/js/line-chart.js"></script>
+    <!-- all pie chart -->
+    <script src="assets/js/pie-chart.js"></script>
+    <!-- all bar chart -->
+    <script src="assets/js/bar-chart.js"></script>
+    <!-- all map chart -->
+    <script src="assets/js/maps.js"></script>
+    <!-- others plugins -->
+    <script src="assets/js/plugins.js"></script>
+    <script src="assets/js/scripts.js"></script>
+</body>
+
+</html>

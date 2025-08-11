@@ -2,7 +2,7 @@
 @import "variables";
 
 // Bootstrap 5
-@import "bootstrap/scss/bootstrap";
+@import "../../node_modules/bootstrap/scss/bootstrap";
 
 // Font Awesome
 @import "@fortawesome/fontawesome-free/css/all.css";
@@ -13,6 +13,7 @@
 @import "components/footer";
 @import "components/cards";
 @import "components/preloader";
+@import "components/icons-fix";
 
 // Layouts
 @import "layouts/dashboard";

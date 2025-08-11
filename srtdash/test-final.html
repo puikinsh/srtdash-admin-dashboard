@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Final Test</title>
+    <link rel="stylesheet" href="/src/scss/main.scss">
+</head>
+<body>
+    <div style="padding: 20px;">
+        <h2>Final Dropdown Test</h2>
+        
+        <ul class="notification-area" style="list-style: none; display: flex; gap: 20px;">
+            <li class="dropdown">
+                <i class="ti-bell dropdown-toggle" data-bs-toggle="dropdown" style="font-size: 24px; cursor: pointer;">
+                    <span style="background: red; color: white; padding: 2px 5px; border-radius: 10px; font-size: 10px;">2</span>
+                </i>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Test Notification 1</a>
+                    <a class="dropdown-item" href="#">Test Notification 2</a>
+                </div>
+            </li>
+            <li class="settings-btn">
+                <i class="ti-settings" style="font-size: 24px; cursor: pointer;"></i>
+            </li>
+        </ul>
+    </div>
+    
+    <div class="offset-area" style="position: fixed; right: -300px; top: 0; width: 300px; height: 100vh; background: white; box-shadow: -2px 0 5px rgba(0,0,0,0.1); transition: right 0.3s;">
+        <div class="offset-btn-close" style="padding: 10px; cursor: pointer; background: #f0f0f0;">
+            <i class="ti-close"></i> Close Panel
+        </div>
+        <div style="padding: 20px;">
+            <h4>Settings Panel</h4>
+            <p>This is a test panel.</p>
+        </div>
+    </div>
+    
+    <style>
+        .offset-area.show_hide {
+            right: 0 !important;
+        }
+        .dropdown-menu.show {
+            display: block !important;
+        }
+    </style>
+    
+    <!-- Load our modern scripts -->
+    <script type="module" src="/src/js/main.js"></script>
+    
+    <script type="module">
+        // Direct inline test
+        console.log('Test page loaded');
+        
+        setTimeout(() => {
+            const settingsBtn = document.querySelector('.settings-btn');
+            const offsetArea = document.querySelector('.offset-area');
+            const closeBtn = document.querySelector('.offset-btn-close');
+            
+            console.log('Elements found:', {
+                settings: !!settingsBtn,
+                offset: !!offsetArea,
+                close: !!closeBtn
+            });
+        }, 1000);
+    </script>
+</body>
+</html>

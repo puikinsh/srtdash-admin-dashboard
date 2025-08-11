@@ -1,0 +1,163 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>srtdash - Starter Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/png" href="assets/images/icon/favicon.ico">
+    <!-- amchart css -->
+    <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
+    <!-- others css -->
+    <!-- modernizr css -->
+    <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/css/styles-7Tr2JQDF.css">
+  <link rel="stylesheet" crossorigin href="./assets/css/responsive-CB_u9RJp.css">
+  <link rel="stylesheet" crossorigin href="./assets/css/slicknav-Cilffaa_.css">
+</head>
+
+<body>
+    <div class="page-container">
+        <div class="main-content">
+            <!-- header area start -->
+            <div class="header-area">
+                <div class="row align-items-center">
+                    <!-- nav and search button -->
+                    <div class="col-md-6 col-sm-8 clearfix">
+                        <div class="nav-btn pull-left">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div class="search-box pull-left">
+                            <form action="#">
+                                <input type="text" name="search" placeholder="Search..." required>
+                                <i class="ti-search"></i>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- profile info & task notification -->
+                    <div class="col-md-6 col-sm-4 clearfix">
+                        <ul class="notification-area pull-right">
+                            <li id="full-view"><i class="ti-fullscreen"></i></li>
+                            <li id="full-view-exit"><i class="ti-zoom-out"></i></li>
+                            <li class="dropdown">
+                                <button type="button" style="background:none;border:none;font-size:24px;color:inherit;cursor:pointer;position:relative;">
+                                    <i class="ti-bell"></i>
+                                    <span style="position:absolute;top:-5px;right:-5px;background:#dc3545;color:white;border-radius:50%;width:16px;height:16px;font-size:10px;display:flex;align-items:center;justify-content:center;">2</span>
+                                </button>
+                                <div class="dropdown-menu" style="position:absolute;top:100%;right:0;z-index:9999;background:white;border:1px solid #ddd;border-radius:4px;box-shadow:0 4px 8px rgba(0,0,0,0.1);width:300px;display:none;">
+                                    <div style="padding:15px;border-bottom:1px solid #eee;">
+                                        <h6 style="margin:0;">Notifications <span style="background:#dc3545;color:white;padding:2px 6px;border-radius:12px;font-size:10px;">3</span></h6>
+                                        <small style="color:#666;">You have 3 new notifications</small>
+                                    </div>
+                                    <div style="padding:5px 0;max-height:300px;overflow-y:auto;">
+                                        <a href="#" style="display:flex;align-items:center;padding:10px 15px;color:#333;text-decoration:none;border-bottom:1px solid #f0f0f0;">
+                                            <div style="width:40px;height:40px;background:#dc3545;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-right:10px;">
+                                                <i class="ti-key" style="color:white;"></i>
+                                            </div>
+                                            <div style="flex:1;">
+                                                <div style="font-weight:600;">Password Changed</div>
+                                                <div style="font-size:12px;color:#666;">You have changed your password</div>
+                                                <div style="font-size:11px;color:#999;">Just now</div>
+                                            </div>
+                                        </a>
+                                        <a href="#" style="display:flex;align-items:center;padding:10px 15px;color:#333;text-decoration:none;border-bottom:1px solid #f0f0f0;">
+                                            <div style="width:40px;height:40px;background:#17a2b8;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-right:10px;">
+                                                <i class="ti-comments-smiley" style="color:white;"></i>
+                                            </div>
+                                            <div style="flex:1;">
+                                                <div style="font-weight:600;">New Comments</div>
+                                                <div style="font-size:12px;color:#666;">New comments on post</div>
+                                                <div style="font-size:11px;color:#999;">30 seconds ago</div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="dropdown">
+                                <button type="button" style="background:none;border:none;font-size:24px;color:inherit;cursor:pointer;position:relative;">
+                                    <i class="fa fa-envelope-o"></i>
+                                    <span style="position:absolute;top:-5px;right:-5px;background:#28a745;color:white;border-radius:50%;width:16px;height:16px;font-size:10px;display:flex;align-items:center;justify-content:center;">3</span>
+                                </button>
+                                <div class="dropdown-menu" style="position:absolute;top:100%;right:0;z-index:9999;background:white;border:1px solid #ddd;border-radius:4px;box-shadow:0 4px 8px rgba(0,0,0,0.1);width:300px;display:none;">
+                                    <div style="padding:15px;border-bottom:1px solid #eee;">
+                                        <h6 style="margin:0;">Messages <span style="background:#28a745;color:white;padding:2px 6px;border-radius:12px;font-size:10px;">3</span></h6>
+                                        <small style="color:#666;">You have 3 new messages</small>
+                                    </div>
+                                    <div style="padding:5px 0;max-height:300px;overflow-y:auto;">
+                                        <a href="#" style="display:flex;align-items:center;padding:10px 15px;color:#333;text-decoration:none;border-bottom:1px solid #f0f0f0;">
+                                            <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAAQABAAD/2wBDAAMCAgICAgMCAgIDAwMDBAYEBAQEBAgGBgUGCQgKCgkICQkKDA8MCgsOCwkJDRENDg8QEBEQCgwSExIQEw8QEBD/wAALCABQAFABAREA/8QAGgABAAMAAwAAAAAAAAAAAAAAAAEGBwMFCP/EACYQAAAHAAMAAgICAwAAAAAAAAABAgMEBQYHERITIRQiCBUXIzH/2gAIAQEAAD8A9QAAAAAAAAAAAAAAAAAAAAAAAAAAAAzH+QGzvMTlaiZS3K6hFhfQ66dOjxES5keK4S/SosZRK+d41JQRIJDhklS1EhXkZ5mOWOQNVS0+UrNcr83Qbafn4WhfrWWp7dZEhrlOOvQ1IJDMozaU0SHGk/qpDhtl2RHas9zHJxcm8y3J82VZHn9RHoF6JEZlplLMuKzIiPzCSaUtdqfJhS0I8e/BmSCUfXSb7nKTbMYuxy97e5jMaSXZtHaQ6ZqwspiI6CNh2LE8PrVGd/2KN34TUSUtmZIJwlDixfI/JXJ8HAZeLr2qSfd0trf2lzXxIzzzkaLLbjRkobcJ1lpx35kLdSaTNCkLQXk++tO4b11zr8c47pVsuXNNa2NDYPMN/G3IehynGDeSns/JOE2lfn/hGoyL6IXkAAUTlDE6HSS8vp8hIriu8jaLsYsayUtMSWlyM7HdaWtCVKbPw8ZpcJKvKkl+pkZikf4X3yrB3kz8/Pt7tWnb0TcJDj39WlpNf/XqiG94+QzUwalG98Xfvz+nRdHE/hHbaikuanU2dM0XIN+ix2X4Tzx/HWsx2mWoERSmyNfpMdpC3VfGZEt00p7NPU03FXLmUl5u/q7LNXdrk4E/Mx0WUl9hE6mdcYXHdccbZUbMpBR20rJKHELLs+0mf1FJwtvsRJp9tl7DP2GsQ9druIsxx6LXyEWkpEpxtlxCHFtk06034M0K9l778mr60TivEzMFkU1NrPZnWs2dNt7OSyg0NOTJchyQ94Sf2SCU4aU9/flJd/Yt4AAAAAAAAAAAAAAAAAAAAAAAAAAAP//Z" style="width:40px;height:40px;border-radius:50%;margin-right:10px;object-fit:cover;" alt="avatar">
+                                            <div style="flex:1;">
+                                                <div style="font-weight:600;">Aglae Mayer</div>
+                                                <div style="font-size:12px;color:#666;">Hey I am waiting for you...</div>
+                                                <div style="font-size:11px;color:#999;">3:15 PM</div>
+                                            </div>
+                                        </a>
+                                        <a href="#" style="display:flex;align-items:center;padding:10px 15px;color:#333;text-decoration:none;border-bottom:1px solid #f0f0f0;">
+                                            <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAAQABAAD/2wBDAAMCAgICAgMCAgIDAwMDBAYEBAQEBAgGBgUGCQgKCgkICQkKDA8MCgsOCwkJDRENDg8QEBEQCgwSExIQEw8QEBD/wAALCABQAFABAREA/8QAGgABAAMAAwAAAAAAAAAAAAAAAAEGBwMFCP/EACYQAAAHAAMAAgICAwAAAAAAAAABAgMEBQYHERITIRQiCBUXIzH/2gAIAQEAAD8A9QAAAAAAAAAAAAAAAAAAAAAAAAAAAAzH+QGzvMTlaiZS3K6hFhfQ66dOjxES5keK4S/SosZRK+d41JQRIJDhklS1EhXkZ5mOWOQNVS0+UrNcr83Qbafn4WhfrWWp7dZEhrlOOvQ1IJDMozaU0SHGk/qpDhtl2RHas9zHJxcm8y3J82VZHn9RHoF6JEZlplLMuKzIiPzCSaUtdqfJhS0I8e/BmSCUfXSb7nKTbMYuxy97e5jMaSXZtHaQ6ZqwspiI6CNh2LE8PrVGd/2KN34TUSUtmZIJwlDixfI/JXJ8HAZeLr2qSfd0trf2lzXxIzzzkaLLbjRkobcJ1lpx35kLdSaTNCkLQXk++tO4b11zr8c47pVsuXNNa2NDYPMN/G3IehynGDeSns/JOE2lfn/hGoyL6IXkAAUTlDE6HSS8vp8hIriu8jaLsYsayUtMSWlyM7HdaWtCVKbPw8ZpcJKvKkl+pkZikf4X3yrB3kz8/Pt7tWnb0TcJDj39WlpNf/XqiG94+QzUwalG98Xfvz+nRdHE/hHbaikuanU2dM0XIN+ix2X4Tzx/HWsx2mWoERSmyNfpMdpC3VfGZEt00p7NPU03FXLmUl5u/q7LNXdrk4E/Mx0WUl9hE6mdcYXHdccbZUbMpBR20rJKHELLs+0mf1FJwtvsRJp9tl7DP2GsQ9druIsxx6LXyEWkpEpxtlxCHFtk06034M0K9l778mr60TivEzMFkU1NrPZnWs2dNt7OSyg0NOTJchyQ94Sf2SCU4aU9/flJd/Yt4AAAAAAAAAAAAAAAAAAAAAAAAAAAP//Z" style="width:40px;height:40px;border-radius:50%;margin-right:10px;object-fit:cover;" alt="avatar">
+                                            <div style="flex:1;">
+                                                <div style="font-weight:600;">John Smith</div>
+                                                <div style="font-size:12px;color:#666;">When you can connect with me...</div>
+                                                <div style="font-size:11px;color:#999;">2:45 PM</div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="settings-btn">
+                                <i class="ti-settings"></i>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- header area end -->
+            
+            <div class="main-content-inner">
+                <h1>Simple Test Page</h1>
+                <p>This is a minimal test page to verify dropdown functionality works.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/vendor/jquery-2.2.4.min.js"></script>
+    <script src="assets/js/scripts.js"></script>
+
+    <script>
+    $(document).ready(function() {
+        console.log('SIMPLE DROPDOWN TEST');
+        
+        // EXTREMELY SIMPLE DROPDOWN CODE
+        $('.notification-area .dropdown button').on('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            console.log('Button clicked!');
+            
+            var menu = $(this).next('.dropdown-menu');
+            var isVisible = menu.is(':visible');
+            
+            // Close all dropdowns
+            $('.notification-area .dropdown-menu').hide();
+            
+            // Show this dropdown if it wasn't visible
+            if (!isVisible) {
+                menu.show();
+                console.log('Menu shown');
+            }
+        });
+        
+        // Close dropdowns when clicking outside
+        $(document).on('click', function(e) {
+            if (!$(e.target).closest('.notification-area .dropdown').length) {
+                $('.notification-area .dropdown-menu').hide();
+            }
+        });
+        
+        console.log('Simple dropdowns ready!');
+    });
+    </script>
+</body>
+</html>

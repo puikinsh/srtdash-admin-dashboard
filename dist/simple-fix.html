@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Working Solution</title>
+    <style>
+        /* Simple fixes for dropdowns and settings panel */
+        .notification-area .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            left: auto;
+            display: none;
+        }
+        
+        .notification-area .dropdown-menu.show {
+            display: block !important;
+        }
+        
+        .notification-area .dropdown > i {
+            cursor: pointer;
+            font-size: 24px !important;
+            text-shadow: none !important;
+        }
+        
+        .offset-area {
+            transition: right 0.3s ease;
+        }
+        
+        .offset-area.show_hide {
+            right: 0 !important;
+        }
+        
+        .offset-close-btn {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            cursor: pointer;
+            font-size: 24px;
+            color: #333;
+            z-index: 10;
+        }
+        
+        .offset-close-btn:hover {
+            color: #dc3545;
+        }
+        
+        .offset-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1040;
+            display: none;
+        }
+        
+        .offset-overlay.show {
+            display: block;
+        }
+    </style>
+  <link rel="stylesheet" crossorigin href="./assets/css/styles-7Tr2JQDF.css">
+</head>
+<body>
+    <!-- Copy your existing HTML structure here -->
+    <div class="header-area" style="padding: 20px; background: #f8f9fa;">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Simple Working Demo</h3>
+            </div>
+            <div class="col-md-6">
+                <ul class="notification-area pull-right">
+                    <li class="dropdown">
+                        <i class="ti-bell dropdown-toggle">
+                            <span>2</span>
+                        </i>
+                        <div class="dropdown-menu bell-notify-box">
+                            <span class="notify-title">You have 3 new notifications</span>
+                            <div class="nofity-list">
+                                <a href="#" class="notify-item">
+                                    <div class="notify-text">
+                                        <p>Notification 1</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="notify-item">
+                                    <div class="notify-text">
+                                        <p>Notification 2</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <i class="fa fa-envelope-o dropdown-toggle">
+                            <span>3</span>
+                        </i>
+                        <div class="dropdown-menu">
+                            <span class="notify-title">You have 3 new messages</span>
+                            <div class="nofity-list">
+                                <a href="#" class="notify-item">
+                                    <div class="notify-text">
+                                        <p>Message 1</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="notify-item">
+                                    <div class="notify-text">
+                                        <p>Message 2</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="settings-btn">
+                        <i class="ti-settings"></i>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Settings panel -->
+    <div class="offset-area">
+        <div class="offset-close-btn">
+            <i class="ti-close"></i>
+        </div>
+        <div class="offset-content" style="padding: 20px;">
+            <h4>Settings Panel</h4>
+            <p>Click the X button or click outside to close this panel.</p>
+        </div>
+    </div>
+    
+    <!-- Overlay for clicking outside -->
+    <div class="offset-overlay"></div>
+    
+    <!-- Simple vanilla JavaScript that actually works -->
+    <script>
+        // Wait for DOM to load
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            // Dropdown functionality
+            document.querySelectorAll('.notification-area .dropdown > i').forEach(function(icon) {
+                icon.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    
+                    // Get the dropdown menu
+                    const dropdownMenu = this.parentElement.querySelector('.dropdown-menu');
+                    
+                    // Close all other dropdowns
+                    document.querySelectorAll('.notification-area .dropdown-menu').forEach(function(menu) {
+                        if (menu !== dropdownMenu) {
+                            menu.classList.remove('show');
+                        }
+                    });
+                    
+                    // Toggle this dropdown
+                    if (dropdownMenu) {
+                        dropdownMenu.classList.toggle('show');
+                    }
+                });
+            });
+            
+            // Close dropdowns when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!e.target.closest('.notification-area .dropdown')) {
+                    document.querySelectorAll('.notification-area .dropdown-menu').forEach(function(menu) {
+                        menu.classList.remove('show');
+                    });
+                }
+            });
+            
+            // Settings panel functionality
+            const settingsBtn = document.querySelector('.settings-btn');
+            const offsetArea = document.querySelector('.offset-area');
+            const offsetCloseBtn = document.querySelector('.offset-close-btn');
+            const offsetOverlay = document.querySelector('.offset-overlay');
+            
+            // Open settings panel
+            if (settingsBtn) {
+                settingsBtn.addEventListener('click', function() {
+                    if (offsetArea) {
+                        offsetArea.classList.add('show_hide');
+                        offsetOverlay.classList.add('show');
+                    }
+                });
+            }
+            
+            // Close settings panel with X button
+            if (offsetCloseBtn) {
+                offsetCloseBtn.addEventListener('click', function() {
+                    if (offsetArea) {
+                        offsetArea.classList.remove('show_hide');
+                        offsetOverlay.classList.remove('show');
+                    }
+                });
+            }
+            
+            // Close settings panel when clicking overlay (outside)
+            if (offsetOverlay) {
+                offsetOverlay.addEventListener('click', function() {
+                    if (offsetArea) {
+                        offsetArea.classList.remove('show_hide');
+                        offsetOverlay.classList.remove('show');
+                    }
+                });
+            }
+            
+            console.log('Simple fix loaded and working!');
+        });
+    </script>
+</body>
+</html>
