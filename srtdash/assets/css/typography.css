@@ -135,7 +135,8 @@ blockquote{
 }
 blockquote:before{
     content: '\f10d';
-    font-family: fontawesome;
+    font-family: "Font Awesome 7 Free";
+    font-weight: 900;
     color: #fff;
     font-size: 32px;
     position: absolute;

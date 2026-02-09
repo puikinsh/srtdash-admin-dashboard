@@ -191,7 +191,8 @@ a:hover {
 .metismenu li a:after {
     position: absolute;
     content: '\f107';
-    font-family: fontawesome;
+    font-family: "Font Awesome 7 Free";
+    font-weight: 900;
     right: 15px;
     top: 12px;
     color: #8d97ad;
@@ -1645,7 +1646,8 @@ table.dbkit-table tr td {
 
 .accordion-s2 .card-header a:before {
     content: "\f106";
-    font-family: fontawesome;
+    font-family: "Font Awesome 7 Free";
+    font-weight: 900;
     position: absolute;
     right: 13px;
     color: #444;
