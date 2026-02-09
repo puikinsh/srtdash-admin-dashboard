@@ -1,11 +1,11 @@
 /*--------------------------------------------
 
-    Template Name: srtdash - Bootstrap 4 Admin and Ui Kit
+    Template Name: srtdash - Bootstrap 5 Admin and Ui Kit
     Template URI: http://tf.itech-theme.com/srtdash-preview
-    Description: This is Bootstrap 4 Admin Template and Ui Kit
+    Description: This is Bootstrap 5 Admin Template and Ui Kit
     Author: cdibrandstudio
     Author https://themeforest.net/user/cdibrandstudio
-    Version: 1.0
+    Version: 2.0
 
 ----------------------------------------------
     
@@ -53,6 +53,14 @@
 
 
 /*------------------------- 1. Core Css -------------------*/
+
+/* Bootstrap 5 link underline reset */
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+}
 
 .page-container {
     width: 100%;

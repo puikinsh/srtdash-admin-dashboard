@@ -25,9 +25,6 @@
 </head>
 
 <body>
-    <!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
     <!-- preloader area start -->
     <div id="preloader">
         <div class="loader"></div>
@@ -183,7 +180,7 @@
                             <li id="full-view"><i class="ti-fullscreen"></i></li>
                             <li id="full-view-exit"><i class="ti-zoom-out"></i></li>
                             <li class="dropdown">
-                                <i class="ti-bell dropdown-toggle" data-toggle="dropdown">
+                                <i class="ti-bell dropdown-toggle" data-bs-toggle="dropdown">
                                     <span>2</span>
                                 </i>
                                 <div class="dropdown-menu bell-notify-box notify-box">
@@ -242,7 +239,7 @@
                                 </div>
                             </li>
                             <li class="dropdown">
-                                <i class="fa fa-envelope-o dropdown-toggle" data-toggle="dropdown"><span>3</span></i>
+                                <i class="fa fa-envelope-o dropdown-toggle" data-bs-toggle="dropdown"><span>3</span></i>
                                 <div class="dropdown-menu notify-box nt-enveloper-box">
                                     <span class="notify-title">You have 3 new notifications <a href="#">view all</a></span>
                                     <div class="nofity-list">
@@ -342,7 +339,7 @@
                     <div class="col-sm-6 clearfix">
                         <div class="user-profile pull-right">
                             <img class="avatar user-thumb" src="assets/images/author/avatar.png" alt="avatar">
-                            <h4 class="user-name dropdown-toggle" data-toggle="dropdown">Kumkum Rai <i class="fa fa-angle-down"></i></h4>
+                            <h4 class="user-name dropdown-toggle" data-bs-toggle="dropdown">Kumkum Rai <i class="fa fa-angle-down"></i></h4>
                             <div class="dropdown-menu">
                                 <a class="dropdown-item" href="#">Message</a>
                                 <a class="dropdown-item" href="#">Settings</a>
@@ -421,7 +418,7 @@
                                         </div>
                                         <div class="form-group">
                                             <label class="col-form-label">Custom Select</label>
-                                            <select class="custom-select">
+                                            <select class="form-select">
                                                 <option selected="selected">Open this select menu</option>
                                                 <option value="1">One</option>
                                                 <option value="2">Two</option>
@@ -466,30 +463,30 @@
                                         <p class="text-muted mb-3">For even more customization and cross browser consistency, use our completely custom form elements to replace the browser defaults. They’re built on top of semantic and accessible markup, so they’re solid replacements for any default form control.</p>
                                         <form action="#">
                                             <b class="text-muted mb-3 d-block">Radios:</b>
-                                            <div class="custom-control custom-radio">
-                                                <input type="radio" checked id="customRadio1" name="customRadio" class="custom-control-input">
-                                                <label class="custom-control-label" for="customRadio1">Checked Radios</label>
+                                            <div class="form-check">
+                                                <input type="radio" checked id="customRadio1" name="customRadio" class="form-check-input">
+                                                <label class="form-check-label" for="customRadio1">Checked Radios</label>
                                             </div>
-                                            <div class="custom-control custom-radio">
-                                                <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
-                                                <label class="custom-control-label" for="customRadio2">Unchecked Radios</label>
+                                            <div class="form-check">
+                                                <input type="radio" id="customRadio2" name="customRadio" class="form-check-input">
+                                                <label class="form-check-label" for="customRadio2">Unchecked Radios</label>
                                             </div>
-                                            <div class="custom-control custom-radio">
-                                                <input type="radio" checked disabled id="customRadio3" name="customRadio33" class="custom-control-input">
-                                                <label class="custom-control-label" for="customRadio3">Disabled Radios</label>
+                                            <div class="form-check">
+                                                <input type="radio" checked disabled id="customRadio3" name="customRadio33" class="form-check-input">
+                                                <label class="form-check-label" for="customRadio3">Disabled Radios</label>
                                             </div>
                                             <b class="text-muted mb-3 mt-4 d-block">Inline Radios:</b>
-                                            <div class="custom-control custom-radio custom-control-inline">
-                                                <input type="radio" checked id="customRadio4" name="customRadio2" class="custom-control-input">
-                                                <label class="custom-control-label" for="customRadio4">Checked Radios</label>
+                                            <div class="form-check form-check-inline">
+                                                <input type="radio" checked id="customRadio4" name="customRadio2" class="form-check-input">
+                                                <label class="form-check-label" for="customRadio4">Checked Radios</label>
                                             </div>
-                                            <div class="custom-control custom-radio custom-control-inline">
-                                                <input type="radio" id="customRadio5" name="customRadio2" class="custom-control-input">
-                                                <label class="custom-control-label" for="customRadio5">Unchecked Radios</label>
+                                            <div class="form-check form-check-inline">
+                                                <input type="radio" id="customRadio5" name="customRadio2" class="form-check-input">
+                                                <label class="form-check-label" for="customRadio5">Unchecked Radios</label>
                                             </div>
-                                            <div class="custom-control custom-radio custom-control-inline">
-                                                <input type="radio" checked disabled id="customRadio6" name="customRadio3" class="custom-control-input">
-                                                <label class="custom-control-label" for="customRadio6">Disabled Radios</label>
+                                            <div class="form-check form-check-inline">
+                                                <input type="radio" checked disabled id="customRadio6" name="customRadio3" class="form-check-input">
+                                                <label class="form-check-label" for="customRadio6">Disabled Radios</label>
                                             </div>
                                         </form>
                                     </div>
@@ -504,40 +501,40 @@
                                         <p class="text-muted mb-3">For even more customization and cross browser consistency, use our completely custom form elements to replace the browser defaults. They’re built on top of semantic and accessible markup, so they’re solid replacements for any default form control.</p>
                                         <form action="#">
                                             <b class="text-muted mb-3 d-block">Checkbox:</b>
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" checked class="custom-control-input" id="customCheck1">
-                                                <label class="custom-control-label" for="customCheck1">checked Checkbox</label>
+                                            <div class="form-check">
+                                                <input type="checkbox" checked class="form-check-input" id="customCheck1">
+                                                <label class="form-check-label" for="customCheck1">checked Checkbox</label>
                                             </div>
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="customCheck2">
-                                                <label class="custom-control-label" for="customCheck2">Unchecked Checkbox</label>
+                                            <div class="form-check">
+                                                <input type="checkbox" class="form-check-input" id="customCheck2">
+                                                <label class="form-check-label" for="customCheck2">Unchecked Checkbox</label>
                                             </div>
                                             <div class="mb-3"></div>
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" checked disabled class="custom-control-input" id="customCheck3">
-                                                <label class="custom-control-label" for="customCheck3">checked Checkbox</label>
+                                            <div class="form-check">
+                                                <input type="checkbox" checked disabled class="form-check-input" id="customCheck3">
+                                                <label class="form-check-label" for="customCheck3">checked Checkbox</label>
                                             </div>
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" disabled class="custom-control-input" id="customCheck4">
-                                                <label class="custom-control-label" for="customCheck4">Unchecked Checkbox</label>
+                                            <div class="form-check">
+                                                <input type="checkbox" disabled class="form-check-input" id="customCheck4">
+                                                <label class="form-check-label" for="customCheck4">Unchecked Checkbox</label>
                                             </div>
                                             <b class="text-muted mb-3 mt-4 d-block">Inline Checkbox:</b>
-                                            <div class="custom-control custom-checkbox custom-control-inline">
-                                                <input type="checkbox" checked class="custom-control-input" id="customCheck5">
-                                                <label class="custom-control-label" for="customCheck5">checked Checkbox</label>
+                                            <div class="form-check form-check-inline">
+                                                <input type="checkbox" checked class="form-check-input" id="customCheck5">
+                                                <label class="form-check-label" for="customCheck5">checked Checkbox</label>
                                             </div>
-                                            <div class="custom-control custom-checkbox custom-control-inline">
-                                                <input type="checkbox" class="custom-control-input" id="customCheck6">
-                                                <label class="custom-control-label" for="customCheck6">Unchecked Checkbox</label>
+                                            <div class="form-check form-check-inline">
+                                                <input type="checkbox" class="form-check-input" id="customCheck6">
+                                                <label class="form-check-label" for="customCheck6">Unchecked Checkbox</label>
                                             </div>
                                             <div class="mb-3"></div>
-                                            <div class="custom-control custom-checkbox custom-control-inline">
-                                                <input type="checkbox" checked disabled class="custom-control-input" id="customCheck7">
-                                                <label class="custom-control-label" for="customCheck7">checked Checkbox</label>
+                                            <div class="form-check form-check-inline">
+                                                <input type="checkbox" checked disabled class="form-check-input" id="customCheck7">
+                                                <label class="form-check-label" for="customCheck7">checked Checkbox</label>
                                             </div>
-                                            <div class="custom-control custom-checkbox custom-control-inline">
-                                                <input type="checkbox" disabled class="custom-control-input" id="customCheck8">
-                                                <label class="custom-control-label" for="customCheck8">Unchecked Checkbox</label>
+                                            <div class="form-check form-check-inline">
+                                                <input type="checkbox" disabled class="form-check-input" id="customCheck8">
+                                                <label class="form-check-label" for="customCheck8">Unchecked Checkbox</label>
                                             </div>
                                         </form>
                                     </div>
@@ -552,8 +549,7 @@
                                         <p class="text-muted mb-3">For even more customization and cross browser consistency, use our completely custom form elements to replace the browser defaults. They’re built on top of semantic and accessible markup, so they’re solid replacements for any default form control.</p>
                                         <form action="#">
                                             <div class="input-group mb-3">
-                                                <div class="input-group-prepend">
-                                                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</button>
+                                                    <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</button>
                                                     <div class="dropdown-menu">
                                                         <a class="dropdown-item" href="#">Action</a>
                                                         <a class="dropdown-item" href="#">Another action</a>
@@ -566,8 +562,7 @@
                                             </div>
                                             <div class="input-group mb-3">
                                                 <input type="text" class="form-control" aria-label="Text input with dropdown button">
-                                                <div class="input-group-append">
-                                                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</button>
+                                                    <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</button>
                                                     <div class="dropdown-menu">
                                                         <a class="dropdown-item" href="#">Action</a>
                                                         <a class="dropdown-item" href="#">Another action</a>
@@ -578,8 +573,7 @@
                                                 </div>
                                             </div>
                                             <div class="input-group mb-3">
-                                                <div class="input-group-prepend">
-                                                    <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</button>
+                                                    <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</button>
                                                     <div class="dropdown-menu">
                                                         <a class="dropdown-item" href="#">Action</a>
                                                         <a class="dropdown-item" href="#">Another action</a>
@@ -592,8 +586,7 @@
                                             </div>
                                             <div class="input-group">
                                                 <input type="text" class="form-control" aria-label="Text input with dropdown button">
-                                                <div class="input-group-append">
-                                                    <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</button>
+                                                    <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</button>
                                                     <div class="dropdown-menu">
                                                         <a class="dropdown-item" href="#">Action</a>
                                                         <a class="dropdown-item" href="#">Another action</a>
@@ -632,7 +625,7 @@
                                                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
                                                 <label class="form-check-label" for="exampleCheck1">Check me out</label>
                                             </div>
-                                            <button type="submit" class="btn btn-primary mt-4 pr-4 pl-4">Submit</button>
+                                            <button type="submit" class="btn btn-primary mt-4 pe-4 ps-4">Submit</button>
                                         </form>
                                     </div>
                                 </div>
@@ -644,15 +637,14 @@
                                     <div class="card-body">
                                         <h4 class="header-title">Inline form</h4>
                                         <form>
-                                            <div class="form-row align-items-center">
+                                            <div class="row align-items-center">
                                                 <div class="col-sm-3 my-1">
-                                                    <label class="sr-only" for="inlineFormInputName">Name</label>
+                                                    <label class="visually-hidden" for="inlineFormInputName">Name</label>
                                                     <input type="text" class="form-control" id="inlineFormInputName" placeholder="Jane Doe">
                                                 </div>
                                                 <div class="col-sm-3 my-1">
-                                                    <label class="sr-only" for="inlineFormInputGroupUsername">Username</label>
+                                                    <label class="visually-hidden" for="inlineFormInputGroupUsername">Username</label>
                                                     <div class="input-group">
-                                                        <div class="input-group-prepend">
                                                             <div class="input-group-text">@</div>
                                                         </div>
                                                         <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Username">
@@ -660,9 +652,9 @@
                                                 </div>
                                                 <div class="col-auto my-1">
                                                     <div class="form-check">
-                                                        <div class="custom-control custom-checkbox mr-sm-2">
-                                                            <input type="checkbox" class="custom-control-input" id="customControlAutosizing">
-                                                            <label class="custom-control-label" for="customControlAutosizing">Remember me
+                                                        <div class="form-check me-sm-2">
+                                                            <input type="checkbox" class="form-check-input" id="customControlAutosizing">
+                                                            <label class="form-check-label" for="customControlAutosizing">Remember me
                                                             </label>
                                                         </div>
                                                     </div>
@@ -754,7 +746,7 @@
                                                         Can't check this
                                                     </label>
                                                 </div>
-                                                <button type="submit" class="btn btn-primary mt-4 pl-4 pr-4">Submit</button>
+                                                <button type="submit" class="btn btn-primary mt-4 ps-4 pe-4">Submit</button>
                                             </fieldset>
                                         </form>
                                     </div>
@@ -767,7 +759,7 @@
                                     <div class="card-body">
                                         <h4 class="header-title">Server side</h4>
                                         <form class="needs-validation" novalidate="">
-                                            <div class="form-row">
+                                            <div class="row">
                                                 <div class="col-md-4 mb-3">
                                                     <label for="validationCustom01">First name</label>
                                                     <input type="text" class="form-control" id="validationCustom01" placeholder="First name" value="Mark" required="">
@@ -785,7 +777,6 @@
                                                 <div class="col-md-4 mb-3">
                                                     <label for="validationCustomUsername">Username</label>
                                                     <div class="input-group">
-                                                        <div class="input-group-prepend">
                                                             <span class="input-group-text" id="inputGroupPrepend">@</span>
                                                         </div>
                                                         <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required="">
@@ -795,7 +786,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="form-row">
+                                            <div class="row">
                                                 <div class="col-md-6 mb-3">
                                                     <label for="validationCustom03">City</label>
                                                     <input type="text" class="form-control" id="validationCustom03" placeholder="City" required="">
@@ -842,41 +833,34 @@
                                         <h4 class="header-title">Input Group</h4>
                                         <form action="#">
                                             <div class="input-group mb-3">
-                                                <div class="input-group-prepend">
                                                     <span class="input-group-text" id="basic-addon1">@</span>
                                                 </div>
                                                 <input type="text" id="username" name="username" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
                                             </div>
                                             <div class="input-group mb-3">
                                                 <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
-                                                <div class="input-group-append">
                                                     <span class="input-group-text" id="basic-addon2">@example.com</span>
                                                 </div>
                                             </div>
                                             <label for="basic-url">Your vanity URL</label>
                                             <div class="input-group mb-3">
-                                                <div class="input-group-prepend">
                                                     <span class="input-group-text" id="basic-addon3">https://</span>
                                                 </div>
                                                 <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
                                             </div>
                                             <div class="input-group mb-3">
-                                                <div class="input-group-prepend">
                                                     <span class="input-group-text">$</span>
                                                 </div>
                                                 <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
-                                                <div class="input-group-append">
                                                     <span class="input-group-text">.00</span>
                                                 </div>
                                             </div>
                                             <div class="input-group mb-3">
-                                                <div class="input-group-prepend">
                                                     <span class="input-group-text">With textarea</span>
                                                 </div>
                                                 <textarea class="form-control" aria-label="With textarea"></textarea>
                                             </div>
                                             <div class="input-group mb-3">
-                                                <div class="input-group-prepend">
                                                     <span class="input-group-text">$</span>
                                                     <span class="input-group-text">0.00</span>
                                                 </div>
@@ -884,7 +868,6 @@
                                             </div>
                                             <div class="input-group">
                                                 <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
-                                                <div class="input-group-append">
                                                     <span class="input-group-text">$</span>
                                                     <span class="input-group-text">0.00</span>
                                                 </div>
@@ -901,38 +884,22 @@
                                         <h4 class="header-title">Custom file input</h4>
                                         <form action="#">
                                             <div class="input-group mb-3">
-                                                <div class="input-group-prepend">
                                                     <span class="input-group-text">Upload</span>
                                                 </div>
-                                                <div class="custom-file">
-                                                    <input type="file" class="custom-file-input" id="inputGroupFile01">
-                                                    <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
-                                                </div>
+                                                                                                    <input type="file" class="form-control" id="inputGroupFile01">
                                             </div>
                                             <div class="input-group mb-3">
-                                                <div class="custom-file">
-                                                    <input type="file" class="custom-file-input" id="inputGroupFile02">
-                                                    <label class="custom-file-label" for="inputGroupFile02">Choose file</label>
-                                                </div>
-                                                <div class="input-group-append">
+                                                                                                    <input type="file" class="form-control" id="inputGroupFile02">
                                                     <span class="input-group-text">Upload</span>
                                                 </div>
                                             </div>
                                             <div class="input-group mb-3">
-                                                <div class="input-group-prepend">
                                                     <button class="btn btn-outline-secondary" type="button">Button</button>
                                                 </div>
-                                                <div class="custom-file">
-                                                    <input type="file" class="custom-file-input" id="inputGroupFile03">
-                                                    <label class="custom-file-label" for="inputGroupFile03">Choose file</label>
-                                                </div>
+                                                                                                    <input type="file" class="form-control" id="inputGroupFile03">
                                             </div>
                                             <div class="input-group">
-                                                <div class="custom-file">
-                                                    <input type="file" class="custom-file-input" id="inputGroupFile04">
-                                                    <label class="custom-file-label" for="inputGroupFile04">Choose file</label>
-                                                </div>
-                                                <div class="input-group-append">
+                                                                                                    <input type="file" class="form-control" id="inputGroupFile04">
                                                     <button class="btn btn-outline-secondary" type="button">Button</button>
                                                 </div>
                                             </div>
@@ -960,8 +927,8 @@
     <div class="offset-area">
         <div class="offset-close"><i class="ti-close"></i></div>
         <ul class="nav offset-menu-tab">
-            <li><a class="active" data-toggle="tab" href="#activity">Activity</a></li>
-            <li><a data-toggle="tab" href="#settings">Settings</a></li>
+            <li><a class="active" data-bs-toggle="tab" href="#activity">Activity</a></li>
+            <li><a data-bs-toggle="tab" href="#settings">Settings</a></li>
         </ul>
         <div class="offset-content tab-content">
             <div id="activity" class="tab-pane fade in show active">
@@ -1136,9 +1103,8 @@
     <!-- offset area end -->
     <!-- jquery latest version -->
     <script src="assets/js/vendor/jquery-2.2.4.min.js"></script>
-    <!-- bootstrap 4 js -->
-    <script src="assets/js/popper.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- bootstrap 5 js -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/owl.carousel.min.js"></script>
     <script src="assets/js/metisMenu.min.js"></script>
     <script src="assets/js/jquery.slimscroll.min.js"></script>
