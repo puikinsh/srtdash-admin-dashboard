@@ -175,7 +175,7 @@ if (document.getElementById('coin_sales3')) {
 /*--------------  coin_sales3 End ------------*/
 
 /*--------------  overview-chart start ------------*/
-if ($('#verview-shart').length) {
+if (document.getElementById('verview-shart') && typeof zingchart !== 'undefined') {
     var myConfig = {
         "type": "line",
 
@@ -1434,7 +1434,7 @@ if (document.getElementById('seolinechart4')) {
 /*-------------- 9 line chart chartjs end ------------*/
 
 /*-------------- 10 line chart amchart start ------------*/
-if ($('#user-statistics').length) {
+if (document.getElementById('user-statistics')) {
     var chart = AmCharts.makeChart("user-statistics", {
         "type": "serial",
         "theme": "light",

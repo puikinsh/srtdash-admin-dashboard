@@ -510,7 +510,6 @@ a:hover {
     font-size: 26px;
     color: #bdbcbc;
     vertical-align: middle;
-    text-shadow: 0 0 8px rgba(0, 0, 0, 0.12);
     transition: color 0.3s ease 0s;
 }
 

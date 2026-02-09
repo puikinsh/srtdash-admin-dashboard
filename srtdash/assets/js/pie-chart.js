@@ -1,5 +1,5 @@
 /*--------------  coin distrubution chart END ------------*/
-if (document.getElementById('coin_distribution')) {
+if (document.getElementById('coin_distribution') && typeof zingchart !== 'undefined') {
 
     zingchart.THEME = "classic";
 
