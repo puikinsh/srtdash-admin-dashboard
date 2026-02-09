@@ -1,5 +1,5 @@
 /*--------------  coin_sales1 start ------------*/
-if ($('#coin_sales1').length) {
+if (document.getElementById('coin_sales1')) {
     var ctx = document.getElementById("coin_sales1").getContext('2d');
     var chart = new Chart(ctx, {
         // The type of chart we want to create
@@ -57,7 +57,7 @@ if ($('#coin_sales1').length) {
 /*--------------  coin_sales1 End ------------*/
 
 /*--------------  coin_sales2 start ------------*/
-if ($('#coin_sales2').length) {
+if (document.getElementById('coin_sales2')) {
     var ctx = document.getElementById("coin_sales2").getContext('2d');
     var chart = new Chart(ctx, {
         // The type of chart we want to create
@@ -115,7 +115,7 @@ if ($('#coin_sales2').length) {
 /*--------------  coin_sales2 End ------------*/
 
 /*--------------  coin_sales3 start ------------*/
-if ($('#coin_sales3').length) {
+if (document.getElementById('coin_sales3')) {
     var ctx = document.getElementById("coin_sales3").getContext('2d');
     var chart = new Chart(ctx, {
         // The type of chart we want to create
@@ -238,7 +238,7 @@ if ($('#verview-shart').length) {
 
 /*--------------  market status chart start ------------*/
 
-if ($('#mvaluechart').length) {
+if (document.getElementById('mvaluechart')) {
     var ctx = document.getElementById('mvaluechart').getContext('2d');
     var myLineChart = new Chart(ctx, {
         // The type of chart we want to create
@@ -288,7 +288,7 @@ if ($('#mvaluechart').length) {
     });
 }
 
-if ($('#mvaluechart2').length) {
+if (document.getElementById('mvaluechart2')) {
     var ctx = document.getElementById('mvaluechart2').getContext('2d');
     var myLineChart = new Chart(ctx, {
         // The type of chart we want to create
@@ -339,7 +339,7 @@ if ($('#mvaluechart2').length) {
     });
 }
 
-if ($('#mvaluechart3').length) {
+if (document.getElementById('mvaluechart3')) {
     var ctx = document.getElementById('mvaluechart3').getContext('2d');
     var myLineChart = new Chart(ctx, {
         // The type of chart we want to create
@@ -390,7 +390,7 @@ if ($('#mvaluechart3').length) {
     });
 }
 
-if ($('#mvaluechart4').length) {
+if (document.getElementById('mvaluechart4')) {
     var ctx = document.getElementById('mvaluechart4').getContext('2d');
     var myLineChart = new Chart(ctx, {
         // The type of chart we want to create
@@ -444,7 +444,7 @@ if ($('#mvaluechart4').length) {
 /*--------------  market status chart END ------------*/
 
 /*--------------  visitor graph line chart start ------------*/
-if ($('#visitor_graph').length) {
+if (document.getElementById('visitor_graph')) {
 
     Highcharts.chart('visitor_graph', {
         chart: {
@@ -478,7 +478,7 @@ if ($('#visitor_graph').length) {
 /*--------------  END visitor graph line chart start ------------*/
 
 /*-------------- 1 line chart amchart start ------------*/
-if ($('#amlinechart1').length) {
+if (document.getElementById('amlinechart1')) {
     var chart = AmCharts.makeChart("amlinechart1", {
         "type": "serial",
         "theme": "light",
@@ -628,7 +628,7 @@ if ($('#amlinechart1').length) {
 /*-------------- 1 line chart amchart end ------------*/
 
 /*-------------- 2 line chart amchart start ------------*/
-if ($('#amlinechart2').length) {
+if (document.getElementById('amlinechart2')) {
     var chart = AmCharts.makeChart("amlinechart2", {
         "type": "serial",
         "theme": "light",
@@ -868,7 +868,7 @@ if ($('#amlinechart2').length) {
 /*-------------- 2 line chart amchart end ------------*/
 
 /*-------------- 3 line chart amchart start ------------*/
-if ($('#amlinechart3').length) {
+if (document.getElementById('amlinechart3')) {
     var chartData = generateChartData();
     var chart = AmCharts.makeChart("amlinechart3", {
         "type": "serial",
@@ -964,7 +964,7 @@ if ($('#amlinechart3').length) {
 /*-------------- 3 line chart amchart end ------------*/
 
 /*-------------- 4 line chart amchart start ------------*/
-if ($('#amlinechart4').length) {
+if (document.getElementById('amlinechart4')) {
     var chart = AmCharts.makeChart("amlinechart4", {
         "type": "serial",
         "theme": "light",
@@ -1078,7 +1078,7 @@ if ($('#amlinechart4').length) {
 /*-------------- 4 line chart amchart end ------------*/
 
 /*-------------- 5 line chart amchart start ------------*/
-if ($('#amlinechart5').length) {
+if (document.getElementById('amlinechart5')) {
     var chart = AmCharts.makeChart("amlinechart5", {
         "type": "serial",
         "theme": "light",
@@ -1182,7 +1182,7 @@ if ($('#amlinechart5').length) {
 /*-------------- 5 line chart amchart end ------------*/
 
 /*-------------- 6 line chart chartjs start ------------*/
-if ($('#seolinechart1').length) {
+if (document.getElementById('seolinechart1')) {
     var ctx = document.getElementById("seolinechart1").getContext('2d');
     var chart = new Chart(ctx, {
         // The type of chart we want to create
@@ -1245,7 +1245,7 @@ if ($('#seolinechart1').length) {
 /*-------------- 6 line chart chartjs end ------------*/
 
 /*-------------- 7 line chart chartjs start ------------*/
-if ($('#seolinechart2').length) {
+if (document.getElementById('seolinechart2')) {
     var ctx = document.getElementById("seolinechart2").getContext('2d');
     var chart = new Chart(ctx, {
         // The type of chart we want to create
@@ -1308,7 +1308,7 @@ if ($('#seolinechart2').length) {
 /*-------------- 7 line chart chartjs end ------------*/
 
 /*-------------- 8 line chart chartjs start ------------*/
-if ($('#seolinechart3').length) {
+if (document.getElementById('seolinechart3')) {
     var ctx = document.getElementById("seolinechart3").getContext('2d');
     var chart = new Chart(ctx, {
         // The type of chart we want to create
@@ -1371,7 +1371,7 @@ if ($('#seolinechart3').length) {
 /*-------------- 8 line chart chartjs end ------------*/
 
 /*-------------- 9 line chart chartjs start ------------*/
-if ($('#seolinechart4').length) {
+if (document.getElementById('seolinechart4')) {
     var ctx = document.getElementById("seolinechart4").getContext('2d');
     var chart = new Chart(ctx, {
         // The type of chart we want to create
@@ -2065,7 +2065,7 @@ if ($('#user-statistics').length) {
 /*-------------- 10 line chart amchart end ------------*/
 
 /*-------------- 11 line chart amchart start ------------*/
-if ($('#salesanalytic').length) {
+if (document.getElementById('salesanalytic')) {
 
     var chart = AmCharts.makeChart("salesanalytic", {
         "type": "serial",

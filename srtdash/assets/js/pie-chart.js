@@ -1,5 +1,5 @@
 /*--------------  coin distrubution chart END ------------*/
-if ($('#coin_distribution').length) {
+if (document.getElementById('coin_distribution')) {
 
     zingchart.THEME = "classic";
 
@@ -81,7 +81,7 @@ if ($('#coin_distribution').length) {
 /*--------------  coin distrubution chart END ------------*/
 
 /*-------------- 1 Pie chart amchart start ------------*/
-if ($('#ampiechart1').length) {
+if (document.getElementById('ampiechart1')) {
     var chart = AmCharts.makeChart("ampiechart1", {
         "type": "pie",
         "labelRadius": -35,
@@ -113,7 +113,7 @@ if ($('#ampiechart1').length) {
 /*-------------- 1 Pie chart amchart end ------------*/
 
 /*-------------- 2 Pie chart amchart start ------------*/
-if ($('#ampiechart2').length) {
+if (document.getElementById('ampiechart2')) {
     var chart = AmCharts.makeChart("ampiechart2", {
         "type": "pie",
         "theme": "light",
@@ -195,7 +195,7 @@ function generateChartData() {
     return chartData;
 }
 
-if ($('#ampiechart3').length) {
+if (document.getElementById('ampiechart3')) {
     AmCharts.makeChart("ampiechart3", {
         "type": "pie",
         "theme": "light",
@@ -236,7 +236,7 @@ if ($('#ampiechart3').length) {
 /*-------------- 3 Pie chart amchart end ------------*/
 
 /*-------------- 4 Pie chart highcharts start ------------*/
-if ($('#highpiechart4').length) {
+if (document.getElementById('highpiechart4')) {
     var pieColors = (function() {
         var colors = [],
             base = Highcharts.getOptions().colors[0],
@@ -295,7 +295,7 @@ if ($('#highpiechart4').length) {
 /*-------------- 4 Pie chart highcharts end ------------*/
 
 /*-------------- 5 Pie chart highcharts start ------------*/
-if ($('#highpiechart5').length) {
+if (document.getElementById('highpiechart5')) {
     Highcharts.chart('highpiechart5', {
         chart: {
             plotBackgroundColor: null,
@@ -345,7 +345,7 @@ if ($('#highpiechart5').length) {
 /*-------------- 5 Pie chart highcharts end ------------*/
 
 /*-------------- 6 Pie chart highcharts start ------------*/
-if ($('#highpiechart6').length) {
+if (document.getElementById('highpiechart6')) {
     Highcharts.chart('highpiechart6', {
         chart: {
             plotBackgroundColor: null,
@@ -399,7 +399,7 @@ if ($('#highpiechart6').length) {
 /*-------------- 6 Pie chart highcharts end ------------*/
 
 /*-------------- 7 Pie chart chartjs start ------------*/
-if ($('#seolinechart8').length) {
+if (document.getElementById('seolinechart8')) {
     var ctx = document.getElementById("seolinechart8").getContext('2d');
     var chart = new Chart(ctx, {
         // The type of chart we want to create

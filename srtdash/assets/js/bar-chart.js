@@ -1,5 +1,5 @@
 /*--------------  coin_sales4 bar chart start ------------*/
-if ($('#coin_sales4').length) {
+if (document.getElementById('coin_sales4')) {
     var ctx = document.getElementById("coin_sales4").getContext('2d');
     var chart = new Chart(ctx, {
         // The type of chart we want to create
@@ -66,7 +66,7 @@ if ($('#coin_sales4').length) {
 /*--------------  coin_sales4 bar chart End ------------*/
 
 /*--------------  coin_sales5 bar chart start ------------*/
-if ($('#coin_sales5').length) {
+if (document.getElementById('coin_sales5')) {
     var ctx = document.getElementById("coin_sales5").getContext('2d');
     var chart = new Chart(ctx, {
         // The type of chart we want to create
@@ -133,7 +133,7 @@ if ($('#coin_sales5').length) {
 /*--------------  coin_sales5 bar chart End ------------*/
 
 /*--------------  coin_sales6 bar chart start ------------*/
-if ($('#coin_sales6').length) {
+if (document.getElementById('coin_sales6')) {
     var ctx = document.getElementById("coin_sales6").getContext('2d');
     var chart = new Chart(ctx, {
         // The type of chart we want to create
@@ -200,7 +200,7 @@ if ($('#coin_sales6').length) {
 /*--------------  coin_sales6 bar chart End ------------*/
 
 /*--------------  coin_sales7 bar chart start ------------*/
-if ($('#coin_sales7').length) {
+if (document.getElementById('coin_sales7')) {
     var ctx = document.getElementById("coin_sales7").getContext('2d');
     var chart = new Chart(ctx, {
         // The type of chart we want to create
@@ -267,7 +267,7 @@ if ($('#coin_sales7').length) {
 /*--------------  coin_sales7 bar chart End ------------*/
 
 /*--------------  bar chart 08 amchart start ------------*/
-if ($('#ambarchart1').length) {
+if (document.getElementById('ambarchart1')) {
     var chart = AmCharts.makeChart("ambarchart1", {
         "theme": "light",
         "type": "serial",
@@ -352,7 +352,7 @@ if ($('#ambarchart1').length) {
 
 /*--------------  bar chart 08 amchart END ------------*/
 /*--------------  bar chart 09 amchart start ------------*/
-if ($('#ambarchart2').length) {
+if (document.getElementById('ambarchart2')) {
     var chart = AmCharts.makeChart("ambarchart2", {
         "type": "serial",
         "addClassNames": true,
@@ -448,7 +448,7 @@ if ($('#ambarchart2').length) {
 
 /*--------------  bar chart 09 amchart END ------------*/
 /*--------------  bar chart 10 amchart start ------------*/
-if ($('#ambarchart3').length) {
+if (document.getElementById('ambarchart3')) {
     var chart = AmCharts.makeChart("ambarchart3", {
         "type": "serial",
         "theme": "light",
@@ -534,7 +534,7 @@ if ($('#ambarchart3').length) {
 }
 /*--------------  bar chart 10 amchart END ------------*/
 /*--------------  bar chart 11 amchart start ------------*/
-if ($('#ambarchart4').length) {
+if (document.getElementById('ambarchart4')) {
     var chart = AmCharts.makeChart("ambarchart4", {
         "type": "serial",
         "theme": "light",
@@ -620,7 +620,7 @@ if ($('#ambarchart4').length) {
 }
 /*--------------  bar chart 11 amchart END ------------*/
 /*--------------  bar chart 12 amchart start ------------*/
-if ($('#ambarchart5').length) {
+if (document.getElementById('ambarchart5')) {
     var chart = AmCharts.makeChart("ambarchart5", {
         "type": "serial",
         "theme": "light",
@@ -693,7 +693,7 @@ if ($('#ambarchart5').length) {
 }
 /*--------------  bar chart 12 amchart END ------------*/
 /*--------------  bar chart 13 amchart start ------------*/
-if ($('#ambarchart6').length) {
+if (document.getElementById('ambarchart6')) {
     var chart = AmCharts.makeChart("ambarchart6", {
         "type": "serial",
         "theme": "light",
@@ -774,7 +774,7 @@ if ($('#ambarchart6').length) {
 /*--------------  bar chart 13 amchart END ------------*/
 
 /*--------------  bar chart 14 highchart start ------------*/
-if ($('#socialads').length) {
+if (document.getElementById('socialads')) {
 
     Highcharts.chart('socialads', {
         chart: {
