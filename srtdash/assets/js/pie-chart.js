@@ -420,8 +420,10 @@ if ($('#seolinechart8').length) {
         },
         // Configuration options go here
         options: {
-            legend: {
-                display: true
+            plugins: {
+                legend: {
+                    display: true
+                }
             },
             animation: {
                 easing: "easeInOutBack"

@@ -16,38 +16,40 @@ if ($('#coin_sales1').length) {
         },
         // Configuration options go here
         options: {
-            legend: {
-                display: false
+            plugins: {
+                legend: {
+                    display: false
+                }
             },
             animation: {
                 easing: "easeInOutBack"
             },
             scales: {
-                yAxes: [{
+                y: {
                     display: !1,
                     ticks: {
-                        fontColor: "rgba(0,0,0,0.5)",
-                        fontStyle: "bold",
+                        color: "rgba(0,0,0,0.5)",
+                        font: { weight: "bold" },
                         beginAtZero: !0,
                         maxTicksLimit: 5,
                         padding: 0
                     },
-                    gridLines: {
+                    grid: {
                         drawTicks: !1,
                         display: !1
                     }
-                }],
-                xAxes: [{
+                },
+                x: {
                     display: !1,
-                    gridLines: {
-                        zeroLineColor: "transparent"
+                    grid: {
+                        color: "transparent"
                     },
                     ticks: {
                         padding: 0,
-                        fontColor: "rgba(0,0,0,0.5)",
-                        fontStyle: "bold"
+                        color: "rgba(0,0,0,0.5)",
+                        font: { weight: "bold" }
                     }
-                }]
+                }
             }
         }
     });
@@ -72,38 +74,40 @@ if ($('#coin_sales2').length) {
         },
         // Configuration options go here
         options: {
-            legend: {
-                display: false
+            plugins: {
+                legend: {
+                    display: false
+                }
             },
             animation: {
                 easing: "easeInOutBack"
             },
             scales: {
-                yAxes: [{
+                y: {
                     display: !1,
                     ticks: {
-                        fontColor: "rgba(0,0,0,0.5)",
-                        fontStyle: "bold",
+                        color: "rgba(0,0,0,0.5)",
+                        font: { weight: "bold" },
                         beginAtZero: !0,
                         maxTicksLimit: 5,
                         padding: 0
                     },
-                    gridLines: {
+                    grid: {
                         drawTicks: !1,
                         display: !1
                     }
-                }],
-                xAxes: [{
+                },
+                x: {
                     display: !1,
-                    gridLines: {
-                        zeroLineColor: "transparent"
+                    grid: {
+                        color: "transparent"
                     },
                     ticks: {
                         padding: 0,
-                        fontColor: "rgba(0,0,0,0.5)",
-                        fontStyle: "bold"
+                        color: "rgba(0,0,0,0.5)",
+                        font: { weight: "bold" }
                     }
-                }]
+                }
             }
         }
     });
@@ -129,38 +133,40 @@ if ($('#coin_sales3').length) {
         },
         // Configuration options go here
         options: {
-            legend: {
-                display: false
+            plugins: {
+                legend: {
+                    display: false
+                }
             },
             animation: {
                 easing: "easeInOutBack"
             },
             scales: {
-                yAxes: [{
+                y: {
                     display: !1,
                     ticks: {
-                        fontColor: "rgba(0,0,0,0.5)",
-                        fontStyle: "bold",
+                        color: "rgba(0,0,0,0.5)",
+                        font: { weight: "bold" },
                         beginAtZero: !0,
                         maxTicksLimit: 5,
                         padding: 0
                     },
-                    gridLines: {
+                    grid: {
                         drawTicks: !1,
                         display: !1
                     }
-                }],
-                xAxes: [{
+                },
+                x: {
                     display: !1,
-                    gridLines: {
-                        zeroLineColor: "transparent"
+                    grid: {
+                        color: "transparent"
                     },
                     ticks: {
                         padding: 0,
-                        fontColor: "rgba(0,0,0,0.5)",
-                        fontStyle: "bold"
+                        color: "rgba(0,0,0,0.5)",
+                        font: { weight: "bold" }
                     }
-                }]
+                }
             }
         }
     });
@@ -253,13 +259,15 @@ if ($('#mvaluechart').length) {
 
         // Configuration options go here
         options: {
-            legend: {
-                display: false
-            },
-            tooltips: {
-                callbacks: {
-                    label: function(tooltipItem) {
-                        return tooltipItem.yLabel;
+            plugins: {
+                legend: {
+                    display: false
+                },
+                tooltip: {
+                    callbacks: {
+                        label: function(tooltipItem) {
+                            return tooltipItem.parsed.y;
+                        }
                     }
                 }
             },
@@ -269,12 +277,12 @@ if ($('#mvaluechart').length) {
                 }
             },
             scales: {
-                yAxes: [{
+                y: {
                     display: !1
-                }],
-                xAxes: [{
+                },
+                x: {
                     display: !1
-                }]
+                }
             }
         }
     });
@@ -302,13 +310,15 @@ if ($('#mvaluechart2').length) {
 
         // Configuration options go here
         options: {
-            legend: {
-                display: false
-            },
-            tooltips: {
-                callbacks: {
-                    label: function(tooltipItem) {
-                        return tooltipItem.yLabel;
+            plugins: {
+                legend: {
+                    display: false
+                },
+                tooltip: {
+                    callbacks: {
+                        label: function(tooltipItem) {
+                            return tooltipItem.parsed.y;
+                        }
                     }
                 }
             },
@@ -318,12 +328,12 @@ if ($('#mvaluechart2').length) {
                 }
             },
             scales: {
-                yAxes: [{
+                y: {
                     display: !1
-                }],
-                xAxes: [{
+                },
+                x: {
                     display: !1
-                }]
+                }
             }
         }
     });
@@ -351,13 +361,15 @@ if ($('#mvaluechart3').length) {
 
         // Configuration options go here
         options: {
-            legend: {
-                display: false
-            },
-            tooltips: {
-                callbacks: {
-                    label: function(tooltipItem) {
-                        return tooltipItem.yLabel;
+            plugins: {
+                legend: {
+                    display: false
+                },
+                tooltip: {
+                    callbacks: {
+                        label: function(tooltipItem) {
+                            return tooltipItem.parsed.y;
+                        }
                     }
                 }
             },
@@ -367,12 +379,12 @@ if ($('#mvaluechart3').length) {
                 }
             },
             scales: {
-                yAxes: [{
+                y: {
                     display: !1
-                }],
-                xAxes: [{
+                },
+                x: {
                     display: !1
-                }]
+                }
             }
         }
     });
@@ -400,13 +412,15 @@ if ($('#mvaluechart4').length) {
 
         // Configuration options go here
         options: {
-            legend: {
-                display: false
-            },
-            tooltips: {
-                callbacks: {
-                    label: function(tooltipItem) {
-                        return tooltipItem.yLabel;
+            plugins: {
+                legend: {
+                    display: false
+                },
+                tooltip: {
+                    callbacks: {
+                        label: function(tooltipItem) {
+                            return tooltipItem.parsed.y;
+                        }
                     }
                 }
             },
@@ -416,12 +430,12 @@ if ($('#mvaluechart4').length) {
                 }
             },
             scales: {
-                yAxes: [{
+                y: {
                     display: !1
-                }],
-                xAxes: [{
+                },
+                x: {
                     display: !1
-                }]
+                }
             }
         }
     });
@@ -1185,38 +1199,40 @@ if ($('#seolinechart1').length) {
         },
         // Configuration options go here
         options: {
-            legend: {
-                display: false
+            plugins: {
+                legend: {
+                    display: false
+                }
             },
             animation: {
                 easing: "easeInOutBack"
             },
             scales: {
-                yAxes: [{
+                y: {
                     display: !1,
                     ticks: {
-                        fontColor: "rgba(0,0,0,0.5)",
-                        fontStyle: "bold",
+                        color: "rgba(0,0,0,0.5)",
+                        font: { weight: "bold" },
                         beginAtZero: !0,
                         maxTicksLimit: 5,
                         padding: 0
                     },
-                    gridLines: {
+                    grid: {
                         drawTicks: !1,
                         display: !1
                     }
-                }],
-                xAxes: [{
+                },
+                x: {
                     display: !1,
-                    gridLines: {
-                        zeroLineColor: "transparent"
+                    grid: {
+                        color: "transparent"
                     },
                     ticks: {
                         padding: 0,
-                        fontColor: "rgba(0,0,0,0.5)",
-                        fontStyle: "bold"
+                        color: "rgba(0,0,0,0.5)",
+                        font: { weight: "bold" }
                     }
-                }]
+                }
             },
             elements: {
                 line: {
@@ -1246,38 +1262,40 @@ if ($('#seolinechart2').length) {
         },
         // Configuration options go here
         options: {
-            legend: {
-                display: false
+            plugins: {
+                legend: {
+                    display: false
+                }
             },
             animation: {
                 easing: "easeInOutBack"
             },
             scales: {
-                yAxes: [{
+                y: {
                     display: !1,
                     ticks: {
-                        fontColor: "rgba(0,0,0,0.5)",
-                        fontStyle: "bold",
+                        color: "rgba(0,0,0,0.5)",
+                        font: { weight: "bold" },
                         beginAtZero: !0,
                         maxTicksLimit: 5,
                         padding: 0
                     },
-                    gridLines: {
+                    grid: {
                         drawTicks: !1,
                         display: !1
                     }
-                }],
-                xAxes: [{
+                },
+                x: {
                     display: !1,
-                    gridLines: {
-                        zeroLineColor: "transparent"
+                    grid: {
+                        color: "transparent"
                     },
                     ticks: {
                         padding: 0,
-                        fontColor: "rgba(0,0,0,0.5)",
-                        fontStyle: "bold"
+                        color: "rgba(0,0,0,0.5)",
+                        font: { weight: "bold" }
                     }
-                }]
+                }
             },
             elements: {
                 line: {
@@ -1307,38 +1325,40 @@ if ($('#seolinechart3').length) {
         },
         // Configuration options go here
         options: {
-            legend: {
-                display: false
+            plugins: {
+                legend: {
+                    display: false
+                }
             },
             animation: {
                 easing: "easeInOutBack"
             },
             scales: {
-                yAxes: [{
+                y: {
                     display: !1,
                     ticks: {
-                        fontColor: "rgba(0,0,0,0.5)",
-                        fontStyle: "bold",
+                        color: "rgba(0,0,0,0.5)",
+                        font: { weight: "bold" },
                         beginAtZero: !0,
                         maxTicksLimit: 5,
                         padding: 0
                     },
-                    gridLines: {
+                    grid: {
                         drawTicks: !1,
                         display: !1
                     }
-                }],
-                xAxes: [{
+                },
+                x: {
                     display: !1,
-                    gridLines: {
-                        zeroLineColor: "transparent"
+                    grid: {
+                        color: "transparent"
                     },
                     ticks: {
                         padding: 0,
-                        fontColor: "rgba(0,0,0,0.5)",
-                        fontStyle: "bold"
+                        color: "rgba(0,0,0,0.5)",
+                        font: { weight: "bold" }
                     }
-                }]
+                }
             },
             elements: {
                 line: {
@@ -1368,38 +1388,40 @@ if ($('#seolinechart4').length) {
         },
         // Configuration options go here
         options: {
-            legend: {
-                display: false
+            plugins: {
+                legend: {
+                    display: false
+                }
             },
             animation: {
                 easing: "easeInOutBack"
             },
             scales: {
-                yAxes: [{
+                y: {
                     display: !1,
                     ticks: {
-                        fontColor: "rgba(0,0,0,0.5)",
-                        fontStyle: "bold",
+                        color: "rgba(0,0,0,0.5)",
+                        font: { weight: "bold" },
                         beginAtZero: !0,
                         maxTicksLimit: 5,
                         padding: 0
                     },
-                    gridLines: {
+                    grid: {
                         drawTicks: !1,
                         display: !1
                     }
-                }],
-                xAxes: [{
+                },
+                x: {
                     display: !1,
-                    gridLines: {
-                        zeroLineColor: "transparent"
+                    grid: {
+                        color: "transparent"
                     },
                     ticks: {
                         padding: 0,
-                        fontColor: "rgba(0,0,0,0.5)",
-                        fontStyle: "bold"
+                        color: "rgba(0,0,0,0.5)",
+                        font: { weight: "bold" }
                     }
-                }]
+                }
             },
             elements: {
                 line: {

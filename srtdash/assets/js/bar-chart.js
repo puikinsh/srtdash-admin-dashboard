@@ -26,36 +26,38 @@ if ($('#coin_sales4').length) {
         },
         // Configuration options go here
         options: {
-            legend: {
-                display: false
+            plugins: {
+                legend: {
+                    display: false
+                }
             },
             animation: {
                 easing: "easeInOutBack"
             },
             scales: {
-                yAxes: [{
+                y: {
                     display: !1,
                     ticks: {
-                        fontColor: "#cccccc",
+                        color: "#cccccc",
                         beginAtZero: !0,
                         padding: 0
                     },
-                    gridLines: {
-                        zeroLineColor: "transparent"
+                    grid: {
+                        color: "transparent"
                     }
-                }],
-                xAxes: [{
+                },
+                x: {
                     display: !1,
-                    gridLines: {
-                        zeroLineColor: "transparent",
+                    grid: {
+                        color: "transparent",
                         display: !1
                     },
                     ticks: {
                         beginAtZero: !0,
                         padding: 0,
-                        fontColor: "#cccccc"
+                        color: "#cccccc"
                     }
-                }]
+                }
             }
         }
     });
@@ -91,36 +93,38 @@ if ($('#coin_sales5').length) {
         },
         // Configuration options go here
         options: {
-            legend: {
-                display: false
+            plugins: {
+                legend: {
+                    display: false
+                }
             },
             animation: {
                 easing: "easeInOutBack"
             },
             scales: {
-                yAxes: [{
+                y: {
                     display: !1,
                     ticks: {
-                        fontColor: "#cccccc",
+                        color: "#cccccc",
                         beginAtZero: !0,
                         padding: 0
                     },
-                    gridLines: {
-                        zeroLineColor: "transparent"
+                    grid: {
+                        color: "transparent"
                     }
-                }],
-                xAxes: [{
+                },
+                x: {
                     display: !1,
-                    gridLines: {
-                        zeroLineColor: "transparent",
+                    grid: {
+                        color: "transparent",
                         display: !1
                     },
                     ticks: {
                         beginAtZero: !0,
                         padding: 0,
-                        fontColor: "#cccccc"
+                        color: "#cccccc"
                     }
-                }]
+                }
             }
         }
     });
@@ -156,36 +160,38 @@ if ($('#coin_sales6').length) {
         },
         // Configuration options go here
         options: {
-            legend: {
-                display: false
+            plugins: {
+                legend: {
+                    display: false
+                }
             },
             animation: {
                 easing: "easeInOutBack"
             },
             scales: {
-                yAxes: [{
+                y: {
                     display: !1,
                     ticks: {
-                        fontColor: "#cccccc",
+                        color: "#cccccc",
                         beginAtZero: !0,
                         padding: 0
                     },
-                    gridLines: {
-                        zeroLineColor: "transparent"
+                    grid: {
+                        color: "transparent"
                     }
-                }],
-                xAxes: [{
+                },
+                x: {
                     display: !1,
-                    gridLines: {
-                        zeroLineColor: "transparent",
+                    grid: {
+                        color: "transparent",
                         display: !1
                     },
                     ticks: {
                         beginAtZero: !0,
                         padding: 0,
-                        fontColor: "#cccccc"
+                        color: "#cccccc"
                     }
-                }]
+                }
             }
         }
     });
@@ -221,36 +227,38 @@ if ($('#coin_sales7').length) {
         },
         // Configuration options go here
         options: {
-            legend: {
-                display: false
+            plugins: {
+                legend: {
+                    display: false
+                }
             },
             animation: {
                 easing: "easeInOutBack"
             },
             scales: {
-                yAxes: [{
+                y: {
                     display: !1,
                     ticks: {
-                        fontColor: "#cccccc",
+                        color: "#cccccc",
                         beginAtZero: !0,
                         padding: 0
                     },
-                    gridLines: {
-                        zeroLineColor: "transparent"
+                    grid: {
+                        color: "transparent"
                     }
-                }],
-                xAxes: [{
+                },
+                x: {
                     display: !1,
-                    gridLines: {
-                        zeroLineColor: "transparent",
+                    grid: {
+                        color: "transparent",
                         display: !1
                     },
                     ticks: {
                         beginAtZero: !0,
                         padding: 0,
-                        fontColor: "#cccccc"
+                        color: "#cccccc"
                     }
-                }]
+                }
             }
         }
     });
