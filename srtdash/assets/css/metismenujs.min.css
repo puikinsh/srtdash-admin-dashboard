@@ -1,0 +1,8 @@
+/*!
+* metismenujs - v1.4.0
+* A menu plugin
+* https://github.com/onokumus/metismenujs#readme
+*
+* Made by Osman Nuri Okumus <onokumus@gmail.com> (https://github.com/onokumus)
+* Under MIT License
+*/:where(html){--mm-transition-timing-function: ease;--mm-trantisition-duration: 0.35s}.metismenu .mm-collapse:not(.mm-show){display:none}.metismenu .mm-collapsing{position:relative;height:0;overflow:hidden;flex-wrap:nowrap;transition:height var(--mm-trantisition-duration) var(--mm-transition-timing-function)}.metismenu .has-arrow{position:relative}.metismenu .has-arrow::after{position:absolute;content:"";width:.5em;height:.5em;border-width:0 0 1px 1px;border-style:solid;border-color:initial;inset-inline-end:1em;transform:rotate(45deg) translate(0, -50%);transform-origin:top;top:50%;transition:transform var(--mm-trantisition-duration) var(--mm-transition-timing-function)}*[dir=rtl] .metismenu .has-arrow::after{transform:rotate(-135deg) translate(0, -50%)}.metismenu .mm-active>.has-arrow::after,.metismenu .has-arrow[aria-expanded=true]::after{transform:rotate(-45deg) translate(0, -50%)}@media(prefers-reduced-motion: reduce){.metismenu .mm-collapsing,.metismenu .has-arrow::after{transition-duration:.000000001s}}/*# sourceMappingURL=metismenujs.min.css.map */

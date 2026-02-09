@@ -1,227 +1,250 @@
-
-(function($) {
-    "use strict";
+(function() {
+    'use strict';
 
     /*================================
     Preloader
     ==================================*/
-
-    var preloader = $('#preloader');
-    $(window).on('load', function() {
-        setTimeout(function() {
-            preloader.fadeOut('slow', function() { $(this).remove(); });
-        }, 300)
-    });
+    initPreloader();
 
     /*================================
-    sidebar collapsing
+    Sidebar collapsing
     ==================================*/
-    if (window.innerWidth <= 1364) {
-        $('.page-container').addClass('sbar_collapsed');
+    initSidebar();
+
+    /*================================
+    Footer resizer
+    ==================================*/
+    initFooterResizer();
+
+    /*================================
+    Sidebar menu (MetisMenuJS)
+    ==================================*/
+    initSidebarMenu();
+
+    /*================================
+    Sticky Header
+    ==================================*/
+    initStickyHeader();
+
+    /*================================
+    Bootstrap popovers
+    ==================================*/
+    initPopovers();
+
+    /*================================
+    Form validation
+    ==================================*/
+    initFormValidation();
+
+    /*================================
+    Login form focus states
+    ==================================*/
+    initFormFocus();
+
+    /*================================
+    Settings panel toggle
+    ==================================*/
+    initSettingsPanel();
+
+    /*================================
+    Testimonial Carousel (Swiper)
+    ==================================*/
+    initTestimonialCarousel();
+
+    /*================================
+    Fullscreen toggle
+    ==================================*/
+    initFullscreen();
+
+    /*================================
+    Function definitions
+    ==================================*/
+
+    function initPreloader() {
+        var preloader = document.getElementById('preloader');
+        if (!preloader) return;
+
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                preloader.style.transition = 'opacity 0.5s';
+                preloader.style.opacity = '0';
+                setTimeout(function() {
+                    preloader.remove();
+                }, 500);
+            }, 300);
+        });
     }
-    $('.nav-btn').on('click', function() {
-        $('.page-container').toggleClass('sbar_collapsed');
-    });
 
-    /*================================
-    Start Footer resizer
-    ==================================*/
-    var e = function() {
-        var e = (window.innerHeight > 0 ? window.innerHeight : this.screen.height) - 5;
-        (e -= 67) < 1 && (e = 1), e > 67 && $(".main-content").css("min-height", e + "px")
-    };
-    $(window).ready(e), $(window).on("resize", e);
+    function initSidebar() {
+        var pageContainer = document.querySelector('.page-container');
+        var navBtn = document.querySelector('.nav-btn');
+        if (!pageContainer) return;
 
-    /*================================
-    sidebar menu
-    ==================================*/
-    $("#menu").metisMenu();
-
-    /*================================
-    slimscroll activation
-    ==================================*/
-    $('.menu-inner').slimScroll({
-        height: 'auto'
-    });
-    $('.nofity-list').slimScroll({
-        height: '435px'
-    });
-    $('.timeline-area').slimScroll({
-        height: '500px'
-    });
-    $('.recent-activity').slimScroll({
-        height: 'calc(100vh - 114px)'
-    });
-    $('.settings-list').slimScroll({
-        height: 'calc(100vh - 158px)'
-    });
-
-    /*================================
-    stickey Header
-    ==================================*/
-    $(window).on('scroll', function() {
-        var scroll = $(window).scrollTop(),
-            mainHeader = $('#sticky-header'),
-            mainHeaderHeight = mainHeader.innerHeight();
-
-        // console.log(mainHeader.innerHeight());
-        if (scroll > 1) {
-            $("#sticky-header").addClass("sticky-menu");
-        } else {
-            $("#sticky-header").removeClass("sticky-menu");
+        if (window.innerWidth <= 1364) {
+            pageContainer.classList.add('sbar_collapsed');
         }
-    });
 
-    /*================================
-    form bootstrap validation
-    ==================================*/
-    $('[data-toggle="popover"]').popover()
+        if (navBtn) {
+            navBtn.addEventListener('click', function() {
+                pageContainer.classList.toggle('sbar_collapsed');
+            });
+        }
+    }
 
-    /*------------- Start form Validation -------------*/
-    window.addEventListener('load', function() {
-        // Fetch all the forms we want to apply custom Bootstrap validation styles to
-        var forms = document.getElementsByClassName('needs-validation');
-        // Loop over them and prevent submission
-        var validation = Array.prototype.filter.call(forms, function(form) {
-            form.addEventListener('submit', function(event) {
-                if (form.checkValidity() === false) {
-                    event.preventDefault();
-                    event.stopPropagation();
+    function initFooterResizer() {
+        var mainContent = document.querySelector('.main-content');
+        if (!mainContent) return;
+
+        function resize() {
+            var height = (window.innerHeight > 0 ? window.innerHeight : screen.height) - 5;
+            height -= 67;
+            if (height < 1) height = 1;
+            if (height > 67) {
+                mainContent.style.minHeight = height + 'px';
+            }
+        }
+
+        resize();
+        window.addEventListener('resize', resize);
+    }
+
+    function initSidebarMenu() {
+        var menu = document.getElementById('menu');
+        if (!menu || typeof MetisMenu === 'undefined') return;
+        new MetisMenu('#menu');
+    }
+
+    function initStickyHeader() {
+        var stickyHeader = document.getElementById('sticky-header');
+        if (!stickyHeader) return;
+
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 1) {
+                stickyHeader.classList.add('sticky-menu');
+            } else {
+                stickyHeader.classList.remove('sticky-menu');
+            }
+        });
+    }
+
+    function initPopovers() {
+        var popoverTriggers = document.querySelectorAll('[data-bs-toggle="popover"]');
+        popoverTriggers.forEach(function(el) {
+            new bootstrap.Popover(el);
+        });
+    }
+
+    function initFormValidation() {
+        window.addEventListener('load', function() {
+            var forms = document.querySelectorAll('.needs-validation');
+            forms.forEach(function(form) {
+                form.addEventListener('submit', function(event) {
+                    if (!form.checkValidity()) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+            });
+        }, false);
+    }
+
+    function initFormFocus() {
+        var formInputs = document.querySelectorAll('.form-gp input');
+        formInputs.forEach(function(input) {
+            input.addEventListener('focus', function() {
+                var parent = this.closest('.form-gp');
+                if (parent) parent.classList.add('focused');
+            });
+            input.addEventListener('blur', function() {
+                if (this.value.length === 0) {
+                    var parent = this.closest('.form-gp');
+                    if (parent) parent.classList.remove('focused');
                 }
-                form.classList.add('was-validated');
-            }, false);
-        });
-    }, false);
-
-    /*================================
-    datatable active
-    ==================================*/
-    if ($('#dataTable').length) {
-        $('#dataTable').DataTable({
-            responsive: true
-        });
-    }
-    if ($('#dataTable2').length) {
-        $('#dataTable2').DataTable({
-            responsive: true
-        });
-    }
-    if ($('#dataTable3').length) {
-        $('#dataTable3').DataTable({
-            responsive: true
+            });
         });
     }
 
+    function initSettingsPanel() {
+        var settingsBtn = document.querySelector('.settings-btn');
+        var offsetClose = document.querySelector('.offset-close');
+        var offsetArea = document.querySelector('.offset-area');
+        if (!offsetArea) return;
 
-    /*================================
-    Slicknav mobile menu
-    ==================================*/
-    $('ul#nav_menu').slicknav({
-        prependTo: "#mobile_menu"
-    });
-
-    /*================================
-    login form
-    ==================================*/
-    $('.form-gp input').on('focus', function() {
-        $(this).parent('.form-gp').addClass('focused');
-    });
-    $('.form-gp input').on('focusout', function() {
-        if ($(this).val().length === 0) {
-            $(this).parent('.form-gp').removeClass('focused');
+        if (settingsBtn) {
+            settingsBtn.addEventListener('click', function() {
+                offsetArea.classList.toggle('show_hide');
+                settingsBtn.classList.toggle('active');
+            });
         }
-    });
+        if (offsetClose) {
+            offsetClose.addEventListener('click', function() {
+                offsetArea.classList.toggle('show_hide');
+                if (settingsBtn) settingsBtn.classList.toggle('active');
+            });
+        }
+    }
 
-    /*================================
-    slider-area background setting
-    ==================================*/
-    $('.settings-btn, .offset-close').on('click', function() {
-        $('.offset-area').toggleClass('show_hide');
-        $('.settings-btn').toggleClass('active');
-    });
+    function initTestimonialCarousel() {
+        var carouselEl = document.querySelector('.testimonial-carousel');
+        if (!carouselEl || typeof Swiper === 'undefined') return;
 
-    /*================================
-    Owl Carousel
-    ==================================*/
-    function slider_area() {
-        var owl = $('.testimonial-carousel').owlCarousel({
-            margin: 50,
+        // Wrap existing slides in swiper-wrapper if not already done
+        if (!carouselEl.querySelector('.swiper-wrapper')) {
+            var children = Array.from(carouselEl.children);
+            var wrapper = document.createElement('div');
+            wrapper.className = 'swiper-wrapper';
+            children.forEach(function(child) {
+                child.classList.add('swiper-slide');
+                wrapper.appendChild(child);
+            });
+            carouselEl.appendChild(wrapper);
+
+            // Add pagination
+            var pagination = document.createElement('div');
+            pagination.className = 'swiper-pagination';
+            carouselEl.appendChild(pagination);
+        }
+
+        new Swiper('.testimonial-carousel', {
+            slidesPerView: 1,
+            spaceBetween: 50,
             loop: true,
             autoplay: false,
-            nav: false,
-            dots: true,
-            responsive: {
-                0: {
-                    items: 1
-                },
-                450: {
-                    items: 1
-                },
-                768: {
-                    items: 2
-                },
-                1000: {
-                    items: 2
-                },
-                1360: {
-                    items: 1
-                },
-                1600: {
-                    items: 2
-                }
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true
+            },
+            breakpoints: {
+                768: { slidesPerView: 2 },
+                1360: { slidesPerView: 1 },
+                1600: { slidesPerView: 2 }
             }
         });
     }
-    slider_area();
 
-    /*================================
-    Fullscreen Page
-    ==================================*/
-
-    if ($('#full-view').length) {
-
-        var requestFullscreen = function(ele) {
-            if (ele.requestFullscreen) {
-                ele.requestFullscreen();
-            } else if (ele.webkitRequestFullscreen) {
-                ele.webkitRequestFullscreen();
-            } else if (ele.mozRequestFullScreen) {
-                ele.mozRequestFullScreen();
-            } else if (ele.msRequestFullscreen) {
-                ele.msRequestFullscreen();
-            } else {
-                console.log('Fullscreen API is not supported.');
-            }
-        };
-
-        var exitFullscreen = function() {
-            if (document.exitFullscreen) {
-                document.exitFullscreen();
-            } else if (document.webkitExitFullscreen) {
-                document.webkitExitFullscreen();
-            } else if (document.mozCancelFullScreen) {
-                document.mozCancelFullScreen();
-            } else if (document.msExitFullscreen) {
-                document.msExitFullscreen();
-            } else {
-                console.log('Fullscreen API is not supported.');
-            }
-        };
-
+    function initFullscreen() {
         var fsDocButton = document.getElementById('full-view');
         var fsExitDocButton = document.getElementById('full-view-exit');
+        if (!fsDocButton) return;
 
         fsDocButton.addEventListener('click', function(e) {
             e.preventDefault();
-            requestFullscreen(document.documentElement);
-            $('body').addClass('expanded');
+            if (document.documentElement.requestFullscreen) {
+                document.documentElement.requestFullscreen();
+            }
+            document.body.classList.add('expanded');
         });
 
-        fsExitDocButton.addEventListener('click', function(e) {
-            e.preventDefault();
-            exitFullscreen();
-            $('body').removeClass('expanded');
-        });
+        if (fsExitDocButton) {
+            fsExitDocButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                }
+                document.body.classList.remove('expanded');
+            });
+        }
     }
 
-})(jQuery);
+})();

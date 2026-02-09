@@ -105,6 +105,20 @@ a:hover {
     padding: 0 30px 50px;
 }
 
+/* Scrollable areas (replaces SlimScroll) */
+.menu-inner {
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255,255,255,0.3) transparent;
+}
+.menu-inner::-webkit-scrollbar { width: 6px; }
+.menu-inner::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.3); border-radius: 3px; }
+
+.nofity-list { max-height: 435px; overflow-y: auto; scrollbar-width: thin; }
+.timeline-area { max-height: 500px; overflow-y: auto; scrollbar-width: thin; }
+.recent-activity { max-height: calc(100vh - 114px); overflow-y: auto; scrollbar-width: thin; }
+.settings-list { max-height: calc(100vh - 158px); overflow-y: auto; scrollbar-width: thin; }
+
 /*------------------------- END Core Css -------------------*/
 
 
