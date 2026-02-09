@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-SRTdash is a static Bootstrap 4 admin dashboard HTML template by Colorlib. It has 46+ HTML pages, no build system, no package.json, and no server-side code. All assets are plain HTML/CSS/JS served directly.
+SRTdash is a static Bootstrap 5.3.8 admin dashboard HTML template by Colorlib. It has 47 HTML pages, no build system, no package.json, and no server-side code. All assets are plain HTML/CSS/JS served directly. No jQuery — all JavaScript is vanilla.
 
 ## Running Locally
 
@@ -17,7 +17,7 @@ cd srtdash && python3 -m http.server 8000
 # Node
 npx http-server srtdash
 
-# Then visit http://localhost:8000/starter.html
+# Then visit http://localhost:8000
 ```
 
 ## Architecture
@@ -36,82 +36,93 @@ npx http-server srtdash
 Every page follows the same layout skeleton:
 
 ```
+<a.skip-link>            → Skip to main content (accessibility)
 #preloader
 .page-container
-  .sidebar-menu          → Left nav with MetisMenu (#menu)
+  .sidebar-menu          → Left nav with MetisMenuJS (#menu)
   .main-content
     .header-area         → Top bar with search, notifications, profile
       #sticky-header     → Becomes sticky on scroll
     .page-title-area     → Breadcrumbs and page heading
-    .main-content-inner  → PAGE CONTENT GOES HERE
+    .main-content-inner#main-content → PAGE CONTENT GOES HERE
   footer
 .offset-area             → Right-side settings panel (toggled by .settings-btn)
+GA4 tracking snippet
 ```
 
 ### CSS Load Order (in `<head>`)
 
-1. `bootstrap.min.css` — Bootstrap 4 framework
-2. Icon CSS — `font-awesome.min.css`, `themify-icons.css`
-3. Plugin CSS — `metisMenu.css`, `owl.carousel.min.css`, `slicknav.min.css`
-4. Template CSS — `typography.css`, `default-css.css` (utilities), `styles.css` (main), `responsive.css` (media queries)
+1. Google Fonts (preconnect + css2 API link)
+2. `bootstrap.min.css` — Bootstrap 5.3.8
+3. Icon CSS — `fontawesome.min.css` + v4 shims, `themify-icons.css`
+4. Plugin CSS — `metismenujs.min.css`, `swiper-bundle.min.css`
+5. Template CSS — `typography.css`, `default-css.css`, `styles.css`, `responsive.css`
 
 ### JS Load Order (before `</body>`)
 
-1. `vendor/jquery-2.2.4.min.js`
-2. `bootstrap.min.js` + `popper.min.js`
-3. Plugin JS — `metisMenu.min.js`, `jquery.slimscroll.min.js`, `jquery.slicknav.min.js`, `owl.carousel.min.js`
-4. Page-specific chart JS (loaded via CDN: Chart.js 2.7.2, Highcharts, ZingChart)
-5. `scripts.js` — Main app logic (sidebar toggle, sticky header, preloader, form states, fullscreen)
+1. `bootstrap.bundle.min.js` (includes Popper)
+2. `metismenujs.min.js`
+3. `swiper-bundle.min.js`
+4. Page-specific chart JS (CDN: Chart.js 4.5.1, Highcharts 12.5.0, ZingChart 2.9.16, AmCharts)
+5. `scripts.js` — Main app logic (vanilla JS IIFE)
 
 ### Key JS Behaviors (scripts.js)
 
-All wrapped in jQuery IIFE `(function($) { ... })(jQuery)`:
+All wrapped in vanilla JS IIFE `(function() { 'use strict'; ... })()`:
 
-- **Preloader**: Fades out 300ms after `window.load`
-- **Sidebar collapse**: Adds `.sbar_collapsed` to `.page-container` at <=1364px or on `.nav-btn` click
-- **MetisMenu**: `$("#menu").metisMenu()` — handles collapsible sidebar navigation
-- **SlimScroll**: Custom scrollbars on `.menu-inner`, `.nofity-list`, `.timeline-area`, `.recent-activity`, `.settings-list`
-- **Sticky header**: Adds `.sticky-menu` to `#sticky-header` on scroll > 1px
-- **SliceNav**: `$('ul#nav_menu').slicknav()` — mobile hamburger menu
-- **Owl Carousel**: `.testimonial-carousel` with responsive breakpoints
-- **Offset panel**: `.settings-btn` toggles `.show_hide` on `.offset-area`
+- **initPreloader()**: Fades out 300ms after `window.load`
+- **initSidebar()**: Adds `.sbar_collapsed` to `.page-container` at <=1364px or on `.nav-btn` click
+- **initSidebarMenu()**: `new MetisMenu('#menu')` — collapsible sidebar navigation
+- **initStickyHeader()**: Adds `.sticky-menu` to `#sticky-header` on scroll > 1px
+- **initTestimonialCarousel()**: Swiper with responsive breakpoints, auto-wraps slides
+- **initSettingsPanel()**: `.settings-btn` toggles `.show_hide` on `.offset-area`
+- **initFullscreen()**: Fullscreen toggle via `#full-view` / `#full-view-exit`
+- **initFormValidation()**: Bootstrap 5 native form validation
+- **initFormFocus()**: Floating label effect on `.form-gp` inputs
 
-### Data Attributes (Bootstrap 4)
+### Data Attributes (Bootstrap 5)
 
-This template uses Bootstrap 4 conventions:
-- `data-toggle="dropdown"`, `data-toggle="tab"`, `data-toggle="modal"`, `data-toggle="popover"`
-- `data-target="#id"`
-- `aria-expanded="true/false"` on MetisMenu items
+This template uses Bootstrap 5 conventions:
+- `data-bs-toggle="dropdown"`, `data-bs-toggle="tab"`, `data-bs-toggle="modal"`, `data-bs-toggle="popover"`
+- `data-bs-target="#id"`
+- `data-bs-dismiss="modal"`, `data-bs-dismiss="alert"`
 
 ### Chart Files
 
-Each chart file initializes hardcoded demo data — no API calls:
-- `bar-chart.js` — Chart.js bar charts
-- `line-chart.js` — Highcharts & ZingChart line charts
-- `pie-chart.js` — Chart.js pie/doughnut charts
+Each chart file initializes hardcoded demo data — no API calls. Guard clauses use `document.getElementById()`:
+- `bar-chart.js` — Chart.js 4 bar charts + AmCharts + Highcharts
+- `line-chart.js` — Chart.js 4, Highcharts, ZingChart, AmCharts line charts
+- `pie-chart.js` — Chart.js 4 doughnut, ZingChart, AmCharts, Highcharts pie charts
 - `maps.js` — Google Maps integration
 
-## Tech Stack & Dependencies
+### Images
+
+All images use `<picture>` elements with AVIF sources and JPG/PNG fallback:
+```html
+<picture>
+  <source srcset="assets/images/path/file.avif" type="image/avif">
+  <img src="assets/images/path/file.jpg" alt="description">
+</picture>
+```
+
+## Tech Stack
 
 | Library | Version | Source |
-|---------|---------|--------|
-| Bootstrap | 4 | Vendor (minified) |
-| jQuery | 2.2.4 | Vendor |
-| Modernizr | 2.8.3 | Vendor |
-| MetisMenu | minified | Vendor |
-| Owl Carousel | minified | Vendor |
-| SliceNav | minified | Vendor |
-| jQuery SlimScroll | minified | Vendor |
-| Chart.js | 2.7.2 | CDN |
-| Highcharts | latest | CDN |
-| ZingChart | latest | CDN |
-| Font Awesome | 4.5.0 | Vendor fonts |
-| Themify Icons | — | Vendor fonts |
+| ------- | ------- | ------ |
+| Bootstrap | 5.3.8 | Vendor (bundle) |
+| MetisMenuJS | 1.4.0 | Vendor |
+| Swiper | 12.1.0 | Vendor |
+| Simple-DataTables | 10.x | CDN |
+| Chart.js | 4.5.1 | CDN |
+| Highcharts | 12.5.0 | CDN |
+| ZingChart | 2.9.16 | CDN |
+| Font Awesome | 7.1.0 Free | Vendor (with v4 shims) |
+| Themify Icons | — | Vendor |
 | Google Fonts | — | CDN (Lato, Poppins) |
 
 ## Conventions
 
-- **HTML**: H5 Boilerplate inspired. IE8 compatibility shims present. Section comments mark regions.
-- **CSS**: No preprocessor. Class-based selectors, kebab-case naming. `styles.css` is the main customization file; `responsive.css` handles breakpoints.
-- **JavaScript**: jQuery IIFE pattern. Feature blocks separated by comment banners. Guard with length checks (e.g., `if ($('#dataTable').length)`).
-- **New pages**: Copy `starter.html`, update `<title>`, edit content inside `.main-content-inner`, update sidebar links.
+- **HTML**: Semantic HTML5. AVIF images with `<picture>` fallback. Skip links for accessibility. `lang="en"` on `<html>`. Each page has unique `<title>` and `<meta name="description">`.
+- **CSS**: No preprocessor. Class-based selectors, kebab-case naming. `styles.css` is the main customization file; `responsive.css` handles breakpoints. No vendor prefixes for standard properties.
+- **JavaScript**: Vanilla JS IIFE pattern. One function per feature with guard clauses (`if (!el) return`). No jQuery. No global state.
+- **New pages**: Copy `starter.html`, update `<title>` and `<meta name="description">`, edit content inside `.main-content-inner`, update sidebar links.
