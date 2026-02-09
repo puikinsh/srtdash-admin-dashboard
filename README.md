@@ -38,7 +38,7 @@ There is a [starter template](srtdash/starter.html) for creating new pages.
 | Simple-DataTables | 10.x | CDN |
 | Chart.js | 4.5.1 | CDN |
 | Highcharts | 12.5.0 | CDN |
-| ZingChart | 2.9.16 | CDN |
+| ZingChart | 2.9.16-1 | CDN |
 | Font Awesome | 7.1.0 Free | Vendor |
 | Themify Icons | — | Vendor |
 | Google Fonts | — | CDN (Lato, Poppins) |
