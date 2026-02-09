@@ -2531,6 +2531,7 @@ table.dataTable thead td {
 
 .login-bg {
     background: url(../images/bg/singin-bg.jpg) center/cover no-repeat;
+    background: image-set(url(../images/bg/singin-bg.avif) type("image/avif"), url(../images/bg/singin-bg.jpg) type("image/jpeg")) center/cover no-repeat;
     position: relative;
     z-index: 1;
 }
