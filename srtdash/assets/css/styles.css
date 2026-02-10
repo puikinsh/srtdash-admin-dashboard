@@ -437,7 +437,6 @@ a:hover {
     margin: 4px 0;
     border-radius: 15px;
     transition: all 0.3s ease 0s;
-    box-shadow: 0 0 0 4px rgba(99, 96, 96, 0.03);
 }
 
 .nav-btn span:nth-child(2) {
@@ -788,18 +787,57 @@ ul.breadcrumbs {
     box-shadow: 0 0 45px 0 rgba(131, 23, 254, 0.06);
 }
 
-.user-profile .dropdown-menu a {
-    font-size: 14px;
-    color: #8a8a8a;
-    letter-spacing: 0;
-    font-weight: 500;
-    padding: 4px 120px;
-    padding-left: 25px;
+.user-dropdown {
+    width: 100%;
+    right: -30px !important;
+    left: auto !important;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 8px 0;
 }
 
-.user-profile .dropdown-menu a:hover {
+.user-dropdown .dropdown-divider {
+    margin: 0;
+    border-color: #eee;
+}
+
+.user-dropdown .dropdown-item {
+    font-size: 14px;
+    color: #6c757d;
+    font-weight: 500;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+}
+
+.user-dropdown .dropdown-item i {
+    width: 20px;
+    margin-right: 10px;
+    font-size: 14px;
+    color: #8063f5;
+    text-align: center;
+}
+
+.user-dropdown .dropdown-item:hover {
     background: #f8f9fa;
-    color: #2942fa;
+    color: #4336fb;
+}
+
+.user-dropdown .dropdown-item:hover i {
+    color: #4336fb;
+}
+
+.user-dropdown .dropdown-item .badge {
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.user-dropdown-logout:hover {
+    color: #dc3545 !important;
+}
+
+.user-dropdown-logout:hover i {
+    color: #dc3545 !important;
 }
 
 /*-------------------- END Page Title Area -------------------*/
