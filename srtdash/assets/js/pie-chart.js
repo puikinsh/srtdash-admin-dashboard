@@ -1,84 +1,71 @@
-/*--------------  coin distrubution chart END ------------*/
-if (document.getElementById('coin_distribution') && typeof zingchart !== 'undefined') {
+/*--------------  Coin Distribution doughnut (Chart.js)  ------------*/
+if (document.getElementById('coin-distribution-chart')) {
 
-    zingchart.THEME = "classic";
-
-    var myConfig = {
-        "globals": {
-            "font-family": "Roboto"
-        },
-        "graphset": [{
-                "type": "pie",
-                "background-color": "#fff",
-                "legend": {
-                    "background-color": "none",
-                    "border-width": 0,
-                    "shadow": false,
-                    "layout": "float",
-                    "margin": "auto auto 16% auto",
-                    "marker": {
-                        "border-radius": 3,
-                        "border-width": 0
-                    },
-                    "item": {
-                        "color": "%backgroundcolor"
-                    }
-                },
-                "plotarea": {
-                    "background-color": "#FFFFFF",
-                    "border-color": "#DFE1E3",
-                    "margin": "25% 8%"
-                },
-                "labels": [{
-                    "x": "45%",
-                    "y": "47%",
-                    "width": "10%",
-                    "text": "340 Coin",
-                    "font-size": 17,
-                    "font-weight": 700
-                }],
-                "plot": {
-                    "size": 70,
-                    "slice": 90,
-                    "margin-right": 0,
-                    "border-width": 0,
-                    "shadow": 0,
-                    "value-box": {
-                        "visible": true
-                    },
-                    "tooltip": {
-                        "text": "%v USD",
-                        "shadow": false,
-                        "border-radius": 2
-                    }
-                },
-                "series": [{
-                        "values": [1355460],
-                        "text": "Bitcoin",
-                        "background-color": "#4cff63"
-                    },
-                    {
-                        "values": [1585218],
-                        "text": "LiteCoin",
-                        "background-color": "#fd9c21"
-                    },
-                    {
-                        "values": [1064598],
-                        "text": "Euthorium",
-                        "background-color": "#2c13f8"
-                    }
-                ]
-            }
-
-        ]
+    /* Center text plugin */
+    var centerTextPlugin = {
+        id: 'centerText',
+        afterDraw: function(chart) {
+            var ctx = chart.ctx;
+            var width = chart.width;
+            var height = chart.height;
+            ctx.save();
+            ctx.font = '700 17px Poppins, sans-serif';
+            ctx.fillStyle = '#1e293b';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillText('340 Coin', width / 2, height / 2 - 10);
+            ctx.restore();
+        }
     };
 
-    zingchart.render({
-        id: 'coin_distribution',
-        data: myConfig,
+    new Chart(document.getElementById('coin-distribution-chart'), {
+        type: 'doughnut',
+        data: {
+            labels: ['Bitcoin', 'LiteCoin', 'Ethereum'],
+            datasets: [{
+                data: [1355460, 1585218, 1064598],
+                backgroundColor: ['#3b82f6', '#f59e0b', '#6366f1'],
+                hoverBackgroundColor: ['#2563eb', '#d97706', '#4f46e5'],
+                borderWidth: 3,
+                borderColor: '#fff'
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            cutout: '70%',
+            plugins: {
+                legend: {
+                    position: 'bottom',
+                    labels: {
+                        usePointStyle: true,
+                        pointStyle: 'circle',
+                        padding: 16,
+                        font: { family: 'Poppins', size: 12 },
+                        color: '#64748b'
+                    }
+                },
+                tooltip: {
+                    backgroundColor: '#1e293b',
+                    titleFont: { family: 'Poppins', size: 13 },
+                    bodyFont: { family: 'Poppins', size: 12 },
+                    padding: 12,
+                    cornerRadius: 8,
+                    callbacks: {
+                        label: function(context) {
+                            var val = context.parsed;
+                            var total = context.dataset.data.reduce(function(a, b) { return a + b; }, 0);
+                            var pct = ((val / total) * 100).toFixed(1);
+                            return ' ' + context.label + ': $' + val.toLocaleString() + ' (' + pct + '%)';
+                        }
+                    }
+                }
+            }
+        },
+        plugins: [centerTextPlugin]
     });
 }
-/*--------------  coin distrubution chart END ------------*/
+/*--------------  Coin Distribution END  ------------*/
 
 /*-------------- 1 Pie chart amchart start ------------*/
 if (document.getElementById('ampiechart1')) {
@@ -245,7 +232,7 @@ if (document.getElementById('highpiechart4')) {
         for (i = 0; i < 10; i += 1) {
             // Start out with a darkened base color (negative brighten), and end
             // up with a much brighter color
-            colors.push(Highcharts.Color(base).brighten((i - 3) / 7).get());
+            colors.push(new Highcharts.Color(base).brighten((i - 3) / 7).get());
         }
         return colors;
     }());

@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-SRTdash is a static Bootstrap 5.3.8 admin dashboard HTML template by Colorlib. It has 47 HTML pages, no build system, no package.json, and no server-side code. All assets are plain HTML/CSS/JS served directly. No jQuery — all JavaScript is vanilla.
+SRTdash is a static Bootstrap 5.3.8 admin dashboard HTML template by Colorlib. It has 56 HTML pages, no build system, no package.json, and no server-side code. All assets are plain HTML/CSS/JS served directly. No jQuery — all JavaScript is vanilla.
 
 ## Running Locally
 
@@ -26,7 +26,8 @@ npx http-server srtdash
 
 - `srtdash/` — All template HTML pages and assets
 - `srtdash/starter.html` — Clean starting template (use as base for new pages)
-- `srtdash/index.html` / `index2.html` / `index3.html` — Three dashboard variants (ICO, Ecommerce, SEO)
+- `srtdash/index.html` / `index2.html` / `index3.html` / `index3-horizontalmenu.html` — Four dashboard variants (ICO, Ecommerce, SEO, Horizontal)
+- `srtdash/calendar.html`, `chat.html`, `email.html`, `file-manager.html`, `notifications.html`, `profile.html`, `settings.html`, `widgets.html` — App pages
 - `srtdash/assets/css/` — Stylesheets (no preprocessor)
 - `srtdash/assets/js/` — Scripts (no bundler, no modules)
 - `documentation/` — Standalone documentation site (separate from template)
@@ -54,7 +55,7 @@ GA4 tracking snippet
 
 1. Google Fonts (preconnect + css2 API link)
 2. `bootstrap.min.css` — Bootstrap 5.3.8
-3. Icon CSS — `fontawesome.min.css` + v4 shims, `themify-icons.css`
+3. Icon CSS — `fontawesome.min.css`, `themify-icons.css`
 4. Plugin CSS — `metismenujs.min.css`, `swiper-bundle.min.css`
 5. Template CSS — `typography.css`, `default-css.css`, `styles.css`, `responsive.css`
 
@@ -116,7 +117,7 @@ All images use `<picture>` elements with AVIF sources and JPG/PNG fallback:
 | Chart.js | 4.5.1 | CDN |
 | Highcharts | 12.5.0 | CDN |
 | ZingChart | 2.9.16 | CDN |
-| Font Awesome | 7.1.0 Free | Vendor (with v4 shims) |
+| Font Awesome | 7.1.0 Free | Vendor |
 | Themify Icons | — | Vendor |
 | Google Fonts | — | CDN (Lato, Poppins) |
 

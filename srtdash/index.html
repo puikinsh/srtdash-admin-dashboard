@@ -15,8 +15,6 @@
     <link rel="stylesheet" href="assets/css/themify-icons.css">
     <link rel="stylesheet" href="assets/css/metismenujs.min.css">
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
-    <!-- amchart css -->
-    <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
     <!-- others css -->
     <link rel="stylesheet" href="assets/css/typography.css">
     <link rel="stylesheet" href="assets/css/default-css.css">
@@ -110,6 +108,19 @@
                             <li><a href="maps.html"><i class="ti-map-alt"></i> <span>maps</span></a></li>
                             <li><a href="invoice.html"><i class="ti-receipt"></i> <span>Invoice Summary</span></a></li>
                             <li>
+                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-widget"></i><span>Apps</span></a>
+                                <ul class="collapse">
+                                    <li><a href="profile.html">Profile</a></li>
+                                    <li><a href="notifications.html">Notifications</a></li>
+                                    <li><a href="settings.html">Settings</a></li>
+                                    <li><a href="calendar.html">Calendar</a></li>
+                                    <li><a href="file-manager.html">File Manager</a></li>
+                                    <li><a href="chat.html">Chat</a></li>
+                                    <li><a href="email.html">Email</a></li>
+                                    <li><a href="widgets.html">Widgets</a></li>
+                                </ul>
+                            </li>
+                            <li>
                                 <a href="javascript:void(0)" aria-expanded="true"><i class="ti-layers-alt"></i> <span>Pages</span></a>
                                 <ul class="collapse">
                                     <li><a href="login.html">Login</a></li>
@@ -122,6 +133,7 @@
                                     <li><a href="screenlock.html">Lock Screen</a></li>
                                     <li><a href="screenlock2.html">Lock Screen 2</a></li>
                                     <li><a href="reset-pass.html">reset password</a></li>
+                                    <li><a href="forgot-password.html">Forgot Password</a></li>
                                     <li><a href="pricing.html">Pricing</a></li>
                                 </ul>
                             </li>
@@ -132,6 +144,7 @@
                                     <li><a href="404.html">Error 404</a></li>
                                     <li><a href="403.html">Error 403</a></li>
                                     <li><a href="500.html">Error 500</a></li>
+                                    <li><a href="401.html">Error 401</a></li>
                                 </ul>
                             </li>
                             <li>
@@ -186,7 +199,7 @@
                                 </i>
                                 <div class="dropdown-menu bell-notify-box notify-box">
                                     <span class="notify-title">You have 3 new notifications <a href="#">view all</a></span>
-                                    <div class="nofity-list">
+                                    <div class="notify-list">
                                         <a href="#" class="notify-item">
                                             <div class="notify-thumb"><i class="ti-key bg-danger"></i></div>
                                             <div class="notify-text">
@@ -197,7 +210,7 @@
                                         <a href="#" class="notify-item">
                                             <div class="notify-thumb"><i class="ti-comments-smiley bg-info"></i></div>
                                             <div class="notify-text">
-                                                <p>New Commetns On Post</p>
+                                                <p>New Comments On Post</p>
                                                 <span>30 Seconds ago</span>
                                             </div>
                                         </a>
@@ -211,7 +224,7 @@
                                         <a href="#" class="notify-item">
                                             <div class="notify-thumb"><i class="ti-comments-smiley bg-info"></i></div>
                                             <div class="notify-text">
-                                                <p>New Commetns On Post</p>
+                                                <p>New Comments On Post</p>
                                                 <span>30 Seconds ago</span>
                                             </div>
                                         </a>
@@ -243,7 +256,7 @@
                                 <i class="fa-regular fa-envelope dropdown-toggle" data-bs-toggle="dropdown"><span>3</span></i>
                                 <div class="dropdown-menu notify-box nt-enveloper-box">
                                     <span class="notify-title">You have 3 new notifications <a href="#">view all</a></span>
-                                    <div class="nofity-list">
+                                    <div class="notify-list">
                                         <a href="#" class="notify-item">
                                             <div class="notify-thumb">
                                                 <picture><source srcset="assets/images/author/author-img1.avif" type="image/avif"><img src="assets/images/author/author-img1.jpg" alt="image"></picture>
@@ -330,7 +343,7 @@
                 <div class="row align-items-center">
                     <div class="col-sm-6">
                         <div class="breadcrumbs-area clearfix">
-                            <h4 class="page-title float-start">Dashboard</h4>
+                            <h1 class="page-title float-start">Dashboard</h1>
                             <ul class="breadcrumbs float-start">
                                 <li><a href="index.html">Home</a></li>
                                 <li><span>Dashboard</span></li>
@@ -342,10 +355,10 @@
                             <picture><source srcset="assets/images/author/avatar.avif" type="image/avif"><img class="avatar user-thumb" src="assets/images/author/avatar.png" alt="avatar"></picture>
                             <h4 class="user-name dropdown-toggle" data-bs-toggle="dropdown">Aigars Silkalns <i class="fa-solid fa-angle-down"></i></h4>
                             <div class="dropdown-menu user-dropdown">
-                                <a class="dropdown-item" href="#"><i class="fa-solid fa-user"></i> My Profile</a>
-                                <a class="dropdown-item" href="#"><i class="fa-solid fa-envelope"></i> Inbox <span class="badge rounded-pill bg-primary ms-auto">3</span></a>
-                                <a class="dropdown-item" href="#"><i class="fa-solid fa-gear"></i> Account Settings</a>
-                                <a class="dropdown-item" href="#"><i class="fa-solid fa-lock"></i> Lock Screen</a>
+                                <a class="dropdown-item" href="profile.html"><i class="fa-solid fa-user"></i> My Profile</a>
+                                <a class="dropdown-item" href="notifications.html"><i class="fa-solid fa-envelope"></i> Inbox <span class="badge rounded-pill bg-primary ms-auto">3</span></a>
+                                <a class="dropdown-item" href="settings.html"><i class="fa-solid fa-gear"></i> Account Settings</a>
+                                <a class="dropdown-item" href="screenlock.html"><i class="fa-solid fa-lock"></i> Lock Screen</a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item user-dropdown-logout" href="#"><i class="fa-solid fa-right-from-bracket"></i> Log Out</a>
                             </div>
@@ -361,7 +374,7 @@
                         <div class="col-md-4">
                             <div class="single-report mb-xs-30">
                                 <div class="s-report-inner pe--20 pt--30 mb-3">
-                                    <div class="icon"><i class="fa-brands fa-btc"></i></div>
+                                    <div class="icon icon-blue"><i class="fa-brands fa-bitcoin"></i></div>
                                     <div class="s-report-title d-flex justify-content-between">
                                         <h4 class="header-title mb-0">Bitcoin</h4>
                                         <p>24 H</p>
@@ -377,7 +390,7 @@
                         <div class="col-md-4">
                             <div class="single-report mb-xs-30">
                                 <div class="s-report-inner pe--20 pt--30 mb-3">
-                                    <div class="icon"><i class="fa-brands fa-btc"></i></div>
+                                    <div class="icon icon-amber"><i class="fa-solid fa-bolt"></i></div>
                                     <div class="s-report-title d-flex justify-content-between">
                                         <h4 class="header-title mb-0">Bitcoin Dash</h4>
                                         <p>24 H</p>
@@ -393,9 +406,9 @@
                         <div class="col-md-4">
                             <div class="single-report">
                                 <div class="s-report-inner pe--20 pt--30 mb-3">
-                                    <div class="icon"><i class="fa-solid fa-eur"></i></div>
+                                    <div class="icon icon-emerald"><i class="fa-brands fa-ethereum"></i></div>
                                     <div class="s-report-title d-flex justify-content-between">
-                                        <h4 class="header-title mb-0">Euthorium</h4>
+                                        <h4 class="header-title mb-0">Ethereum</h4>
                                         <p>24 H</p>
                                     </div>
                                     <div class="d-flex justify-content-between pb-2">
@@ -421,7 +434,7 @@
                                         <option value="0">01 July 2018</option>
                                     </select>
                                 </div>
-                                <div id="verview-shart"></div>
+                                <div id="overview-chart-wrap"><canvas id="overview-chart"></canvas></div>
                             </div>
                         </div>
                     </div>
@@ -429,7 +442,7 @@
                         <div class="card h-full">
                             <div class="card-body">
                                 <h4 class="header-title mb-0">Coin Distribution</h4>
-                                <div id="coin_distribution"></div>
+                                <div id="coin-distribution-wrap"><canvas id="coin-distribution-chart"></canvas></div>
                             </div>
                         </div>
                     </div>
@@ -460,51 +473,44 @@
                                                 <td class="stats-chart">Stats</td>
                                             </tr>
                                             <tr>
-                                                <td class="mv-icon"><picture><source srcset="assets/images/icon/market-value/icon1.avif" type="image/avif"><img src="assets/images/icon/market-value/icon1.png" alt="icon"></picture>
-                                                </td>
+                                                <td class="mv-icon"><span class="mv-coin-icon mv-indigo"><i class="fa-solid fa-bolt"></i></span></td>
                                                 <td class="coin-name">Dashcoin</td>
-                                                <td class="buy">30% <picture><source srcset="assets/images/icon/market-value/triangle-down.avif" type="image/avif"><img src="assets/images/icon/market-value/triangle-down.png" alt="icon"></picture></td>
-                                                <td class="sell">20% <picture><source srcset="assets/images/icon/market-value/triangle-up.avif" type="image/avif"><img src="assets/images/icon/market-value/triangle-up.png" alt="icon"></picture></td>
-                                                <td class="trends"><picture><source srcset="assets/images/icon/market-value/trends-up-icon.avif" type="image/avif"><img src="assets/images/icon/market-value/trends-up-icon.png" alt="icon"></picture></td>
+                                                <td class="buy">30% <i class="fa-solid fa-caret-down text-danger"></i></td>
+                                                <td class="sell">20% <i class="fa-solid fa-caret-up text-success"></i></td>
+                                                <td class="trends"><i class="fa-solid fa-arrow-trend-up text-success"></i></td>
                                                 <td class="attachments">$ 56746,857</td>
                                                 <td class="stats-chart">
                                                     <canvas id="mvaluechart"></canvas>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td class="mv-icon">
-                                                    <div class="mv-icon"><picture><source srcset="assets/images/icon/market-value/icon2.avif" type="image/avif"><img src="assets/images/icon/market-value/icon2.png" alt="icon"></picture></div>
-                                                </td>
+                                                <td class="mv-icon"><span class="mv-coin-icon mv-amber"><i class="fa-solid fa-coins"></i></span></td>
                                                 <td class="coin-name">LiteCoin</td>
-                                                <td class="buy">30% <picture><source srcset="assets/images/icon/market-value/triangle-down.avif" type="image/avif"><img src="assets/images/icon/market-value/triangle-down.png" alt="icon"></picture></td>
-                                                <td class="sell">20% <picture><source srcset="assets/images/icon/market-value/triangle-up.avif" type="image/avif"><img src="assets/images/icon/market-value/triangle-up.png" alt="icon"></picture></td>
-                                                <td class="trends"><picture><source srcset="assets/images/icon/market-value/trends-down-icon.avif" type="image/avif"><img src="assets/images/icon/market-value/trends-down-icon.png" alt="icon"></picture></td>
+                                                <td class="buy">30% <i class="fa-solid fa-caret-down text-danger"></i></td>
+                                                <td class="sell">20% <i class="fa-solid fa-caret-up text-success"></i></td>
+                                                <td class="trends"><i class="fa-solid fa-arrow-trend-down text-danger"></i></td>
                                                 <td class="attachments">$ 56746,857</td>
                                                 <td class="stats-chart">
                                                     <canvas id="mvaluechart2"></canvas>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td class="mv-icon">
-                                                    <div class="mv-icon"><picture><source srcset="assets/images/icon/market-value/icon3.avif" type="image/avif"><img src="assets/images/icon/market-value/icon3.png" alt="icon"></picture></div>
-                                                </td>
-                                                <td class="coin-name">Euthorium</td>
-                                                <td class="buy">30% <picture><source srcset="assets/images/icon/market-value/triangle-down.avif" type="image/avif"><img src="assets/images/icon/market-value/triangle-down.png" alt="icon"></picture></td>
-                                                <td class="sell">20% <picture><source srcset="assets/images/icon/market-value/triangle-up.avif" type="image/avif"><img src="assets/images/icon/market-value/triangle-up.png" alt="icon"></picture></td>
-                                                <td class="trends"><picture><source srcset="assets/images/icon/market-value/trends-up-icon.avif" type="image/avif"><img src="assets/images/icon/market-value/trends-up-icon.png" alt="icon"></picture></td>
+                                                <td class="mv-icon"><span class="mv-coin-icon mv-blue"><i class="fa-brands fa-ethereum"></i></span></td>
+                                                <td class="coin-name">Ethereum</td>
+                                                <td class="buy">30% <i class="fa-solid fa-caret-down text-danger"></i></td>
+                                                <td class="sell">20% <i class="fa-solid fa-caret-up text-success"></i></td>
+                                                <td class="trends"><i class="fa-solid fa-arrow-trend-up text-success"></i></td>
                                                 <td class="attachments">$ 56746,857</td>
                                                 <td class="stats-chart">
                                                     <canvas id="mvaluechart3"></canvas>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td class="mv-icon">
-                                                    <div class="mv-icon"><picture><source srcset="assets/images/icon/market-value/icon4.avif" type="image/avif"><img src="assets/images/icon/market-value/icon4.png" alt="icon"></picture></div>
-                                                </td>
+                                                <td class="mv-icon"><span class="mv-coin-icon mv-emerald"><i class="fa-brands fa-bitcoin"></i></span></td>
                                                 <td class="coin-name">Bitcoindash</td>
-                                                <td class="buy">30% <picture><source srcset="assets/images/icon/market-value/triangle-down.avif" type="image/avif"><img src="assets/images/icon/market-value/triangle-down.png" alt="icon"></picture></td>
-                                                <td class="sell">20% <picture><source srcset="assets/images/icon/market-value/triangle-up.avif" type="image/avif"><img src="assets/images/icon/market-value/triangle-up.png" alt="icon"></picture></td>
-                                                <td class="trends"><picture><source srcset="assets/images/icon/market-value/trends-up-icon.avif" type="image/avif"><img src="assets/images/icon/market-value/trends-up-icon.png" alt="icon"></picture></td>
+                                                <td class="buy">30% <i class="fa-solid fa-caret-down text-danger"></i></td>
+                                                <td class="sell">20% <i class="fa-solid fa-caret-up text-success"></i></td>
+                                                <td class="trends"><i class="fa-solid fa-arrow-trend-up text-success"></i></td>
                                                 <td class="attachments">$ 56746,857</td>
                                                 <td class="stats-chart">
                                                     <canvas id="mvaluechart4"></canvas>
@@ -528,19 +534,19 @@
                                 <div class="cripto-live mt-5">
                                     <ul>
                                         <li>
-                                            <div class="icon b">b</div> Bitcoin<span><i class="fa-solid fa-long-arrow-up"></i>$876909.00</span></li>
+                                            <div class="icon icon-blue"><i class="fa-brands fa-bitcoin"></i></div> Bitcoin<span><i class="fa-solid fa-arrow-trend-up"></i>$876909.00</span></li>
                                         <li>
-                                            <div class="icon l">l</div> Litecoin<span><i class="fa-solid fa-long-arrow-up"></i>$29780.00</span></li>
+                                            <div class="icon icon-indigo"><i class="fa-solid fa-coins"></i></div> Litecoin<span><i class="fa-solid fa-arrow-trend-up"></i>$29780.00</span></li>
                                         <li>
-                                            <div class="icon d">d</div> Dashcoin<span><i class="fa-solid fa-long-arrow-up"></i>$13276.00</span></li>
+                                            <div class="icon icon-amber"><i class="fa-solid fa-bolt"></i></div> Dashcoin<span><i class="fa-solid fa-arrow-trend-up"></i>$13276.00</span></li>
                                         <li>
-                                            <div class="icon b">b</div> Bitcoindash<span><i class="fa-solid fa-long-arrow-down"></i>$5684.890</span></li>
+                                            <div class="icon icon-emerald"><i class="fa-brands fa-bitcoin"></i></div> Bitcoindash<span><i class="fa-solid fa-arrow-trend-down"></i>$5684.890</span></li>
                                         <li>
-                                            <div class="icon e">e</div> Euthorium<span><i class="fa-solid fa-long-arrow-down"></i>$3890.98</span></li>
+                                            <div class="icon icon-blue"><i class="fa-brands fa-ethereum"></i></div> Ethereum<span><i class="fa-solid fa-arrow-trend-down"></i>$3890.98</span></li>
                                         <li>
-                                            <div class="icon t">b</div> Tcoin<span><i class="fa-solid fa-long-arrow-up"></i>$750.789</span></li>
+                                            <div class="icon icon-indigo"><i class="fa-solid fa-coins"></i></div> Tcoin<span><i class="fa-solid fa-arrow-trend-up"></i>$750.789</span></li>
                                         <li>
-                                            <div class="icon b">b</div> Bitcoin<span><i class="fa-solid fa-long-arrow-up"></i>$325.037</span></li>
+                                            <div class="icon icon-amber"><i class="fa-brands fa-bitcoin"></i></div> Bitcoin<span><i class="fa-solid fa-arrow-trend-up"></i>$325.037</span></li>
                                     </ul>
                                 </div>
                             </div>
@@ -659,7 +665,7 @@
                                         </div>
                                         <div class="lts-content">
                                             <span>Admin Post</span>
-                                            <h2><a href="blog.html">Sed ut perspiciatis unde omnis iste.</a></h2>
+                                            <h2><a href="#">Sed ut perspiciatis unde omnis iste.</a></h2>
                                             <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some...</p>
                                         </div>
                                     </div>
@@ -669,7 +675,7 @@
                                         </div>
                                         <div class="lts-content">
                                             <span>Admin Post</span>
-                                            <h2><a href="blog.html">Sed ut perspiciatis unde omnis iste.</a></h2>
+                                            <h2><a href="#">Sed ut perspiciatis unde omnis iste.</a></h2>
                                             <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some...</p>
                                         </div>
                                     </div>
@@ -711,7 +717,7 @@
         <!-- footer area start-->
         <footer>
             <div class="footer-area">
-                <p>© Copyright 2018. All right reserved. Template by <a href="https://colorlib.com/wp/">Colorlib</a>.</p>
+                <p>© Copyright 2026. All right reserved. Template by <a href="https://colorlib.com/wp/">Colorlib</a>.</p>
             </div>
         </footer>
         <!-- footer area end-->
@@ -902,16 +908,6 @@
 
     <!-- Chart.js 4 -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.1/dist/chart.umd.min.js"></script>
-    <!-- Highcharts 12.5.0 -->
-    <script src="https://code.highcharts.com/12.5.0/highcharts.js"></script>
-    <!-- ZingChart 2.9.16 -->
-    <script src="https://cdn.zingchart.com/2.9.16-1/zingchart.min.js"></script>
-    <script>
-    if (typeof zingchart !== "undefined") {
-        zingchart.MODULESDIR = "https://cdn.zingchart.com/2.9.16-1/modules/";
-        ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "ee6b7db5b51705a13dc2339db3edaf6d"];
-    }
-    </script>
     <!-- all line chart activation -->
     <script src="assets/js/line-chart.js"></script>
     <!-- all pie chart -->

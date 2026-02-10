@@ -110,6 +110,19 @@
                             <li><a href="maps.html"><i class="ti-map-alt"></i> <span>maps</span></a></li>
                             <li><a href="invoice.html"><i class="ti-receipt"></i> <span>Invoice Summary</span></a></li>
                             <li>
+                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-widget"></i><span>Apps</span></a>
+                                <ul class="collapse">
+                                    <li><a href="profile.html">Profile</a></li>
+                                    <li><a href="notifications.html">Notifications</a></li>
+                                    <li><a href="settings.html">Settings</a></li>
+                                    <li><a href="calendar.html">Calendar</a></li>
+                                    <li><a href="file-manager.html">File Manager</a></li>
+                                    <li><a href="chat.html">Chat</a></li>
+                                    <li><a href="email.html">Email</a></li>
+                                    <li><a href="widgets.html">Widgets</a></li>
+                                </ul>
+                            </li>
+                            <li>
                                 <a href="javascript:void(0)" aria-expanded="true"><i class="ti-layers-alt"></i> <span>Pages</span></a>
                                 <ul class="collapse">
                                     <li><a href="login.html">Login</a></li>
@@ -122,6 +135,7 @@
                                     <li><a href="screenlock.html">Lock Screen</a></li>
                                     <li><a href="screenlock2.html">Lock Screen 2</a></li>
                                     <li><a href="reset-pass.html">reset password</a></li>
+                                    <li><a href="forgot-password.html">Forgot Password</a></li>
                                     <li><a href="pricing.html">Pricing</a></li>
                                 </ul>
                             </li>
@@ -132,6 +146,7 @@
                                     <li><a href="404.html">Error 404</a></li>
                                     <li><a href="403.html">Error 403</a></li>
                                     <li><a href="500.html">Error 500</a></li>
+                                    <li><a href="401.html">Error 401</a></li>
                                 </ul>
                             </li>
                             <li>
@@ -186,7 +201,7 @@
                                 </i>
                                 <div class="dropdown-menu bell-notify-box notify-box">
                                     <span class="notify-title">You have 3 new notifications <a href="#">view all</a></span>
-                                    <div class="nofity-list">
+                                    <div class="notify-list">
                                         <a href="#" class="notify-item">
                                             <div class="notify-thumb"><i class="ti-key bg-danger"></i></div>
                                             <div class="notify-text">
@@ -197,7 +212,7 @@
                                         <a href="#" class="notify-item">
                                             <div class="notify-thumb"><i class="ti-comments-smiley bg-info"></i></div>
                                             <div class="notify-text">
-                                                <p>New Commetns On Post</p>
+                                                <p>New Comments On Post</p>
                                                 <span>30 Seconds ago</span>
                                             </div>
                                         </a>
@@ -211,7 +226,7 @@
                                         <a href="#" class="notify-item">
                                             <div class="notify-thumb"><i class="ti-comments-smiley bg-info"></i></div>
                                             <div class="notify-text">
-                                                <p>New Commetns On Post</p>
+                                                <p>New Comments On Post</p>
                                                 <span>30 Seconds ago</span>
                                             </div>
                                         </a>
@@ -243,7 +258,7 @@
                                 <i class="fa-regular fa-envelope dropdown-toggle" data-bs-toggle="dropdown"><span>3</span></i>
                                 <div class="dropdown-menu notify-box nt-enveloper-box">
                                     <span class="notify-title">You have 3 new notifications <a href="#">view all</a></span>
-                                    <div class="nofity-list">
+                                    <div class="notify-list">
                                         <a href="#" class="notify-item">
                                             <div class="notify-thumb">
                                                 <picture><source srcset="assets/images/author/author-img1.avif" type="image/avif"><img src="assets/images/author/author-img1.jpg" alt="image"></picture>
@@ -330,7 +345,7 @@
                 <div class="row align-items-center">
                     <div class="col-sm-6">
                         <div class="breadcrumbs-area clearfix">
-                            <h4 class="page-title float-start">Dashboard</h4>
+                            <h1 class="page-title float-start">Dashboard</h1>
                             <ul class="breadcrumbs float-start">
                                 <li><a href="index.html">Home</a></li>
                                 <li><span>Media Object</span></li>
@@ -342,10 +357,10 @@
                             <picture><source srcset="assets/images/author/avatar.avif" type="image/avif"><img class="avatar user-thumb" src="assets/images/author/avatar.png" alt="avatar"></picture>
                             <h4 class="user-name dropdown-toggle" data-bs-toggle="dropdown">Aigars Silkalns <i class="fa-solid fa-angle-down"></i></h4>
                             <div class="dropdown-menu user-dropdown">
-                                <a class="dropdown-item" href="#"><i class="fa-solid fa-user"></i> My Profile</a>
-                                <a class="dropdown-item" href="#"><i class="fa-solid fa-envelope"></i> Inbox <span class="badge rounded-pill bg-primary ms-auto">3</span></a>
-                                <a class="dropdown-item" href="#"><i class="fa-solid fa-gear"></i> Account Settings</a>
-                                <a class="dropdown-item" href="#"><i class="fa-solid fa-lock"></i> Lock Screen</a>
+                                <a class="dropdown-item" href="profile.html"><i class="fa-solid fa-user"></i> My Profile</a>
+                                <a class="dropdown-item" href="notifications.html"><i class="fa-solid fa-envelope"></i> Inbox <span class="badge rounded-pill bg-primary ms-auto">3</span></a>
+                                <a class="dropdown-item" href="settings.html"><i class="fa-solid fa-gear"></i> Account Settings</a>
+                                <a class="dropdown-item" href="screenlock.html"><i class="fa-solid fa-lock"></i> Lock Screen</a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item user-dropdown-logout" href="#"><i class="fa-solid fa-right-from-bracket"></i> Log Out</a>
                             </div>
@@ -359,34 +374,20 @@
                     <div class="col-lg-6 mt-5">
                         <div class="card">
                             <div class="card-body">
-                                <div class="media mb-5">
-                                    <picture><source srcset="assets/images/media/media1.avif" type="image/avif"><img class="img-fluid me-4" src="assets/images/media/media1.jpg" alt="image"></picture>
+                                <h4 class="header-title">Default Media Object</h4>
+                                <div class="media mb-4">
+                                    <picture class="me-4"><source srcset="assets/images/media/media1.avif" type="image/avif"><img class="img-fluid" src="assets/images/media/media1.jpg" alt="Media object thumbnail"></picture>
                                     <div class="media-body">
-                                        <h4 class="mb-3">Media heading</h4> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+                                        <h5 class="mb-2">Media heading</h5>
+                                        <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.</p>
                                     </div>
                                 </div>
-                                <div class="media">
-                                    <picture><source srcset="assets/images/media/media2.avif" type="image/avif"><img class="img-fluid me-4" src="assets/images/media/media2.jpg" alt=""></picture>
+                                <hr>
+                                <div class="media mt-4">
+                                    <picture class="me-4"><source srcset="assets/images/media/media2.avif" type="image/avif"><img class="img-fluid" src="assets/images/media/media2.jpg" alt="Media object thumbnail"></picture>
                                     <div class="media-body">
-                                        <h4 class="mb-3">Media heading</h4> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 mt-5">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="media mb-5">
-                                    <picture><source srcset="assets/images/media/media1.avif" type="image/avif"><img class="img-fluid me-4" src="assets/images/media/media1.jpg" alt="image"></picture>
-                                    <div class="media-body">
-                                        <h4 class="mb-3">Media heading</h4> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
-                                    </div>
-                                </div>
-                                <div class="media mt-5 child-media">
-                                    <picture><source srcset="assets/images/media/media2.avif" type="image/avif"><img class="img-fluid me-4" src="assets/images/media/media2.jpg" alt=""></picture>
-                                    <div class="media-body">
-                                        <h4 class="mb-3">Media heading</h4> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+                                        <h5 class="mb-2">Media heading</h5>
+                                        <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.</p>
                                     </div>
                                 </div>
                             </div>
@@ -395,34 +396,19 @@
                     <div class="col-lg-6 mt-5">
                         <div class="card">
                             <div class="card-body">
-                                <div class="media mb-5">
-                                    <picture><source srcset="assets/images/media/media1.avif" type="image/avif"><img class="align-self-center img-fluid me-4" src="assets/images/media/media1.jpg" alt="image"></picture>
+                                <h4 class="header-title">Nested Media Object</h4>
+                                <div class="media mb-4">
+                                    <picture class="me-4"><source srcset="assets/images/media/media1.avif" type="image/avif"><img class="img-fluid" src="assets/images/media/media1.jpg" alt="Parent media thumbnail"></picture>
                                     <div class="media-body">
-                                        <h4 class="mb-3">Center-aligned media</h4> Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate architecto ea atque eum adipisci aspernatur, repellat commodi dignissimos delectus aliquam qui fugiat neque ut ipsa nihil quia voluptatum ratione tenetur, rem, cumque rerum quae hic eveniet! Eius vitae excepturi quae? Aperiam doloremque consequuntur qui dignissimos et ad voluptate maiores modi.
+                                        <h5 class="mb-2">Media heading</h5>
+                                        <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.</p>
                                     </div>
                                 </div>
-                                <div class="media">
-                                    <picture><source srcset="assets/images/media/media2.avif" type="image/avif"><img class="align-self-center img-fluid me-4" src="assets/images/media/media2.jpg" alt=""></picture>
+                                <div class="media child-media">
+                                    <picture class="me-4"><source srcset="assets/images/media/media2.avif" type="image/avif"><img class="img-fluid" src="assets/images/media/media2.jpg" alt="Nested media thumbnail"></picture>
                                     <div class="media-body">
-                                        <h4 class="mb-3">Center-aligned media</h4> Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae suscipit ad voluptate labore, quo velit omnis voluptatibus fugit sunt molestias veritatis dicta similique perspiciatis tempora iste soluta natus non eius at ratione sit, ullam debitis deleniti. Magnam quasi blanditiis esse dolor sed tenetur eum repellendus odit. Impedit nobis ipsa sit veritatis enim! Asperiores exercitationem deserunt non quidem, error eum voluptatem.
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 mt-5">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="media mb-5">
-                                    <picture><source srcset="assets/images/media/media1.avif" type="image/avif"><img class="align-self-end img-fluid me-4" src="assets/images/media/media1.jpg" alt="image"></picture>
-                                    <div class="media-body">
-                                        <h4 class="mb-3">Bottom-aligned media</h4> Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate architecto ea atque eum adipisci aspernatur, repellat commodi dignissimos delectus aliquam qui fugiat neque ut ipsa nihil quia voluptatum ratione tenetur, rem, cumque rerum quae hic eveniet! Eius vitae excepturi quae? Aperiam doloremque consequuntur qui dignissimos et ad voluptate maiores modi.
-                                    </div>
-                                </div>
-                                <div class="media">
-                                    <picture><source srcset="assets/images/media/media2.avif" type="image/avif"><img class="align-self-end img-fluid me-4" src="assets/images/media/media2.jpg" alt=""></picture>
-                                    <div class="media-body">
-                                        <h4 class="mb-3">Bottom-aligned media</h4> Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae suscipit ad voluptate labore, quo velit omnis voluptatibus fugit sunt molestias veritatis dicta similique perspiciatis tempora iste soluta natus non eius at ratione sit, ullam debitis deleniti. Magnam quasi blanditiis esse dolor sed tenetur eum repellendus odit. Impedit nobis ipsa sit veritatis enim! Asperiores exercitationem deserunt non quidem, error eum voluptatem.
+                                        <h5 class="mb-2">Media heading</h5>
+                                        <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.</p>
                                     </div>
                                 </div>
                             </div>
@@ -431,17 +417,21 @@
                     <div class="col-lg-6 mt-5">
                         <div class="card">
                             <div class="card-body">
-                                <div class="media mb-5">
+                                <h4 class="header-title">Center-aligned Media</h4>
+                                <div class="media mb-4">
+                                    <picture class="align-self-center me-4"><source srcset="assets/images/media/media1.avif" type="image/avif"><img class="img-fluid" src="assets/images/media/media1.jpg" alt="Center-aligned media thumbnail"></picture>
                                     <div class="media-body">
-                                        <h4 class="mb-3">Media object</h4> Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate architecto ea atque eum adipisci aspernatur, repellat commodi dignissimos delectus aliquam qui fugiat neque.
+                                        <h5 class="mb-2">Center-aligned media</h5>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate architecto ea atque eum adipisci aspernatur, repellat commodi dignissimos delectus aliquam qui fugiat neque ut ipsa nihil quia voluptatum ratione tenetur, rem, cumque rerum quae hic eveniet! Eius vitae excepturi quae? Aperiam doloremque consequuntur qui dignissimos et ad voluptate maiores modi.</p>
                                     </div>
-                                    <picture><source srcset="assets/images/media/media1.avif" type="image/avif"><img class="img-fluid ms-4" src="assets/images/media/media1.jpg" alt="image"></picture>
                                 </div>
-                                <div class="media">
+                                <hr>
+                                <div class="media mt-4">
+                                    <picture class="align-self-center me-4"><source srcset="assets/images/media/media2.avif" type="image/avif"><img class="img-fluid" src="assets/images/media/media2.jpg" alt="Center-aligned media thumbnail"></picture>
                                     <div class="media-body">
-                                        <h4 class="mb-3">Media object</h4> Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae suscipit ad voluptate labore, quo velit omnis voluptatibus fugit sunt molestias veritatis dicta similique.
+                                        <h5 class="mb-2">Center-aligned media</h5>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae suscipit ad voluptate labore, quo velit omnis voluptatibus fugit sunt molestias veritatis dicta similique perspiciatis tempora iste soluta natus non eius at ratione sit, ullam debitis deleniti. Magnam quasi blanditiis esse dolor sed tenetur eum repellendus odit. Impedit nobis ipsa sit veritatis enim! Asperiores exercitationem deserunt non quidem, error eum voluptatem.</p>
                                     </div>
-                                    <picture><source srcset="assets/images/media/media2.avif" type="image/avif"><img class="img-fluid ms-4" src="assets/images/media/media2.jpg" alt=""></picture>
                                 </div>
                             </div>
                         </div>
@@ -449,17 +439,65 @@
                     <div class="col-lg-6 mt-5">
                         <div class="card">
                             <div class="card-body">
-                                <ul class="list-unstyled">
+                                <h4 class="header-title">Bottom-aligned Media</h4>
+                                <div class="media mb-4">
+                                    <picture class="align-self-end me-4"><source srcset="assets/images/media/media1.avif" type="image/avif"><img class="img-fluid" src="assets/images/media/media1.jpg" alt="Bottom-aligned media thumbnail"></picture>
+                                    <div class="media-body">
+                                        <h5 class="mb-2">Bottom-aligned media</h5>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate architecto ea atque eum adipisci aspernatur, repellat commodi dignissimos delectus aliquam qui fugiat neque ut ipsa nihil quia voluptatum ratione tenetur, rem, cumque rerum quae hic eveniet! Eius vitae excepturi quae? Aperiam doloremque consequuntur qui dignissimos et ad voluptate maiores modi.</p>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="media mt-4">
+                                    <picture class="align-self-end me-4"><source srcset="assets/images/media/media2.avif" type="image/avif"><img class="img-fluid" src="assets/images/media/media2.jpg" alt="Bottom-aligned media thumbnail"></picture>
+                                    <div class="media-body">
+                                        <h5 class="mb-2">Bottom-aligned media</h5>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae suscipit ad voluptate labore, quo velit omnis voluptatibus fugit sunt molestias veritatis dicta similique perspiciatis tempora iste soluta natus non eius at ratione sit, ullam debitis deleniti. Magnam quasi blanditiis esse dolor sed tenetur eum repellendus odit. Impedit nobis ipsa sit veritatis enim! Asperiores exercitationem deserunt non quidem, error eum voluptatem.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mt-5">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="header-title">Right-aligned Media</h4>
+                                <div class="media mb-4">
+                                    <div class="media-body">
+                                        <h5 class="mb-2">Media object</h5>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate architecto ea atque eum adipisci aspernatur, repellat commodi dignissimos delectus aliquam qui fugiat neque.</p>
+                                    </div>
+                                    <picture class="ms-4"><source srcset="assets/images/media/media1.avif" type="image/avif"><img class="img-fluid" src="assets/images/media/media1.jpg" alt="Right-aligned media thumbnail"></picture>
+                                </div>
+                                <hr>
+                                <div class="media mt-4">
+                                    <div class="media-body">
+                                        <h5 class="mb-2">Media object</h5>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae suscipit ad voluptate labore, quo velit omnis voluptatibus fugit sunt molestias veritatis dicta similique.</p>
+                                    </div>
+                                    <picture class="ms-4"><source srcset="assets/images/media/media2.avif" type="image/avif"><img class="img-fluid" src="assets/images/media/media2.jpg" alt="Right-aligned media thumbnail"></picture>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mt-5">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="header-title">Media List</h4>
+                                <ul class="list-unstyled mb-0">
                                     <li class="media mb-4">
-                                        <picture><source srcset="assets/images/media/media1.avif" type="image/avif"><img class="img-fluid me-4" src="assets/images/media/media1.jpg" alt="image"></picture>
+                                        <picture class="me-4"><source srcset="assets/images/media/media1.avif" type="image/avif"><img class="img-fluid" src="assets/images/media/media1.jpg" alt="List media thumbnail"></picture>
                                         <div class="media-body">
-                                            <h5 class="mb-3">List-based media object</h5> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                                            <h5 class="mb-2">List-based media object</h5>
+                                            <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
                                         </div>
                                     </li>
+                                    <hr>
                                     <li class="media">
-                                        <picture><source srcset="assets/images/media/media1.avif" type="image/avif"><img class="img-fluid me-4" src="assets/images/media/media1.jpg" alt="image"></picture>
+                                        <picture class="me-4"><source srcset="assets/images/media/media1.avif" type="image/avif"><img class="img-fluid" src="assets/images/media/media1.jpg" alt="List media thumbnail"></picture>
                                         <div class="media-body">
-                                            <h5 class="mb-3">List-based media object</h5> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                                            <h5 class="mb-2">List-based media object</h5>
+                                            <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
                                         </div>
                                     </li>
                                 </ul>
@@ -473,7 +511,7 @@
         <!-- footer area start-->
         <footer>
             <div class="footer-area">
-                <p>© Copyright 2018. All right reserved. Template by <a href="https://colorlib.com/wp/">Colorlib</a>.</p>
+                <p>© Copyright 2026. All right reserved. Template by <a href="https://colorlib.com/wp/">Colorlib</a>.</p>
             </div>
         </footer>
         <!-- footer area end-->

@@ -1,0 +1,680 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Account Settings - SRTdash Admin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Account settings page for managing profile, security, and notification preferences.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/images/icon/logo.png">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="assets/css/themify-icons.css">
+    <link rel="stylesheet" href="assets/css/metismenujs.min.css">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <!-- others css -->
+    <link rel="stylesheet" href="assets/css/typography.css">
+    <link rel="stylesheet" href="assets/css/default-css.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <!-- preloader area start -->
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+    <!-- preloader area end -->
+    <!-- page container area start -->
+    <div class="page-container">
+        <!-- sidebar menu area start -->
+        <div class="sidebar-menu">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <a href="index.html"><picture><source srcset="assets/images/icon/logo.avif" type="image/avif"><img src="assets/images/icon/logo.png" alt="logo"></picture></a>
+                </div>
+            </div>
+            <div class="main-menu">
+                <div class="menu-inner">
+                    <nav>
+                        <ul class="metismenu" id="menu">
+                            <li>
+                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-dashboard"></i><span>dashboard</span></a>
+                                <ul class="collapse">
+                                    <li><a href="index.html">ICO dashboard</a></li>
+                                    <li><a href="index2.html">Ecommerce dashboard</a></li>
+                                    <li><a href="index3.html">SEO dashboard</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-layout-sidebar-left"></i><span>Sidebar Types</span></a>
+                                <ul class="collapse">
+                                    <li><a href="index.html">Left Sidebar</a></li>
+                                    <li><a href="index3-horizontalmenu.html">Horizontal Sidebar</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-pie-chart"></i><span>Charts</span></a>
+                                <ul class="collapse">
+                                    <li><a href="barchart.html">bar chart</a></li>
+                                    <li><a href="linechart.html">line Chart</a></li>
+                                    <li><a href="piechart.html">pie chart</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-palette"></i><span>UI Features</span></a>
+                                <ul class="collapse">
+                                    <li><a href="accordion.html">Accordion</a></li>
+                                    <li><a href="alert.html">Alert</a></li>
+                                    <li><a href="badge.html">Badge</a></li>
+                                    <li><a href="button.html">Button</a></li>
+                                    <li><a href="button-group.html">Button Group</a></li>
+                                    <li><a href="cards.html">Cards</a></li>
+                                    <li><a href="dropdown.html">Dropdown</a></li>
+                                    <li><a href="list-group.html">List Group</a></li>
+                                    <li><a href="media-object.html">Media Object</a></li>
+                                    <li><a href="modal.html">Modal</a></li>
+                                    <li><a href="pagination.html">Pagination</a></li>
+                                    <li><a href="popovers.html">Popover</a></li>
+                                    <li><a href="progressbar.html">Progressbar</a></li>
+                                    <li><a href="tab.html">Tab</a></li>
+                                    <li><a href="typography.html">Typography</a></li>
+                                    <li><a href="form.html">Form</a></li>
+                                    <li><a href="grid.html">grid system</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-slice"></i><span>icons</span></a>
+                                <ul class="collapse">
+                                    <li><a href="fontawesome.html">fontawesome icons</a></li>
+                                    <li><a href="themify.html">themify icons</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)" aria-expanded="true"><i class="fa-solid fa-table"></i><span>Tables</span></a>
+                                <ul class="collapse">
+                                    <li><a href="table-basic.html">basic table</a></li>
+                                    <li><a href="table-layout.html">table layout</a></li>
+                                    <li><a href="datatable.html">datatable</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="maps.html"><i class="ti-map-alt"></i> <span>maps</span></a></li>
+                            <li><a href="invoice.html"><i class="ti-receipt"></i> <span>Invoice Summary</span></a></li>
+                            <li>
+                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-widget"></i><span>Apps</span></a>
+                                <ul class="collapse">
+                                    <li><a href="profile.html">Profile</a></li>
+                                    <li><a href="notifications.html">Notifications</a></li>
+                                    <li><a href="settings.html">Settings</a></li>
+                                    <li><a href="calendar.html">Calendar</a></li>
+                                    <li><a href="file-manager.html">File Manager</a></li>
+                                    <li><a href="chat.html">Chat</a></li>
+                                    <li><a href="email.html">Email</a></li>
+                                    <li><a href="widgets.html">Widgets</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-layers-alt"></i> <span>Pages</span></a>
+                                <ul class="collapse">
+                                    <li><a href="login.html">Login</a></li>
+                                    <li><a href="login2.html">Login 2</a></li>
+                                    <li><a href="login3.html">Login 3</a></li>
+                                    <li><a href="register.html">Register</a></li>
+                                    <li><a href="register2.html">Register 2</a></li>
+                                    <li><a href="register3.html">Register 3</a></li>
+                                    <li><a href="register4.html">Register 4</a></li>
+                                    <li><a href="screenlock.html">Lock Screen</a></li>
+                                    <li><a href="screenlock2.html">Lock Screen 2</a></li>
+                                    <li><a href="reset-pass.html">reset password</a></li>
+                                    <li><a href="forgot-password.html">Forgot Password</a></li>
+                                    <li><a href="pricing.html">Pricing</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)" aria-expanded="true"><i class="fa-solid fa-exclamation-triangle"></i><span>Error</span></a>
+                                <ul class="collapse">
+                                    <li><a href="404.html">Error 404</a></li>
+                                    <li><a href="403.html">Error 403</a></li>
+                                    <li><a href="500.html">Error 500</a></li>
+                                    <li><a href="401.html">Error 401</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)" aria-expanded="true"><i class="fa-solid fa-align-left"></i> <span>Multi level menu</span></a>
+                                <ul class="collapse">
+                                    <li><a href="#">Item level (1)</a></li>
+                                    <li><a href="#">Item level (1)</a></li>
+                                    <li><a href="#" aria-expanded="true">Item level (1)</a>
+                                        <ul class="collapse">
+                                            <li><a href="#">Item level (2)</a></li>
+                                            <li><a href="#">Item level (2)</a></li>
+                                            <li><a href="#">Item level (2)</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Item level (1)</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <!-- sidebar menu area end -->
+        <!-- main content area start -->
+        <div class="main-content">
+            <!-- header area start -->
+            <div class="header-area">
+                <div class="row align-items-center">
+                    <!-- nav and search button -->
+                    <div class="col-md-6 col-sm-8 clearfix">
+                        <div class="nav-btn float-start">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div class="search-box float-start">
+                            <form action="#">
+                                <input type="text" name="search" placeholder="Search..." required>
+                                <i class="ti-search"></i>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- profile info & task notification -->
+                    <div class="col-md-6 col-sm-4 clearfix">
+                        <ul class="notification-area float-end">
+                            <li id="full-view"><i class="ti-fullscreen"></i></li>
+                            <li id="full-view-exit"><i class="ti-zoom-out"></i></li>
+                            <li class="dropdown">
+                                <i class="ti-bell dropdown-toggle" data-bs-toggle="dropdown">
+                                    <span>2</span>
+                                </i>
+                                <div class="dropdown-menu bell-notify-box notify-box">
+                                    <span class="notify-title">You have 3 new notifications <a href="#">view all</a></span>
+                                    <div class="notify-list">
+                                        <a href="#" class="notify-item">
+                                            <div class="notify-thumb"><i class="ti-key bg-danger"></i></div>
+                                            <div class="notify-text">
+                                                <p>You have Changed Your Password</p>
+                                                <span>Just Now</span>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="notify-item">
+                                            <div class="notify-thumb"><i class="ti-comments-smiley bg-info"></i></div>
+                                            <div class="notify-text">
+                                                <p>New Comments On Post</p>
+                                                <span>30 Seconds ago</span>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="notify-item">
+                                            <div class="notify-thumb"><i class="ti-key bg-primary"></i></div>
+                                            <div class="notify-text">
+                                                <p>Some special like you</p>
+                                                <span>Just Now</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="dropdown">
+                                <i class="fa-regular fa-envelope dropdown-toggle" data-bs-toggle="dropdown"><span>3</span></i>
+                                <div class="dropdown-menu notify-box nt-enveloper-box">
+                                    <span class="notify-title">You have 3 new notifications <a href="#">view all</a></span>
+                                    <div class="notify-list">
+                                        <a href="#" class="notify-item">
+                                            <div class="notify-thumb">
+                                                <picture><source srcset="assets/images/author/author-img1.avif" type="image/avif"><img src="assets/images/author/author-img1.jpg" alt="image"></picture>
+                                            </div>
+                                            <div class="notify-text">
+                                                <p>Aglae Mayer</p>
+                                                <span class="msg">Hey I am waiting for you...</span>
+                                                <span>3:15 PM</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="settings-btn">
+                                <i class="ti-settings"></i>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- header area end -->
+            <!-- page title area start -->
+            <div class="page-title-area">
+                <div class="row align-items-center">
+                    <div class="col-sm-6">
+                        <div class="breadcrumbs-area clearfix">
+                            <h1 class="page-title float-start">Account Settings</h1>
+                            <ul class="breadcrumbs float-start">
+                                <li><a href="index.html">Home</a></li>
+                                <li><span>Account Settings</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 clearfix">
+                        <div class="user-profile float-end">
+                            <picture><source srcset="assets/images/author/avatar.avif" type="image/avif"><img class="avatar user-thumb" src="assets/images/author/avatar.png" alt="avatar"></picture>
+                            <h4 class="user-name dropdown-toggle" data-bs-toggle="dropdown">Aigars Silkalns <i class="fa-solid fa-angle-down"></i></h4>
+                            <div class="dropdown-menu user-dropdown">
+                                <a class="dropdown-item" href="#"><i class="fa-solid fa-user"></i> My Profile</a>
+                                <a class="dropdown-item" href="#"><i class="fa-solid fa-envelope"></i> Inbox <span class="badge rounded-pill bg-primary ms-auto">3</span></a>
+                                <a class="dropdown-item" href="settings.html"><i class="fa-solid fa-gear"></i> Account Settings</a>
+                                <a class="dropdown-item" href="#"><i class="fa-solid fa-lock"></i> Lock Screen</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item user-dropdown-logout" href="#"><i class="fa-solid fa-right-from-bracket"></i> Log Out</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- page title area end -->
+            <div class="main-content-inner" id="main-content">
+                <div class="row mt-5 mb-5">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row">
+                                    <!-- Vertical Tab Navigation -->
+                                    <div class="col-lg-3">
+                                        <div class="nav flex-column nav-pills" id="settings-tab" role="tablist" aria-orientation="vertical">
+                                            <button class="nav-link active text-start mb-2" id="general-tab" data-bs-toggle="pill" data-bs-target="#general" type="button" role="tab" aria-controls="general" aria-selected="true">
+                                                <i class="fa-solid fa-user me-2"></i> General
+                                            </button>
+                                            <button class="nav-link text-start mb-2" id="security-tab" data-bs-toggle="pill" data-bs-target="#security" type="button" role="tab" aria-controls="security" aria-selected="false">
+                                                <i class="fa-solid fa-shield-halved me-2"></i> Security
+                                            </button>
+                                            <button class="nav-link text-start mb-2" id="notifications-tab" data-bs-toggle="pill" data-bs-target="#notifications" type="button" role="tab" aria-controls="notifications" aria-selected="false">
+                                                <i class="fa-solid fa-bell me-2"></i> Notifications
+                                            </button>
+                                            <button class="nav-link text-start" id="billing-tab" data-bs-toggle="pill" data-bs-target="#billing" type="button" role="tab" aria-controls="billing" aria-selected="false">
+                                                <i class="fa-solid fa-credit-card me-2"></i> Billing
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <!-- Tab Content Panels -->
+                                    <div class="col-lg-9 mt-lg-0 mt-4">
+                                        <div class="tab-content" id="settings-tabContent">
+                                            <!-- General Tab -->
+                                            <div class="tab-pane fade show active" id="general" role="tabpanel" aria-labelledby="general-tab">
+                                                <h4 class="header-title mb-4">Profile Information</h4>
+                                                <!-- Profile Photo -->
+                                                <div class="d-flex align-items-center mb-4">
+                                                    <div class="me-4">
+                                                        <picture>
+                                                            <source srcset="assets/images/author/avatar.avif" type="image/avif">
+                                                            <img src="assets/images/author/avatar.png" alt="Profile photo" class="rounded-circle" width="80" height="80">
+                                                        </picture>
+                                                    </div>
+                                                    <div>
+                                                        <h5 class="mb-1">Profile Photo</h5>
+                                                        <button type="button" class="btn btn-sm btn-outline-primary">Change Photo</button>
+                                                    </div>
+                                                </div>
+                                                <!-- Profile Form -->
+                                                <form action="#">
+                                                    <div class="row">
+                                                        <div class="col-md-6 mb-3">
+                                                            <label for="fullName" class="form-label">Full Name</label>
+                                                            <input type="text" class="form-control" id="fullName" value="Aigars Silkalns">
+                                                        </div>
+                                                        <div class="col-md-6 mb-3">
+                                                            <label for="email" class="form-label">Email</label>
+                                                            <input type="email" class="form-control" id="email" value="aigars@example.com">
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-6 mb-3">
+                                                            <label for="phone" class="form-label">Phone</label>
+                                                            <input type="tel" class="form-control" id="phone" value="+1 (555) 123-4567">
+                                                        </div>
+                                                        <div class="col-md-6 mb-3">
+                                                            <label for="timezone" class="form-label">Timezone</label>
+                                                            <select class="form-select" id="timezone">
+                                                                <option value="UTC-12">UTC-12:00 Baker Island</option>
+                                                                <option value="UTC-11">UTC-11:00 American Samoa</option>
+                                                                <option value="UTC-10">UTC-10:00 Hawaii</option>
+                                                                <option value="UTC-9">UTC-09:00 Alaska</option>
+                                                                <option value="UTC-8">UTC-08:00 Pacific Time</option>
+                                                                <option value="UTC-7">UTC-07:00 Mountain Time</option>
+                                                                <option value="UTC-6">UTC-06:00 Central Time</option>
+                                                                <option value="UTC-5">UTC-05:00 Eastern Time</option>
+                                                                <option value="UTC-4">UTC-04:00 Atlantic Time</option>
+                                                                <option value="UTC-3">UTC-03:00 Buenos Aires</option>
+                                                                <option value="UTC-2">UTC-02:00 Mid-Atlantic</option>
+                                                                <option value="UTC-1">UTC-01:00 Azores</option>
+                                                                <option value="UTC+0" selected>UTC+00:00 London, Dublin</option>
+                                                                <option value="UTC+1">UTC+01:00 Berlin, Paris</option>
+                                                                <option value="UTC+2" >UTC+02:00 Helsinki, Riga</option>
+                                                                <option value="UTC+3">UTC+03:00 Moscow, Istanbul</option>
+                                                                <option value="UTC+4">UTC+04:00 Dubai</option>
+                                                                <option value="UTC+5">UTC+05:00 Karachi</option>
+                                                                <option value="UTC+5:30">UTC+05:30 Mumbai</option>
+                                                                <option value="UTC+6">UTC+06:00 Dhaka</option>
+                                                                <option value="UTC+7">UTC+07:00 Bangkok</option>
+                                                                <option value="UTC+8">UTC+08:00 Singapore</option>
+                                                                <option value="UTC+9">UTC+09:00 Tokyo</option>
+                                                                <option value="UTC+10">UTC+10:00 Sydney</option>
+                                                                <option value="UTC+11">UTC+11:00 Solomon Islands</option>
+                                                                <option value="UTC+12">UTC+12:00 Auckland</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="bio" class="form-label">Bio</label>
+                                                        <textarea class="form-control" id="bio" rows="4" style="height: auto; min-height: 150px;">Full-stack developer and admin dashboard enthusiast. Building modern web applications with a focus on clean UI and great user experience.</textarea>
+                                                    </div>
+                                                    <button type="submit" class="btn btn-primary">Save Changes</button>
+                                                </form>
+                                            </div>
+                                            <!-- Security Tab -->
+                                            <div class="tab-pane fade" id="security" role="tabpanel" aria-labelledby="security-tab">
+                                                <h4 class="header-title mb-4">Change Password</h4>
+                                                <form action="#">
+                                                    <div class="row">
+                                                        <div class="col-md-6 mb-3">
+                                                            <label for="currentPassword" class="form-label">Current Password</label>
+                                                            <input type="password" class="form-control" id="currentPassword" placeholder="Enter current password">
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-6 mb-3">
+                                                            <label for="newPassword" class="form-label">New Password</label>
+                                                            <input type="password" class="form-control" id="newPassword" placeholder="Enter new password">
+                                                        </div>
+                                                        <div class="col-md-6 mb-3">
+                                                            <label for="confirmPassword" class="form-label">Confirm Password</label>
+                                                            <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm new password">
+                                                        </div>
+                                                    </div>
+                                                    <button type="submit" class="btn btn-primary me-2">Update Password</button>
+                                                    <button type="button" class="btn btn-outline-danger">Log Out All Devices</button>
+                                                </form>
+                                                <!-- Two-Factor Authentication -->
+                                                <hr class="my-4">
+                                                <h4 class="header-title mb-3">Two-Factor Authentication</h4>
+                                                <div class="d-flex align-items-center justify-content-between mb-4">
+                                                    <div>
+                                                        <p class="mb-0">Add an extra layer of security to your account by enabling two-factor authentication.</p>
+                                                    </div>
+                                                    <div class="s-swtich ms-3">
+                                                        <input type="checkbox" id="switch2fa" />
+                                                        <label for="switch2fa">Toggle</label>
+                                                    </div>
+                                                </div>
+                                                <!-- Active Sessions -->
+                                                <hr class="my-4">
+                                                <h4 class="header-title mb-3">Active Sessions</h4>
+                                                <div class="table-responsive">
+                                                    <table class="table table-bordered">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Device</th>
+                                                                <th>Location</th>
+                                                                <th>Last Active</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td><i class="fa-solid fa-desktop me-2"></i>Chrome on macOS</td>
+                                                                <td>Riga, Latvia</td>
+                                                                <td>Active now</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><i class="fa-solid fa-mobile-screen me-2"></i>Safari on iPhone</td>
+                                                                <td>Riga, Latvia</td>
+                                                                <td>2 hours ago</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><i class="fa-solid fa-laptop me-2"></i>Firefox on Windows</td>
+                                                                <td>London, UK</td>
+                                                                <td>3 days ago</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <!-- Notifications Tab -->
+                                            <div class="tab-pane fade" id="notifications" role="tabpanel" aria-labelledby="notifications-tab">
+                                                <h4 class="header-title mb-4">Notification Preferences</h4>
+                                                <div class="settings-list">
+                                                    <div class="s-settings mb-4">
+                                                        <div class="s-sw-title">
+                                                            <h5>Email Notifications</h5>
+                                                            <div class="s-swtich">
+                                                                <input type="checkbox" id="switchEmail" checked />
+                                                                <label for="switchEmail">Toggle</label>
+                                                            </div>
+                                                        </div>
+                                                        <p>Receive email notifications for account activity, security alerts, and important updates.</p>
+                                                    </div>
+                                                    <div class="s-settings mb-4">
+                                                        <div class="s-sw-title">
+                                                            <h5>Push Notifications</h5>
+                                                            <div class="s-swtich">
+                                                                <input type="checkbox" id="switchPush" checked />
+                                                                <label for="switchPush">Toggle</label>
+                                                            </div>
+                                                        </div>
+                                                        <p>Get real-time push notifications in your browser for messages and task assignments.</p>
+                                                    </div>
+                                                    <div class="s-settings mb-4">
+                                                        <div class="s-sw-title">
+                                                            <h5>SMS Notifications</h5>
+                                                            <div class="s-swtich">
+                                                                <input type="checkbox" id="switchSMS" />
+                                                                <label for="switchSMS">Toggle</label>
+                                                            </div>
+                                                        </div>
+                                                        <p>Receive text message alerts for critical security events and password changes.</p>
+                                                    </div>
+                                                    <div class="s-settings mb-4">
+                                                        <div class="s-sw-title">
+                                                            <h5>Weekly Report</h5>
+                                                            <div class="s-swtich">
+                                                                <input type="checkbox" id="switchWeekly" checked />
+                                                                <label for="switchWeekly">Toggle</label>
+                                                            </div>
+                                                        </div>
+                                                        <p>Get a weekly summary of your dashboard activity, analytics, and key metrics delivered to your inbox.</p>
+                                                    </div>
+                                                    <div class="s-settings mb-4">
+                                                        <div class="s-sw-title">
+                                                            <h5>Marketing Emails</h5>
+                                                            <div class="s-swtich">
+                                                                <input type="checkbox" id="switchMarketing" />
+                                                                <label for="switchMarketing">Toggle</label>
+                                                            </div>
+                                                        </div>
+                                                        <p>Receive emails about new features, product updates, and promotional offers.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Billing Tab -->
+                                            <div class="tab-pane fade" id="billing" role="tabpanel" aria-labelledby="billing-tab">
+                                                <h4 class="header-title mb-4">Billing Information</h4>
+                                                <!-- Current Plan -->
+                                                <div class="card mb-4" style="border: 1px solid #e9ecef;">
+                                                    <div class="card-body d-flex justify-content-between align-items-center">
+                                                        <div>
+                                                            <h5 class="mb-1">Current Plan</h5>
+                                                            <p class="mb-0"><strong>Pro Plan</strong> - $29/month</p>
+                                                        </div>
+                                                        <button type="button" class="btn btn-outline-primary">Change Plan</button>
+                                                    </div>
+                                                </div>
+                                                <!-- Payment Method -->
+                                                <div class="card mb-4" style="border: 1px solid #e9ecef;">
+                                                    <div class="card-body d-flex justify-content-between align-items-center">
+                                                        <div>
+                                                            <h5 class="mb-1">Payment Method</h5>
+                                                            <p class="mb-0"><i class="fa-solid fa-credit-card me-2"></i>Visa ending in 4242 &middot; Exp 12/26</p>
+                                                        </div>
+                                                        <a href="#" class="text-primary">Update</a>
+                                                    </div>
+                                                </div>
+                                                <!-- Billing History -->
+                                                <h5 class="mb-3">Billing History</h5>
+                                                <div class="table-responsive">
+                                                    <table class="table table-bordered">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Date</th>
+                                                                <th>Description</th>
+                                                                <th>Amount</th>
+                                                                <th>Status</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>Jan 1, 2026</td>
+                                                                <td>Pro Plan - Monthly</td>
+                                                                <td>$29.00</td>
+                                                                <td><span class="badge bg-success">Paid</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Dec 1, 2025</td>
+                                                                <td>Pro Plan - Monthly</td>
+                                                                <td>$29.00</td>
+                                                                <td><span class="badge bg-success">Paid</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Nov 1, 2025</td>
+                                                                <td>Pro Plan - Monthly</td>
+                                                                <td>$29.00</td>
+                                                                <td><span class="badge bg-success">Paid</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Oct 1, 2025</td>
+                                                                <td>Pro Plan - Upgrade from Basic</td>
+                                                                <td>$29.00</td>
+                                                                <td><span class="badge bg-warning text-dark">Pending</span></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- main content area end -->
+        <!-- footer area start-->
+        <footer>
+            <div class="footer-area">
+                <p>© Copyright 2026. All right reserved. Template by <a href="https://colorlib.com/wp/">Colorlib</a>.</p>
+            </div>
+        </footer>
+        <!-- footer area end-->
+    </div>
+    <!-- page container area end -->
+    <!-- offset area start -->
+    <div class="offset-area">
+        <div class="offset-close"><i class="ti-close"></i></div>
+        <ul class="nav offset-menu-tab">
+            <li><a class="active" data-bs-toggle="tab" href="#activity">Activity</a></li>
+            <li><a data-bs-toggle="tab" href="#settings-panel">Settings</a></li>
+        </ul>
+        <div class="offset-content tab-content">
+            <div id="activity" class="tab-pane fade in show active">
+                <div class="recent-activity">
+                    <div class="timeline-task">
+                        <div class="icon bg1">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div class="tm-title">
+                            <h4>Rashed sent you an email</h4>
+                            <span class="time"><i class="ti-time"></i>09:35</span>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse distinctio itaque at.
+                        </p>
+                    </div>
+                    <div class="timeline-task">
+                        <div class="icon bg2">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <div class="tm-title">
+                            <h4>Added</h4>
+                            <span class="time"><i class="ti-time"></i>7 Minutes Ago</span>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur.
+                        </p>
+                    </div>
+                    <div class="timeline-task">
+                        <div class="icon bg2">
+                            <i class="fa-solid fa-exclamation-triangle"></i>
+                        </div>
+                        <div class="tm-title">
+                            <h4>You missed you Password!</h4>
+                            <span class="time"><i class="ti-time"></i>09:20 Am</span>
+                        </div>
+                    </div>
+                    <div class="timeline-task">
+                        <div class="icon bg3">
+                            <i class="fa-solid fa-bomb"></i>
+                        </div>
+                        <div class="tm-title">
+                            <h4>Member waiting for you Attention</h4>
+                            <span class="time"><i class="ti-time"></i>09:35</span>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse distinctio itaque at.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div id="settings-panel" class="tab-pane fade">
+                <div class="offset-settings">
+                    <h4>General Settings</h4>
+                    <div class="settings-list">
+                        <div class="s-settings">
+                            <div class="s-sw-title">
+                                <h5>Notifications</h5>
+                                <div class="s-swtich">
+                                    <input type="checkbox" id="switch1" />
+                                    <label for="switch1">Toggle</label>
+                                </div>
+                            </div>
+                            <p>Keep it 'On' When you want to get all the notification.</p>
+                        </div>
+                        <div class="s-settings">
+                            <div class="s-sw-title">
+                                <h5>Show recent activity</h5>
+                                <div class="s-swtich">
+                                    <input type="checkbox" id="switch2" />
+                                    <label for="switch2">Toggle</label>
+                                </div>
+                            </div>
+                            <p>The for attribute is necessary to bind our custom checkbox with the input.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- offset area end -->
+    <!-- bootstrap 5 js -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/metismenujs.min.js"></script>
+    <script src="assets/js/scripts.js"></script>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag("js", new Date());
+        gtag("config", "G-XXXXXXXXXX");
+    </script>
+</body>
+
+</html>

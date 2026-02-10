@@ -110,6 +110,19 @@
                             <li><a href="maps.html"><i class="ti-map-alt"></i> <span>maps</span></a></li>
                             <li><a href="invoice.html"><i class="ti-receipt"></i> <span>Invoice Summary</span></a></li>
                             <li>
+                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-widget"></i><span>Apps</span></a>
+                                <ul class="collapse">
+                                    <li><a href="profile.html">Profile</a></li>
+                                    <li><a href="notifications.html">Notifications</a></li>
+                                    <li><a href="settings.html">Settings</a></li>
+                                    <li><a href="calendar.html">Calendar</a></li>
+                                    <li><a href="file-manager.html">File Manager</a></li>
+                                    <li><a href="chat.html">Chat</a></li>
+                                    <li><a href="email.html">Email</a></li>
+                                    <li><a href="widgets.html">Widgets</a></li>
+                                </ul>
+                            </li>
+                            <li>
                                 <a href="javascript:void(0)" aria-expanded="true"><i class="ti-layers-alt"></i> <span>Pages</span></a>
                                 <ul class="collapse">
                                     <li><a href="login.html">Login</a></li>
@@ -122,6 +135,7 @@
                                     <li><a href="screenlock.html">Lock Screen</a></li>
                                     <li><a href="screenlock2.html">Lock Screen 2</a></li>
                                     <li><a href="reset-pass.html">reset password</a></li>
+                                    <li><a href="forgot-password.html">Forgot Password</a></li>
                                     <li><a href="pricing.html">Pricing</a></li>
                                 </ul>
                             </li>
@@ -132,6 +146,7 @@
                                     <li><a href="404.html">Error 404</a></li>
                                     <li><a href="403.html">Error 403</a></li>
                                     <li><a href="500.html">Error 500</a></li>
+                                    <li><a href="401.html">Error 401</a></li>
                                 </ul>
                             </li>
                             <li>
@@ -186,7 +201,7 @@
                                 </i>
                                 <div class="dropdown-menu bell-notify-box notify-box">
                                     <span class="notify-title">You have 3 new notifications <a href="#">view all</a></span>
-                                    <div class="nofity-list">
+                                    <div class="notify-list">
                                         <a href="#" class="notify-item">
                                             <div class="notify-thumb"><i class="ti-key bg-danger"></i></div>
                                             <div class="notify-text">
@@ -197,7 +212,7 @@
                                         <a href="#" class="notify-item">
                                             <div class="notify-thumb"><i class="ti-comments-smiley bg-info"></i></div>
                                             <div class="notify-text">
-                                                <p>New Commetns On Post</p>
+                                                <p>New Comments On Post</p>
                                                 <span>30 Seconds ago</span>
                                             </div>
                                         </a>
@@ -211,7 +226,7 @@
                                         <a href="#" class="notify-item">
                                             <div class="notify-thumb"><i class="ti-comments-smiley bg-info"></i></div>
                                             <div class="notify-text">
-                                                <p>New Commetns On Post</p>
+                                                <p>New Comments On Post</p>
                                                 <span>30 Seconds ago</span>
                                             </div>
                                         </a>
@@ -243,7 +258,7 @@
                                 <i class="fa-regular fa-envelope dropdown-toggle" data-bs-toggle="dropdown"><span>3</span></i>
                                 <div class="dropdown-menu notify-box nt-enveloper-box">
                                     <span class="notify-title">You have 3 new notifications <a href="#">view all</a></span>
-                                    <div class="nofity-list">
+                                    <div class="notify-list">
                                         <a href="#" class="notify-item">
                                             <div class="notify-thumb">
                                                 <picture><source srcset="assets/images/author/author-img1.avif" type="image/avif"><img src="assets/images/author/author-img1.jpg" alt="image"></picture>
@@ -330,7 +345,7 @@
                 <div class="row align-items-center">
                     <div class="col-sm-6">
                         <div class="breadcrumbs-area clearfix">
-                            <h4 class="page-title float-start">Dashboard</h4>
+                            <h1 class="page-title float-start">Dashboard</h1>
                             <ul class="breadcrumbs float-start">
                                 <li><a href="index.html">Home</a></li>
                                 <li><span>Form</span></li>
@@ -342,10 +357,10 @@
                             <picture><source srcset="assets/images/author/avatar.avif" type="image/avif"><img class="avatar user-thumb" src="assets/images/author/avatar.png" alt="avatar"></picture>
                             <h4 class="user-name dropdown-toggle" data-bs-toggle="dropdown">Aigars Silkalns <i class="fa-solid fa-angle-down"></i></h4>
                             <div class="dropdown-menu user-dropdown">
-                                <a class="dropdown-item" href="#"><i class="fa-solid fa-user"></i> My Profile</a>
-                                <a class="dropdown-item" href="#"><i class="fa-solid fa-envelope"></i> Inbox <span class="badge rounded-pill bg-primary ms-auto">3</span></a>
-                                <a class="dropdown-item" href="#"><i class="fa-solid fa-gear"></i> Account Settings</a>
-                                <a class="dropdown-item" href="#"><i class="fa-solid fa-lock"></i> Lock Screen</a>
+                                <a class="dropdown-item" href="profile.html"><i class="fa-solid fa-user"></i> My Profile</a>
+                                <a class="dropdown-item" href="notifications.html"><i class="fa-solid fa-envelope"></i> Inbox <span class="badge rounded-pill bg-primary ms-auto">3</span></a>
+                                <a class="dropdown-item" href="settings.html"><i class="fa-solid fa-gear"></i> Account Settings</a>
+                                <a class="dropdown-item" href="screenlock.html"><i class="fa-solid fa-lock"></i> Lock Screen</a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item user-dropdown-logout" href="#"><i class="fa-solid fa-right-from-bracket"></i> Log Out</a>
                             </div>
@@ -553,51 +568,47 @@
                                         <p class="text-muted mb-3">For even more customization and cross browser consistency, use our completely custom form elements to replace the browser defaults. They’re built on top of semantic and accessible markup, so they’re solid replacements for any default form control.</p>
                                         <form action="#">
                                             <div class="input-group mb-3">
-                                                    <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</button>
-                                                    <div class="dropdown-menu">
-                                                        <a class="dropdown-item" href="#">Action</a>
-                                                        <a class="dropdown-item" href="#">Another action</a>
-                                                        <a class="dropdown-item" href="#">Something else here</a>
-                                                        <div role="separator" class="dropdown-divider"></div>
-                                                        <a class="dropdown-item" href="#">Separated link</a>
-                                                    </div>
+                                                <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</button>
+                                                <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href="#">Action</a>
+                                                    <a class="dropdown-item" href="#">Another action</a>
+                                                    <a class="dropdown-item" href="#">Something else here</a>
+                                                    <div role="separator" class="dropdown-divider"></div>
+                                                    <a class="dropdown-item" href="#">Separated link</a>
                                                 </div>
                                                 <input type="text" class="form-control" aria-label="Text input with dropdown button">
                                             </div>
                                             <div class="input-group mb-3">
                                                 <input type="text" class="form-control" aria-label="Text input with dropdown button">
-                                                    <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</button>
-                                                    <div class="dropdown-menu">
-                                                        <a class="dropdown-item" href="#">Action</a>
-                                                        <a class="dropdown-item" href="#">Another action</a>
-                                                        <a class="dropdown-item" href="#">Something else here</a>
-                                                        <div role="separator" class="dropdown-divider"></div>
-                                                        <a class="dropdown-item" href="#">Separated link</a>
-                                                    </div>
+                                                <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</button>
+                                                <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href="#">Action</a>
+                                                    <a class="dropdown-item" href="#">Another action</a>
+                                                    <a class="dropdown-item" href="#">Something else here</a>
+                                                    <div role="separator" class="dropdown-divider"></div>
+                                                    <a class="dropdown-item" href="#">Separated link</a>
                                                 </div>
                                             </div>
                                             <div class="input-group mb-3">
-                                                    <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</button>
-                                                    <div class="dropdown-menu">
-                                                        <a class="dropdown-item" href="#">Action</a>
-                                                        <a class="dropdown-item" href="#">Another action</a>
-                                                        <a class="dropdown-item" href="#">Something else here</a>
-                                                        <div role="separator" class="dropdown-divider"></div>
-                                                        <a class="dropdown-item" href="#">Separated link</a>
-                                                    </div>
+                                                <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</button>
+                                                <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href="#">Action</a>
+                                                    <a class="dropdown-item" href="#">Another action</a>
+                                                    <a class="dropdown-item" href="#">Something else here</a>
+                                                    <div role="separator" class="dropdown-divider"></div>
+                                                    <a class="dropdown-item" href="#">Separated link</a>
                                                 </div>
                                                 <input type="text" class="form-control" aria-label="Text input with dropdown button">
                                             </div>
                                             <div class="input-group">
                                                 <input type="text" class="form-control" aria-label="Text input with dropdown button">
-                                                    <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</button>
-                                                    <div class="dropdown-menu">
-                                                        <a class="dropdown-item" href="#">Action</a>
-                                                        <a class="dropdown-item" href="#">Another action</a>
-                                                        <a class="dropdown-item" href="#">Something else here</a>
-                                                        <div role="separator" class="dropdown-divider"></div>
-                                                        <a class="dropdown-item" href="#">Separated link</a>
-                                                    </div>
+                                                <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</button>
+                                                <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href="#">Action</a>
+                                                    <a class="dropdown-item" href="#">Another action</a>
+                                                    <a class="dropdown-item" href="#">Something else here</a>
+                                                    <div role="separator" class="dropdown-divider"></div>
+                                                    <a class="dropdown-item" href="#">Separated link</a>
                                                 </div>
                                             </div>
                                         </form>
@@ -649,8 +660,7 @@
                                                 <div class="col-sm-3 my-1">
                                                     <label class="visually-hidden" for="inlineFormInputGroupUsername">Username</label>
                                                     <div class="input-group">
-                                                            <div class="input-group-text">@</div>
-                                                        </div>
+                                                        <span class="input-group-text">@</span>
                                                         <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Username">
                                                     </div>
                                                 </div>
@@ -781,8 +791,7 @@
                                                 <div class="col-md-4 mb-3">
                                                     <label for="validationCustomUsername">Username</label>
                                                     <div class="input-group">
-                                                            <span class="input-group-text" id="inputGroupPrepend">@</span>
-                                                        </div>
+                                                        <span class="input-group-text" id="inputGroupPrepend">@</span>
                                                         <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required="">
                                                         <div class="invalid-feedback">
                                                             Please choose a username.
@@ -837,44 +846,36 @@
                                         <h4 class="header-title">Input Group</h4>
                                         <form action="#">
                                             <div class="input-group mb-3">
-                                                    <span class="input-group-text" id="basic-addon1">@</span>
-                                                </div>
+                                                <span class="input-group-text" id="basic-addon1">@</span>
                                                 <input type="text" id="username" name="username" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
                                             </div>
                                             <div class="input-group mb-3">
                                                 <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
-                                                    <span class="input-group-text" id="basic-addon2">@example.com</span>
-                                                </div>
+                                                <span class="input-group-text" id="basic-addon2">@example.com</span>
                                             </div>
                                             <label for="basic-url">Your vanity URL</label>
                                             <div class="input-group mb-3">
-                                                    <span class="input-group-text" id="basic-addon3">https://</span>
-                                                </div>
+                                                <span class="input-group-text" id="basic-addon3">https://</span>
                                                 <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
                                             </div>
                                             <div class="input-group mb-3">
-                                                    <span class="input-group-text">$</span>
-                                                </div>
+                                                <span class="input-group-text">$</span>
                                                 <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
-                                                    <span class="input-group-text">.00</span>
-                                                </div>
+                                                <span class="input-group-text">.00</span>
                                             </div>
                                             <div class="input-group mb-3">
-                                                    <span class="input-group-text">With textarea</span>
-                                                </div>
+                                                <span class="input-group-text">With textarea</span>
                                                 <textarea class="form-control" aria-label="With textarea"></textarea>
                                             </div>
                                             <div class="input-group mb-3">
-                                                    <span class="input-group-text">$</span>
-                                                    <span class="input-group-text">0.00</span>
-                                                </div>
+                                                <span class="input-group-text">$</span>
+                                                <span class="input-group-text">0.00</span>
                                                 <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
                                             </div>
                                             <div class="input-group">
                                                 <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
-                                                    <span class="input-group-text">$</span>
-                                                    <span class="input-group-text">0.00</span>
-                                                </div>
+                                                <span class="input-group-text">$</span>
+                                                <span class="input-group-text">0.00</span>
                                             </div>
                                         </form>
                                     </div>
@@ -888,24 +889,20 @@
                                         <h4 class="header-title">Custom file input</h4>
                                         <form action="#">
                                             <div class="input-group mb-3">
-                                                    <span class="input-group-text">Upload</span>
-                                                </div>
-                                                                                                    <input type="file" class="form-control" id="inputGroupFile01">
+                                                <span class="input-group-text">Upload</span>
+                                                <input type="file" class="form-control" id="inputGroupFile01">
                                             </div>
                                             <div class="input-group mb-3">
-                                                                                                    <input type="file" class="form-control" id="inputGroupFile02">
-                                                    <span class="input-group-text">Upload</span>
-                                                </div>
+                                                <input type="file" class="form-control" id="inputGroupFile02">
+                                                <span class="input-group-text">Upload</span>
                                             </div>
                                             <div class="input-group mb-3">
-                                                    <button class="btn btn-outline-secondary" type="button">Button</button>
-                                                </div>
-                                                                                                    <input type="file" class="form-control" id="inputGroupFile03">
+                                                <button class="btn btn-outline-secondary" type="button">Button</button>
+                                                <input type="file" class="form-control" id="inputGroupFile03">
                                             </div>
                                             <div class="input-group">
-                                                                                                    <input type="file" class="form-control" id="inputGroupFile04">
-                                                    <button class="btn btn-outline-secondary" type="button">Button</button>
-                                                </div>
+                                                <input type="file" class="form-control" id="inputGroupFile04">
+                                                <button class="btn btn-outline-secondary" type="button">Button</button>
                                             </div>
                                         </form>
                                     </div>
@@ -921,7 +918,7 @@
         <!-- footer area start-->
         <footer>
             <div class="footer-area">
-                <p>© Copyright 2018. All right reserved. Template by <a href="https://colorlib.com/wp/">Colorlib</a>.</p>
+                <p>© Copyright 2026. All right reserved. Template by <a href="https://colorlib.com/wp/">Colorlib</a>.</p>
             </div>
         </footer>
         <!-- footer area end-->

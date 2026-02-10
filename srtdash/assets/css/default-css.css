@@ -403,7 +403,28 @@ img {
 /* Colors */
 
 :root {
+    /* Brand */
     --primary-color: #4336FB;
+    --primary-hover: #8553fa;
+    --primary-gradient-start: #8914fe;
+    --primary-gradient-end: #8063f5;
+
+    /* Text */
+    --text-dark: #444;
+    --text-medium: #565656;
+    --text-muted: #8a8a8a;
+
+    /* Backgrounds */
+    --bg-body: #F3F8FB;
+    --bg-sidebar: #303641;
+    --bg-white: #fff;
+
+    /* Borders */
+    --border-color: #d8e3e7;
+    --border-light: #eee;
+
+    /* Accent (replace stray Bootstrap blue) */
+    --accent-color: #4336FB;
 }
 
 #preloader {

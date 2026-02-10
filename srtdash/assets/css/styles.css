@@ -1,10 +1,10 @@
 /*--------------------------------------------
 
-    Template Name: srtdash - Bootstrap 5 Admin and Ui Kit
-    Template URI: http://tf.itech-theme.com/srtdash-preview
+    Template Name: SRTdash - Bootstrap 5 Admin and Ui Kit
+    Template URI: https://github.com/puikinsh/srtdash-admin-dashboard
     Description: This is Bootstrap 5 Admin Template and Ui Kit
-    Author: cdibrandstudio
-    Author https://themeforest.net/user/cdibrandstudio
+    Author: Colorlib / DashboardPack.com
+    Author URI: https://dashboardpack.com/
     Version: 2.0
 
 ----------------------------------------------
@@ -48,6 +48,11 @@
    24. Pricing
    25. 404 Page
    26. Offset Sidebar
+   27. Calendar
+   28. File Manager
+   29. Chat
+   30. Email
+   31. Widgets
 
 -----------------------------------------------------------------------------------*/
 
@@ -96,7 +101,7 @@ a:hover {
 
 .main-content {
     width: 100%;
-    background: #F3F8FB;
+    background: var(--bg-body);
 }
 
 .main-content-inner {
@@ -112,7 +117,7 @@ a:hover {
 .menu-inner::-webkit-scrollbar { width: 6px; }
 .menu-inner::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.3); border-radius: 3px; }
 
-.nofity-list { max-height: 435px; overflow-y: auto; scrollbar-width: thin; }
+.notify-list { max-height: 435px; overflow-y: auto; scrollbar-width: thin; }
 .timeline-area { max-height: 500px; overflow-y: auto; scrollbar-width: thin; }
 .recent-activity { max-height: calc(100vh - 114px); overflow-y: auto; scrollbar-width: thin; }
 .settings-list { max-height: calc(100vh - 158px); overflow-y: auto; scrollbar-width: thin; }
@@ -130,7 +135,7 @@ a:hover {
     height: 100vh;
     width: 280px;
     overflow: hidden;
-    background: #303641;
+    background: var(--bg-sidebar);
     box-shadow: 2px 0 32px rgba(0, 0, 0, 0.05);
     transition: all 0.3s ease 0s;
 }
@@ -151,14 +156,10 @@ a:hover {
     height: 100%;
 }
 
-.slimScrollBar {
-    background: #fff!important;
-    opacity: 0.1!important;
-}
 
 .sidebar-header {
     padding: 19px 32px 20px;
-    background: #303641;
+    background: var(--bg-sidebar);
     border-bottom: 1px solid #343e50;
 }
 .sidebar-menu .logo{
@@ -170,7 +171,7 @@ a:hover {
 }
 
 .metismenu >li >a {
-    padding-left: 32px!important;
+    padding-left: 32px;
 }
 .metismenu li a {
     position: relative;
@@ -205,6 +206,11 @@ a:hover {
 
 .metismenu li a:only-child:after {
     content: '';
+}
+
+.metismenu li.search-highlight > a {
+    background: rgba(67, 54, 251, 0.15);
+    color: #fff;
 }
 
 .metismenu li a span {
@@ -256,7 +262,7 @@ a:hover {
 /*-------------------- 2.1.1 Horizontal Menu -------------------*/
 
 .body-bg {
-    background: #F3F8FB;
+    background: var(--bg-body);
 }
 
 .horizontal-main-wrapper {
@@ -283,14 +289,14 @@ a:hover {
 
 .mainheader-area {
     background: #fff;
-    border-bottom: 1px solid #f3f8fb;
+    border-bottom: 1px solid var(--bg-body);
     padding-left: 15px;
     position: relative;
     z-index: 99;
 }
 
 .mainheader-area .logo a span {
-    color: #843df9;
+    color: var(--primary-color);
 }
 
 .horizontal-menu {
@@ -312,7 +318,7 @@ a:hover {
 
 .horizontal-menu ul li:hover>a,
 .horizontal-menu ul li.active>a {
-    color: #007BFF;
+    color: var(--accent-color);
 }
 
 .horizontal-menu nav>ul>li:first-child>a {
@@ -332,7 +338,7 @@ a:hover {
     background: #fff;
     opacity: 0;
     visibility: hidden;
-    border-top: 4px solid #007BFF;
+    border-top: 4px solid var(--accent-color);
     border-radius: 3px;
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.03);
 }
@@ -365,53 +371,6 @@ a:hover {
     width: 100%;
 }
 
-/* mobile menu */
-
-.slicknav_menu {
-    background: #8255f7;
-    padding: 0;
-    margin-top: 20px;
-}
-
-.slicknav_menu>a {
-    display: block;
-    width: 100%;
-    padding: 15px;
-    margin: 0;
-    background: transparent;
-}
-
-.slicknav_menu .slicknav_icon {
-    float: right;
-}
-
-.slicknav_menu .slicknav_icon-bar {
-    box-shadow: none;
-}
-
-.slicknav_menu .slicknav_menutxt {
-    font-weight: 500;
-    text-shadow: none;
-}
-
-.slicknav_nav .slicknav_row,
-.slicknav_nav a {
-    text-transform: capitalize;
-}
-
-.slicknav_nav .slicknav_row:hover {
-    border-radius: 0;
-    background: #8e66f7;
-}
-
-.slicknav_nav li i {
-    width: 26px;
-    display: inline-block;
-}
-
-.slicknav_nav .slicknav_item .slicknav_arrow {
-    float: right;
-}
 
 /*-------------------- END Horizontal Menu -------------------*/
 
@@ -421,7 +380,7 @@ a:hover {
 .header-area {
     padding: 15px 30px;
     background: #fff;
-    border-bottom: 1px solid #d8e3e7;
+    border-bottom: 1px solid var(--border-color);
 }
 
 .nav-btn {
@@ -508,7 +467,7 @@ a:hover {
 }
 
 .notification-area li.settings-btn.active i {
-    color: #007BFF;
+    color: var(--accent-color);
 }
 
 .notification-area li>i {
@@ -566,11 +525,11 @@ a:hover {
     text-decoration: underline;
 }
 
-.nofity-list {
+.notify-list {
     padding: 30px 0;
 }
 
-.nofity-list a {
+.notify-list a {
     padding: 0 30px;
     display: block;
     margin-bottom: 20px;
@@ -578,7 +537,7 @@ a:hover {
     padding-bottom: 15px;
 }
 
-.nofity-list a:last-child {
+.notify-list a:last-child {
     margin-bottom: 0;
     border-bottom: none;
 }
@@ -697,7 +656,7 @@ ul.breadcrumbs {
     display: block;
     font-size: 14px;
     font-weight: 400;
-    color: #7801ff;
+    color: var(--primary-color);
     letter-spacing: 0;
     margin-right: 16px;
     position: relative;
@@ -722,7 +681,7 @@ ul.breadcrumbs {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    background: linear-gradient(to right, #8914fe 0%, #8063f5 100%);
+    background: linear-gradient(to right, var(--primary-gradient-start) 0%, var(--primary-gradient-end) 100%);
     padding: 17px 38px;
     position: relative;
 }
@@ -788,8 +747,8 @@ ul.breadcrumbs {
 }
 
 .user-dropdown {
-    width: 100%;
-    right: -30px !important;
+    min-width: 240px;
+    right: 0 !important;
     left: auto !important;
     border-radius: 10px;
     overflow: hidden;
@@ -798,7 +757,7 @@ ul.breadcrumbs {
 
 .user-dropdown .dropdown-divider {
     margin: 0;
-    border-color: #eee;
+    border-color: var(--border-light);
 }
 
 .user-dropdown .dropdown-item {
@@ -814,7 +773,7 @@ ul.breadcrumbs {
     width: 20px;
     margin-right: 10px;
     font-size: 14px;
-    color: #8063f5;
+    color: var(--primary-gradient-end);
     text-align: center;
 }
 
@@ -858,7 +817,7 @@ ul.breadcrumbs {
 .single-report .icon {
     font-size: 32px;
     color: #fff;
-    background: var(--primary-color);
+    background: #3b82f6;
     height: 95px;
     width: 100px;
     text-align: right;
@@ -869,6 +828,11 @@ ul.breadcrumbs {
     left: -39px;
     top: -30px;
 }
+
+.icon-blue { background: #3b82f6 !important; }
+.icon-amber { background: #f59e0b !important; }
+.icon-emerald { background: #10b981 !important; }
+.icon-indigo { background: #6366f1 !important; }
 
 .s-report-title {
     margin-bottom: 25px;
@@ -887,7 +851,7 @@ ul.breadcrumbs {
 .single-report p {
     font-size: 12px;
     font-weight: 700;
-    color: #565656;
+    color: var(--text-medium);
     background: #ececec;
     letter-spacing: 0;
     padding: 0 9px;
@@ -897,7 +861,7 @@ ul.breadcrumbs {
 
 .single-report h2 {
     font-size: 26px;
-    color: #565656;
+    color: var(--text-medium);
     font-weight: 500;
     letter-spacing: 0;
 }
@@ -905,7 +869,7 @@ ul.breadcrumbs {
 .single-report span {
     font-size: 15px;
     font-weight: 600;
-    color: #565656;
+    color: var(--text-medium);
     letter-spacing: 0;
 }
 
@@ -920,7 +884,7 @@ ul.breadcrumbs {
 
 .custome-select {
     font-size: 13px;
-    color: #565656;
+    color: var(--text-medium);
     font-weight: 500;
     letter-spacing: 0;
 }
@@ -929,22 +893,14 @@ ul.breadcrumbs {
     border: none;
 }
 
-#verview-shart {
+#overview-chart-wrap {
+    position: relative;
     height: 400px;
 }
 
-#verview-shart-license-text,
-#coin_distribution-license-text {
-    display: none;
-}
-
-#coin_distribution-wrapper {
-    height: 400px!important;
-    margin-top: -30px;
-}
-
-#coin_distribution-menu {
-    display: none;
+#coin-distribution-wrap {
+    position: relative;
+    height: 340px;
 }
 
 
@@ -975,7 +931,7 @@ table.dbkit-table tr {
 
 table.dbkit-table tr th,
 table.dbkit-table tr td {
-    border-top: none!important;
+    border-top: none;
 }
 
 table.dbkit-table tr:hover {
@@ -990,12 +946,28 @@ table.dbkit-table tr td {
     min-width: 141px;
 }
 
-.mv-icon img {
-    max-width: 29px;
+.mv-coin-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 16px;
 }
+
+.mv-coin-icon.mv-blue { background: #3b82f6; }
+.mv-coin-icon.mv-indigo { background: #6366f1; }
+.mv-coin-icon.mv-amber { background: #f59e0b; }
+.mv-coin-icon.mv-emerald { background: #10b981; }
 
 .trends {
     text-align: center;
+}
+
+.trends i {
+    font-size: 18px;
 }
 
 .stats-chart {
@@ -1007,9 +979,9 @@ table.dbkit-table tr td {
     margin: auto;
 }
 
-.buy img,
-.sell img {
-    margin-left: 10px;
+.buy i,
+.sell i {
+    margin-left: 8px;
 }
 
 /*-------------------- END Market value ------------------- */
@@ -1021,7 +993,7 @@ table.dbkit-table tr td {
     margin-bottom: 27px;
     font-size: 16px;
     font-weight: 500;
-    color: #565656;
+    color: var(--text-medium);
     letter-spacing: 0;
 }
 
@@ -1030,34 +1002,16 @@ table.dbkit-table tr td {
 }
 
 .cripto-live ul li .icon {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     height: 30px;
     width: 30px;
     margin-right: 10px;
     border-radius: 50%;
-    font-size: 16px;
-    font-weight: 700;
+    font-size: 14px;
     color: #fff;
-    background: #ffd615;
-    text-align: center;
-    line-height: 30px;
-    text-transform: uppercase;
-}
-
-.cripto-live ul li .icon.l {
-    background: #08bfc1;
-}
-
-.cripto-live ul li .icon.d {
-    background: #4cff63;
-}
-
-.cripto-live ul li .icon.e {
-    background: #8a7fe2;
-}
-
-.cripto-live ul li .icon.t {
-    background: #95b36e;
+    background: #3b82f6;
 }
 
 .cripto-live ul li span {
@@ -1067,12 +1021,12 @@ table.dbkit-table tr td {
 }
 
 .cripto-live ul li span i {
-    color: #2fd444;
+    color: #10b981;
     margin-right: 10px;
 }
 
-.cripto-live ul li span i.fa-long-arrow-down {
-    color: #ff0e0e;
+.cripto-live ul li span i.fa-arrow-trend-down {
+    color: #ef4444;
 }
 
 /*-------------------- END Live Crypto Price ------------------- */
@@ -1095,7 +1049,7 @@ table.dbkit-table tr td {
 .trd-history-tabs ul li a.active {
     border-bottom: 2px solid #731ffd;
     padding-bottom: 7px;
-    color: #565656;
+    color: var(--text-medium);
 }
 
 /*-------------------- END Trading History ------------------- */
@@ -1121,7 +1075,7 @@ table.dbkit-table tr td {
 .lts-content span {
     font-size: 16px;
     font-weight: 600;
-    color: #565656;
+    color: var(--text-medium);
     letter-spacing: 0;
 }
 
@@ -1129,7 +1083,7 @@ table.dbkit-table tr td {
     display: block;
     font-size: 20px;
     font-weight: 700;
-    color: #565656;
+    color: var(--text-medium);
     letter-spacing: 0;
     margin-bottom: 16px;
 }
@@ -1141,7 +1095,7 @@ table.dbkit-table tr td {
 .lts-content p {
     font-size: 15px;
     font-weight: 400;
-    color: #565656;
+    color: var(--text-medium);
 }
 
 .input-form {
@@ -1236,7 +1190,7 @@ table.dbkit-table tr td {
 /* Todays Order List */
 
 .dbkit-table .heading-td td {
-    color: #444;
+    color: var(--text-dark);
     font-weight: 500;
 }
 
@@ -1259,7 +1213,7 @@ table.dbkit-table tr td {
 }
 
 .pagination_area ul li a:hover {
-    background: #8553fa;
+    background: var(--primary-hover);
     color: #fff;
 }
 
@@ -1608,7 +1562,7 @@ table.dbkit-table tr td {
 }
 
 .amcharts-chart-div>a {
-    display: none!important;
+    display: none;
 }
 
 /*-------------------- END Bar Chart ------------------- */
@@ -1663,7 +1617,7 @@ table.dbkit-table tr td {
     background: #EFF3F6;
     padding: 16px 15px;
     border-radius: 3px;
-    color: #444;
+    color: var(--text-dark);
     letter-spacing: 0;
     font-size: 15px;
     font-weight: 500;
@@ -1674,7 +1628,7 @@ table.dbkit-table tr td {
     border: 1px solid #eff3f6;
     font-size: 14px;
     letter-spacing: 0;
-    color: #444;
+    color: var(--text-dark);
     line-height: 27px;
     font-weight: 400;
 }
@@ -1693,7 +1647,7 @@ table.dbkit-table tr td {
     font-weight: 900;
     position: absolute;
     right: 13px;
-    color: #444;
+    color: var(--text-dark);
     font-size: 26px;
 }
 
@@ -1710,12 +1664,12 @@ table.dbkit-table tr td {
     font-family: 'themify';
     position: absolute;
     right: 13px;
-    color: #444;
+    color: var(--text-dark);
     font-size: 15px;
 }
 
 .gradiant-bg .card-header a {
-    background-image: linear-gradient(to bottom right, #8914fe, #8160f6);
+    background-image: linear-gradient(to bottom right, var(--primary-gradient-start), var(--primary-gradient-end));
     color: #fff;
 }
 
@@ -1786,10 +1740,8 @@ table.dbkit-table tr td {
     padding: 13px 15px;
 }
 
-.alert-dismiss .alert-dismissible .close {
-    top: 4px;
-    outline: none;
-    font-size: 13px;
+.alert-dismiss .alert-dismissible .btn-close {
+    padding: 0.75rem 1rem;
 }
 
 /*-------------------- END Alert------------------- */
@@ -1848,7 +1800,7 @@ table.dbkit-table tr td {
 
 .title {
     font-size: 18px;
-    color: #444;
+    color: var(--text-dark);
     margin-bottom: 10px;
 }
 
@@ -1879,13 +1831,34 @@ p.card-text {
 /*-------------------- 14. List Group ------------------- */
 
 .list-group-item {
-    color: #444;
+    color: var(--text-dark);
     font-size: 13px;
 }
 
+.media {
+    display: flex;
+    align-items: flex-start;
+}
+
 .media-body {
+    flex: 1;
     font-size: 13px;
-    line-height: 27px;
+    line-height: 24px;
+}
+
+.media-body h5 {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.media-body p:last-child {
+    margin-bottom: 0;
+}
+
+.card-body > hr {
+    border-color: #eef0f3;
+    opacity: 1;
 }
 
 
@@ -1908,7 +1881,7 @@ p.card-text {
 /*-------------------- 16. Pagination ------------------- */
 
 .pg-color-border li a {
-    border-color: #007BFF;
+    border-color: var(--accent-color);
 }
 
 .pagination li a {
@@ -1919,6 +1892,11 @@ p.card-text {
 
 
 /*-------------------- 17. Form ------------------- */
+
+.form-group {
+    margin-bottom: 16px;
+    margin-bottom: 1rem;
+}
 
 .form-control,
 .form-control:focus {
@@ -1937,22 +1915,12 @@ p.card-text {
     padding: .67rem .8rem;
 }
 
-.form-control-sm,
-.input-group-sm>.form-control,
-.input-group-sm>.input-group-append>.btn,
-.input-group-sm>.input-group-append>.input-group-text,
-.input-group-sm>.input-group-prepend>.btn,
-.input-group-sm>.input-group-prepend>.input-group-text {
+.form-control-sm {
     padding: 4px 8px;
     padding: .25rem .5rem;
 }
 
-.form-control-lg,
-.input-group-lg>.form-control,
-.input-group-lg>.input-group-append>.btn,
-.input-group-lg>.input-group-append>.input-group-text,
-.input-group-lg>.input-group-prepend>.btn,
-.input-group-lg>.input-group-prepend>.input-group-text {
+.form-control-lg {
     padding: 13.6px 16px;
     padding: .85rem 1rem;
 }
@@ -1989,7 +1957,7 @@ label {
 
 .grid-col {
     padding: 10px 15px;
-    background: #f3f8fb;
+    background: var(--bg-body);
     margin-bottom: 30px;
     color: #666;
     border: 1px solid #e3e6e8;
@@ -2007,14 +1975,14 @@ label {
 .fw-icons {}
 
 .fw-icons a {
-    color: #444;
+    color: var(--text-dark);
     margin: 9px 0;
     display: inline-block;
     font-family: 'lato', sans-serif;
 }
 
 .fw-icons a:hover {
-    color: #007BFF;
+    color: var(--accent-color);
 }
 
 .fw-icons a i {
@@ -2049,7 +2017,7 @@ label {
 }
 
 .icon-container span.icon-name {
-    color: #444;
+    color: var(--text-dark);
     margin: 9px 0;
     display: inline-block;
     font-family: 'lato', sans-serif;
@@ -2061,7 +2029,7 @@ label {
 }
 
 .icon-container:hover span {
-    color: #007BFF;
+    color: var(--accent-color);
 }
 
 /*-------------------- END Icons ------------------- */
@@ -2079,7 +2047,7 @@ table tr th {
 
 table tr th,
 table tr td {
-    border-top: 1px solid rgba(120, 130, 140, 0.13) !important;
+    border-top: 1px solid rgba(120, 130, 140, 0.13);
 }
 
 table tr td [class^="ti-"] {
@@ -2088,7 +2056,7 @@ table tr td [class^="ti-"] {
 
 .table-bordered td,
 .table-bordered th {
-    border: 1px solid rgba(120, 130, 140, 0.13) !important;
+    border: 1px solid rgba(120, 130, 140, 0.13);
 }
 
 .status-p {
@@ -2129,7 +2097,7 @@ div.dataTables_wrapper div.dataTables_length select {
 }
 
 table.dataTable.no-footer {
-    border-bottom: 1px solid rgba(120, 130, 140, 0.13) !important;
+    border-bottom: 1px solid rgba(120, 130, 140, 0.13);
 }
 
 table.dataTable thead th,
@@ -2152,7 +2120,7 @@ table.dataTable thead td {
 .datatable-primary .dataTables_paginate .paginate_button.disabled,
 .datatable-primary .dataTables_paginate .paginate_button.disabled:hover,
 .datatable-primary .dataTables_paginate .paginate_button.disabled:active {
-    color: #4336fb!important;
+    color: var(--primary-color);
     border: none;
 }
 
@@ -2173,20 +2141,20 @@ table.dataTable thead td {
 
 .datatable-dark .dataTables_paginate .page-item.active .page-link,
 .datatable-dark .dataTables_paginate .page-item .page-link:hover {
-    background-color: #444;
-    border-color: #444;
+    background-color: var(--text-dark);
+    border-color: var(--text-dark);
     color: #fff;
 }
 
 .datatable-dark .dataTables_paginate .page-link {
-    color: #444;
+    color: var(--text-dark);
     border: 1px solid #444;
 }
 
 .datatable-dark .dataTables_paginate .paginate_button.disabled,
 .datatable-dark .dataTables_paginate .paginate_button.disabled:hover,
 .datatable-dark .dataTables_paginate .paginate_button.disabled:active {
-    color: #444!important;
+    color: var(--text-dark);
     border: none;
 }
 
@@ -2227,7 +2195,7 @@ table.dataTable thead td {
 }
 
 .invoice-head .iv-left span {
-    color: #444;
+    color: var(--text-dark);
 }
 
 .invoice-head span {
@@ -2265,9 +2233,9 @@ table.dataTable thead td {
 
 .invoice-table .table-bordered td,
 .invoice-table .table-bordered th {
-    border: 1px solid rgba(120, 130, 140, 0.13) !important;
-    border-left: none!important;
-    border-right: none!important;
+    border: 1px solid rgba(120, 130, 140, 0.13);
+    border-left: none;
+    border-right: none;
 }
 
 .invoice-table tr td {
@@ -2277,14 +2245,14 @@ table.dataTable thead td {
 .invoice-table tfoot tr td {
     text-transform: uppercase;
     font-weight: 600;
-    color: #444;
+    color: var(--text-dark);
 }
 
 .invoice-buttons a {
     display: inline-block;
     font-size: 15px;
     color: #fff;
-    background: #815ef6;
+    background: var(--primary-hover);
     padding: 12px 19px;
     border-radius: 3px;
     text-transform: capitalize;
@@ -2304,7 +2272,7 @@ table.dataTable thead td {
 /*-------------------- 23. Login ------------------- */
 
 .login-area {
-    background: #F3F8FB;
+    background: var(--bg-body);
 }
 
 .login-box {
@@ -2503,7 +2471,7 @@ table.dataTable thead td {
 
 .login-s2 .login-form-head h4,
 .login-s2 .login-form-head p {
-    color: #444;
+    color: var(--text-dark);
 }
 
 /* login-s3 */
@@ -2555,7 +2523,7 @@ table.dataTable thead td {
 }
 
 .prc-head h4 {
-    background: #805ff5;
+    background: var(--primary-hover);
     color: #fff;
     padding: 28px;
     letter-spacing: 0;
@@ -2583,7 +2551,7 @@ table.dataTable thead td {
 .prc-list>a {
     display: inline-block;
     margin-top: 40px;
-    background: #805ff5;
+    background: var(--primary-hover);
     color: #fff;
     padding: 11px 20px;
     border-radius: 40px;
@@ -2613,7 +2581,7 @@ table.dataTable thead td {
 
 .error-area {
     min-height: 100vh;
-    background: #F3F8FB;
+    background: var(--bg-body);
 }
 
 .error-content {
@@ -2703,7 +2671,7 @@ table.dataTable thead td {
 .offset-menu-tab li a {
     display: block;
     font-size: 16px;
-    color: #444;
+    color: var(--text-dark);
     font-weight: 600;
     font-family: 'lato', sans-serif;
     position: relative;
@@ -2711,7 +2679,7 @@ table.dataTable thead td {
 }
 
 .offset-menu-tab li a.active {
-    color: #853bfa;
+    color: var(--primary-color);
 }
 
 .offset-menu-tab li a:before {
@@ -2720,7 +2688,7 @@ table.dataTable thead td {
     bottom: 0;
     height: 5px;
     width: 100%;
-    background: #853bfa;
+    background: var(--primary-color);
     border-radius: 30px;
     transition: all 0.3s cubic-bezier(0.91, 0.31, 0.31, 0.92) 0s;
 }
@@ -2734,7 +2702,7 @@ table.dataTable thead td {
 }
 
 .offset-menu-tab li:last-child a:before {
-    display: none!important;
+    display: none;
 }
 
 .offset-content {
@@ -2751,7 +2719,7 @@ table.dataTable thead td {
     font-size: 18px;
     letter-spacing: 0;
     font-weight: 700;
-    color: #444;
+    color: var(--text-dark);
     margin-bottom: 23px;
 }
 
@@ -2823,12 +2791,219 @@ table.dataTable thead td {
 
 /*-------------------- END Offset Sidebar ------------------- */
 
+
+/*-------------------- 27. Calendar ------------------- */
+
+#calendar {
+    max-width: 100%;
+}
+
+.fc .fc-toolbar-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.fc .fc-button-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.fc .fc-button-primary:hover {
+    background-color: var(--primary-hover);
+    border-color: var(--primary-hover);
+}
+
+.fc .fc-button-primary:not(:disabled).fc-button-active,
+.fc .fc-button-primary:not(:disabled):active {
+    background-color: var(--primary-hover);
+    border-color: var(--primary-hover);
+}
+
+.fc .fc-daygrid-day.fc-day-today {
+    background: rgba(67, 54, 251, 0.08);
+}
+
+/*-------------------- END Calendar ------------------- */
+
+
+/*-------------------- 28. File Manager ------------------- */
+
+.fm-folder-tree a {
+    color: var(--text-dark);
+    text-decoration: none;
+}
+
+.fm-folder-tree li.active a {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.fm-upload-zone {
+    border: 2px dashed #d8e3e7;
+    border-radius: 8px;
+    background: var(--bg-body);
+    transition: border-color 0.2s;
+}
+
+.fm-upload-zone:hover {
+    border-color: var(--primary-color);
+}
+
+.fm-file-card {
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 20px 15px;
+    text-align: center;
+    transition: box-shadow 0.2s;
+    cursor: pointer;
+}
+
+.fm-file-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/*-------------------- END File Manager ------------------- */
+
+
+/*-------------------- 29. Chat ------------------- */
+
+.chat-contact-item {
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.chat-contact-item:hover,
+.chat-contact-item.active {
+    background: var(--bg-body);
+}
+
+.chat-status-dot {
+    position: absolute;
+    bottom: 2px;
+    right: 2px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+
+.chat-message-sent .chat-bubble {
+    background: var(--primary-color);
+    color: #fff;
+    display: inline-block;
+    padding: 10px 16px;
+    border-radius: 16px 16px 0 16px;
+    max-width: 70%;
+    text-align: left;
+}
+
+.chat-message-received .chat-bubble {
+    background: #f0f0f0;
+    color: var(--text-dark);
+    display: inline-block;
+    padding: 10px 16px;
+    border-radius: 16px 16px 16px 0;
+    max-width: 70%;
+}
+
+.chat-messages {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 0, 0, 0.15) transparent;
+}
+
+/*-------------------- END Chat ------------------- */
+
+
+/*-------------------- 30. Email ------------------- */
+
+.email-folder-list li a {
+    color: var(--text-dark);
+    text-decoration: none;
+    display: block;
+}
+
+.email-folder-list li.active a {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.email-item {
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.email-item:hover {
+    background: var(--bg-body);
+}
+
+.email-item.unread {
+    background: rgba(67, 54, 251, 0.03);
+}
+
+.email-star {
+    cursor: pointer;
+    color: #ccc;
+    transition: color 0.2s;
+}
+
+.email-star.active,
+.email-star:hover {
+    color: #ffc107;
+}
+
+.min-width-0 {
+    min-width: 0;
+}
+
+/*-------------------- END Email ------------------- */
+
+
+/*-------------------- 31. Widgets ------------------- */
+
+.widget-todo-item {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    align-items: center;
+}
+
+.widget-todo-item:last-child {
+    border-bottom: none;
+}
+
+.widget-timeline-item {
+    position: relative;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    border-left: 2px solid #eee;
+    margin-left: 4px;
+}
+
+.widget-timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -5px;
+    top: 4px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--primary-color);
+}
+
+.widget-timeline-item:last-child {
+    border-left: none;
+    padding-bottom: 0;
+}
+
+/*-------------------- END Widgets ------------------- */
+
+
 /* Accessibility */
 .skip-link {
     position: absolute;
     top: -40px;
     left: 0;
-    background: #007bff;
+    background: var(--accent-color);
     color: #fff;
     padding: 8px 16px;
     z-index: 10000;
@@ -2839,7 +3014,7 @@ table.dataTable thead td {
 }
 
 *:focus-visible {
-    outline: 2px solid #007bff;
+    outline: 2px solid var(--accent-color);
     outline-offset: 2px;
 }
 

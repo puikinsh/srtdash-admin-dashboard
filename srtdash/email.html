@@ -3,9 +3,9 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Invoice - srtdash</title>
+    <title>Email Inbox - SRTdash Admin</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Invoice template with itemized billing, totals, and print-ready layout.">
+    <meta name="description" content="Email inbox with folder navigation, message list, starred messages, and compose functionality.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -15,8 +15,6 @@
     <link rel="stylesheet" href="assets/css/themify-icons.css">
     <link rel="stylesheet" href="assets/css/metismenujs.min.css">
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
-    <!-- amchart css -->
-    <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
     <!-- others css -->
     <link rel="stylesheet" href="assets/css/typography.css">
     <link rel="stylesheet" href="assets/css/default-css.css">
@@ -53,9 +51,7 @@
                                 </ul>
                             </li>
                             <li>
-                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-layout-sidebar-left"></i><span>Sidebar
-                                        Types
-                                    </span></a>
+                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-layout-sidebar-left"></i><span>Sidebar Types</span></a>
                                 <ul class="collapse">
                                     <li><a href="index.html">Left Sidebar</a></li>
                                     <li><a href="index3-horizontalmenu.html">Horizontal Sidebar</a></li>
@@ -108,8 +104,8 @@
                                 </ul>
                             </li>
                             <li><a href="maps.html"><i class="ti-map-alt"></i> <span>maps</span></a></li>
-                            <li class="active"><a href="invoice.html"><i class="ti-receipt"></i> <span>Invoice Summary</span></a></li>
-                            <li>
+                            <li><a href="invoice.html"><i class="ti-receipt"></i> <span>Invoice Summary</span></a></li>
+                            <li class="active">
                                 <a href="javascript:void(0)" aria-expanded="true"><i class="ti-widget"></i><span>Apps</span></a>
                                 <ul class="collapse">
                                     <li><a href="profile.html">Profile</a></li>
@@ -118,7 +114,7 @@
                                     <li><a href="calendar.html">Calendar</a></li>
                                     <li><a href="file-manager.html">File Manager</a></li>
                                     <li><a href="chat.html">Chat</a></li>
-                                    <li><a href="email.html">Email</a></li>
+                                    <li class="active"><a href="email.html">Email</a></li>
                                     <li><a href="widgets.html">Widgets</a></li>
                                 </ul>
                             </li>
@@ -223,34 +219,6 @@
                                                 <span>Just Now</span>
                                             </div>
                                         </a>
-                                        <a href="#" class="notify-item">
-                                            <div class="notify-thumb"><i class="ti-comments-smiley bg-info"></i></div>
-                                            <div class="notify-text">
-                                                <p>New Comments On Post</p>
-                                                <span>30 Seconds ago</span>
-                                            </div>
-                                        </a>
-                                        <a href="#" class="notify-item">
-                                            <div class="notify-thumb"><i class="ti-key bg-primary"></i></div>
-                                            <div class="notify-text">
-                                                <p>Some special like you</p>
-                                                <span>Just Now</span>
-                                            </div>
-                                        </a>
-                                        <a href="#" class="notify-item">
-                                            <div class="notify-thumb"><i class="ti-key bg-danger"></i></div>
-                                            <div class="notify-text">
-                                                <p>You have Changed Your Password</p>
-                                                <span>Just Now</span>
-                                            </div>
-                                        </a>
-                                        <a href="#" class="notify-item">
-                                            <div class="notify-thumb"><i class="ti-key bg-danger"></i></div>
-                                            <div class="notify-text">
-                                                <p>You have Changed Your Password</p>
-                                                <span>Just Now</span>
-                                            </div>
-                                        </a>
                                     </div>
                                 </div>
                             </li>
@@ -262,66 +230,6 @@
                                         <a href="#" class="notify-item">
                                             <div class="notify-thumb">
                                                 <picture><source srcset="assets/images/author/author-img1.avif" type="image/avif"><img src="assets/images/author/author-img1.jpg" alt="image"></picture>
-                                            </div>
-                                            <div class="notify-text">
-                                                <p>Aglae Mayer</p>
-                                                <span class="msg">Hey I am waiting for you...</span>
-                                                <span>3:15 PM</span>
-                                            </div>
-                                        </a>
-                                        <a href="#" class="notify-item">
-                                            <div class="notify-thumb">
-                                                <picture><source srcset="assets/images/author/author-img2.avif" type="image/avif"><img src="assets/images/author/author-img2.jpg" alt="image"></picture>
-                                            </div>
-                                            <div class="notify-text">
-                                                <p>Aglae Mayer</p>
-                                                <span class="msg">When you can connect with me...</span>
-                                                <span>3:15 PM</span>
-                                            </div>
-                                        </a>
-                                        <a href="#" class="notify-item">
-                                            <div class="notify-thumb">
-                                                <picture><source srcset="assets/images/author/author-img3.avif" type="image/avif"><img src="assets/images/author/author-img3.jpg" alt="image"></picture>
-                                            </div>
-                                            <div class="notify-text">
-                                                <p>Aglae Mayer</p>
-                                                <span class="msg">I missed you so much...</span>
-                                                <span>3:15 PM</span>
-                                            </div>
-                                        </a>
-                                        <a href="#" class="notify-item">
-                                            <div class="notify-thumb">
-                                                <picture><source srcset="assets/images/author/author-img4.avif" type="image/avif"><img src="assets/images/author/author-img4.jpg" alt="image"></picture>
-                                            </div>
-                                            <div class="notify-text">
-                                                <p>Aglae Mayer</p>
-                                                <span class="msg">Your product is completely Ready...</span>
-                                                <span>3:15 PM</span>
-                                            </div>
-                                        </a>
-                                        <a href="#" class="notify-item">
-                                            <div class="notify-thumb">
-                                                <picture><source srcset="assets/images/author/author-img2.avif" type="image/avif"><img src="assets/images/author/author-img2.jpg" alt="image"></picture>
-                                            </div>
-                                            <div class="notify-text">
-                                                <p>Aglae Mayer</p>
-                                                <span class="msg">Hey I am waiting for you...</span>
-                                                <span>3:15 PM</span>
-                                            </div>
-                                        </a>
-                                        <a href="#" class="notify-item">
-                                            <div class="notify-thumb">
-                                                <picture><source srcset="assets/images/author/author-img1.avif" type="image/avif"><img src="assets/images/author/author-img1.jpg" alt="image"></picture>
-                                            </div>
-                                            <div class="notify-text">
-                                                <p>Aglae Mayer</p>
-                                                <span class="msg">Hey I am waiting for you...</span>
-                                                <span>3:15 PM</span>
-                                            </div>
-                                        </a>
-                                        <a href="#" class="notify-item">
-                                            <div class="notify-thumb">
-                                                <picture><source srcset="assets/images/author/author-img3.avif" type="image/avif"><img src="assets/images/author/author-img3.jpg" alt="image"></picture>
                                             </div>
                                             <div class="notify-text">
                                                 <p>Aglae Mayer</p>
@@ -345,10 +253,10 @@
                 <div class="row align-items-center">
                     <div class="col-sm-6">
                         <div class="breadcrumbs-area clearfix">
-                            <h1 class="page-title float-start">Dashboard</h1>
+                            <h1 class="page-title float-start">Email</h1>
                             <ul class="breadcrumbs float-start">
                                 <li><a href="index.html">Home</a></li>
-                                <li><span>Invoice</span></li>
+                                <li><span>Email</span></li>
                             </ul>
                         </div>
                     </div>
@@ -370,94 +278,279 @@
             </div>
             <!-- page title area end -->
             <div class="main-content-inner" id="main-content">
-                <div class="row">
-                    <div class="col-lg-12 mt-5">
+                <!-- email area start -->
+                <div class="row mt-4 mb-4">
+                    <!-- email sidebar -->
+                    <div class="col-lg-3">
                         <div class="card">
                             <div class="card-body">
-                                <div class="invoice-area">
-                                    <div class="invoice-head">
-                                        <div class="row">
-                                            <div class="iv-left col-6">
-                                                <span>INVOICE</span>
-                                            </div>
-                                            <div class="iv-right col-6 text-md-right">
-                                                <span>#34445998</span>
-                                            </div>
-                                        </div>
+                                <button class="btn btn-primary w-100 mb-4" data-bs-toggle="modal" data-bs-target="#composeModal">
+                                    <i class="fa-solid fa-pen-to-square me-2"></i>Compose
+                                </button>
+                                <h6 class="header-title mb-3">Folders</h6>
+                                <ul class="list-unstyled email-folder-list">
+                                    <li class="mb-2 active"><a href="#" class="d-flex align-items-center py-1"><i class="fa-solid fa-inbox me-2" style="color: #4336fb; width: 20px;"></i> Inbox <span class="ms-auto badge bg-primary">12</span></a></li>
+                                    <li class="mb-2"><a href="#" class="d-flex align-items-center py-1"><i class="fa-solid fa-paper-plane me-2" style="color: #36b398; width: 20px;"></i> Sent</a></li>
+                                    <li class="mb-2"><a href="#" class="d-flex align-items-center py-1"><i class="fa-solid fa-file me-2" style="color: #f59e0b; width: 20px;"></i> Drafts <span class="ms-auto badge bg-warning text-dark">3</span></a></li>
+                                    <li class="mb-2"><a href="#" class="d-flex align-items-center py-1"><i class="fa-solid fa-star me-2" style="color: #ffc107; width: 20px;"></i> Starred</a></li>
+                                    <li class="mb-2"><a href="#" class="d-flex align-items-center py-1"><i class="fa-solid fa-exclamation-circle me-2" style="color: #f96776; width: 20px;"></i> Spam <span class="ms-auto badge bg-danger">5</span></a></li>
+                                    <li class="mb-2"><a href="#" class="d-flex align-items-center py-1"><i class="fa-solid fa-trash me-2 text-muted" style="width: 20px;"></i> Trash</a></li>
+                                </ul>
+                                <hr>
+                                <h6 class="header-title mb-3">Labels</h6>
+                                <ul class="list-unstyled">
+                                    <li class="mb-2"><a href="#" class="d-flex align-items-center text-muted" style="font-size: 13px;"><span class="d-inline-block me-2 rounded-circle" style="width: 10px; height: 10px; background: #4336fb;"></span> Work</a></li>
+                                    <li class="mb-2"><a href="#" class="d-flex align-items-center text-muted" style="font-size: 13px;"><span class="d-inline-block me-2 rounded-circle" style="width: 10px; height: 10px; background: #10b981;"></span> Personal</a></li>
+                                    <li class="mb-2"><a href="#" class="d-flex align-items-center text-muted" style="font-size: 13px;"><span class="d-inline-block me-2 rounded-circle" style="width: 10px; height: 10px; background: #f59e0b;"></span> Important</a></li>
+                                    <li class="mb-2"><a href="#" class="d-flex align-items-center text-muted" style="font-size: 13px;"><span class="d-inline-block me-2 rounded-circle" style="width: 10px; height: 10px; background: #f96776;"></span> Clients</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- email list -->
+                    <div class="col-lg-9">
+                        <div class="card">
+                            <!-- toolbar -->
+                            <div class="card-header d-flex justify-content-between align-items-center">
+                                <div class="d-flex align-items-center gap-2">
+                                    <div class="form-check mb-0">
+                                        <input class="form-check-input" type="checkbox" id="selectAll">
                                     </div>
-                                    <div class="row align-items-center">
-                                        <div class="col-md-6">
-                                            <div class="invoice-address">
-                                                <h3>invoiced to</h3>
-                                                <h5>Verdie Hintz</h5>
-                                                <p>4494 Weekley Street, San Antonio, 78205 Texas</p>
-                                                <p>San Antonio</p>
-                                                <p>Somalia</p>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 text-md-right">
-                                            <ul class="invoice-date">
-                                                <li>Invoice Date : sat 18 | 07 | 2018</li>
-                                                <li>Due Date : sat 18 | 07 | 2018</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="invoice-table table-responsive mt-5">
-                                        <table class="table table-bordered table-hover text-end">
-                                            <thead>
-                                                <tr class="text-capitalize">
-                                                    <th class="text-center" style="width: 5%;">id</th>
-                                                    <th class="text-left" style="width: 45%; min-width: 130px;">description</th>
-                                                    <th>qty</th>
-                                                    <th style="min-width: 100px">Unit Cost</th>
-                                                    <th>total</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td class="text-center">1</td>
-                                                    <td class="text-left">Crazy Toys</td>
-                                                    <td>1</td>
-                                                    <td>$20</td>
-                                                    <td>$40</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-center">2</td>
-                                                    <td class="text-left">Beautiful flowers</td>
-                                                    <td>2</td>
-                                                    <td>$50</td>
-                                                    <td>$100</td>
-                                                </tr>
-                                            </tbody>
-                                            <tfoot>
-                                                <tr>
-                                                    <td colspan="4">total balance :</td>
-                                                    <td>$140</td>
-                                                </tr>
-                                            </tfoot>
-                                        </table>
-                                    </div>
+                                    <button class="btn btn-sm btn-outline-secondary" title="Refresh"><i class="fa-solid fa-arrows-rotate"></i></button>
+                                    <button class="btn btn-sm btn-outline-secondary" title="Archive"><i class="fa-solid fa-box-archive"></i></button>
+                                    <button class="btn btn-sm btn-outline-secondary" title="Delete"><i class="fa-solid fa-trash"></i></button>
                                 </div>
-                                <div class="invoice-buttons text-end">
-                                    <a href="#" class="invoice-btn">print invoice</a>
-                                    <a href="#" class="invoice-btn">send invoice</a>
+                                <small class="text-muted">1-12 of 48</small>
+                            </div>
+                            <div class="card-body p-0">
+                                <!-- email 1 - unread -->
+                                <div class="email-item unread d-flex align-items-center p-3 border-bottom">
+                                    <div class="form-check me-2 mb-0">
+                                        <input class="form-check-input" type="checkbox">
+                                    </div>
+                                    <i class="fa-regular fa-star email-star me-3"></i>
+                                    <div class="min-width-0 flex-grow-1 d-flex align-items-center">
+                                        <strong class="me-3" style="min-width: 140px; font-size: 14px;">Sarah Miller</strong>
+                                        <div class="text-truncate flex-grow-1 min-width-0">
+                                            <strong style="font-size: 13px;">New Dashboard Mockups</strong>
+                                            <span class="text-muted" style="font-size: 13px;"> &mdash; Hi Aigars, I've attached the latest dashboard mockup files for your review. Let me know...</span>
+                                        </div>
+                                    </div>
+                                    <small class="text-muted ms-3" style="white-space: nowrap; font-size: 12px;">10:32 AM</small>
+                                </div>
+                                <!-- email 2 - unread -->
+                                <div class="email-item unread d-flex align-items-center p-3 border-bottom">
+                                    <div class="form-check me-2 mb-0">
+                                        <input class="form-check-input" type="checkbox">
+                                    </div>
+                                    <i class="fa-solid fa-star email-star active me-3"></i>
+                                    <div class="min-width-0 flex-grow-1 d-flex align-items-center">
+                                        <strong class="me-3" style="min-width: 140px; font-size: 14px;">James Wilson</strong>
+                                        <div class="text-truncate flex-grow-1 min-width-0">
+                                            <strong style="font-size: 13px;">Server Migration Complete</strong>
+                                            <span class="text-muted" style="font-size: 13px;"> &mdash; The migration to the new server has been completed successfully. All services are running...</span>
+                                        </div>
+                                    </div>
+                                    <small class="text-muted ms-3" style="white-space: nowrap; font-size: 12px;">9:45 AM</small>
+                                </div>
+                                <!-- email 3 - unread -->
+                                <div class="email-item unread d-flex align-items-center p-3 border-bottom">
+                                    <div class="form-check me-2 mb-0">
+                                        <input class="form-check-input" type="checkbox">
+                                    </div>
+                                    <i class="fa-regular fa-star email-star me-3"></i>
+                                    <div class="min-width-0 flex-grow-1 d-flex align-items-center">
+                                        <strong class="me-3" style="min-width: 140px; font-size: 14px;">GitHub</strong>
+                                        <div class="text-truncate flex-grow-1 min-width-0">
+                                            <strong style="font-size: 13px;">[srtdash] Pull Request #42 merged</strong>
+                                            <span class="text-muted" style="font-size: 13px;"> &mdash; Your pull request "Upgrade to Bootstrap 5.3.8" was merged into the main branch...</span>
+                                        </div>
+                                    </div>
+                                    <small class="text-muted ms-3" style="white-space: nowrap; font-size: 12px;">8:12 AM</small>
+                                </div>
+                                <!-- email 4 - read -->
+                                <div class="email-item d-flex align-items-center p-3 border-bottom">
+                                    <div class="form-check me-2 mb-0">
+                                        <input class="form-check-input" type="checkbox">
+                                    </div>
+                                    <i class="fa-regular fa-star email-star me-3"></i>
+                                    <div class="min-width-0 flex-grow-1 d-flex align-items-center">
+                                        <span class="me-3" style="min-width: 140px; font-size: 14px;">Emma Davis</span>
+                                        <div class="text-truncate flex-grow-1 min-width-0">
+                                            <span style="font-size: 13px;">Weekly Team Meeting Notes</span>
+                                            <span class="text-muted" style="font-size: 13px;"> &mdash; Here are the notes from yesterday's team meeting. Action items are highlighted...</span>
+                                        </div>
+                                    </div>
+                                    <small class="text-muted ms-3" style="white-space: nowrap; font-size: 12px;">Yesterday</small>
+                                </div>
+                                <!-- email 5 - read -->
+                                <div class="email-item d-flex align-items-center p-3 border-bottom">
+                                    <div class="form-check me-2 mb-0">
+                                        <input class="form-check-input" type="checkbox">
+                                    </div>
+                                    <i class="fa-solid fa-star email-star active me-3"></i>
+                                    <div class="min-width-0 flex-grow-1 d-flex align-items-center">
+                                        <span class="me-3" style="min-width: 140px; font-size: 14px;">Stripe</span>
+                                        <div class="text-truncate flex-grow-1 min-width-0">
+                                            <span style="font-size: 13px;">Your January Invoice</span>
+                                            <span class="text-muted" style="font-size: 13px;"> &mdash; Your invoice for January 2026 is ready. Total amount: $299.00. View your invoice...</span>
+                                        </div>
+                                    </div>
+                                    <small class="text-muted ms-3" style="white-space: nowrap; font-size: 12px;">Yesterday</small>
+                                </div>
+                                <!-- email 6 - read -->
+                                <div class="email-item d-flex align-items-center p-3 border-bottom">
+                                    <div class="form-check me-2 mb-0">
+                                        <input class="form-check-input" type="checkbox">
+                                    </div>
+                                    <i class="fa-regular fa-star email-star me-3"></i>
+                                    <div class="min-width-0 flex-grow-1 d-flex align-items-center">
+                                        <span class="me-3" style="min-width: 140px; font-size: 14px;">Michael Brown</span>
+                                        <div class="text-truncate flex-grow-1 min-width-0">
+                                            <span style="font-size: 13px;">Re: API Documentation</span>
+                                            <span class="text-muted" style="font-size: 13px;"> &mdash; Thanks for the updated docs! The new endpoints section is much clearer now...</span>
+                                        </div>
+                                    </div>
+                                    <small class="text-muted ms-3" style="white-space: nowrap; font-size: 12px;">Feb 7</small>
+                                </div>
+                                <!-- email 7 - read -->
+                                <div class="email-item d-flex align-items-center p-3 border-bottom">
+                                    <div class="form-check me-2 mb-0">
+                                        <input class="form-check-input" type="checkbox">
+                                    </div>
+                                    <i class="fa-regular fa-star email-star me-3"></i>
+                                    <div class="min-width-0 flex-grow-1 d-flex align-items-center">
+                                        <span class="me-3" style="min-width: 140px; font-size: 14px;">Lisa Anderson</span>
+                                        <div class="text-truncate flex-grow-1 min-width-0">
+                                            <span style="font-size: 13px;">Client Feedback Report</span>
+                                            <span class="text-muted" style="font-size: 13px;"> &mdash; I've compiled all the client feedback from the last sprint into a single document...</span>
+                                        </div>
+                                    </div>
+                                    <small class="text-muted ms-3" style="white-space: nowrap; font-size: 12px;">Feb 6</small>
+                                </div>
+                                <!-- email 8 - read -->
+                                <div class="email-item d-flex align-items-center p-3 border-bottom">
+                                    <div class="form-check me-2 mb-0">
+                                        <input class="form-check-input" type="checkbox">
+                                    </div>
+                                    <i class="fa-regular fa-star email-star me-3"></i>
+                                    <div class="min-width-0 flex-grow-1 d-flex align-items-center">
+                                        <span class="me-3" style="min-width: 140px; font-size: 14px;">Google Cloud</span>
+                                        <div class="text-truncate flex-grow-1 min-width-0">
+                                            <span style="font-size: 13px;">Security Alert: New sign-in</span>
+                                            <span class="text-muted" style="font-size: 13px;"> &mdash; A new sign-in was detected on your Google Cloud account from Riga, Latvia...</span>
+                                        </div>
+                                    </div>
+                                    <small class="text-muted ms-3" style="white-space: nowrap; font-size: 12px;">Feb 5</small>
+                                </div>
+                                <!-- email 9 - read -->
+                                <div class="email-item d-flex align-items-center p-3 border-bottom">
+                                    <div class="form-check me-2 mb-0">
+                                        <input class="form-check-input" type="checkbox">
+                                    </div>
+                                    <i class="fa-regular fa-star email-star me-3"></i>
+                                    <div class="min-width-0 flex-grow-1 d-flex align-items-center">
+                                        <span class="me-3" style="min-width: 140px; font-size: 14px;">Robert Taylor</span>
+                                        <div class="text-truncate flex-grow-1 min-width-0">
+                                            <span style="font-size: 13px;">Design System Updates</span>
+                                            <span class="text-muted" style="font-size: 13px;"> &mdash; The design system has been updated with the new color palette and typography changes...</span>
+                                        </div>
+                                    </div>
+                                    <small class="text-muted ms-3" style="white-space: nowrap; font-size: 12px;">Feb 4</small>
+                                </div>
+                                <!-- email 10 - read -->
+                                <div class="email-item d-flex align-items-center p-3 border-bottom">
+                                    <div class="form-check me-2 mb-0">
+                                        <input class="form-check-input" type="checkbox">
+                                    </div>
+                                    <i class="fa-regular fa-star email-star me-3"></i>
+                                    <div class="min-width-0 flex-grow-1 d-flex align-items-center">
+                                        <span class="me-3" style="min-width: 140px; font-size: 14px;">Netlify</span>
+                                        <div class="text-truncate flex-grow-1 min-width-0">
+                                            <span style="font-size: 13px;">Deploy successful: srtdash</span>
+                                            <span class="text-muted" style="font-size: 13px;"> &mdash; Your site srtdash-demo has been deployed successfully. Build time: 45s...</span>
+                                        </div>
+                                    </div>
+                                    <small class="text-muted ms-3" style="white-space: nowrap; font-size: 12px;">Feb 3</small>
+                                </div>
+                                <!-- email 11 - read -->
+                                <div class="email-item d-flex align-items-center p-3 border-bottom">
+                                    <div class="form-check me-2 mb-0">
+                                        <input class="form-check-input" type="checkbox">
+                                    </div>
+                                    <i class="fa-regular fa-star email-star me-3"></i>
+                                    <div class="min-width-0 flex-grow-1 d-flex align-items-center">
+                                        <span class="me-3" style="min-width: 140px; font-size: 14px;">Jennifer White</span>
+                                        <div class="text-truncate flex-grow-1 min-width-0">
+                                            <span style="font-size: 13px;">Budget Approval Needed</span>
+                                            <span class="text-muted" style="font-size: 13px;"> &mdash; Please review and approve the Q1 budget proposal. The deadline is this Friday...</span>
+                                        </div>
+                                    </div>
+                                    <small class="text-muted ms-3" style="white-space: nowrap; font-size: 12px;">Feb 2</small>
+                                </div>
+                                <!-- email 12 - read -->
+                                <div class="email-item d-flex align-items-center p-3">
+                                    <div class="form-check me-2 mb-0">
+                                        <input class="form-check-input" type="checkbox">
+                                    </div>
+                                    <i class="fa-regular fa-star email-star me-3"></i>
+                                    <div class="min-width-0 flex-grow-1 d-flex align-items-center">
+                                        <span class="me-3" style="min-width: 140px; font-size: 14px;">David Clark</span>
+                                        <div class="text-truncate flex-grow-1 min-width-0">
+                                            <span style="font-size: 13px;">Re: Project Timeline</span>
+                                            <span class="text-muted" style="font-size: 13px;"> &mdash; I've updated the project timeline with the revised milestones. Phase 2 starts next week...</span>
+                                        </div>
+                                    </div>
+                                    <small class="text-muted ms-3" style="white-space: nowrap; font-size: 12px;">Feb 1</small>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <!-- email area end -->
             </div>
         </div>
         <!-- main content area end -->
         <!-- footer area start-->
         <footer>
             <div class="footer-area">
-                <p>© Copyright 2026. All right reserved. Template by <a href="https://colorlib.com/wp/">Colorlib</a>.</p>
+                <p>&copy; Copyright 2026. All right reserved. Template by <a href="https://colorlib.com/wp/">Colorlib</a>.</p>
             </div>
         </footer>
         <!-- footer area end-->
     </div>
     <!-- page container area end -->
+    <!-- compose modal -->
+    <div class="modal fade" id="composeModal" tabindex="-1" aria-labelledby="composeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="composeModalLabel">New Message</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="emailTo" class="form-label">To</label>
+                            <input type="email" class="form-control" id="emailTo" placeholder="recipient@example.com">
+                        </div>
+                        <div class="mb-3">
+                            <label for="emailSubject" class="form-label">Subject</label>
+                            <input type="text" class="form-control" id="emailSubject" placeholder="Subject">
+                        </div>
+                        <div class="mb-3">
+                            <label for="emailBody" class="form-label">Message</label>
+                            <textarea class="form-control" id="emailBody" rows="8" placeholder="Write your message..." style="height: auto; min-height: 150px;"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Discard</button>
+                    <button type="button" class="btn btn-primary"><i class="fa-solid fa-paper-plane me-2"></i>Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- offset area start -->
     <div class="offset-area">
         <div class="offset-close"><i class="ti-close"></i></div>
@@ -510,70 +603,6 @@
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse distinctio itaque at.
                         </p>
                     </div>
-                    <div class="timeline-task">
-                        <div class="icon bg3">
-                            <i class="ti-signal"></i>
-                        </div>
-                        <div class="tm-title">
-                            <h4>You Added Kaji Patha few minutes ago</h4>
-                            <span class="time"><i class="ti-time"></i>01 minutes ago</span>
-                        </div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse distinctio itaque at.
-                        </p>
-                    </div>
-                    <div class="timeline-task">
-                        <div class="icon bg1">
-                            <i class="fa-solid fa-envelope"></i>
-                        </div>
-                        <div class="tm-title">
-                            <h4>Ratul Hamba sent you an email</h4>
-                            <span class="time"><i class="ti-time"></i>09:35</span>
-                        </div>
-                        <p>Hello sir , where are you, i am egerly waiting for you.
-                        </p>
-                    </div>
-                    <div class="timeline-task">
-                        <div class="icon bg2">
-                            <i class="fa-solid fa-exclamation-triangle"></i>
-                        </div>
-                        <div class="tm-title">
-                            <h4>Rashed sent you an email</h4>
-                            <span class="time"><i class="ti-time"></i>09:35</span>
-                        </div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse distinctio itaque at.
-                        </p>
-                    </div>
-                    <div class="timeline-task">
-                        <div class="icon bg2">
-                            <i class="fa-solid fa-exclamation-triangle"></i>
-                        </div>
-                        <div class="tm-title">
-                            <h4>Rashed sent you an email</h4>
-                            <span class="time"><i class="ti-time"></i>09:35</span>
-                        </div>
-                    </div>
-                    <div class="timeline-task">
-                        <div class="icon bg3">
-                            <i class="fa-solid fa-bomb"></i>
-                        </div>
-                        <div class="tm-title">
-                            <h4>Rashed sent you an email</h4>
-                            <span class="time"><i class="ti-time"></i>09:35</span>
-                        </div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse distinctio itaque at.
-                        </p>
-                    </div>
-                    <div class="timeline-task">
-                        <div class="icon bg3">
-                            <i class="ti-signal"></i>
-                        </div>
-                        <div class="tm-title">
-                            <h4>Rashed sent you an email</h4>
-                            <span class="time"><i class="ti-time"></i>09:35</span>
-                        </div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse distinctio itaque at.
-                        </p>
-                    </div>
                 </div>
             </div>
             <div id="settings" class="tab-pane fade">
@@ -600,36 +629,6 @@
                             </div>
                             <p>The for attribute is necessary to bind our custom checkbox with the input.</p>
                         </div>
-                        <div class="s-settings">
-                            <div class="s-sw-title">
-                                <h5>Show your emails</h5>
-                                <div class="s-swtich">
-                                    <input type="checkbox" id="switch3" />
-                                    <label for="switch3">Toggle</label>
-                                </div>
-                            </div>
-                            <p>Show email so that easily find you.</p>
-                        </div>
-                        <div class="s-settings">
-                            <div class="s-sw-title">
-                                <h5>Show Task statistics</h5>
-                                <div class="s-swtich">
-                                    <input type="checkbox" id="switch4" />
-                                    <label for="switch4">Toggle</label>
-                                </div>
-                            </div>
-                            <p>The for attribute is necessary to bind our custom checkbox with the input.</p>
-                        </div>
-                        <div class="s-settings">
-                            <div class="s-sw-title">
-                                <h5>Notifications</h5>
-                                <div class="s-swtich">
-                                    <input type="checkbox" id="switch5" />
-                                    <label for="switch5">Toggle</label>
-                                </div>
-                            </div>
-                            <p>Use checkboxes when looking for yes or no answers.</p>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -640,7 +639,6 @@
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/swiper-bundle.min.js"></script>
     <script src="assets/js/metismenujs.min.js"></script>
-
     <script src="assets/js/scripts.js"></script>
     <!-- Google Analytics 4 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>

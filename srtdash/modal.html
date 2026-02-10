@@ -110,6 +110,19 @@
                             <li><a href="maps.html"><i class="ti-map-alt"></i> <span>maps</span></a></li>
                             <li><a href="invoice.html"><i class="ti-receipt"></i> <span>Invoice Summary</span></a></li>
                             <li>
+                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-widget"></i><span>Apps</span></a>
+                                <ul class="collapse">
+                                    <li><a href="profile.html">Profile</a></li>
+                                    <li><a href="notifications.html">Notifications</a></li>
+                                    <li><a href="settings.html">Settings</a></li>
+                                    <li><a href="calendar.html">Calendar</a></li>
+                                    <li><a href="file-manager.html">File Manager</a></li>
+                                    <li><a href="chat.html">Chat</a></li>
+                                    <li><a href="email.html">Email</a></li>
+                                    <li><a href="widgets.html">Widgets</a></li>
+                                </ul>
+                            </li>
+                            <li>
                                 <a href="javascript:void(0)" aria-expanded="true"><i class="ti-layers-alt"></i> <span>Pages</span></a>
                                 <ul class="collapse">
                                     <li><a href="login.html">Login</a></li>
@@ -122,6 +135,7 @@
                                     <li><a href="screenlock.html">Lock Screen</a></li>
                                     <li><a href="screenlock2.html">Lock Screen 2</a></li>
                                     <li><a href="reset-pass.html">reset password</a></li>
+                                    <li><a href="forgot-password.html">Forgot Password</a></li>
                                     <li><a href="pricing.html">Pricing</a></li>
                                 </ul>
                             </li>
@@ -132,6 +146,7 @@
                                     <li><a href="404.html">Error 404</a></li>
                                     <li><a href="403.html">Error 403</a></li>
                                     <li><a href="500.html">Error 500</a></li>
+                                    <li><a href="401.html">Error 401</a></li>
                                 </ul>
                             </li>
                             <li>
@@ -186,7 +201,7 @@
                                 </i>
                                 <div class="dropdown-menu bell-notify-box notify-box">
                                     <span class="notify-title">You have 3 new notifications <a href="#">view all</a></span>
-                                    <div class="nofity-list">
+                                    <div class="notify-list">
                                         <a href="#" class="notify-item">
                                             <div class="notify-thumb"><i class="ti-key bg-danger"></i></div>
                                             <div class="notify-text">
@@ -197,7 +212,7 @@
                                         <a href="#" class="notify-item">
                                             <div class="notify-thumb"><i class="ti-comments-smiley bg-info"></i></div>
                                             <div class="notify-text">
-                                                <p>New Commetns On Post</p>
+                                                <p>New Comments On Post</p>
                                                 <span>30 Seconds ago</span>
                                             </div>
                                         </a>
@@ -211,7 +226,7 @@
                                         <a href="#" class="notify-item">
                                             <div class="notify-thumb"><i class="ti-comments-smiley bg-info"></i></div>
                                             <div class="notify-text">
-                                                <p>New Commetns On Post</p>
+                                                <p>New Comments On Post</p>
                                                 <span>30 Seconds ago</span>
                                             </div>
                                         </a>
@@ -243,7 +258,7 @@
                                 <i class="fa-regular fa-envelope dropdown-toggle" data-bs-toggle="dropdown"><span>3</span></i>
                                 <div class="dropdown-menu notify-box nt-enveloper-box">
                                     <span class="notify-title">You have 3 new notifications <a href="#">view all</a></span>
-                                    <div class="nofity-list">
+                                    <div class="notify-list">
                                         <a href="#" class="notify-item">
                                             <div class="notify-thumb">
                                                 <picture><source srcset="assets/images/author/author-img1.avif" type="image/avif"><img src="assets/images/author/author-img1.jpg" alt="image"></picture>
@@ -330,7 +345,7 @@
                 <div class="row align-items-center">
                     <div class="col-sm-6">
                         <div class="breadcrumbs-area clearfix">
-                            <h4 class="page-title float-start">Dashboard</h4>
+                            <h1 class="page-title float-start">Dashboard</h1>
                             <ul class="breadcrumbs float-start">
                                 <li><a href="index.html">Home</a></li>
                                 <li><span>Modal</span></li>
@@ -342,10 +357,10 @@
                             <picture><source srcset="assets/images/author/avatar.avif" type="image/avif"><img class="avatar user-thumb" src="assets/images/author/avatar.png" alt="avatar"></picture>
                             <h4 class="user-name dropdown-toggle" data-bs-toggle="dropdown">Aigars Silkalns <i class="fa-solid fa-angle-down"></i></h4>
                             <div class="dropdown-menu user-dropdown">
-                                <a class="dropdown-item" href="#"><i class="fa-solid fa-user"></i> My Profile</a>
-                                <a class="dropdown-item" href="#"><i class="fa-solid fa-envelope"></i> Inbox <span class="badge rounded-pill bg-primary ms-auto">3</span></a>
-                                <a class="dropdown-item" href="#"><i class="fa-solid fa-gear"></i> Account Settings</a>
-                                <a class="dropdown-item" href="#"><i class="fa-solid fa-lock"></i> Lock Screen</a>
+                                <a class="dropdown-item" href="profile.html"><i class="fa-solid fa-user"></i> My Profile</a>
+                                <a class="dropdown-item" href="notifications.html"><i class="fa-solid fa-envelope"></i> Inbox <span class="badge rounded-pill bg-primary ms-auto">3</span></a>
+                                <a class="dropdown-item" href="settings.html"><i class="fa-solid fa-gear"></i> Account Settings</a>
+                                <a class="dropdown-item" href="screenlock.html"><i class="fa-solid fa-lock"></i> Lock Screen</a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item user-dropdown-logout" href="#"><i class="fa-solid fa-right-from-bracket"></i> Log Out</a>
                             </div>
@@ -370,7 +385,7 @@
                                         <div class="modal-content">
                                             <div class="modal-header">
                                                 <h5 class="modal-title">Modal title</h5>
-                                                <button type="button" class="close" data-bs-dismiss="modal"><span>&times;</span></button>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                             </div>
                                             <div class="modal-body">
                                                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam, repudiandae modi quae adipisci sunt, quaerat nihil est mollitia delectus consequuntur voluptate nesciunt veniam impedit, odio ducimus provident dolore quia obcaecati.
@@ -401,7 +416,7 @@
                                         <div class="modal-content">
                                             <div class="modal-header">
                                                 <h5 class="modal-title">Modal title</h5>
-                                                <button type="button" class="close" data-bs-dismiss="modal"><span>&times;</span></button>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                             </div>
                                             <div class="modal-body">
                                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia reprehenderit eligendi unde, dolore vero ullam repudiandae molestias ratione suscipit nobis quas repellat asperiores ab? Atque sequi in deserunt accusamus error ad rerum delectus cupiditate, nesciunt odit! Recusandae vitae est, veritatis sit culpa aperiam omnis! Nesciunt magni est hic, quis facilis iure fugit voluptatibus laborum suscipit accusamus. Adipisci, dolorem similique excepturi quaerat deleniti voluptate possimus ullam exercitationem aliquam perferendis, eaque dolorum nobis sed quidem! Eos, nihil eveniet itaque, deserunt ea impedit cumque eligendi tempore sint, et laborum! Quaerat beatae necessitatibus ad! Id natus, incidunt possimus corporis harum in, quis est provident nisi quaerat impedit! Voluptate debitis laborum quod reiciendis at quisquam enim deleniti, impedit, adipisci praesentium quaerat aut molestiae tenetur, amet iusto autem necessitatibus aliquam tempora cumque placeat sed ratione minima. Modi, ipsum temporibus distinctio quidem magnam, totam, expedita voluptates ducimus libero nesciunt corrupti? Sit officiis nam itaque ducimus laudantium commodi laboriosam consequuntur, natus cum assumenda nisi veritatis magnam reiciendis voluptatibus provident voluptates officia odit necessitatibus libero iure eaque, error praesentium? Neque deserunt fugiat consequuntur explicabo optio commodi quis quia tempore, ut quidem repellendus nobis eligendi quos aperiam assumenda dignissimos praesentium quasi eveniet! Sit adipisci nesciunt veritatis harum mollitia, in quos quam, atque quo aliquam delectus aspernatur perferendis quidem animi quia magni voluptatum commodi eligendi obcaecati pariatur esse dicta deleniti fugit. Id, ad incidunt, repudiandae consequuntur possimus sit expedita soluta ratione quidem nisi officiis itaque atque impedit ullam voluptas perspiciatis maiores repellat quia culpa. Ipsum nisi eos assumenda? Omnis ipsum officiis maxime quo voluptate doloremque numquam tenetur quisquam, corrupti odio porro, exercitationem nemo voluptatum quos necessitatibus. Laudantium animi quod quasi, ratione a facere vel placeat sint necessitatibus neque cumque aspernatur aliquam accusamus ipsam dolore iste. Harum beatae ea, sunt quidem pariatur eaque quos exercitationem vitae consequatur iusto minima illo provident et dolorum culpa tenetur. Eveniet magni error quisquam quia quo debitis temporibus nemo corporis amet ex voluptatum delectus, excepturi commodi. Doloremque, voluptates ducimus alias, asperiores dolorum vitae fugit harum illum accusantium eos quidem libero fugiat sapiente eum earum aliquam facilis corrupti ullam obcaecati et sed quo nobis! Commodi, explicabo perspiciatis modi et quam, suscipit enim dolorem accusantium assumenda, harum ex doloremque. Error fuga eos accusantium consectetur perferendis mollitia unde beatae eaque reiciendis ipsam vel minus fugit quis amet a, sapiente, voluptatem natus delectus? Dicta ad totam voluptas eveniet, laboriosam officia aut, quo dolorum esse laudantium rerum. Quam officiis quibusdam maiores, obcaecati sit sint id dignissimos rerum tempora facilis! Expedita assumenda hic odit, autem alias fugiat voluptas consequuntur. Velit, illum numquam? Velit asperiores accusamus magnam minus quo ex, sunt in molestias alias suscipit! Beatae, eos. Ipsa explicabo possimus repellendus saepe placeat veritatis libero, recusandae quisquam nobis amet assumenda asperiores eveniet inventore totam repellat pariatur ea! Voluptate numquam illo non sed ratione aliquam sequi debitis, ipsam, esse aut tempore quod quam. Quos doloremque, asperiores alias facere dolore, quidem impedit atque odio, dolor adipisci explicabo harum. Pariatur harum enim, quasi excepturi amet architecto maiores illo rem, hic eveniet unde, autem officia id consequuntur atque tempore repellat magnam incidunt nulla. Modi eum commodi ex corporis delectus laudantium nihil. Esse odio aut magni vero autem consectetur repellat quisquam perferendis placeat sint, saepe praesentium nemo deleniti corrupti aperiam totam voluptate libero omnis. Harum placeat nostrum officia odio excepturi doloribus exercitationem totam quibusdam vero quis molestias possimus, optio iusto pariatur. In ea unde doloribus, consequatur odit rerum sunt accusamus quam molestiae necessitatibus, ratione distinctio harum minus. Maxime numquam aperiam inventore totam officia atque, quod asperiores modi ipsum quidem magnam dignissimos laborum nemo in maiores veritatis iste aliquid, voluptas possimus corporis dolor vel cumque debitis. Officiis eaque debitis quia, in ut nisi commodi, quasi fugit blanditiis earum atque asperiores dolorem quaerat temporibus, sunt officia dignissimos sit natus a dolorum non porro repellendus.</p>
@@ -431,7 +446,7 @@
                                         <div class="modal-content">
                                             <div class="modal-header">
                                                 <h5 class="modal-title">Modal title</h5>
-                                                <button type="button" class="close" data-bs-dismiss="modal"><span>&times;</span></button>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                             </div>
                                             <div class="modal-body">
                                                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius voluptates explicabo natus nobis, aperiam placeat aliquid nisi ut exercitationem dolor quisquam nam tempora voluptatem. Unde dignissimos est aliquid quidem porro dolorum ipsam suscipit animi quas, debitis ea, sunt quo distinctio doloribus eveniet dolores tempore delectus voluptatum! Possimus earum asperiores animi.</p>
@@ -461,7 +476,7 @@
                                         <div class="modal-content">
                                             <div class="modal-header">
                                                 <h5 class="modal-title">Modal title</h5>
-                                                <button type="button" class="close" data-bs-dismiss="modal"><span>&times;</span></button>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                             </div>
                                             <div class="modal-body">
                                                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius voluptates explicabo natus nobis, aperiam placeat aliquid nisi ut exercitationem dolor quisquam nam tempora voluptatem. Unde dignissimos est aliquid quidem porro dolorum ipsam suscipit animi quas, debitis ea, sunt quo distinctio doloribus eveniet dolores tempore delectus voluptatum! Possimus earum asperiores animi.</p>
@@ -491,7 +506,7 @@
                                         <div class="modal-content">
                                             <div class="modal-header">
                                                 <h5 class="modal-title">Modal title</h5>
-                                                <button type="button" class="close" data-bs-dismiss="modal"><span>&times;</span></button>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                             </div>
                                             <div class="modal-body">
                                                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius voluptates explicabo natus nobis, aperiam placeat aliquid nisi ut exercitationem dolor quisquam nam tempora voluptatem. Unde dignissimos est</p>
@@ -520,7 +535,7 @@
                                         <div class="modal-content">
                                             <div class="modal-header">
                                                 <h5 class="modal-title">Modal title</h5>
-                                                <button type="button" class="close" data-bs-dismiss="modal"><span>&times;</span></button>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                             </div>
                                             <div class="modal-body">
                                                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius voluptates explicabo natus nobis, aperiam placeat aliquid nisi ut exercitationem dolor quisquam nam tempora voluptatem. Unde dignissimos est aliquid quidem porro dolorum ipsam suscipit animi quas, debitis ea, sunt quo distinctio doloribus eveniet dolores tempore delectus voluptatum! Possimus earum asperiores animi.</p>
@@ -543,7 +558,7 @@
         <!-- footer area start-->
         <footer>
             <div class="footer-area">
-                <p>© Copyright 2018. All right reserved. Template by <a href="https://colorlib.com/wp/">Colorlib</a>.</p>
+                <p>© Copyright 2026. All right reserved. Template by <a href="https://colorlib.com/wp/">Colorlib</a>.</p>
             </div>
         </footer>
         <!-- footer area end-->

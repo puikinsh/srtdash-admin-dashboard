@@ -3,898 +3,938 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Documentation | srtdash - srtdash Admin Template</title>
-    <meta name="description" content="Thanks for purchasing Huge. If you need any support, please contact with us.">
-    <meta name="author" content="uttaraitpark">
-    <meta name="copyright" content="uttaraitpark">
-    <link rel="shortcut icon" type="image/png" href="img/favicon.ico">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/tree-viewer.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Documentation — SRTdash Admin Dashboard v2.0</title>
+    <meta name="description" content="Complete documentation for SRTdash Admin Dashboard v2.0 — Bootstrap 5.3.8 template with 56 pages, Chart.js charts, and vanilla JavaScript.">
+    <link rel="icon" type="image/png" href="../srtdash/assets/images/icon/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-    <div class="wrapper">
-        <div class="left-side">
-            <div class="logo">
-                <img src="img/logo.png" alt="" />
+    <!-- Mobile toggle -->
+    <button class="doc-mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">&#9776;</button>
+    <div class="doc-sidebar-overlay" id="sidebarOverlay"></div>
+
+    <div class="doc-wrapper">
+        <!-- Sidebar -->
+        <aside class="doc-sidebar" id="docSidebar">
+            <div class="doc-sidebar-brand">
+                <img src="../srtdash/assets/images/icon/logo.png" alt="SRTdash logo">
+                <span class="version">v2.0 Documentation</span>
             </div>
-            <div class="left-content">
-                <ul role="tablist">
-                    <li role="presentation" class="active"><a href="#one" aria-controls="home" role="tab" data-toggle="tab"><span><i class="fa fa-home"></i></span>Welcome</a></li>
-                    <li role="presentation"><a href="#two" aria-controls="home" role="tab" data-toggle="tab"><span><i class="fa fa-folder"></i></span>Main File Structure</a></li>
-                    <li role="presentation"><a href="#three" aria-controls="home" role="tab" data-toggle="tab"><span><i class="fa fa-code"></i></span>HTML Structure</a></li>
-                    <li role="presentation"><a href="#six" aria-controls="home" role="tab" data-toggle="tab"><span><i class="fa fa-slideshare"></i></span>Plugins stractures</a></li>
-                    <li role="presentation"><a href="#source" aria-controls="home" role="tab" data-toggle="tab"><span><i class="fa fa-thumbs-up"></i></span>Sources & Credits</a></li>
-                    <li role="presentation"><a href="#support" aria-controls="home" role="tab" data-toggle="tab"><span><i class="fa fa-support"></i></span>Support</a></li>
-                </ul>
+            <ul class="doc-sidebar-nav" id="docNav">
+                <li><a href="#welcome" class="active" data-section="welcome"><i class="bi bi-house"></i> Welcome</a></li>
+                <li><a href="#getting-started" data-section="getting-started"><i class="bi bi-rocket"></i> Getting Started</a></li>
+                <li><a href="#file-structure" data-section="file-structure"><i class="bi bi-folder2-open"></i> File Structure</a></li>
+                <li><a href="#page-layout" data-section="page-layout"><i class="bi bi-layout-sidebar"></i> Page Layout</a></li>
+                <li><a href="#css" data-section="css"><i class="bi bi-palette"></i> CSS Architecture</a></li>
+                <li><a href="#javascript" data-section="javascript"><i class="bi bi-code-slash"></i> JavaScript</a></li>
+                <li><a href="#pages" data-section="pages"><i class="bi bi-files"></i> Pages &amp; Components</a></li>
+                <li><a href="#tech-stack" data-section="tech-stack"><i class="bi bi-stack"></i> Tech Stack</a></li>
+                <li><a href="#customization" data-section="customization"><i class="bi bi-sliders"></i> Customization</a></li>
+                <li><a href="#accessibility" data-section="accessibility"><i class="bi bi-universal-access"></i> Accessibility</a></li>
+                <li><a href="#images" data-section="images"><i class="bi bi-image"></i> Image Optimization</a></li>
+                <li><a href="#credits" data-section="credits"><i class="bi bi-heart"></i> Credits</a></li>
+                <li><a href="#support" data-section="support"><i class="bi bi-chat-dots"></i> Support</a></li>
+            </ul>
+            <div class="doc-sidebar-footer">
+                &copy; 2026 <a href="https://colorlib.com/wp/templates/">Colorlib</a>
             </div>
-            <div class="copyright">
-                <p>Copyright &#169; 2018 <a href="https://colorlib.com/wp/templates/" >Colorlib</a></p>
-            </div>
-        </div>
-        <div class="right-side">
-            <div class="right-content">
-                <div id="one" class="content active fade in">
-                    <h1><span>srtdash</span> - srtdash Admin Template</h1>
-                    <div class="content-welcome">
-                        <p>
-                            
-                        </p>
-                    </div>
-                    <div class="created">
-                        <p>
-                            Created: 04/11/2018
-                            <br> Latest Update: 04/11/2018
-                            <br> By: <a href="https://colorlib.com/wp/templates/" >Colorlib</a>
-                            
-                            
-                            <br>
-                            <br> Thank you for purchasing our theme. If you have any question, please feel free to contact us from <a href="https://colorlib.com/wp/templates/">here</a>.
-                        </p>
-                    </div>
-                </div>
-                <div id="two" class="content fade">
-                    <h1>Main File Structure</h1>
+        </aside>
+
+        <!-- Main content -->
+        <main class="doc-main">
+            <div class="doc-content">
+
+                <!-- ==================== WELCOME ==================== -->
+                <section id="welcome" class="doc-section active">
+                    <h1>SRTdash Admin Dashboard</h1>
                     <p>
-                        All the file are well organized, its so easy to work with.
-                        <br> 1. Unzip the files.
-                        <br> 2. Open "srtdash" folder.
-                        <br> You will find the html markup file on the root that will be edited.
-                        <br> Also you will see 4 directories, css, js, fonts and images.
-                        <br> In the first folder Content only styling files the all the other files expect the htmls.
-                        <br> Js folder contain only the jquery library. Fonts folder contain essetial font files for fonts.
+                        SRTdash is a modern, fully responsive admin dashboard template built with <strong>Bootstrap 5.3.8</strong>
+                        and <strong>vanilla JavaScript</strong>. It ships with <strong>56 HTML pages</strong> covering dashboards,
+                        UI components, charts, forms, tables, authentication, and more.
                     </p>
-                    <pre>
-								<div class="tree-viewer-pd" id="jstree1">
-                                    <ul>
-                                        <li class="jstree-open">srtdash
-                                            <ul>
-                                                <li>css
-                                                    <ul>
-														<li>chosen
-															<ul>
-																<li data-jstree='"type":"css"}'>bootstrap-chosen.css</li>
-															</ul>
-														</li>
-														<li>code-editor
-															<ul>
-																<li data-jstree='"type":"css"}'>ambiance.css</li>
-																<li data-jstree='"type":"css"}'>codemirror.css</li>
-															</ul>
-														</li>
-														<li>colorpicker
-															<ul>
-																<li data-jstree='"type":"css"}'>colorpicker.css</li>
-															</ul>
-														</li>
-														<li>cropper
-															<ul>
-																<li data-jstree='"type":"css"}'>cropper.min.css</li>
-															</ul>
-														</li>
-														<li>datapicker
-															<ul>
-																<li data-jstree='"type":"css"}'>datepicker3.css</li>
-															</ul>
-														</li>
-														<li>data-table
-															<ul>
-																<li data-jstree='"type":"css"}'>bootstrap-editable.css</li>
-																<li data-jstree='"type":"css"}'>bootstrap-table.css</li>
-															</ul>
-														</li>
-														<li>duallistbox
-															<ul>
-																<li data-jstree='"type":"css"}'>bootstrap-duallistbox.min.css</li>
-															</ul>
-														</li>
-														<li>form
-															<ul>
-																<li data-jstree='"type":"css"}'>all-type-forms.css</li>
-																<li data-jstree='"type":"css"}'>themesaller-forms.css</li>
-															</ul>
-														</li>
-														<li>ionRangeSlider
-															<ul>
-																<li data-jstree='"type":"css"}'>ion.rangeSlider.css</li>
-																<li data-jstree='"type":"css"}'>ion.rangeSlider.skinFlat.css</li>
-															</ul>
-														</li>
-														<li>jvectormap
-															<ul>
-																<li data-jstree='"type":"css"}'>jquery-jvectormap-2.0.3.css</li>
-															</ul>
-														</li>
-														<li>preloader
-															<ul>
-																<li data-jstree='"type":"css"}'>preloader-style.css</li>
-															</ul>
-														</li>
-														<li>select2
-															<ul>
-																<li data-jstree='"type":"css"}'>select2.min.css</li>
-															</ul>
-														</li>
-														<li>switcher
-															<ul>
-																<li data-jstree='"type":"css"}'>color-one.css</li>
-																<li data-jstree='"type":"css"}'>color-two.css</li>
-																<li data-jstree='"type":"css"}'>color-three.css</li>
-																<li data-jstree='"type":"css"}'>color-four.css</li>
-																<li data-jstree='"type":"css"}'>color-five.css</li>
-																<li data-jstree='"type":"css"}'>color-six.css</li>
-																<li data-jstree='"type":"css"}'>color-seven.css</li>
-																<li data-jstree='"type":"css"}'>color-eight.css</li>
-																<li data-jstree='"type":"css"}'>color-nine.css</li>
-																<li data-jstree='"type":"css"}'>color-ten.css</li>
-															</ul>
-														</li>
-														<li>touchspin
-															<ul>
-																<li data-jstree='"type":"css"}'>jquery.bootstrap-touchspin.min.css</li>
-															</ul>
-														</li>
-														<li>tree-viewer
-															<ul>
-																<li data-jstree='"type":"css"}'>jtree-viewer.css</li>
-															</ul>
-														</li>
-                                                        <li data-jstree='"type":"css"}'>accordions.css</li>
-                                                        <li data-jstree='"type":"css"}'>adminpro-custon-icon.css</li>
-                                                        <li data-jstree='"type":"css"}'>alerts.css</li>
-                                                        <li data-jstree='"type":"css"}'>animate.css</li>
-                                                        <li data-jstree='"type":"css"}'>bootstrap-editable.css</li>
-                                                        <li data-jstree='"type":"css"}'>buttons.css</li>
-                                                        <li data-jstree='"type":"css"}'>c3.min.css</li>
-                                                        <li data-jstree='"type":"css"}'>charts.css</li>
-                                                        <li data-jstree='"type":"css"}'>datetimepicker.css</li>
-                                                        <li data-jstree='"type":"css"}'>dropzone.css</li>
-                                                        <li data-jstree='"type":"css"}'>form.css</li>
-                                                        <li data-jstree='"type":"css"}'>jquery.mCustomScrollbar.min.css</li>
-                                                        <li data-jstree='"type":"css"}'>Lobibox.min.css</li>
-                                                        <li data-jstree='"type":"css"}'>meanmenu.min.css</li>
-                                                        <li data-jstree='"type":"css"}'>modals.css</li>
-                                                        <li data-jstree='"type":"css"}'>normalize.css</li>
-                                                        <li data-jstree='"type":"css"}'>notifications.css</li>
-                                                        <li data-jstree='"type":"css"}'>select2.css</li>
-                                                        <li data-jstree='"type":"css"}'>select2-bootstrap.css</li>
-                                                        <li data-jstree='"type":"css"}'>summernote.css</li>
-                                                        <li data-jstree='"type":"css"}'>tab-menus.css</li>
-                                                        <li data-jstree='"type":"css"}'>tabs.css</li>
-                                                        <li data-jstree='"type":"css"}'>typeahead.js-bootstrap.css</li>
-                                                        <li data-jstree='"type":"css"}'>x-editor-style.css</li>
-                                                        <li data-jstree='"type":"css"}'>bootstrap.min.css</li>
-                                                        <li data-jstree='"type":"css"}'>font-awesome.min.css</li>
-                                                        <li data-jstree='"type":"css"}'>responsive.css</li>
-                                                        <li data-jstree='"type":"css"}'>tree-viewer.css</li>
-                                                        <li data-jstree='"type":"css"}'>main.css</li>
-                                                    </ul>
-                                                </li>
-												<li>fonts
-                                                    <ul>
-                                                        <li data-jstree='"type":"otf"}'>FontAwesome.otf</li>
-                                                        <li data-jstree='"type":"ttf"}'>fontawesome-webfont.ttf</li>
-                                                        <li data-jstree='"type":"woff"}'>fontawesome-webfont.woff</li>
-                                                        <li data-jstree='"type":"woff"}'>glyphicons-halflings-regular.woff</li>
-                                                    </ul>
-                                                </li>
-												<li class="jstree-open">img
-                                                    <ul>
-                                                        <li>blog-details
-															<ul>
-																<li data-jstree='"type":"png"}'>1.jpg</li>
-															</ul>
-														</li>
-                                                        <li>contact
-															<ul>
-																<li data-jstree='"type":"png"}'>1.jpg</li>
-																<li data-jstree='"type":"png"}'>2.jpg</li>
-																<li data-jstree='"type":"png"}'>3.jpg</li>
-																<li data-jstree='"type":"png"}'>4.jpg</li>
-															</ul>
-														</li>
-                                                        <li>logo
-															<ul>
-																<li data-jstree='"type":"png"}'>logo.png</li>
-															</ul>
-														</li>
-                                                        <li>cropper
-															<ul>
-																<li data-jstree='"type":"jpg"}'>1.jpg</li>
-															</ul>
-														</li>
-                                                        <li>product
-															<ul>
-																<li data-jstree='"type":"jpg"}'>1.jpg</li>
-																<li data-jstree='"type":"jpg"}'>1-big.jpg</li>
-																<li data-jstree='"type":"jpg"}'>1-small.jpg</li>
-																<li data-jstree='"type":"jpg"}'>2.jpg</li>
-																<li data-jstree='"type":"jpg"}'>2-big.jpg</li>
-																<li data-jstree='"type":"jpg"}'>2-small.jpg</li>
-																<li data-jstree='"type":"jpg"}'>3.jpg</li>
-																<li data-jstree='"type":"jpg"}'>3-big.jpg</li>
-																<li data-jstree='"type":"jpg"}'>3-small.jpg</li>
-																<li data-jstree='"type":"jpg"}'>4.jpg</li>
-																<li data-jstree='"type":"jpg"}'>4-big.jpg</li>
-																<li data-jstree='"type":"jpg"}'>4-small.jpg</li>
-																<li data-jstree='"type":"jpg"}'>11-300x300.jpg</li>
-																<li data-jstree='"type":"jpg"}'>p8-375x375.jpg</li>
-																<li data-jstree='"type":"jpg"}'>product072-1-600x600.jpg</li>
-															</ul>
-														</li>
-                                                        <li data-jstree='"type":"png"}'>clear.png</li>
-                                                        <li data-jstree='"type":"ico"}'>favicon.ico</li>
-                                                        <li class="text-navy" data-jstree='"type":"img"}'>green1.png</li>
-                                                    </ul>
-                                                </li>
-                                                <li>pdf
-                                                    <ul>
-                                                        <li data-jstree='"type":"ogg"}'>mamunur.pdf</li>
-                                                    </ul>
-                                                </li>
-                                                <li class="jstree-open">js
-                                                    <ul>
-														<li>c3-charts
-															<ul>
-																<li data-jstree='"type":"js"}'>c3.min.js</li>
-																<li data-jstree='"type":"js"}'>c3-active.js</li>
-																<li data-jstree='"type":"js"}'>d3.min.js</li>
-															</ul>
-														</li>
-														<li>charts
-															<ul>
-																<li data-jstree='"type":"js"}'>area-chart.js</li>
-																<li data-jstree='"type":"js"}'>bar-chart.js</li>
-																<li data-jstree='"type":"js"}'>Chart.js</li>
-																<li data-jstree='"type":"js"}'>line-chart.js</li>
-																<li data-jstree='"type":"js"}'>rounded-chart.js</li>
-															</ul>
-														</li>
-														<li>chat-active
-															<ul>
-																<li data-jstree='"type":"js"}'>jquery.chat.js</li>
-															</ul>
-														</li>
-														<li>chosen
-															<ul>
-																<li data-jstree='"type":"js"}'>chosen.jquery.js</li>
-																<li data-jstree='"type":"js"}'>chosen-active.js</li>
-															</ul>
-														</li>
-														<li>code-editor
-															<ul>
-																<li data-jstree='"type":"js"}'>code-editor.js</li>
-																<li data-jstree='"type":"js"}'>code-editor-active.js</li>
-																<li data-jstree='"type":"js"}'>codemirror.js</li>
-															</ul>
-														</li>
-														<li>colorpicker
-															<ul>
-																<li data-jstree='"type":"js"}'>color-picker-active.js</li>
-																<li data-jstree='"type":"js"}'>jquery.spectrum.min.js</li>
-															</ul>
-														</li>
-														<li>counterup
-															<ul>
-																<li data-jstree='"type":"js"}'>counterup-active.js</li>
-																<li data-jstree='"type":"js"}'>jquery.counterup.min.js</li>
-																<li data-jstree='"type":"js"}'>waypoints.min.js</li>
-															</ul>
-														</li>
-														<li>cropper
-															<ul>
-																<li data-jstree='"type":"js"}'>cropper.min.js</li>
-																<li data-jstree='"type":"js"}'>cropper-actice.js</li>
-															</ul>
-														</li>
-														<li>data-map
-															<ul>
-																<li data-jstree='"type":"js"}'>bootstrap3-typeahead.min.js</li>
-																<li data-jstree='"type":"js"}'>d3.min.js</li>
-																<li data-jstree='"type":"js"}'>datamaps.all.min.js</li>
-																<li data-jstree='"type":"js"}'>data-maps-active.js</li>
-																<li data-jstree='"type":"js"}'>topojson.js</li>
-															</ul>
-														</li>
-														<li>datapicker
-															<ul>
-																<li data-jstree='"type":"js"}'>bootstrap-datepicker.js</li>
-																<li data-jstree='"type":"js"}'>datepicker-active.js</li>
-															</ul>
-														</li>
-														<li>data-table
-															<ul>
-																<li data-jstree='"type":"js"}'>bootstrap-editable.js</li>
-																<li data-jstree='"type":"js"}'>bootstrap-table.js</li>
-																<li data-jstree='"type":"js"}'>bootstrap-table-cookie.js</li>
-																<li data-jstree='"type":"js"}'>bootstrap-table-editable.js</li>
-																<li data-jstree='"type":"js"}'>bootstrap-table-export.js</li>
-																<li data-jstree='"type":"js"}'>bootstrap-table-key-events.js</li>
-																<li data-jstree='"type":"js"}'>bootstrap-table-resizable.js</li>
-																<li data-jstree='"type":"js"}'>colResizable-1.5.source.js</li>
-																<li data-jstree='"type":"js"}'>data-table-active.js</li>
-																<li data-jstree='"type":"js"}'>tableExport.js</li>
-															</ul>
-														</li>
-														<li>duallistbox
-															<ul>
-																<li data-jstree='"type":"js"}'>duallistbox.active.js</li>
-																<li data-jstree='"type":"js"}'>jquery.bootstrap-duallistbox.js</li>
-															</ul>
-														</li>
-														<li>flot
-															<ul>
-																<li data-jstree='"type":"js"}'>Chart.min.js</li>
-																<li data-jstree='"type":"js"}'>dashtwo-flot-active.js</li>
-																<li data-jstree='"type":"js"}'>flot-active.js</li>
-																<li data-jstree='"type":"js"}'>jquery.flot.js</li>
-																<li data-jstree='"type":"js"}'>jquery.flot.pie.js</li>
-																<li data-jstree='"type":"js"}'>jquery.flot.resize.js</li>
-																<li data-jstree='"type":"js"}'>jquery.flot.spline.js</li>
-																<li data-jstree='"type":"js"}'>jquery.flot.symbol.js</li>
-																<li data-jstree='"type":"js"}'>jquery.flot.time.js</li>
-																<li data-jstree='"type":"js"}'>jquery.flot.tooltip.min.js</li>
-																<li data-jstree='"type":"js"}'>widget-flot-chart-active.js</li>
-															</ul>
-														</li>
-														<li>google.maps
-															<ul>
-																<li data-jstree='"type":"js"}'>google.maps-active.js</li>
-															</ul>
-														</li>
-														<li>icheck
-															<ul>
-																<li data-jstree='"type":"js"}'>icheck.min.js</li>
-																<li data-jstree='"type":"js"}'>icheck-active.js</li>
-															</ul>
-														</li>
-														<li>input-mask
-															<ul>
-																<li data-jstree='"type":"js"}'>jasny-bootstrap.min.js</li>
-															</ul>
-														</li>
-														<li>ionRangeSlider
-															<ul>
-																<li data-jstree='"type":"js"}'>ion.rangeSlider.active.js</li>
-																<li data-jstree='"type":"js"}'>ion.rangeSlider.min.js</li>
-															</ul>
-														</li>
-														<li>jvectormap
-															<ul>
-																<li data-jstree='"type":"js"}'>jquery-jvectormap-2.0.2.min.js</li>
-																<li data-jstree='"type":"js"}'>jquery-jvectormap-world-mill-en.js</li>
-																<li data-jstree='"type":"js"}'>jvectormap-active.js</li>
-															</ul>
-														</li>
-														<li>knob
-															<ul>
-																<li data-jstree='"type":"js"}'>jquery.knob.js</li>
-																<li data-jstree='"type":"js"}'>knob-active.js</li>
-															</ul>
-														</li>
-														<li>map
-															<ul>
-																<li data-jstree='"type":"js"}'>france_departments.js</li>
-																<li data-jstree='"type":"js"}'>jquery.mapael.js</li>
-																<li data-jstree='"type":"js"}'>map-active.js</li>
-																<li data-jstree='"type":"js"}'>raphael.min.js</li>
-																<li data-jstree='"type":"js"}'>usa_states.js</li>
-																<li data-jstree='"type":"js"}'>world_countries.js</li>
-															</ul>
-														</li>
-														<li>multiple-email
-															<ul>
-																<li data-jstree='"type":"js"}'>multiple-email-active.js</li>
-															</ul>
-														</li>
-														<li>password-meter
-															<ul>
-																<li data-jstree='"type":"js"}'>password-meter-active.js</li>
-																<li data-jstree='"type":"js"}'>pwstrength-bootstrap.min.js</li>
-																<li data-jstree='"type":"js"}'>zxcvbn.js</li>
-															</ul>
-														</li>
-														<li>pdf
-															<ul>
-																<li data-jstree='"type":"js"}'>jquery.media.js</li>
-																<li data-jstree='"type":"js"}'>pdf-active.js</li>
-															</ul>
-														</li>
-														<li>peity
-															<ul>
-																<li data-jstree='"type":"js"}'>jquery.peity.min.js</li>
-																<li data-jstree='"type":"js"}'>peity-active.js</li>
-															</ul>
-														</li>
-														<li>rangle-slider
-															<ul>
-																<li data-jstree='"type":"js"}'>jquery-ui-1.10.4.custom.min.js</li>
-																<li data-jstree='"type":"js"}'>jquery-ui-touch-punch.min.js</li>
-																<li data-jstree='"type":"js"}'>rangle-active.js</li>
-															</ul>
-														</li>
-														<li>rounded-counter
-															<ul>
-																<li data-jstree='"type":"js"}'>jquery.appear.js</li>
-																<li data-jstree='"type":"js"}'>jquery.countdown.min.js</li>
-																<li data-jstree='"type":"js"}'>jquery.knob.js</li>
-																<li data-jstree='"type":"js"}'>knob-active.js</li>
-															</ul>
-														</li>
-														<li>select2
-															<ul>
-																<li data-jstree='"type":"js"}'>select2.full.min.js</li>
-																<li data-jstree='"type":"js"}'>select2-active.js</li>
-															</ul>
-														</li>
-														<li>skycons
-															<ul>
-																<li data-jstree='"type":"js"}'>skycons.active.js</li>
-																<li data-jstree='"type":"js"}'>skycons.min.js</li>
-															</ul>
-														</li>
-														<li>skycons
-															<ul>
-																<li data-jstree='"type":"js"}'>sparkline-active.js</li>
-																<li data-jstree='"type":"js"}'>jquery.sparkline.min.js</li>
-															</ul>
-														</li>
-														<li>switcher
-															<ul>
-																<li data-jstree='"type":"js"}'>styleswitch.js</li>
-																<li data-jstree='"type":"js"}'>switch-active.js</li>
-															</ul>
-														</li>
-														<li>todo
-															<ul>
-																<li data-jstree='"type":"js"}'>jquery.todo.js</li>
-															</ul>
-														</li>
-														<li>touchspin
-															<ul>
-																<li data-jstree='"type":"js"}'>jquery.bootstrap-touchspin.min.js</li>
-																<li data-jstree='"type":"js"}'>touchspin-active.js</li>
-															</ul>
-														</li>
-														<li>tree-line
-															<ul>
-																<li data-jstree='"type":"js"}'>jstree.active.js</li>
-																<li data-jstree='"type":"js"}'>jstree.min.js</li>
-															</ul>
-														</li>
-														<li>vendor
-															<ul>
-																<li data-jstree='"type":"js"}'>jquery-1.11.3.min.js</li>
-																<li data-jstree='"type":"js"}'>modernizr-2.8.3.min.js</li>
-															</ul>
-														</li>
-														<li>wow
-															<ul>
-																<li data-jstree='"type":"js"}'>wow.min.js</li>
-															</ul>
-														</li>
-                                                        <li data-jstree='"type":"js"}'>bootstrap.min.js</li>
-                                                        <li data-jstree='"type":"js"}'>jquery-ui.min.js</li>
-                                                        <li data-jstree='"type":"js"}'>jquery.meanmenu.js</li>
-                                                        <li data-jstree='"type":"js"}'>jquery-1.11.3.min.js</li>
-                                                        <li data-jstree='"type":"js"}'>modernizr-2.8.3.min.js</li>
-                                                        <li class="text-navy" data-jstree='"type":"js"}'>jquery.mCustomScrollbar.concat.min.js</li>
-                                                        <li class="text-navy" data-jstree='"type":"js"}'>bootstrap.min.js</li>
-                                                        <li class="text-navy" data-jstree='"type":"js"}'>bootstrap-datetimepicker.js</li>
-                                                        <li class="text-navy" data-jstree='"type":"js"}'>bootstrap-editable.js</li>
-                                                        <li class="text-navy" data-jstree='"type":"js"}'>datepicker-active.js</li>
-                                                        <li class="text-navy" data-jstree='"type":"js"}'>dropzone.js</li>
-                                                        <li class="text-navy" data-jstree='"type":"js"}'>form-active.js</li>
-                                                        <li class="text-navy" data-jstree='"type":"js"}'>jquery.form.min.js</li>
-                                                        <li class="text-navy" data-jstree='"type":"js"}'>jquery.maskedinput.min.js</li>
-                                                        <li class="text-navy" data-jstree='"type":"js"}'>jquery.mCustomScrollbar.concat.min.js</li>
-                                                        <li class="text-navy" data-jstree='"type":"js"}'>jquery.meanmenu.js</li>
-                                                        <li class="text-navy" data-jstree='"type":"js"}'>jquery.mockjax.js</li>
-                                                        <li class="text-navy" data-jstree='"type":"js"}'>jquery.scrollUp.min.js</li>
-                                                        <li class="text-navy" data-jstree='"type":"js"}'>jquery.sticky.js</li>
-                                                        <li class="text-navy" data-jstree='"type":"js"}'>jquery.validate.min.js</li>
-                                                        <li class="text-navy" data-jstree='"type":"js"}'>jquery-ui.min.js</li>
-                                                        <li class="text-navy" data-jstree='"type":"js"}'>Lobibox.js</li>
-                                                        <li class="text-navy" data-jstree='"type":"js"}'>main.js</li>
-                                                        <li class="text-navy" data-jstree='"type":"js"}'>masking-active.js</li>
-                                                        <li class="text-navy" data-jstree='"type":"js"}'>mock-active.js</li>
-                                                        <li class="text-navy" data-jstree='"type":"js"}'>modal-active.js</li>
-                                                        <li class="text-navy" data-jstree='"type":"js"}'>moment.min.js</li>
-                                                        <li class="text-navy" data-jstree='"type":"js"}'>notification-active.js</li>
-                                                        <li class="text-navy" data-jstree='"type":"js"}'>select2.js</li>
-                                                        <li class="text-navy" data-jstree='"type":"js"}'>summernote.min.js</li>
-                                                        <li class="text-navy" data-jstree='"type":"js"}'>summernote-active.js</li>
-                                                        <li class="text-navy" data-jstree='"type":"js"}'>typeahead.js</li>
-                                                        <li class="text-navy" data-jstree='"type":"js"}'>typeaheadjs.js</li>
-                                                        <li class="text-navy" data-jstree='"type":"js"}'>xediable-active.js</li>
-                                                    </ul>
-                                                </li>
-                                                <li data-jstree='"type":"html"}'> index.html</li>
-                                                <li data-jstree='"type":"html"}'> index-1.html</li>
-                                                <li data-jstree='"type":"html"}'> index-2.html</li>
-                                                <li data-jstree='"type":"html"}'> add-course.html</li>
-                                                <li data-jstree='"type":"html"}'> add-department.html</li>
-                                                <li data-jstree='"type":"html"}'> add-library-assets.html</li>
-                                                <li data-jstree='"type":"html"}'> add-professor.html</li>
-                                                <li data-jstree='"type":"html"}'> add-student.html</li>
-                                                <li data-jstree='"type":"html"}'> all-courses.html</li>
-                                                <li data-jstree='"type":"html"}'> all-professors.html</li>
-                                                <li data-jstree='"type":"html"}'> all-students.html</li>
-                                                <li data-jstree='"type":"html"}'> course-info.html</li>
-                                                <li data-jstree='"type":"html"}'> departments.html</li>
-                                                <li data-jstree='"type":"html"}'> edit-course.html</li>
-                                                <li data-jstree='"type":"html"}'> edit-department.html</li>
-                                                <li data-jstree='"type":"html"}'> edit-library-assets.html</li>
-                                                <li data-jstree='"type":"html"}'> edit-professor.html</li>
-                                                <li data-jstree='"type":"html"}'> edit-student.html</li>
-                                                <li data-jstree='"type":"html"}'> events.html</li>
-                                                <li data-jstree='"type":"html"}'> library-assets.html</li>
-                                                <li data-jstree='"type":"html"}'> professor-profile.html</li>
-                                                <li data-jstree='"type":"html"}'> student-profile.html</li>
-                                                <li data-jstree='"type":"html"}'> 404.html</li>
-                                                <li data-jstree='"type":"html"}'> 500.html</li>
-                                                <li data-jstree='"type":"html"}'> accordion.html</li>
-                                                <li data-jstree='"type":"html"}'> advance-form-element.html</li>
-                                                <li data-jstree='"type":"html"}'> alerts.html</li>
-                                                <li data-jstree='"type":"html"}'> analytics.html</li>
-                                                <li data-jstree='"type":"html"}'> area-charts.html</li>
-                                                <li data-jstree='"type":"html"}'> bar-charts.html</li>
-                                                <li data-jstree='"type":"html"}'> basic-form-element.html</li>
-                                                <li data-jstree='"type":"html"}'> buttons.html</li>
-                                                <li data-jstree='"type":"html"}'> c3.html</li>
-                                                <li data-jstree='"type":"html"}'> code-editor.html</li>
-                                                <li data-jstree='"type":"html"}'> contacts.html</li>
-                                                <li data-jstree='"type":"html"}'> data-maps.html</li>
-                                                <li data-jstree='"type":"html"}'> data-table.html</li>
-                                                <li data-jstree='"type":"html"}'> dual-list-box.html</li>
-                                                <li data-jstree='"type":"html"}'> google-map.html</li>
-                                                <li data-jstree='"type":"html"}'> images-cropper.html</li>
-                                                <li data-jstree='"type":"html"}'> line-charts.html</li>
-                                                <li data-jstree='"type":"html"}'> lock.html</li>
-                                                <li data-jstree='"type":"html"}'> login.html</li>
-                                                <li data-jstree='"type":"html"}'> mailbox.html</li>
-                                                <li data-jstree='"type":"html"}'> mailbox-compose.html</li>
-                                                <li data-jstree='"type":"html"}'> mailbox-view.html</li>
-                                                <li data-jstree='"type":"html"}'> modals.html</li>
-                                                <li data-jstree='"type":"html"}'> multi-upload.html</li>
-                                                <li data-jstree='"type":"html"}'> notifications.html</li>
-                                                <li data-jstree='"type":"html"}'> password-meter.html</li>
-                                                <li data-jstree='"type":"html"}'> password-recovery.html</li>
-                                                <li data-jstree='"type":"html"}'> pdf-viewer.html</li>
-                                                <li data-jstree='"type":"html"}'> peity.html</li>
-                                                <li data-jstree='"type":"html"}'> preloader.html</li>
-                                                <li data-jstree='"type":"html"}'> register.html</li>
-                                                <li data-jstree='"type":"html"}'> rounded-chart.html</li>
-                                                <li data-jstree='"type":"html"}'> sparkline.html</li>
-                                                <li data-jstree='"type":"html"}'> tabs.html</li>
-                                                <li data-jstree='"type":"html"}'> tinymc.html</li>
-                                                <li data-jstree='"type":"html"}'> tree-view.html</li>
-                                                <li data-jstree='"type":"html"}'> widgets.html</li>
-                                                <li data-jstree='"type":"html"}'> x-editable.html</li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </div>
-</pre>
-                </div>
-                <div id="three" class="content fade">
+                    <div class="doc-tip">
+                        <strong>No build step required</strong>
+                        SRTdash is a static HTML template. Open any page directly in your browser or use a simple local server. No Node.js, no bundler, no compilation needed.
+                    </div>
 
-                    <h1> HTML Structure </h1>
-                    <div>The base structure was organized by row, col-** class </div>
-                    <pre>
-<xmp>
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12">
-                <div class="logo">
-                    <a href="dashboard.html">
-                        <img src="img/logo.png" alt="">
-                    </a>
-                </div>
-            </div><!-- column end -->
-        </div> <!-- row end -->
-    </div> <!-- container end -->
-</xmp>
-</pre>
+                    <h2>What's Included</h2>
+                    <div class="doc-card-grid">
+                        <div class="doc-card">
+                            <strong>3 Dashboard Variants</strong>
+                            <small>ICO, Ecommerce, and SEO dashboards with unique layouts and chart configurations</small>
+                        </div>
+                        <div class="doc-card">
+                            <strong>56 HTML Pages</strong>
+                            <small>Every common admin panel screen — from login to invoices to data tables</small>
+                        </div>
+                        <div class="doc-card">
+                            <strong>Bootstrap 5.3.8</strong>
+                            <small>Latest stable Bootstrap with all components, utilities, and responsive grid</small>
+                        </div>
+                        <div class="doc-card">
+                            <strong>100% Vanilla JS</strong>
+                            <small>Zero jQuery dependency. Clean, modular JavaScript with guard clauses</small>
+                        </div>
+                        <div class="doc-card">
+                            <strong>Chart.js 4 Charts</strong>
+                            <small>Beautiful gradient area charts, doughnut charts, bar charts, and sparklines</small>
+                        </div>
+                        <div class="doc-card">
+                            <strong>AVIF Image Support</strong>
+                            <small>All images use &lt;picture&gt; elements with AVIF sources and JPG/PNG fallback</small>
+                        </div>
+                        <div class="doc-card">
+                            <strong>Font Awesome 7</strong>
+                            <small>Latest Free icons plus Themify Icons for maximum icon variety</small>
+                        </div>
+                        <div class="doc-card">
+                            <strong>Accessible &amp; SEO-ready</strong>
+                            <small>Skip links, ARIA labels, semantic HTML, unique meta tags per page, GA4 ready</small>
+                        </div>
+                    </div>
 
-                </div>
-                
-                <div id="six" class="content fade">
-				
-				<div class="plugins-area">
-					<h1>Plugins</h1>
-					<div class="static-table-list">
-						<table class="table">
-							<thead>
-								<tr>
-									<th>#</th>
-									<th>Plugin Name</th>
-									<th>Description</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>1</td>
-									<td>C3 And D3</td>
-									<td>we are going to show you how to get started with C3 and <a href="http://c3js.org/gettingstarted.html">read more</a></td>
-								</tr>
-								<tr>
-									<td>2</td>
-									<td>Chart</td>
-									<td>Simple yet flexible JavaScript charting for designers & developersand <a href="http://www.chartjs.org/">read more</a></td>
-								</tr>
-								<tr>
-									<td>3</td>
-									<td>Chosen</td>
-									<td>Chosen is a jQuery plugin that makes long and <a href="https://harvesthq.github.io/chosen/">read more</a></td>
-								</tr>
-								<tr>
-									<td>4</td>
-									<td>CodeMirror</td>
-									<td>CodeMirror is a versatile text editor implemented in JavaScript for the browser and <a href="http://codemirror.net/index.html">read more</a></td>
-								</tr>
-								<tr>
-									<td>5</td>
-									<td>Colorpicker</td>
-									<td>Satisfied with the solutions available for colorpicking and <a href="http://bgrins.github.io/spectrum/">read more</a></td>
-								</tr>
-								<tr>
-									<td>6</td>
-									<td>counterup</td>
-									<td>COUNTER-UP JQUERY PLUGIN and <a href="http://bfintal.github.io/Counter-Up/demo/demo.html">read more</a></td>
-								</tr>
-								<tr>
-									<td>7</td>
-									<td>Cropper</td>
-									<td>A simple jQuery image cropping plugin and <a href="https://fengyuanchen.github.io/cropper/">read more</a></td>
-								</tr>
-								<tr>
-									<td>8</td>
-									<td>Data Map</td>
-									<td>HTML5 maps look gorgeous on iPhones, Android devices and iPads <a href="http://simplemaps.com/us">read more</a></td>
-								</tr>
-								<tr>
-									<td>9</td>
-									<td>Datepicker</td>
-									<td>Bootstrap-datepicker provides a flexible datepicker widget in the Bootstrap style and <a href="https://bootstrap-datepicker.readthedocs.io/en/stable/">read more</a></td>
-								</tr>
-								<tr>
-									<td>10</td>
-									<td>X-editable</td>
-									<td>X-editable can be used with any engine (bootstrap, jquery-ui, jquery only) and includes both popup and inline modes and <a href="http://vitalets.github.io/x-editable/">Read More</a></td>
-								</tr>
-								<tr>
-									<td>11</td>
-									<td>Dual Listbox</td>
-									<td>Bootstrap Dual Listbox is a responsive dual listbox widget optimized for Twitter Bootstrap and <a href="https://www.virtuosoft.eu/code/bootstrap-duallistbox/">Read More</a></td>
-								</tr>
-								<tr>
-									<td>12</td>
-									<td>plot Chart</td>
-									<td>Flot is a pure JavaScript plotting library for jQuery, with a focus on simple usage, attractive looks and interactive features and <a href="http://www.flotcharts.org/">Read More</a></td>
-								</tr>
-								<tr>
-									<td>13</td>
-									<td>Google Maps</td>
-									<td>All of the examples contained in the Google Maps JavaScript API documentation set are listed below for quick reference and <a href="https://developers.google.com/maps/documentation/javascript/examples/">Read More</a></td>
-								</tr>
-								<tr>
-									<td>14</td>
-									<td>iCheck</td>
-									<td>UPER CUSTOMIZED CHECKBOXES AND RADIO BUTTONS FOR JQUERY & ZEPTO and <a href="http://icheck.fronteed.com/">Read More</a></td>
-								</tr>
-								<tr>
-									<td>15</td>
-									<td>RangeSlider</td>
-									<td>Ion.RangeSlider 2.2.0. jQuery-plugin Easy, flexible and responsive range slider with skin support and <a href="http://ionden.com/a/plugins/ion.rangeSlider/en.html">Read More</a></td>
-								</tr>
-								<tr>
-									<td>16</td>
-									<td>jvectormap</td>
-									<td>JavaScript-based jVectorMap uses only native browser technologies like JavaScript, CSS, HTML, SVG or VML and <a href="http://jvectormap.com/">Read More</a></td>
-								</tr>
-								<tr>
-									<td>17</td>
-									<td>Knob</td>
-									<td>jQuery Knob mouse click and wheel mouse, keyboard (on focus) and fingers (touch events) and <a href="http://anthonyterrien.com/demo/knob/">Read More</a></td>
-								</tr>
-								<tr>
-									<td>18</td>
-									<td>Mapael</td>
-									<td>Ease the build of pretty data visualizations on dynamic vector maps and <a href="https://www.vincentbroute.fr/mapael/">Read More</a></td>
-								</tr>
-								<tr>
-									<td>19</td>
-									<td>Password Meter</td>
-									<td>jQuery Password Strength Meter for Twitter Bootstrap and <a href="https://cdn.rawgit.com/ablanco/jquery.pwstrength.bootstrap/master/examples/index.html">Read More</a></td>
-								</tr>
-								<tr>
-									<td>20</td>
-									<td>PDF Viewer</td>
-									<td>The jQuery Media Plugin supports unobtrusive conversion of standard markup into rich media content and <a href="http://malsup.com/jquery/media/">Read More</a></td>
-								</tr>
-								<tr>
-									<td>21</td>
-									<td>Peity Charts</td>
-									<td>Peity (sounds like deity) is a jQuery plugin that converts an element's content into a mini pie  donut  line  or bar chart  and is compatible with any browser that supports Chrome, Firefox, IE9+, Opera, Safari and <a href="http://benpickles.github.io/peity/">Read More</a></td>
-								</tr>
-								<tr>
-									<td>22</td>
-									<td>Skycons</td>
-									<td>Skycons is a set of ten animated weather glyphs, procedurally generated by JavaScript using the HTML5 canvas tag and <a href="https://darkskyapp.github.io/skycons/">Read More</a></td>
-								</tr>
-								<tr>
-									<td>23</td>
-									<td>Sparklines</td>
-									<td>This jQuery plugin generates sparklines (small inline charts) directly in the browser using data supplied either inline in the HTML, or via javascript and <a href="https://omnipotent.net/jquery.sparkline/#s-about">Read More</a></td>
-								</tr>
-								<tr>
-									<td>24</td>
-									<td>TouchSpin</td>
-									<td>A mobile and touch friendly input spinner component for Bootstrap 3. It supports the mousewheel and the up/down keys and <a href="https://www.virtuosoft.eu/code/bootstrap-touchspin/">Read More</a></td>
-								</tr>
-								<tr>
-									<td>25</td>
-									<td>jsTree</td>
-									<td>jsTree is jquery plugin, that provides interactive trees. It is absolutely free, open source and distributed under the MIT license. jsTree is easily extendable, themable and configurable, it supports HTML & JSON data sources and AJAX loading and <a href="https://www.jstree.com/">Read More</a></td>
-								</tr>
-								<tr>
-									<td>26</td>
-									<td>Lobibox</td>
-									<td>Free responsive jQuery messagebox and notification plugin available for commercial and non-commercial usages and <a href="http://lobianijs.com/site/lobibox">Read More</a></td>
-								</tr>
-								<tr>
-									<td>26</td>
-									<td>WOW</td>
-									<td>Reveal Animations When You Scroll. Very Animate.css Friend :-) Easily customize animation settings: style, delay, length, offset, iterations... and <a href="http://mynameismatthieu.com/WOW/">Read More</a></td>
-								</tr>
-								<tr>
-									<td>27</td>
-									<td>Data Table</td>
-									<td>An extended Bootstrap table with radio, checkbox, sort, pagination, and other added features and <a href="http://issues.wenzhixin.net.cn/bootstrap-table/">Read More</a></td>
-								</tr>
-								<tr>
-									<td>28</td>
-									<td>Custom scrollbar</td>
-									<td>Highly customizable custom scrollbar jQuery plugin. Features include vertical and/or horizontal scrollbar(s), adjustable scrolling momentum, mouse-wheel and <a href="http://manos.malihu.gr/jquery-custom-content-scroller/">Read More</a></td>
-								</tr>
-								<tr>
-									<td>29</td>
-									<td>Summernote</td>
-									<td>Customize by Initializing various options and modules and <a href="https://summernote.org/">Read More</a></td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-				</div>
-                    
-                    
-                    <h1>Tinymc Editor Structure</h1>
-					<h3>Quick start</h3>
-			<p>Copy-paste the stylesheet "link" into your "head" before all other stylesheets to load our CSS.</p>
-			<pre>
-	<xmp>
-	<!-- summernote CSS
-		============================================ -->
-        <link rel="stylesheet" href="css/summernote.css">
-	</xmp>
-</pre>
-<p>The end of your pages, right before the closing "body" tag. Be sure to place js first, as our JavaScript plugins depend on them. </p>
-			<pre>
-	<xmp>
-	<!-- summernote JS
-		============================================ -->
-        <script src="js/summernote.min.js"></script>
-        <script src="js/summernote-active.js"></script>
-	</xmp>
-</pre>
-                    
-                    <pre>
-                        <xmp>
-    <div class="tinymce-single nt-mg-b-30">
-		<div class="alert-title">
-			<h2>Basic Summernote WYSIWYG editor</h2>
-			<p>The fastest way to get Summernote WYSIWYG editor is powerfull JavaScript plugin. you can easily maintance typography system.</p>
-		</div>
-		<div id="summernote1">
-		</div>
-	</div>                             
-                        </xmp>
-                    </pre>
-                    
-                    
-                </div>
-                
-                
-                <div id="source" class="content fade">
-                    <h1> Sources &amp; Credits </h1>
-                    
-                    <h3>Fonts</h3>
+                    <h2>Version History</h2>
+                    <table class="doc-table">
+                        <thead>
+                            <tr>
+                                <th>Version</th>
+                                <th>Date</th>
+                                <th>Changes</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="doc-badge doc-badge-blue">v2.0</span></td>
+                                <td>2026</td>
+                                <td>Complete rewrite: Bootstrap 5.3.8, vanilla JS, AVIF images, Font Awesome 7, accessibility, SEO, Chart.js 4 consolidation</td>
+                            </tr>
+                            <tr>
+                                <td><span class="doc-badge doc-badge-amber">v1.0</span></td>
+                                <td>2018</td>
+                                <td>Original release with Bootstrap 4 and jQuery</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <!-- ==================== GETTING STARTED ==================== -->
+                <section id="getting-started" class="doc-section">
+                    <h1>Getting Started</h1>
+                    <p>SRTdash requires no build tools, package managers, or server-side setup. Simply open the files.</p>
+
+                    <h2>Quick Start</h2>
+                    <ol>
+                        <li>Unzip the template archive</li>
+                        <li>Navigate to the <code>srtdash/</code> folder</li>
+                        <li>Open <code>index.html</code> in your browser</li>
+                    </ol>
+
+                    <h2>Local Development Server</h2>
+                    <p>For the best experience (especially for AVIF image loading), use a local HTTP server:</p>
+                    <h3>Using Python</h3>
+<pre><code>cd srtdash
+python3 -m http.server 8000
+# Visit http://localhost:8000</code></pre>
+
+                    <h3>Using Node.js</h3>
+<pre><code>npx http-server srtdash
+# Visit http://localhost:8080</code></pre>
+
+                    <h3>Using VS Code</h3>
+                    <p>Install the <strong>Live Server</strong> extension, then right-click any HTML file and select "Open with Live Server."</p>
+
+                    <div class="doc-note">
+                        <strong>Why a local server?</strong>
+                        Some browsers restrict <code>&lt;picture&gt;</code> element AVIF source switching when opening files via <code>file://</code> protocol. A local HTTP server ensures all features work correctly.
+                    </div>
+
+                    <h2>Browser Support</h2>
+                    <p>SRTdash supports all modern evergreen browsers:</p>
+                    <table class="doc-table">
+                        <thead>
+                            <tr><th>Browser</th><th>Version</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Chrome / Edge</td><td>90+</td></tr>
+                            <tr><td>Firefox</td><td>90+</td></tr>
+                            <tr><td>Safari</td><td>15+</td></tr>
+                            <tr><td>Opera</td><td>76+</td></tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <!-- ==================== FILE STRUCTURE ==================== -->
+                <section id="file-structure" class="doc-section">
+                    <h1>File Structure</h1>
+                    <p>The template is organized in a single <code>srtdash/</code> directory with all assets nested under <code>assets/</code>.</p>
+
+<div class="file-tree">srtdash/
+&#9500;&#9472;&#9472; assets/
+&#9474;   &#9500;&#9472;&#9472; css/
+&#9474;   &#9474;   &#9500;&#9472;&#9472; bootstrap.min.css      <span style="color:#64748b">&#8592; Bootstrap 5.3.8</span>
+&#9474;   &#9474;   &#9500;&#9472;&#9472; fontawesome.min.css     <span style="color:#64748b">&#8592; Font Awesome 7.1.0 Free</span>
+&#9474;   &#9474;   &#9500;&#9472;&#9472; metismenujs.min.css     <span style="color:#64748b">&#8592; Sidebar menu plugin</span>
+&#9474;   &#9474;   &#9500;&#9472;&#9472; swiper-bundle.min.css   <span style="color:#64748b">&#8592; Carousel plugin</span>
+&#9474;   &#9474;   &#9500;&#9472;&#9472; themify-icons.css       <span style="color:#64748b">&#8592; Themify icon font</span>
+&#9474;   &#9474;   &#9500;&#9472;&#9472; typography.css          <span style="color:#64748b">&#8592; Font imports &amp; base typography</span>
+&#9474;   &#9474;   &#9500;&#9472;&#9472; default-css.css         <span style="color:#64748b">&#8592; Reset &amp; CSS variables</span>
+&#9474;   &#9474;   &#9500;&#9472;&#9472; styles.css              <span style="color:#64748b">&#8592; Main template styles</span>
+&#9474;   &#9474;   &#9492;&#9472;&#9472; responsive.css          <span style="color:#64748b">&#8592; Media query breakpoints</span>
+&#9474;   &#9500;&#9472;&#9472; js/
+&#9474;   &#9474;   &#9500;&#9472;&#9472; bootstrap.bundle.min.js <span style="color:#64748b">&#8592; Bootstrap 5 + Popper</span>
+&#9474;   &#9474;   &#9500;&#9472;&#9472; metismenujs.min.js      <span style="color:#64748b">&#8592; Collapsible sidebar menu</span>
+&#9474;   &#9474;   &#9500;&#9472;&#9472; swiper-bundle.min.js    <span style="color:#64748b">&#8592; Touch slider/carousel</span>
+&#9474;   &#9474;   &#9500;&#9472;&#9472; scripts.js              <span style="color:#64748b">&#8592; Main app logic (vanilla JS)</span>
+&#9474;   &#9474;   &#9500;&#9472;&#9472; bar-chart.js            <span style="color:#64748b">&#8592; Bar chart configurations</span>
+&#9474;   &#9474;   &#9500;&#9472;&#9472; line-chart.js           <span style="color:#64748b">&#8592; Line chart configurations</span>
+&#9474;   &#9474;   &#9500;&#9472;&#9472; pie-chart.js            <span style="color:#64748b">&#8592; Pie/doughnut chart configurations</span>
+&#9474;   &#9474;   &#9492;&#9472;&#9472; maps.js                 <span style="color:#64748b">&#8592; Google Maps integration</span>
+&#9474;   &#9500;&#9472;&#9472; fonts/                           <span style="color:#64748b">&#8592; Themify icon font files</span>
+&#9474;   &#9500;&#9472;&#9472; webfonts/                        <span style="color:#64748b">&#8592; Font Awesome WOFF2 files</span>
+&#9474;   &#9492;&#9472;&#9472; images/
+&#9474;       &#9500;&#9472;&#9472; author/                      <span style="color:#64748b">&#8592; Avatar &amp; author photos</span>
+&#9474;       &#9500;&#9472;&#9472; bg/                          <span style="color:#64748b">&#8592; Background images</span>
+&#9474;       &#9500;&#9472;&#9472; blog/                        <span style="color:#64748b">&#8592; Blog post thumbnails</span>
+&#9474;       &#9500;&#9472;&#9472; card/                        <span style="color:#64748b">&#8592; Card images</span>
+&#9474;       &#9500;&#9472;&#9472; icon/                        <span style="color:#64748b">&#8592; Logos &amp; icon assets</span>
+&#9474;       &#9500;&#9472;&#9472; media/                       <span style="color:#64748b">&#8592; Media object images</span>
+&#9474;       &#9492;&#9472;&#9472; team/                        <span style="color:#64748b">&#8592; Team member photos</span>
+&#9500;&#9472;&#9472; index.html                               <span style="color:#64748b">&#8592; ICO Dashboard</span>
+&#9500;&#9472;&#9472; index2.html                              <span style="color:#64748b">&#8592; Ecommerce Dashboard</span>
+&#9500;&#9472;&#9472; index3.html                              <span style="color:#64748b">&#8592; SEO Dashboard</span>
+&#9500;&#9472;&#9472; index3-horizontalmenu.html               <span style="color:#64748b">&#8592; Horizontal nav variant</span>
+&#9500;&#9472;&#9472; starter.html                             <span style="color:#64748b">&#8592; Blank starter template</span>
+&#9492;&#9472;&#9472; ... (51 more HTML pages)</div>
+
+                    <h2>Key Files</h2>
+                    <table class="doc-table">
+                        <thead>
+                            <tr><th>File</th><th>Purpose</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><code>starter.html</code></td><td>Blank page skeleton — copy this when creating new pages</td></tr>
+                            <tr><td><code>assets/css/styles.css</code></td><td>Main customization file — all component-level styles</td></tr>
+                            <tr><td><code>assets/css/responsive.css</code></td><td>All media query breakpoints</td></tr>
+                            <tr><td><code>assets/css/default-css.css</code></td><td>CSS custom properties (variables), resets, utility classes</td></tr>
+                            <tr><td><code>assets/js/scripts.js</code></td><td>Core app logic — sidebar, sticky header, preloader, etc.</td></tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <!-- ==================== PAGE LAYOUT ==================== -->
+                <section id="page-layout" class="doc-section">
+                    <h1>Page Layout</h1>
+                    <p>Every page follows a consistent layout skeleton. Understanding this structure is key to customizing the template.</p>
+
+                    <h2>Visual Layout</h2>
+                    <div class="layout-diagram">
+                        <div class="ld-row">
+                            <div class="ld-sidebar">
+                                <span class="ld-label">SIDEBAR</span>
+                                <span>.sidebar-menu</span>
+                                <span style="opacity:0.5">Logo</span>
+                                <span style="opacity:0.5">Navigation</span>
+                                <span style="opacity:0.5">#menu</span>
+                            </div>
+                            <div class="ld-main">
+                                <div class="ld-block ld-header"><span class="ld-label">HEADER &nbsp;</span> .header-area &mdash; search, notifications, profile</div>
+                                <div class="ld-block ld-breadcrumb"><span class="ld-label">TITLE &nbsp;</span> .page-title-area &mdash; breadcrumbs, user dropdown</div>
+                                <div class="ld-block ld-content"><span class="ld-label">CONTENT</span><br>.main-content-inner#main-content<br><br>Your page content goes here</div>
+                                <div class="ld-block ld-footer"><span class="ld-label">FOOTER</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2>HTML Skeleton</h2>
+<pre><code>&lt;!-- Skip link (accessibility) --&gt;
+&lt;a href="#main-content" class="skip-link"&gt;Skip to main content&lt;/a&gt;
+
+&lt;!-- Preloader --&gt;
+&lt;div id="preloader"&gt;&lt;div class="loader"&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;!-- Page container --&gt;
+&lt;div class="page-container"&gt;
+
+    &lt;!-- Sidebar --&gt;
+    &lt;div class="sidebar-menu"&gt;
+        &lt;div class="sidebar-header"&gt;...logo...&lt;/div&gt;
+        &lt;div class="main-menu"&gt;
+            &lt;nav&gt;
+                &lt;ul class="metismenu" id="menu"&gt;
+                    &lt;!-- Navigation items --&gt;
+                &lt;/ul&gt;
+            &lt;/nav&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Main content --&gt;
+    &lt;div class="main-content"&gt;
+        &lt;div class="header-area"&gt;...header...&lt;/div&gt;
+        &lt;div class="page-title-area"&gt;...breadcrumbs...&lt;/div&gt;
+
+        &lt;div class="main-content-inner" id="main-content"&gt;
+            &lt;!-- YOUR CONTENT HERE --&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;footer&gt;...&lt;/footer&gt;
+&lt;/div&gt;
+
+&lt;!-- Right-side settings panel --&gt;
+&lt;div class="offset-area"&gt;...&lt;/div&gt;</code></pre>
+
+                    <h2>Sidebar Navigation</h2>
+                    <p>The sidebar uses <strong>MetisMenuJS</strong> for collapsible submenus. The active page is highlighted with the <code>class="active"</code> on both the parent <code>&lt;li&gt;</code> and the submenu <code>&lt;li&gt;</code>.</p>
+<pre><code>&lt;li class="active"&gt;
+    &lt;a href="javascript:void(0)" aria-expanded="true"&gt;
+        &lt;i class="ti-dashboard"&gt;&lt;/i&gt;&lt;span&gt;dashboard&lt;/span&gt;
+    &lt;/a&gt;
+    &lt;ul class="collapse"&gt;
+        &lt;li class="active"&gt;&lt;a href="index.html"&gt;ICO dashboard&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="index2.html"&gt;Ecommerce dashboard&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="index3.html"&gt;SEO dashboard&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/li&gt;</code></pre>
+
+                    <h2>Header Area</h2>
+                    <p>The header contains: navigation toggle button, search box, notification dropdowns (bell + envelope), fullscreen toggle, and settings panel trigger. It becomes sticky on scroll via <code>#sticky-header</code>.</p>
+
+                    <h2>Data Attributes</h2>
+                    <p>All interactive components use Bootstrap 5 data attributes:</p>
+                    <table class="doc-table">
+                        <thead>
+                            <tr><th>Attribute</th><th>Used For</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><code>data-bs-toggle="dropdown"</code></td><td>Header notification &amp; profile dropdowns</td></tr>
+                            <tr><td><code>data-bs-toggle="tab"</code></td><td>Tab navigation, trading history, settings panel</td></tr>
+                            <tr><td><code>data-bs-toggle="modal"</code></td><td>Modal dialogs</td></tr>
+                            <tr><td><code>data-bs-toggle="popover"</code></td><td>Popover tooltips</td></tr>
+                            <tr><td><code>data-bs-dismiss="modal"</code></td><td>Close buttons inside modals</td></tr>
+                            <tr><td><code>data-bs-dismiss="alert"</code></td><td>Dismissible alert close buttons</td></tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <!-- ==================== CSS ARCHITECTURE ==================== -->
+                <section id="css" class="doc-section">
+                    <h1>CSS Architecture</h1>
+                    <p>SRTdash uses a layered CSS approach with no preprocessor. All styles are plain CSS files loaded in a specific order.</p>
+
+                    <h2>Load Order</h2>
+                    <p>CSS files are loaded in the <code>&lt;head&gt;</code> in this exact order:</p>
+                    <table class="doc-table">
+                        <thead>
+                            <tr><th>#</th><th>File</th><th>Purpose</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>1</td><td><code>Google Fonts</code></td><td>Lato and Poppins font families via Google Fonts API</td></tr>
+                            <tr><td>2</td><td><code>bootstrap.min.css</code></td><td>Bootstrap 5.3.8 framework</td></tr>
+                            <tr><td>3</td><td><code>fontawesome.min.css</code></td><td>Font Awesome 7.1.0 Free (with v4 shim compatibility)</td></tr>
+                            <tr><td>4</td><td><code>themify-icons.css</code></td><td>Themify icon font</td></tr>
+                            <tr><td>5</td><td><code>metismenujs.min.css</code></td><td>MetisMenu sidebar plugin styles</td></tr>
+                            <tr><td>6</td><td><code>swiper-bundle.min.css</code></td><td>Swiper carousel styles</td></tr>
+                            <tr><td>7</td><td><code>typography.css</code></td><td>Font imports and base typography rules</td></tr>
+                            <tr><td>8</td><td><code>default-css.css</code></td><td>CSS custom properties, resets, utility classes</td></tr>
+                            <tr><td>9</td><td><code>styles.css</code></td><td>All component-level template styles</td></tr>
+                            <tr><td>10</td><td><code>responsive.css</code></td><td>Responsive breakpoints and overrides</td></tr>
+                        </tbody>
+                    </table>
+
+                    <h2>CSS Custom Properties</h2>
+                    <p>The template uses CSS variables defined in <code>default-css.css</code> for consistent theming:</p>
+<pre><code>:root {
+    --primary-color: #4336FB;
+    --text-dark: #333;
+    --text-medium: #616161;
+    --text-light: #999;
+}</code></pre>
+                    <p>To change the primary brand color across the entire template, update <code>--primary-color</code> in <code>default-css.css</code>.</p>
+
+                    <h2>Typography</h2>
+                    <p>Two font families are used throughout:</p>
                     <ul>
-                        <li><a href="https://fonts.googleapis.com/">Google Fonts</a></li>
+                        <li><strong>Poppins</strong> — headings, dashboard labels, chart text</li>
+                        <li><strong>Lato</strong> — body text, table content, sidebar</li>
                     </ul>
-                    
-                    <h3>Icons</h3>
+
+                    <h2>Icon Systems</h2>
+                    <p>SRTdash includes two icon libraries:</p>
+                    <table class="doc-table">
+                        <thead>
+                            <tr><th>Library</th><th>Usage</th><th>Syntax</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Font Awesome 7 Free</td>
+                                <td>Primary — sidebar icons, dashboard icons, action buttons</td>
+                                <td><code>&lt;i class="fa-solid fa-house"&gt;</code></td>
+                            </tr>
+                            <tr>
+                                <td>Themify Icons</td>
+                                <td>Secondary — sidebar items, settings panel</td>
+                                <td><code>&lt;i class="ti-dashboard"&gt;</code></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>Browse available icons on the <code>fontawesome.html</code> and <code>themify.html</code> showcase pages.</p>
+
+                    <h2>Responsive Breakpoints</h2>
+                    <p>Defined in <code>responsive.css</code>, the template adapts at these widths:</p>
+                    <table class="doc-table">
+                        <thead>
+                            <tr><th>Breakpoint</th><th>Behavior</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><code>&le;1364px</code></td><td>Sidebar auto-collapses</td></tr>
+                            <tr><td><code>&le;1199px</code></td><td>XL grid adjustments</td></tr>
+                            <tr><td><code>&le;991px</code></td><td>Tablet layout, stacked columns</td></tr>
+                            <tr><td><code>&le;767px</code></td><td>Mobile layout, full-width columns</td></tr>
+                            <tr><td><code>&le;575px</code></td><td>Extra-small adjustments</td></tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <!-- ==================== JAVASCRIPT ==================== -->
+                <section id="javascript" class="doc-section">
+                    <h1>JavaScript</h1>
+                    <p>All JavaScript is vanilla (no jQuery). The main application logic lives in <code>scripts.js</code>, wrapped in an IIFE for scope isolation.</p>
+
+                    <h2>Script Load Order</h2>
+                    <p>Scripts are loaded before the closing <code>&lt;/body&gt;</code> tag in this order:</p>
+                    <table class="doc-table">
+                        <thead>
+                            <tr><th>#</th><th>Script</th><th>Source</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>1</td><td><code>bootstrap.bundle.min.js</code></td><td>Vendor (includes Popper.js)</td></tr>
+                            <tr><td>2</td><td><code>metismenujs.min.js</code></td><td>Vendor</td></tr>
+                            <tr><td>3</td><td><code>swiper-bundle.min.js</code></td><td>Vendor</td></tr>
+                            <tr><td>4</td><td>Chart libraries (page-specific)</td><td>CDN</td></tr>
+                            <tr><td>5</td><td>Chart initialization files</td><td>Local</td></tr>
+                            <tr><td>6</td><td><code>scripts.js</code></td><td>Local — core app logic</td></tr>
+                            <tr><td>7</td><td>Google Analytics 4</td><td>CDN</td></tr>
+                        </tbody>
+                    </table>
+
+                    <h2>Core Features (scripts.js)</h2>
+                    <p>The main script file is organized as individual initialization functions:</p>
+                    <table class="doc-table">
+                        <thead>
+                            <tr><th>Function</th><th>What It Does</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><code>initPreloader()</code></td><td>Fades out the loading screen 300ms after <code>window.load</code></td></tr>
+                            <tr><td><code>initSidebar()</code></td><td>Toggles <code>.sbar_collapsed</code> on sidebar via nav button click or at &le;1364px viewport</td></tr>
+                            <tr><td><code>initSidebarMenu()</code></td><td>Initializes <code>new MetisMenu('#menu')</code> for collapsible nav</td></tr>
+                            <tr><td><code>initStickyHeader()</code></td><td>Adds <code>.sticky-menu</code> class to <code>#sticky-header</code> when scrolled past 1px</td></tr>
+                            <tr><td><code>initTestimonialCarousel()</code></td><td>Swiper carousel with responsive breakpoints, auto-wraps slides in <code>.swiper-wrapper</code></td></tr>
+                            <tr><td><code>initSettingsPanel()</code></td><td>Toggles <code>.show_hide</code> on <code>.offset-area</code> when clicking <code>.settings-btn</code></td></tr>
+                            <tr><td><code>initFullscreen()</code></td><td>Toggles browser fullscreen via <code>#full-view</code> / <code>#full-view-exit</code> buttons</td></tr>
+                            <tr><td><code>initFormValidation()</code></td><td>Bootstrap 5 native form validation on <code>.needs-validation</code> forms</td></tr>
+                            <tr><td><code>initFormFocus()</code></td><td>Floating label focus effect on <code>.form-gp</code> inputs</td></tr>
+                        </tbody>
+                    </table>
+
+                    <h2>Chart Files</h2>
+                    <p>Each chart file initializes hardcoded demo data and uses guard clauses (<code>if (!document.getElementById(...))</code>) to safely skip initialization when the canvas element isn't on the current page.</p>
+
+                    <h3>line-chart.js</h3>
+                    <p>Powers charts on the ICO dashboard (<code>index.html</code>), line chart showcase, and other pages:</p>
                     <ul>
-                        <li><a href="http://fontawesome.io/">Font Awesome</a></li>
+                        <li><strong>Sales mini-charts</strong> — Smooth gradient area charts (blue, amber, emerald)</li>
+                        <li><strong>Overview chart</strong> — Dual-dataset line chart with gradient fills (Revenue vs Expenses)</li>
+                        <li><strong>Market sparklines</strong> — Tiny inline charts in the market value table (4 colors)</li>
+                        <li><strong>Visitor graph</strong> — Highcharts areaspline (on other dashboard pages)</li>
                     </ul>
-                    <h3>Scripts</h3>
+
+                    <h3>pie-chart.js</h3>
                     <ul>
-                        <li><a href="http://benpickles.github.io/peity/">Peity Charts</a></li>
-                        <li><a href="https://omnipotent.net/jquery.sparkline/#s-about">Sparklines</a></li>
-                        <li><a href="http://manos.malihu.gr/jquery-custom-content-scroller/">Scrollbar</a></li>
-                        <li><a href="https://www.virtuosoft.eu/code/bootstrap-touchspin/">TouchSpin</a></li>
-                        <li><a href="http://issues.wenzhixin.net.cn/bootstrap-table/">Data Table</a></li>
-                        <li><a href="https://www.jstree.com/">JsTree</a></li>
-                        <li><a href="https://darkskyapp.github.io/skycons/">Skycons</a></li>
-                        <li><a href="https://cdn.rawgit.com/ablanco/jquery.pwstrength.bootstrap/master/examples/index.html">Password Meter</a></li>
-                        <li><a href="http://malsup.com/jquery/media/">PDF Viewer</a></li>
-                        <li><a href="https://www.vincentbroute.fr/mapael/">Mapael</a></li>
-                        <li><a href="http://jvectormap.com/">jvectormap</a></li>
-                        <li><a href="http://ionden.com/a/plugins/ion.rangeSlider/en.html">RangeSlider</a></li>
-                        <li><a href="https://fengyuanchen.github.io/cropper/">Cropper</a></li>
-                        <li><a href="http://simplemaps.com/us">Data Map</a></li>
-                        <li><a href="http://codemirror.net/index.html">CodeMirror</a></li>
-                        <li><a href="https://harvesthq.github.io/chosen/">Chosen</a></li>
-                        <li><a href="http://c3js.org/gettingstarted.html">C3 And D3</a></li>
-                        <li><a href="https://www.malot.fr/bootstrap-datetimepicker/">datetimepicker</a></li>
-                        <li><a href="http://github.com/vitalets/x-editable">x-editable</a></li>
-                        <li><a href="http://www.dropzonejs.com//">dropzonejs</a></li>
-                        <li><a href="http://jquery.malsup.com/form/#ajaxForm">form Validation</a></li>
-                        <li><a href="https://github.com/jzaefferer/jquery-validation">form Validation</a></li>
-                        <li><a href="http://digitalbush.com/projects/masked-input-plugin/#license">masked input</a></li>
-                        <li><a href="https://github.com/jakerella/jquery-mockjax">mockjax</a></li>
-                        <li><a href="https://lobianijs.com/site/lobibox">lobibox</a></li>
-                        <li><a href="http://summernote.org/">summernote</a></li>
-                        <li><a href="https://vitalets.github.io/x-editable/">editable</a></li>
+                        <li><strong>Coin Distribution</strong> — Chart.js doughnut with center text plugin (index.html)</li>
+                        <li><strong>ZingChart / Highcharts / AmCharts</strong> — Additional charts on piechart.html showcase</li>
                     </ul>
-                </div>
-                <div id="support" class="content fade">
-                    <h1> Supports </h1>
-                    <p>Thank you for reading the documentaion. If you still have any question or any problem, please contact with us. We will give you best support. Thanks.</p>
-                    <a href="https://colorlib.com/wp/templates/" >Colorlib</a>
-                </div>
-                <div id="nine" class="content fade">
-                    <h1> Sliders Structure </h1>
-                    <div>The base structure was organized by row, col-** class </div>
-                    <pre>
-    <xmp>
-    <!-- code will be here -->
-    </xmp>
-</pre>
-                    <!-- code pre tag end -->
-                </div>
+
+                    <h3>bar-chart.js</h3>
+                    <ul>
+                        <li><strong>Chart.js bar charts</strong> — Stacked, grouped bar configurations</li>
+                        <li><strong>AmCharts / Highcharts bars</strong> — Additional charts on barchart.html showcase</li>
+                    </ul>
+
+                    <div class="doc-tip">
+                        <strong>Safe CDN loading</strong>
+                        Chart files use <code>typeof library !== 'undefined'</code> guard clauses. If a CDN script isn't loaded on a page, the chart simply won't initialize — no errors.
+                    </div>
+
+                    <h2>Color Palette (Charts)</h2>
+                    <p>The ICO dashboard charts use a unified, harmonious color palette:</p>
+                    <table class="doc-table">
+                        <thead>
+                            <tr><th>Color</th><th>Hex</th><th>Usage</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><span style="display:inline-block;width:14px;height:14px;border-radius:3px;background:#3b82f6;vertical-align:middle"></span> Blue</td><td><code>#3b82f6</code></td><td>Bitcoin, primary series, Ethereum icon</td></tr>
+                            <tr><td><span style="display:inline-block;width:14px;height:14px;border-radius:3px;background:#6366f1;vertical-align:middle"></span> Indigo</td><td><code>#6366f1</code></td><td>Secondary series, Dashcoin, coin distribution</td></tr>
+                            <tr><td><span style="display:inline-block;width:14px;height:14px;border-radius:3px;background:#f59e0b;vertical-align:middle"></span> Amber</td><td><code>#f59e0b</code></td><td>Bitcoin Dash, expenses, accent</td></tr>
+                            <tr><td><span style="display:inline-block;width:14px;height:14px;border-radius:3px;background:#10b981;vertical-align:middle"></span> Emerald</td><td><code>#10b981</code></td><td>Ethereum chart, success indicators</td></tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <!-- ==================== PAGES ==================== -->
+                <section id="pages" class="doc-section">
+                    <h1>Pages &amp; Components</h1>
+                    <p>SRTdash includes 56 ready-to-use HTML pages organized into these categories:</p>
+
+                    <h2>Dashboards</h2>
+                    <div class="doc-card-grid">
+                        <div class="doc-card"><strong>index.html</strong><small>ICO Dashboard — crypto sales, market trends, charts</small></div>
+                        <div class="doc-card"><strong>index2.html</strong><small>Ecommerce Dashboard — sales, orders, revenue</small></div>
+                        <div class="doc-card"><strong>index3.html</strong><small>SEO Dashboard — traffic, keywords, analytics</small></div>
+                        <div class="doc-card"><strong>index3-horizontalmenu.html</strong><small>Horizontal navigation variant</small></div>
+                    </div>
+
+                    <h2>Charts</h2>
+                    <div class="doc-card-grid">
+                        <div class="doc-card"><strong>barchart.html</strong><small>Bar chart showcase (Chart.js, AmCharts, Highcharts)</small></div>
+                        <div class="doc-card"><strong>linechart.html</strong><small>Line chart showcase (Chart.js, Highcharts, ZingChart)</small></div>
+                        <div class="doc-card"><strong>piechart.html</strong><small>Pie/doughnut chart showcase (Chart.js, ZingChart, Highcharts)</small></div>
+                    </div>
+
+                    <h2>UI Components</h2>
+                    <div class="doc-card-grid">
+                        <div class="doc-card"><strong>accordion.html</strong><small>Collapsible accordion panels</small></div>
+                        <div class="doc-card"><strong>alert.html</strong><small>Bootstrap alert variants</small></div>
+                        <div class="doc-card"><strong>badge.html</strong><small>Badge styles and sizes</small></div>
+                        <div class="doc-card"><strong>button.html</strong><small>Button styles and variants</small></div>
+                        <div class="doc-card"><strong>button-group.html</strong><small>Button groups and toolbars</small></div>
+                        <div class="doc-card"><strong>cards.html</strong><small>Card layouts and styles</small></div>
+                        <div class="doc-card"><strong>dropdown.html</strong><small>Dropdown menus</small></div>
+                        <div class="doc-card"><strong>list-group.html</strong><small>List group variants</small></div>
+                        <div class="doc-card"><strong>media-object.html</strong><small>Media objects with alignment options</small></div>
+                        <div class="doc-card"><strong>modal.html</strong><small>Modal dialogs</small></div>
+                        <div class="doc-card"><strong>pagination.html</strong><small>Pagination styles</small></div>
+                        <div class="doc-card"><strong>popovers.html</strong><small>Popovers and tooltips</small></div>
+                        <div class="doc-card"><strong>progressbar.html</strong><small>Progress bar variants</small></div>
+                        <div class="doc-card"><strong>tab.html</strong><small>Tab navigation panels</small></div>
+                        <div class="doc-card"><strong>typography.html</strong><small>Heading, text, and list styles</small></div>
+                        <div class="doc-card"><strong>grid.html</strong><small>Bootstrap grid system demo</small></div>
+                    </div>
+
+                    <h2>Forms &amp; Tables</h2>
+                    <div class="doc-card-grid">
+                        <div class="doc-card"><strong>form.html</strong><small>Form elements and validation</small></div>
+                        <div class="doc-card"><strong>table-basic.html</strong><small>Basic table styles</small></div>
+                        <div class="doc-card"><strong>table-layout.html</strong><small>Table layout variants</small></div>
+                        <div class="doc-card"><strong>datatable.html</strong><small>Interactive data table with sorting, search, pagination</small></div>
+                    </div>
+
+                    <h2>Icons</h2>
+                    <div class="doc-card-grid">
+                        <div class="doc-card"><strong>fontawesome.html</strong><small>Font Awesome 7 icon showcase</small></div>
+                        <div class="doc-card"><strong>themify.html</strong><small>Themify icon showcase</small></div>
+                    </div>
+
+                    <h2>Apps</h2>
+                    <div class="doc-card-grid">
+                        <div class="doc-card"><strong>profile.html</strong><small>User profile page</small></div>
+                        <div class="doc-card"><strong>notifications.html</strong><small>Notification center</small></div>
+                        <div class="doc-card"><strong>settings.html</strong><small>Account settings</small></div>
+                        <div class="doc-card"><strong>invoice.html</strong><small>Invoice summary</small></div>
+                        <div class="doc-card"><strong>pricing.html</strong><small>Pricing table</small></div>
+                        <div class="doc-card"><strong>maps.html</strong><small>Google Maps integration</small></div>
+                    </div>
+
+                    <h2>Authentication</h2>
+                    <div class="doc-card-grid">
+                        <div class="doc-card"><strong>login.html / login2.html / login3.html</strong><small>Three login page variants</small></div>
+                        <div class="doc-card"><strong>register.html — register4.html</strong><small>Four registration page variants</small></div>
+                        <div class="doc-card"><strong>reset-pass.html / forgot-password.html</strong><small>Password recovery flows</small></div>
+                        <div class="doc-card"><strong>screenlock.html / screenlock2.html</strong><small>Lock screen variants</small></div>
+                    </div>
+
+                    <h2>Error Pages</h2>
+                    <div class="doc-card-grid">
+                        <div class="doc-card"><strong>401.html</strong><small>Unauthorized</small></div>
+                        <div class="doc-card"><strong>403.html</strong><small>Forbidden</small></div>
+                        <div class="doc-card"><strong>404.html</strong><small>Not Found</small></div>
+                        <div class="doc-card"><strong>500.html</strong><small>Internal Server Error</small></div>
+                    </div>
+                </section>
+
+                <!-- ==================== TECH STACK ==================== -->
+                <section id="tech-stack" class="doc-section">
+                    <h1>Tech Stack</h1>
+                    <p>Every library and tool used in the template, with version numbers and sources.</p>
+
+                    <h2>Core Libraries</h2>
+                    <table class="doc-table">
+                        <thead>
+                            <tr><th>Library</th><th>Version</th><th>Source</th><th>Purpose</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Bootstrap</strong></td>
+                                <td><span class="doc-badge doc-badge-blue">5.3.8</span></td>
+                                <td>Vendor</td>
+                                <td>CSS framework, grid, components, utilities</td>
+                            </tr>
+                            <tr>
+                                <td><strong>MetisMenuJS</strong></td>
+                                <td><span class="doc-badge doc-badge-blue">1.4.0</span></td>
+                                <td>Vendor</td>
+                                <td>Collapsible sidebar navigation</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Swiper</strong></td>
+                                <td><span class="doc-badge doc-badge-blue">12.1.0</span></td>
+                                <td>Vendor</td>
+                                <td>Touch slider / carousel</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h2>Chart Libraries</h2>
+                    <table class="doc-table">
+                        <thead>
+                            <tr><th>Library</th><th>Version</th><th>Source</th><th>Used On</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Chart.js</strong></td>
+                                <td><span class="doc-badge doc-badge-green">4.5.1</span></td>
+                                <td>CDN</td>
+                                <td>All dashboards, chart showcase pages</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Highcharts</strong></td>
+                                <td><span class="doc-badge doc-badge-green">12.5.0</span></td>
+                                <td>CDN</td>
+                                <td>Chart showcase pages (linechart, barchart, piechart)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>ZingChart</strong></td>
+                                <td><span class="doc-badge doc-badge-green">2.9.16</span></td>
+                                <td>CDN</td>
+                                <td>Chart showcase pages</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h2>Icon Libraries</h2>
+                    <table class="doc-table">
+                        <thead>
+                            <tr><th>Library</th><th>Version</th><th>Source</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Font Awesome</strong></td>
+                                <td><span class="doc-badge doc-badge-blue">7.1.0 Free</span></td>
+                                <td>Vendor (with v4 shim compatibility)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Themify Icons</strong></td>
+                                <td>&mdash;</td>
+                                <td>Vendor</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h2>Other</h2>
+                    <table class="doc-table">
+                        <thead>
+                            <tr><th>Library</th><th>Version</th><th>Source</th><th>Used On</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Simple-DataTables</strong></td>
+                                <td><span class="doc-badge doc-badge-green">10.x</span></td>
+                                <td>CDN</td>
+                                <td>datatable.html</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Google Fonts</strong></td>
+                                <td>&mdash;</td>
+                                <td>CDN</td>
+                                <td>Lato + Poppins (all pages)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Google Analytics 4</strong></td>
+                                <td>&mdash;</td>
+                                <td>CDN</td>
+                                <td>All pages (replace <code>G-XXXXXXXXXX</code> with your ID)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <!-- ==================== CUSTOMIZATION ==================== -->
+                <section id="customization" class="doc-section">
+                    <h1>Customization</h1>
+
+                    <h2>Creating a New Page</h2>
+                    <p>The fastest way to add a new page:</p>
+                    <ol>
+                        <li>Copy <code>starter.html</code> — it contains the full layout skeleton with empty content area</li>
+                        <li>Update the <code>&lt;title&gt;</code> and <code>&lt;meta name="description"&gt;</code> tags</li>
+                        <li>Add your content inside <code>.main-content-inner#main-content</code></li>
+                        <li>Update the sidebar navigation to include a link to your new page</li>
+                        <li>Set <code>class="active"</code> on the relevant sidebar <code>&lt;li&gt;</code> elements</li>
+                    </ol>
+
+                    <div class="doc-warning">
+                        <strong>Remember sidebar links</strong>
+                        Every page has its own copy of the sidebar HTML. When adding a new page to the navigation, update the sidebar markup in every HTML file where it should appear.
+                    </div>
+
+                    <h2>Changing the Brand Color</h2>
+                    <p>The template's primary color is controlled by a single CSS variable in <code>default-css.css</code>:</p>
+<pre><code>/* In assets/css/default-css.css */
+:root {
+    --primary-color: #4336FB;  /* Change this to your brand color */
+}</code></pre>
+                    <p>This variable is used for active states, sidebar accents, buttons, and decorative elements throughout the template.</p>
+
+                    <h2>Changing Fonts</h2>
+                    <p>Fonts are loaded via Google Fonts in the <code>&lt;head&gt;</code> of every page:</p>
+<pre><code>&lt;link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&amp;family=Poppins:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"&gt;</code></pre>
+                    <p>To change fonts, update the Google Fonts URL and the corresponding <code>font-family</code> declarations in <code>typography.css</code>.</p>
+
+                    <h2>Adding Chart Libraries</h2>
+                    <p>Chart CDN scripts are loaded only on pages that need them. To add charts to a new page:</p>
+<pre><code>&lt;!-- Add before scripts.js --&gt;
+&lt;script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.1/dist/chart.umd.min.js"&gt;&lt;/script&gt;
+&lt;script src="assets/js/line-chart.js"&gt;&lt;/script&gt;
+&lt;script src="assets/js/pie-chart.js"&gt;&lt;/script&gt;</code></pre>
+                    <p>Guard clauses in each chart file prevent errors when canvas elements don't exist on the page.</p>
+
+                    <h2>Google Analytics</h2>
+                    <p>Every page includes a GA4 tracking snippet at the bottom. Replace the placeholder ID with your actual tracking ID:</p>
+<pre><code>&lt;script async src="https://www.googletagmanager.com/gtag/js?id=G-YOUR-ID"&gt;&lt;/script&gt;
+&lt;script&gt;
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js", new Date());
+    gtag("config", "G-YOUR-ID");
+&lt;/script&gt;</code></pre>
+
+                    <h2>Sidebar Configuration</h2>
+                    <p>The sidebar supports multi-level collapsible menus via MetisMenuJS. To add a new menu group:</p>
+<pre><code>&lt;li&gt;
+    &lt;a href="javascript:void(0)" aria-expanded="true"&gt;
+        &lt;i class="ti-widget"&gt;&lt;/i&gt;&lt;span&gt;My Section&lt;/span&gt;
+    &lt;/a&gt;
+    &lt;ul class="collapse"&gt;
+        &lt;li&gt;&lt;a href="page1.html"&gt;Page One&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="page2.html"&gt;Page Two&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/li&gt;</code></pre>
+                </section>
+
+                <!-- ==================== ACCESSIBILITY ==================== -->
+                <section id="accessibility" class="doc-section">
+                    <h1>Accessibility</h1>
+                    <p>SRTdash includes several accessibility features built into every page.</p>
+
+                    <h2>Skip Link</h2>
+                    <p>Every page includes a visually hidden skip link as the first focusable element:</p>
+<pre><code>&lt;a href="#main-content" class="skip-link"&gt;Skip to main content&lt;/a&gt;</code></pre>
+                    <p>This link becomes visible on keyboard focus, allowing keyboard users to bypass the sidebar and header navigation.</p>
+
+                    <h2>Semantic HTML</h2>
+                    <ul>
+                        <li>Proper heading hierarchy (<code>h1</code> &rarr; <code>h2</code> &rarr; <code>h3</code>)</li>
+                        <li><code>&lt;nav&gt;</code> element wrapping sidebar navigation</li>
+                        <li><code>&lt;main&gt;</code>-equivalent content area with <code>id="main-content"</code></li>
+                        <li><code>&lt;footer&gt;</code> element for page footer</li>
+                        <li><code>lang="en"</code> attribute on all <code>&lt;html&gt;</code> tags</li>
+                    </ul>
+
+                    <h2>ARIA Attributes</h2>
+                    <ul>
+                        <li><code>aria-expanded</code> on collapsible sidebar menu items</li>
+                        <li><code>role="tab"</code> and <code>role="tabpanel"</code> on tab interfaces</li>
+                        <li><code>aria-label</code> on icon-only buttons</li>
+                    </ul>
+
+                    <h2>Keyboard Navigation</h2>
+                    <ul>
+                        <li>All interactive elements are focusable</li>
+                        <li>Bootstrap dropdowns, modals, and tabs work with keyboard</li>
+                        <li>Focus visible indicators on all interactive elements</li>
+                    </ul>
+
+                    <h2>Images</h2>
+                    <p>All <code>&lt;img&gt;</code> elements include descriptive <code>alt</code> attributes. Decorative images use <code>alt=""</code>.</p>
+                </section>
+
+                <!-- ==================== IMAGES ==================== -->
+                <section id="images" class="doc-section">
+                    <h1>Image Optimization</h1>
+                    <p>SRTdash uses modern image formats with progressive enhancement for maximum performance.</p>
+
+                    <h2>AVIF with Fallback</h2>
+                    <p>Every image uses the <code>&lt;picture&gt;</code> element with an AVIF source and JPG/PNG fallback:</p>
+<pre><code>&lt;picture&gt;
+    &lt;source srcset="assets/images/path/file.avif" type="image/avif"&gt;
+    &lt;img src="assets/images/path/file.jpg" alt="Description"&gt;
+&lt;/picture&gt;</code></pre>
+                    <p>Browsers that support AVIF (Chrome, Firefox, Safari 16+) load the smaller AVIF file. Older browsers gracefully fall back to JPG/PNG.</p>
+
+                    <div class="doc-note">
+                        <strong>AVIF savings</strong>
+                        AVIF files are typically 40-60% smaller than equivalent JPEGs at the same visual quality, resulting in significantly faster page loads.
+                    </div>
+
+                    <h2>Image Directories</h2>
+                    <table class="doc-table">
+                        <thead>
+                            <tr><th>Directory</th><th>Contents</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><code>images/author/</code></td><td>User avatars and author photos (5 authors + 1 avatar)</td></tr>
+                            <tr><td><code>images/bg/</code></td><td>Full-screen background images (login/register pages)</td></tr>
+                            <tr><td><code>images/blog/</code></td><td>Blog post thumbnail images</td></tr>
+                            <tr><td><code>images/card/</code></td><td>Card component images (9 variants)</td></tr>
+                            <tr><td><code>images/icon/</code></td><td>Logo and miscellaneous icon assets</td></tr>
+                            <tr><td><code>images/media/</code></td><td>Media object example images</td></tr>
+                            <tr><td><code>images/team/</code></td><td>Team member profile photos (5 members)</td></tr>
+                        </tbody>
+                    </table>
+
+                    <h2>Adding New Images</h2>
+                    <p>When adding images, always provide both formats:</p>
+                    <ol>
+                        <li>Place the original JPG/PNG in the appropriate directory</li>
+                        <li>Create an AVIF version (using tools like Squoosh, libavif, or your image editor)</li>
+                        <li>Use the <code>&lt;picture&gt;</code> element pattern shown above</li>
+                    </ol>
+                </section>
+
+                <!-- ==================== CREDITS ==================== -->
+                <section id="credits" class="doc-section">
+                    <h1>Sources &amp; Credits</h1>
+
+                    <h2>Frameworks</h2>
+                    <ul>
+                        <li><a href="https://getbootstrap.com/">Bootstrap 5.3.8</a> — CSS framework</li>
+                        <li><a href="https://fonts.google.com/">Google Fonts</a> — Lato and Poppins typefaces</li>
+                    </ul>
+
+                    <h2>JavaScript Libraries</h2>
+                    <ul>
+                        <li><a href="https://www.chartjs.org/">Chart.js 4</a> — Beautiful, flexible charting</li>
+                        <li><a href="https://www.highcharts.com/">Highcharts 12</a> — Advanced interactive charts</li>
+                        <li><a href="https://www.zingchart.com/">ZingChart</a> — Enterprise-grade charts</li>
+                        <li><a href="https://swiperjs.com/">Swiper 12</a> — Modern touch slider</li>
+                        <li><a href="https://github.com/onokumus/metismenujs">MetisMenuJS</a> — Collapsible menu plugin</li>
+                        <li><a href="https://github.com/fiduswriter/Simple-DataTables">Simple-DataTables</a> — Lightweight data tables</li>
+                    </ul>
+
+                    <h2>Icons</h2>
+                    <ul>
+                        <li><a href="https://fontawesome.com/">Font Awesome 7 Free</a> — Icon library</li>
+                        <li><a href="https://themify.me/themify-icons">Themify Icons</a> — Icon font</li>
+                    </ul>
+
+                    <h2>Images</h2>
+                    <ul>
+                        <li>Sample photos from <a href="https://unsplash.com/">Unsplash</a> and <a href="https://www.pexels.com/">Pexels</a></li>
+                    </ul>
+                </section>
+
+                <!-- ==================== SUPPORT ==================== -->
+                <section id="support" class="doc-section">
+                    <h1>Support</h1>
+                    <p>
+                        Thank you for using SRTdash! If you have questions, encounter issues, or need customization help,
+                        please don't hesitate to reach out.
+                    </p>
+
+                    <h2>Contact</h2>
+                    <p>
+                        Get in touch via the <a href="https://colorlib.com/wp/templates/">Colorlib Templates</a> page.
+                    </p>
+
+                    <h2>Template by</h2>
+                    <p>
+                        Designed and developed by <a href="https://colorlib.com/">Colorlib</a> — a leading HTML template provider
+                        trusted by millions of developers worldwide.
+                    </p>
+
+                    <div class="doc-tip">
+                        <strong>Found a bug?</strong>
+                        Please include the browser name and version, the page URL, and a description of the issue. Screenshots are always appreciated!
+                    </div>
+                </section>
+
             </div>
-        </div>
+        </main>
     </div>
-    <script src="js/jquery-3.1.0.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-	<script src="js/jstree.min.js"></script>
-    <script src="js/jstree.active.js"></script>
-    <script src="js/main.js"></script>
+
+    <!-- Bootstrap Icons (via CDN for sidebar nav icons) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <script>
+    (function() {
+        'use strict';
+
+        var nav = document.getElementById('docNav');
+        var sections = document.querySelectorAll('.doc-section');
+        var sidebar = document.getElementById('docSidebar');
+        var toggle = document.getElementById('mobileToggle');
+        var overlay = document.getElementById('sidebarOverlay');
+
+        // Tab navigation
+        nav.addEventListener('click', function(e) {
+            var link = e.target.closest('a[data-section]');
+            if (!link) return;
+            e.preventDefault();
+
+            var sectionId = link.getAttribute('data-section');
+
+            // Update active nav link
+            nav.querySelectorAll('a').forEach(function(a) { a.classList.remove('active'); });
+            link.classList.add('active');
+
+            // Show active section
+            sections.forEach(function(s) { s.classList.remove('active'); });
+            var target = document.getElementById(sectionId);
+            if (target) target.classList.add('active');
+
+            // Scroll to top
+            window.scrollTo(0, 0);
+
+            // Close mobile sidebar
+            sidebar.classList.remove('open');
+            overlay.classList.remove('open');
+        });
+
+        // Mobile sidebar toggle
+        toggle.addEventListener('click', function() {
+            sidebar.classList.toggle('open');
+            overlay.classList.toggle('open');
+        });
+
+        overlay.addEventListener('click', function() {
+            sidebar.classList.remove('open');
+            overlay.classList.remove('open');
+        });
+
+        // Handle direct URL hash navigation
+        if (window.location.hash) {
+            var hash = window.location.hash.substring(1);
+            var hashLink = nav.querySelector('a[data-section="' + hash + '"]');
+            if (hashLink) hashLink.click();
+        }
+    })();
+    </script>
 </body>
 
 </html>

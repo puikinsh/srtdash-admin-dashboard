@@ -1,170 +1,182 @@
-/*--------------  coin_sales1 start ------------*/
+/*--------------  Gradient helper  ------------*/
+function createGradientFill(ctx, color, alpha) {
+    var gradient = ctx.createLinearGradient(0, 0, 0, ctx.canvas.height);
+    gradient.addColorStop(0, color.replace(')', ', ' + alpha + ')').replace('rgb', 'rgba'));
+    gradient.addColorStop(1, color.replace(')', ', 0)').replace('rgb', 'rgba'));
+    return gradient;
+}
+
+/* Mini chart shared options */
+var miniChartOptions = {
+    plugins: { legend: { display: false }, tooltip: { enabled: false } },
+    animation: { duration: 800, easing: 'easeOutQuart' },
+    elements: { point: { radius: 0, hoverRadius: 0 } },
+    scales: {
+        y: { display: false, beginAtZero: false },
+        x: { display: false }
+    },
+    responsive: true
+};
+
+/*--------------  coin_sales1 (Bitcoin — blue)  ------------*/
 if (document.getElementById('coin_sales1')) {
-    var ctx = document.getElementById("coin_sales1").getContext('2d');
-    var chart = new Chart(ctx, {
-        // The type of chart we want to create
+    var ctx1 = document.getElementById('coin_sales1').getContext('2d');
+    var grad1 = ctx1.createLinearGradient(0, 0, 0, 100);
+    grad1.addColorStop(0, 'rgba(59, 130, 246, 0.25)');
+    grad1.addColorStop(1, 'rgba(59, 130, 246, 0)');
+    new Chart(ctx1, {
         type: 'line',
-        // The data for our dataset
         data: {
-            labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec", "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+            labels: ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],
             datasets: [{
-                label: "Sales",
-                backgroundColor: "rgba(117, 19, 246, 0.1)",
-                borderColor: '#0b76b6',
+                label: 'Bitcoin',
                 data: [18, 28, 41, 52, 86, 68, 49, 20, 35, 20, 50, 62, 49, 30, 45, 58, 25, 38, 55, 72, 64, 48, 52, 60],
-            }]
-        },
-        // Configuration options go here
-        options: {
-            plugins: {
-                legend: {
-                    display: false
-                }
-            },
-            animation: {
-                easing: "easeInOutBack"
-            },
-            scales: {
-                y: {
-                    display: !1,
-                    ticks: {
-                        color: "rgba(0,0,0,0.5)",
-                        font: { weight: "bold" },
-                        beginAtZero: !0,
-                        maxTicksLimit: 5,
-                        padding: 0
-                    },
-                    grid: {
-                        drawTicks: !1,
-                        display: !1
-                    }
-                },
-                x: {
-                    display: !1,
-                    grid: {
-                        color: "transparent"
-                    },
-                    ticks: {
-                        padding: 0,
-                        color: "rgba(0,0,0,0.5)",
-                        font: { weight: "bold" }
-                    }
-                }
-            }
-        }
-    });
-}
-/*--------------  coin_sales1 End ------------*/
-
-/*--------------  coin_sales2 start ------------*/
-if (document.getElementById('coin_sales2')) {
-    var ctx = document.getElementById("coin_sales2").getContext('2d');
-    var chart = new Chart(ctx, {
-        // The type of chart we want to create
-        type: 'line',
-        // The data for our dataset
-        data: {
-            labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec", "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
-            datasets: [{
-                label: "Sales",
-                backgroundColor: "rgba(240, 180, 26, 0.1)",
-                borderColor: '#F0B41A',
-                data: [18, 32, 41, 55, 86, 70, 49, 20, 65, 64, 50, 72, 49, 30, 45, 60, 25, 42, 58, 80, 68, 50, 55, 65],
-            }]
-        },
-        // Configuration options go here
-        options: {
-            plugins: {
-                legend: {
-                    display: false
-                }
-            },
-            animation: {
-                easing: "easeInOutBack"
-            },
-            scales: {
-                y: {
-                    display: !1,
-                    ticks: {
-                        color: "rgba(0,0,0,0.5)",
-                        font: { weight: "bold" },
-                        beginAtZero: !0,
-                        maxTicksLimit: 5,
-                        padding: 0
-                    },
-                    grid: {
-                        drawTicks: !1,
-                        display: !1
-                    }
-                },
-                x: {
-                    display: !1,
-                    grid: {
-                        color: "transparent"
-                    },
-                    ticks: {
-                        padding: 0,
-                        color: "rgba(0,0,0,0.5)",
-                        font: { weight: "bold" }
-                    }
-                }
-            }
-        }
-    });
-}
-/*--------------  coin_sales2 End ------------*/
-
-/*--------------  coin_sales3 start ------------*/
-if (document.getElementById('coin_sales3')) {
-    var ctx = document.getElementById("coin_sales3").getContext('2d');
-    var chart = new Chart(ctx, {
-        // The type of chart we want to create
-        type: 'line',
-        // The data for our dataset
-        data: {
-            labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec", "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
-            datasets: [{
-                label: "Sales",
-                backgroundColor: "rgba(247, 163, 58, 0.1)",
-                borderColor: '#fd9d24',
+                borderColor: '#3b82f6',
+                backgroundColor: grad1,
+                borderWidth: 2.5,
                 fill: true,
+                tension: 0.4
+            }]
+        },
+        options: miniChartOptions
+    });
+}
+
+/*--------------  coin_sales2 (Bitcoin Dash — amber)  ------------*/
+if (document.getElementById('coin_sales2')) {
+    var ctx2 = document.getElementById('coin_sales2').getContext('2d');
+    var grad2 = ctx2.createLinearGradient(0, 0, 0, 100);
+    grad2.addColorStop(0, 'rgba(245, 158, 11, 0.25)');
+    grad2.addColorStop(1, 'rgba(245, 158, 11, 0)');
+    new Chart(ctx2, {
+        type: 'line',
+        data: {
+            labels: ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],
+            datasets: [{
+                label: 'Bitcoin Dash',
+                data: [18, 32, 41, 55, 86, 70, 49, 20, 65, 64, 50, 72, 49, 30, 45, 60, 25, 42, 58, 80, 68, 50, 55, 65],
+                borderColor: '#f59e0b',
+                backgroundColor: grad2,
+                borderWidth: 2.5,
+                fill: true,
+                tension: 0.4
+            }]
+        },
+        options: miniChartOptions
+    });
+}
+
+/*--------------  coin_sales3 (Ethereum — emerald)  ------------*/
+if (document.getElementById('coin_sales3')) {
+    var ctx3 = document.getElementById('coin_sales3').getContext('2d');
+    var grad3 = ctx3.createLinearGradient(0, 0, 0, 100);
+    grad3.addColorStop(0, 'rgba(16, 185, 129, 0.25)');
+    grad3.addColorStop(1, 'rgba(16, 185, 129, 0)');
+    new Chart(ctx3, {
+        type: 'line',
+        data: {
+            labels: ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],
+            datasets: [{
+                label: 'Ethereum',
                 data: [18, 30, 41, 50, 49, 35, 20, 65, 50, 86, 72, 58, 20, 30, 45, 52, 25, 40, 62, 78, 65, 45, 50, 58],
+                borderColor: '#10b981',
+                backgroundColor: grad3,
+                borderWidth: 2.5,
+                fill: true,
+                tension: 0.4
             }]
         },
-        // Configuration options go here
+        options: miniChartOptions
+    });
+}
+
+/*--------------  Overview chart (Chart.js — replaces ZingChart)  ------------*/
+if (document.getElementById('overview-chart')) {
+    var ctxOv = document.getElementById('overview-chart').getContext('2d');
+    var gradBlue = ctxOv.createLinearGradient(0, 0, 0, 400);
+    gradBlue.addColorStop(0, 'rgba(59, 130, 246, 0.18)');
+    gradBlue.addColorStop(1, 'rgba(59, 130, 246, 0)');
+    var gradAmber = ctxOv.createLinearGradient(0, 0, 0, 400);
+    gradAmber.addColorStop(0, 'rgba(245, 158, 11, 0.18)');
+    gradAmber.addColorStop(1, 'rgba(245, 158, 11, 0)');
+
+    new Chart(ctxOv, {
+        type: 'line',
+        data: {
+            labels: ['0','5','10','15','20','25','30','35','40','45','50','55','60','65','70','75','80','85','90','95','100'],
+            datasets: [{
+                label: 'Revenue',
+                data: [40, 42, 45, 38, 30, 25, 20, 28, 30, 35, 45, 50, 55, 48, 40, 35, 30, 42, 55, 48, 38],
+                borderColor: '#3b82f6',
+                backgroundColor: gradBlue,
+                borderWidth: 2.5,
+                fill: true,
+                tension: 0.4,
+                pointRadius: 0,
+                pointHoverRadius: 5,
+                pointHoverBackgroundColor: '#3b82f6',
+                pointHoverBorderColor: '#fff',
+                pointHoverBorderWidth: 2
+            }, {
+                label: 'Expenses',
+                data: [20, 22, 25, 28, 30, 33, 35, 40, 45, 42, 40, 38, 40, 37, 35, 30, 25, 20, 17, 28, 40],
+                borderColor: '#f59e0b',
+                backgroundColor: gradAmber,
+                borderWidth: 2.5,
+                fill: true,
+                tension: 0.4,
+                pointRadius: 0,
+                pointHoverRadius: 5,
+                pointHoverBackgroundColor: '#f59e0b',
+                pointHoverBorderColor: '#fff',
+                pointHoverBorderWidth: 2
+            }]
+        },
         options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            interaction: { mode: 'index', intersect: false },
             plugins: {
                 legend: {
-                    display: false
+                    display: true,
+                    position: 'top',
+                    align: 'end',
+                    labels: {
+                        usePointStyle: true,
+                        pointStyle: 'circle',
+                        padding: 20,
+                        font: { family: 'Poppins', size: 12 },
+                        color: '#64748b'
+                    }
+                },
+                tooltip: {
+                    backgroundColor: '#1e293b',
+                    titleFont: { family: 'Poppins', size: 13 },
+                    bodyFont: { family: 'Poppins', size: 12 },
+                    padding: 12,
+                    cornerRadius: 8,
+                    displayColors: true,
+                    usePointStyle: true
                 }
-            },
-            animation: {
-                easing: "easeInOutBack"
             },
             scales: {
                 y: {
-                    display: !1,
+                    border: { display: false },
+                    grid: { color: '#f1f5f9' },
                     ticks: {
-                        color: "rgba(0,0,0,0.5)",
-                        font: { weight: "bold" },
-                        beginAtZero: !0,
-                        maxTicksLimit: 5,
-                        padding: 0
-                    },
-                    grid: {
-                        drawTicks: !1,
-                        display: !1
+                        font: { family: 'Poppins', size: 11 },
+                        color: '#94a3b8',
+                        padding: 8
                     }
                 },
                 x: {
-                    display: !1,
-                    grid: {
-                        color: "transparent"
-                    },
+                    border: { display: false },
+                    grid: { display: false },
                     ticks: {
-                        padding: 0,
-                        color: "rgba(0,0,0,0.5)",
-                        font: { weight: "bold" }
+                        font: { family: 'Poppins', size: 11 },
+                        color: '#94a3b8',
+                        maxTicksLimit: 11,
+                        padding: 8
                     }
                 }
             }
@@ -172,266 +184,55 @@ if (document.getElementById('coin_sales3')) {
     });
 }
 
-/*--------------  coin_sales3 End ------------*/
-
-/*--------------  overview-chart start ------------*/
-if (document.getElementById('verview-shart') && typeof zingchart !== 'undefined') {
-    var myConfig = {
-        "type": "line",
-
-        "scale-x": { //X-Axis
-            "labels": ["0", "5", "10", "15", "20", "25", "30", "35", "40", "45", "50", "55", "60", "65", "70", "75", "80", "85", "90", "95", "100"],
-            "label": {
-                "font-size": 14,
-                "offset-x": 0,
-            },
-            "item": { //Scale Items (scale values or labels)
-                "font-size": 10,
-            },
-            "guide": { //Guides
-                "visible": false,
-                "line-style": "solid", //"solid", "dotted", "dashed", "dashdot"
-                "alpha": 1
-            }
-        },
-        "plot": { "aspect": "spline" },
-        "series": [{
-                "values": [20, 22, 25, 28, 30, 33, 35, 40, 45, 42, 40, 38, 40, 37, 35, 30, 25, 20, 17, 28, 40, 50],
-                "line-color": "#F0B41A",
-                "line-width": 4,
-                "marker": {
-                    "background-color": "#D79D3B",
-                    "size": 4,
-                    "border-color": "#D79D3B"
-                }
-            },
-            {
-                "values": [40, 42, 45, 38, 30, 25, 20, 28, 30, 35, 45, 50, 55, 48, 40, 35, 30, 42, 55, 48, 38, 30],
-                "line-color": "#0884D9",
-                "line-width": 4,
-                "marker": {
-                    "background-color": "#067dce",
-                    "size": 4,
-                    "border-color": "#067dce"
-                }
-            }
-        ]
-    };
-
-    zingchart.render({
-        id: 'verview-shart',
-        data: myConfig,
-        height: "100%",
-        width: "100%"
-    });
-}
-
-/*--------------  overview-chart END ------------*/
-
-/*--------------  market status chart start ------------*/
-
-if (document.getElementById('mvaluechart')) {
-    var ctx = document.getElementById('mvaluechart').getContext('2d');
-    var myLineChart = new Chart(ctx, {
-        // The type of chart we want to create
+/*--------------  Market sparkline helper  ------------*/
+function createSparkline(canvasId, data, color) {
+    var el = document.getElementById(canvasId);
+    if (!el) return;
+    var ctx = el.getContext('2d');
+    var grad = ctx.createLinearGradient(0, 0, 0, 50);
+    grad.addColorStop(0, color.replace(')', ', 0.2)').replace('rgb', 'rgba'));
+    grad.addColorStop(1, color.replace(')', ', 0)').replace('rgb', 'rgba'));
+    new Chart(ctx, {
         type: 'line',
-        // The data for our dataset
         data: {
-            labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec", "Jan", "Feb"],
+            labels: data.map(function(_, i) { return i; }),
             datasets: [{
-                label: "Market Value",
-                backgroundColor: 'transparent',
-                borderColor: '#6e00ff',
+                data: data,
+                borderColor: color,
+                backgroundColor: grad,
                 borderWidth: 2,
-                data: [5, 15, 30, 18, 10, 25, 8, 30, 22, 35, 20, 28, 15, 32],
-                pointBorderColor: "transparent",
-                pointBorderWidth: 10
+                fill: true,
+                tension: 0.4,
+                pointRadius: 0,
+                pointHoverRadius: 4,
+                pointHoverBackgroundColor: color,
+                pointHoverBorderColor: '#fff',
+                pointHoverBorderWidth: 2
             }]
         },
-
-        // Configuration options go here
         options: {
+            responsive: true,
             plugins: {
-                legend: {
-                    display: false
-                },
+                legend: { display: false },
                 tooltip: {
-                    callbacks: {
-                        label: function(tooltipItem) {
-                            return tooltipItem.parsed.y;
-                        }
-                    }
+                    backgroundColor: '#1e293b',
+                    bodyFont: { family: 'Poppins', size: 11 },
+                    padding: 8,
+                    cornerRadius: 6,
+                    displayColors: false,
+                    callbacks: { label: function(t) { return t.parsed.y; } }
                 }
             },
-            elements: {
-                line: {
-                    tension: 0, // disables bezier curves
-                }
-            },
-            scales: {
-                y: {
-                    display: !1
-                },
-                x: {
-                    display: !1
-                }
-            }
+            scales: { y: { display: false }, x: { display: false } }
         }
     });
 }
 
-if (document.getElementById('mvaluechart2')) {
-    var ctx = document.getElementById('mvaluechart2').getContext('2d');
-    var myLineChart = new Chart(ctx, {
-        // The type of chart we want to create
-        type: 'line',
-
-        // The data for our dataset
-        data: {
-            labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec", "Jan", "Feb"],
-            datasets: [{
-                label: "Market Value",
-                backgroundColor: 'transparent',
-                borderColor: '#6e00ff',
-                borderWidth: 2,
-                data: [8, 15, 30, 12, 10, 25, 5, 18, 35, 50, 40, 28, 32, 45],
-                pointBorderColor: "transparent",
-                pointBorderWidth: 10
-            }]
-        },
-
-        // Configuration options go here
-        options: {
-            plugins: {
-                legend: {
-                    display: false
-                },
-                tooltip: {
-                    callbacks: {
-                        label: function(tooltipItem) {
-                            return tooltipItem.parsed.y;
-                        }
-                    }
-                }
-            },
-            elements: {
-                line: {
-                    tension: 0, // disables bezier curves
-                }
-            },
-            scales: {
-                y: {
-                    display: !1
-                },
-                x: {
-                    display: !1
-                }
-            }
-        }
-    });
-}
-
-if (document.getElementById('mvaluechart3')) {
-    var ctx = document.getElementById('mvaluechart3').getContext('2d');
-    var myLineChart = new Chart(ctx, {
-        // The type of chart we want to create
-        type: 'line',
-
-        // The data for our dataset
-        data: {
-            labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec", "Jan", "Feb"],
-            datasets: [{
-                label: "Market Value",
-                backgroundColor: 'transparent',
-                borderColor: '#6e00ff',
-                borderWidth: 2,
-                data: [10, 15, 40, 25, 10, 25, 8, 30, 20, 38, 28, 42, 35, 22],
-                pointBorderColor: "transparent",
-                pointBorderWidth: 10
-            }]
-        },
-
-        // Configuration options go here
-        options: {
-            plugins: {
-                legend: {
-                    display: false
-                },
-                tooltip: {
-                    callbacks: {
-                        label: function(tooltipItem) {
-                            return tooltipItem.parsed.y;
-                        }
-                    }
-                }
-            },
-            elements: {
-                line: {
-                    tension: 0, // disables bezier curves
-                }
-            },
-            scales: {
-                y: {
-                    display: !1
-                },
-                x: {
-                    display: !1
-                }
-            }
-        }
-    });
-}
-
-if (document.getElementById('mvaluechart4')) {
-    var ctx = document.getElementById('mvaluechart4').getContext('2d');
-    var myLineChart = new Chart(ctx, {
-        // The type of chart we want to create
-        type: 'line',
-
-        // The data for our dataset
-        data: {
-            labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec", "Jan", "Feb"],
-            datasets: [{
-                label: "Market Value",
-                backgroundColor: 'transparent',
-                borderColor: '#6e00ff',
-                borderWidth: 2,
-                data: [12, 30, 30, 18, 10, 25, 5, 30, 22, 15, 28, 35, 20, 32],
-                pointBorderColor: "transparent",
-                pointBorderWidth: 10
-            }]
-        },
-
-        // Configuration options go here
-        options: {
-            plugins: {
-                legend: {
-                    display: false
-                },
-                tooltip: {
-                    callbacks: {
-                        label: function(tooltipItem) {
-                            return tooltipItem.parsed.y;
-                        }
-                    }
-                }
-            },
-            elements: {
-                line: {
-                    tension: 0, // disables bezier curves
-                }
-            },
-            scales: {
-                y: {
-                    display: !1
-                },
-                x: {
-                    display: !1
-                }
-            }
-        }
-    });
-}
+/*--------------  Market status sparklines  ------------*/
+createSparkline('mvaluechart',  [5, 15, 30, 18, 10, 25, 8, 30, 22, 35, 20, 28, 15, 32],  'rgb(59, 130, 246)');
+createSparkline('mvaluechart2', [8, 15, 30, 12, 10, 25, 5, 18, 35, 50, 40, 28, 32, 45],  'rgb(99, 102, 241)');
+createSparkline('mvaluechart3', [10, 15, 40, 25, 10, 25, 8, 30, 20, 38, 28, 42, 35, 22], 'rgb(245, 158, 11)');
+createSparkline('mvaluechart4', [12, 30, 30, 18, 10, 25, 5, 30, 22, 15, 28, 35, 20, 32], 'rgb(16, 185, 129)');
 
 /*--------------  market status chart END ------------*/
 
