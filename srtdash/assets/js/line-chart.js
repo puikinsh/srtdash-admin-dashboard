@@ -6,12 +6,12 @@ if (document.getElementById('coin_sales1')) {
         type: 'line',
         // The data for our dataset
         data: {
-            labels: ["January", "February", "March", "April", "May", "June", "July", "January", "February", "March", "April", "May"],
+            labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec", "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
             datasets: [{
                 label: "Sales",
                 backgroundColor: "rgba(117, 19, 246, 0.1)",
                 borderColor: '#0b76b6',
-                data: [18, 41, 86, 49, 20, 35, 20, 50, 49, 30, 45, 25],
+                data: [18, 28, 41, 52, 86, 68, 49, 20, 35, 20, 50, 62, 49, 30, 45, 58, 25, 38, 55, 72, 64, 48, 52, 60],
             }]
         },
         // Configuration options go here
@@ -64,12 +64,12 @@ if (document.getElementById('coin_sales2')) {
         type: 'line',
         // The data for our dataset
         data: {
-            labels: ["January", "February", "March", "April", "May", "June", "July", "January", "February", "March", "April", "May"],
+            labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec", "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
             datasets: [{
                 label: "Sales",
                 backgroundColor: "rgba(240, 180, 26, 0.1)",
                 borderColor: '#F0B41A',
-                data: [18, 41, 86, 49, 20, 65, 64, 50, 49, 30, 45, 25],
+                data: [18, 32, 41, 55, 86, 70, 49, 20, 65, 64, 50, 72, 49, 30, 45, 60, 25, 42, 58, 80, 68, 50, 55, 65],
             }]
         },
         // Configuration options go here
@@ -122,13 +122,13 @@ if (document.getElementById('coin_sales3')) {
         type: 'line',
         // The data for our dataset
         data: {
-            labels: ["January", "February", "March", "April", "May", "June", "July", "January", "February", "March", "April", "May"],
+            labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec", "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
             datasets: [{
                 label: "Sales",
                 backgroundColor: "rgba(247, 163, 58, 0.1)",
                 borderColor: '#fd9d24',
                 fill: true,
-                data: [18, 41, 50, 49, 20, 65, 50, 86, 20, 30, 45, 25],
+                data: [18, 30, 41, 50, 49, 35, 20, 65, 50, 86, 72, 58, 20, 30, 45, 52, 25, 40, 62, 78, 65, 45, 50, 58],
             }]
         },
         // Configuration options go here
@@ -180,7 +180,7 @@ if (document.getElementById('verview-shart') && typeof zingchart !== 'undefined'
         "type": "line",
 
         "scale-x": { //X-Axis
-            "labels": ["0", "10", "20", "30", "40", "50", "60", "70", "80", "90", "100"],
+            "labels": ["0", "5", "10", "15", "20", "25", "30", "35", "40", "45", "50", "55", "60", "65", "70", "75", "80", "85", "90", "95", "100"],
             "label": {
                 "font-size": 14,
                 "offset-x": 0,
@@ -196,31 +196,23 @@ if (document.getElementById('verview-shart') && typeof zingchart !== 'undefined'
         },
         "plot": { "aspect": "spline" },
         "series": [{
-                "values": [20, 25, 30, 35, 45, 40, 40, 35, 25, 17, 40, 50],
+                "values": [20, 22, 25, 28, 30, 33, 35, 40, 45, 42, 40, 38, 40, 37, 35, 30, 25, 20, 17, 28, 40, 50],
                 "line-color": "#F0B41A",
-                /* "dotted" | "dashed" */
-                "line-width": 5 /* in pixels */ ,
-                "marker": { /* Marker object */
+                "line-width": 4,
+                "marker": {
                     "background-color": "#D79D3B",
-                    /* hexadecimal or RGB value */
-                    "size": 5,
-                    /* in pixels */
-                    "border-color": "#D79D3B",
-                    /* hexadecimal or RBG value */
+                    "size": 4,
+                    "border-color": "#D79D3B"
                 }
             },
             {
-                "values": [40, 45, 30, 20, 30, 35, 45, 55, 40, 30, 55, 30],
+                "values": [40, 42, 45, 38, 30, 25, 20, 28, 30, 35, 45, 50, 55, 48, 40, 35, 30, 42, 55, 48, 38, 30],
                 "line-color": "#0884D9",
-                /* "dotted" | "dashed" */
-                "line-width": 5 /* in pixels */ ,
-                "marker": { /* Marker object */
+                "line-width": 4,
+                "marker": {
                     "background-color": "#067dce",
-                    /* hexadecimal or RGB value */
-                    "size": 5,
-                    /* in pixels */
-                    "border-color": "#067dce",
-                    /* hexadecimal or RBG value */
+                    "size": 4,
+                    "border-color": "#067dce"
                 }
             }
         ]
@@ -245,13 +237,13 @@ if (document.getElementById('mvaluechart')) {
         type: 'line',
         // The data for our dataset
         data: {
-            labels: ["January", "February", "March", "April", "May", "June", "July"],
+            labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec", "Jan", "Feb"],
             datasets: [{
                 label: "Market Value",
                 backgroundColor: 'transparent',
                 borderColor: '#6e00ff',
                 borderWidth: 2,
-                data: [0, 15, 30, 10, 25, 0, 30],
+                data: [5, 15, 30, 18, 10, 25, 8, 30, 22, 35, 20, 28, 15, 32],
                 pointBorderColor: "transparent",
                 pointBorderWidth: 10
             }]
@@ -296,13 +288,13 @@ if (document.getElementById('mvaluechart2')) {
 
         // The data for our dataset
         data: {
-            labels: ["January", "February", "March", "April", "May", "June", "July"],
+            labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec", "Jan", "Feb"],
             datasets: [{
                 label: "Market Value",
                 backgroundColor: 'transparent',
                 borderColor: '#6e00ff',
                 borderWidth: 2,
-                data: [0, 15, 30, 10, 25, 0, 50],
+                data: [8, 15, 30, 12, 10, 25, 5, 18, 35, 50, 40, 28, 32, 45],
                 pointBorderColor: "transparent",
                 pointBorderWidth: 10
             }]
@@ -347,13 +339,13 @@ if (document.getElementById('mvaluechart3')) {
 
         // The data for our dataset
         data: {
-            labels: ["January", "February", "March", "April", "May", "June", "July", "Agut"],
+            labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec", "Jan", "Feb"],
             datasets: [{
                 label: "Market Value",
                 backgroundColor: 'transparent',
                 borderColor: '#6e00ff',
                 borderWidth: 2,
-                data: [0, 15, 40, 10, 25, 0, 30, 20],
+                data: [10, 15, 40, 25, 10, 25, 8, 30, 20, 38, 28, 42, 35, 22],
                 pointBorderColor: "transparent",
                 pointBorderWidth: 10
             }]
@@ -398,13 +390,13 @@ if (document.getElementById('mvaluechart4')) {
 
         // The data for our dataset
         data: {
-            labels: ["January", "February", "March", "April", "May", "June", "July"],
+            labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec", "Jan", "Feb"],
             datasets: [{
                 label: "Market Value",
                 backgroundColor: 'transparent',
                 borderColor: '#6e00ff',
                 borderWidth: 2,
-                data: [0, 30, 30, 10, 25, 0, 30],
+                data: [12, 30, 30, 18, 10, 25, 5, 30, 22, 15, 28, 35, 20, 32],
                 pointBorderColor: "transparent",
                 pointBorderWidth: 10
             }]

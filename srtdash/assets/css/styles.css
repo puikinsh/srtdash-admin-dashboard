@@ -244,6 +244,12 @@ a:hover {
     top: 6px;
 }
 
+/* Override Bootstrap .collapse:not(.show) which conflicts with MetisMenu */
+.metismenu .mm-show,
+.metismenu .mm-collapsing {
+    display: block;
+}
+
 /*-------------------- END Sidebar Menu -------------------*/
 
 
