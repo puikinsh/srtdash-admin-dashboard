@@ -53,6 +53,9 @@
                                 </ul>
                             </li>
                             <li>
+                                <a href="https://dashboardpack.com/?utm_source=srtdash&utm_medium=sidebar&utm_campaign=demo" target="_blank" rel="noopener"><i class="fa-solid fa-crown"></i> <span>Go Pro</span><span class="badge rounded-pill bg-danger ms-2" style="font-size:10px;">Hot</span></a>
+                            </li>
+                            <li>
                                 <a href="javascript:void(0)" aria-expanded="true"><i class="ti-layout-sidebar-left"></i><span>Sidebar
                                         Types
                                     </span></a>
@@ -292,35 +295,35 @@
                                     <i class="fa-solid fa-plus me-2"></i>Add Event
                                 </button>
                                 <h6 class="header-title mb-3">Upcoming Events</h6>
-                                <div class="d-flex align-items-center mb-3">
+                                <div class="d-flex align-items-center mb-3 cal-sidebar-event" data-event-title="Team Standup">
                                     <div class="me-3" style="width:10px;height:10px;border-radius:50%;background:#4336fb;"></div>
                                     <div>
                                         <h6 class="mb-0" style="font-size:14px;">Team Standup</h6>
                                         <small class="text-muted">Today, 10:00 AM</small>
                                     </div>
                                 </div>
-                                <div class="d-flex align-items-center mb-3">
+                                <div class="d-flex align-items-center mb-3 cal-sidebar-event" data-event-title="Project Review">
                                     <div class="me-3" style="width:10px;height:10px;border-radius:50%;background:#36b398;"></div>
                                     <div>
                                         <h6 class="mb-0" style="font-size:14px;">Project Review</h6>
                                         <small class="text-muted">Tomorrow, 2:00 PM</small>
                                     </div>
                                 </div>
-                                <div class="d-flex align-items-center mb-3">
+                                <div class="d-flex align-items-center mb-3 cal-sidebar-event" data-event-title="Deadline: Q1 Report">
                                     <div class="me-3" style="width:10px;height:10px;border-radius:50%;background:#f96776;"></div>
                                     <div>
                                         <h6 class="mb-0" style="font-size:14px;">Deadline: Q1 Report</h6>
                                         <small class="text-muted">Feb 14, 5:00 PM</small>
                                     </div>
                                 </div>
-                                <div class="d-flex align-items-center mb-3">
+                                <div class="d-flex align-items-center mb-3 cal-sidebar-event" data-event-title="Client Meeting">
                                     <div class="me-3" style="width:10px;height:10px;border-radius:50%;background:#d6a20c;"></div>
                                     <div>
                                         <h6 class="mb-0" style="font-size:14px;">Client Meeting</h6>
                                         <small class="text-muted">Feb 15, 11:00 AM</small>
                                     </div>
                                 </div>
-                                <div class="d-flex align-items-center">
+                                <div class="d-flex align-items-center cal-sidebar-event" data-event-title="Team Lunch">
                                     <div class="me-3" style="width:10px;height:10px;border-radius:50%;background:#4796ea;"></div>
                                     <div>
                                         <h6 class="mb-0" style="font-size:14px;">Team Lunch</h6>
@@ -382,6 +385,43 @@
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
                                 <button type="button" class="btn btn-primary">Save Event</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- view event modal -->
+                <div class="modal fade" id="viewEventModal" tabindex="-1" aria-labelledby="viewEventModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="viewEventModalLabel">Event Details</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div id="viewEventColor" class="me-3" style="width:14px;height:14px;border-radius:50%;"></div>
+                                    <h5 class="mb-0" id="viewEventTitle"></h5>
+                                </div>
+                                <div class="mb-2">
+                                    <i class="ti-calendar me-2 text-muted"></i>
+                                    <span id="viewEventDate"></span>
+                                </div>
+                                <div class="mb-2" id="viewEventTimeRow">
+                                    <i class="ti-time me-2 text-muted"></i>
+                                    <span id="viewEventTime"></span>
+                                </div>
+                                <div class="mb-2" id="viewEventLocationRow" style="display:none;">
+                                    <i class="ti-location-pin me-2 text-muted"></i>
+                                    <span id="viewEventLocation"></span>
+                                </div>
+                                <hr>
+                                <p class="text-muted mb-0" id="viewEventDesc"></p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-outline-danger btn-sm" id="viewEventDelete">
+                                    <i class="ti-trash me-1"></i>Delete
+                                </button>
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                             </div>
                         </div>
                     </div>
@@ -494,6 +534,29 @@
     document.addEventListener('DOMContentLoaded', function() {
         var calendarEl = document.getElementById('calendar');
         if (!calendarEl) return;
+
+        // View-event modal elements
+        var viewModal = new bootstrap.Modal(document.getElementById('viewEventModal'));
+        var viewTitle = document.getElementById('viewEventTitle');
+        var viewDate = document.getElementById('viewEventDate');
+        var viewTime = document.getElementById('viewEventTime');
+        var viewTimeRow = document.getElementById('viewEventTimeRow');
+        var viewLocation = document.getElementById('viewEventLocation');
+        var viewLocationRow = document.getElementById('viewEventLocationRow');
+        var viewDesc = document.getElementById('viewEventDesc');
+        var viewColor = document.getElementById('viewEventColor');
+        var viewDeleteBtn = document.getElementById('viewEventDelete');
+        var clickedEvent = null;
+
+        // Format date for display
+        function formatDate(d) {
+            var opts = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            return d.toLocaleDateString('en-US', opts);
+        }
+        function formatTime(d) {
+            return d.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' });
+        }
+
         var calendar = new FullCalendar.Calendar(calendarEl, {
             initialView: 'dayGridMonth',
             headerToolbar: {
@@ -504,19 +567,210 @@
             editable: true,
             selectable: true,
             dayMaxEvents: true,
+            eventClick: function(info) {
+                info.jsEvent.preventDefault();
+                clickedEvent = info.event;
+                var ev = info.event;
+                var props = ev.extendedProps || {};
+
+                viewTitle.textContent = ev.title;
+                viewColor.style.background = ev.backgroundColor || '#4336fb';
+
+                // Date
+                viewDate.textContent = formatDate(ev.start);
+                if (ev.end && ev.end.toDateString() !== ev.start.toDateString()) {
+                    viewDate.textContent += ' — ' + formatDate(ev.end);
+                }
+
+                // Time
+                if (ev.allDay) {
+                    viewTimeRow.style.display = 'none';
+                } else {
+                    viewTimeRow.style.display = '';
+                    var timeTxt = formatTime(ev.start);
+                    if (ev.end) timeTxt += ' — ' + formatTime(ev.end);
+                    viewTime.textContent = timeTxt;
+                }
+
+                // Location
+                if (props.location) {
+                    viewLocationRow.style.display = '';
+                    viewLocation.textContent = props.location;
+                } else {
+                    viewLocationRow.style.display = 'none';
+                }
+
+                // Description
+                viewDesc.textContent = props.description || 'No additional details.';
+
+                viewModal.show();
+            },
             events: [
-                { title: 'Team Standup', start: '2026-02-10T10:00:00', color: '#4336fb' },
-                { title: 'Project Review', start: '2026-02-11T14:00:00', color: '#36b398' },
-                { title: 'Deadline: Q1 Report', start: '2026-02-14T17:00:00', color: '#f96776' },
-                { title: 'Client Meeting', start: '2026-02-15T11:00:00', end: '2026-02-15T12:00:00', color: '#d6a20c' },
-                { title: 'Team Lunch', start: '2026-02-16T12:30:00', color: '#4796ea' },
-                { title: 'Sprint Planning', start: '2026-02-18T09:00:00', end: '2026-02-18T10:30:00', color: '#4336fb' },
-                { title: 'Design Review', start: '2026-02-20T15:00:00', color: '#36b398' },
-                { title: 'Board Meeting', start: '2026-02-22T10:00:00', end: '2026-02-22T16:00:00', color: '#f96776' },
-                { title: 'Workshop', start: '2026-02-25', end: '2026-02-27', color: '#d6a20c' }
+                {
+                    title: 'Team Standup',
+                    start: '2026-02-10T10:00:00',
+                    color: '#4336fb',
+                    extendedProps: {
+                        description: 'Daily 15-minute sync with the development team to review progress and blockers.',
+                        location: 'Conference Room A'
+                    }
+                },
+                {
+                    title: 'Project Review',
+                    start: '2026-02-11T14:00:00',
+                    color: '#36b398',
+                    extendedProps: {
+                        description: 'Review milestones and deliverables for the current sprint cycle.',
+                        location: 'Board Room'
+                    }
+                },
+                {
+                    title: 'Deadline: Q1 Report',
+                    start: '2026-02-14T17:00:00',
+                    color: '#f96776',
+                    extendedProps: {
+                        description: 'Final submission of the Q1 financial and progress report to stakeholders.'
+                    }
+                },
+                {
+                    title: 'Client Meeting',
+                    start: '2026-02-15T11:00:00',
+                    end: '2026-02-15T12:00:00',
+                    color: '#d6a20c',
+                    extendedProps: {
+                        description: 'Discuss project requirements and timeline with the client.',
+                        location: 'Zoom Call'
+                    }
+                },
+                {
+                    title: 'Team Lunch',
+                    start: '2026-02-16T12:30:00',
+                    color: '#4796ea',
+                    extendedProps: {
+                        description: 'Monthly team lunch outing to celebrate recent wins.',
+                        location: 'Downtown Grill'
+                    }
+                },
+                {
+                    title: 'Sprint Planning',
+                    start: '2026-02-18T09:00:00',
+                    end: '2026-02-18T10:30:00',
+                    color: '#4336fb',
+                    extendedProps: {
+                        description: 'Plan tasks and assign story points for the next two-week sprint.',
+                        location: 'Conference Room B'
+                    }
+                },
+                {
+                    title: 'Design Review',
+                    start: '2026-02-20T15:00:00',
+                    color: '#36b398',
+                    extendedProps: {
+                        description: 'Review mockups and prototypes for the new dashboard redesign.',
+                        location: 'Design Studio'
+                    }
+                },
+                {
+                    title: 'Board Meeting',
+                    start: '2026-02-22T10:00:00',
+                    end: '2026-02-22T16:00:00',
+                    color: '#f96776',
+                    extendedProps: {
+                        description: 'Full-day board meeting covering Q1 results, strategy, and budget approval.',
+                        location: 'Executive Suite'
+                    }
+                },
+                {
+                    title: 'Workshop',
+                    start: '2026-02-25',
+                    end: '2026-02-27',
+                    color: '#d6a20c',
+                    extendedProps: {
+                        description: 'Two-day hands-on workshop on modern front-end development practices.',
+                        location: 'Training Center'
+                    }
+                }
             ]
         });
         calendar.render();
+
+        // Delete event from modal
+        viewDeleteBtn.addEventListener('click', function() {
+            if (clickedEvent) {
+                clickedEvent.remove();
+                clickedEvent = null;
+                viewModal.hide();
+            }
+        });
+
+        // Add Event — wire up Save button
+        var addModal = document.getElementById('addEventModal');
+        var saveBtn = addModal.querySelector('.btn-primary');
+        saveBtn.addEventListener('click', function() {
+            var title = document.getElementById('eventTitle').value.trim();
+            if (!title) {
+                document.getElementById('eventTitle').classList.add('is-invalid');
+                return;
+            }
+            document.getElementById('eventTitle').classList.remove('is-invalid');
+
+            var startVal = document.getElementById('eventStart').value;
+            var endVal = document.getElementById('eventEnd').value;
+            var color = document.getElementById('eventColor').value;
+            var desc = document.getElementById('eventDescription').value.trim();
+
+            calendar.addEvent({
+                title: title,
+                start: startVal || new Date().toISOString().split('T')[0],
+                end: endVal || null,
+                color: color,
+                extendedProps: { description: desc }
+            });
+
+            // Reset form and close
+            addModal.querySelector('form').reset();
+            bootstrap.Modal.getInstance(addModal).hide();
+        });
+
+        // Make sidebar upcoming events clickable
+        document.querySelectorAll('.cal-sidebar-event').forEach(function(el) {
+            el.style.cursor = 'pointer';
+            el.addEventListener('click', function() {
+                var eventTitle = el.getAttribute('data-event-title');
+                var events = calendar.getEvents();
+                for (var i = 0; i < events.length; i++) {
+                    if (events[i].title === eventTitle) {
+                        clickedEvent = events[i];
+                        var ev = events[i];
+                        var props = ev.extendedProps || {};
+
+                        viewTitle.textContent = ev.title;
+                        viewColor.style.background = ev.backgroundColor || '#4336fb';
+                        viewDate.textContent = formatDate(ev.start);
+                        if (ev.end && ev.end.toDateString() !== ev.start.toDateString()) {
+                            viewDate.textContent += ' — ' + formatDate(ev.end);
+                        }
+                        if (ev.allDay) {
+                            viewTimeRow.style.display = 'none';
+                        } else {
+                            viewTimeRow.style.display = '';
+                            var timeTxt = formatTime(ev.start);
+                            if (ev.end) timeTxt += ' — ' + formatTime(ev.end);
+                            viewTime.textContent = timeTxt;
+                        }
+                        if (props.location) {
+                            viewLocationRow.style.display = '';
+                            viewLocation.textContent = props.location;
+                        } else {
+                            viewLocationRow.style.display = 'none';
+                        }
+                        viewDesc.textContent = props.description || 'No additional details.';
+                        viewModal.show();
+                        break;
+                    }
+                }
+            });
+        });
     });
     </script>
     <!-- Google Analytics 4 -->

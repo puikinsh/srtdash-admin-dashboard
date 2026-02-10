@@ -1,24 +1,109 @@
 # SRTdash Admin Dashboard
 
-A free, full-featured admin dashboard template built with **Bootstrap 5.3.8**, **HTML5**, **CSS3**, and **vanilla JavaScript**. No jQuery. No build tools. Just clean, modern code.
+SRTdash is a free, multipurpose admin dashboard template designed for web applications, SaaS products, and back-office panels. It ships with **56 ready-to-use pages** covering everything from analytics dashboards and data tables to chat, email, file management, user profiles, and full authentication flows — all built on **Bootstrap 5.3.8** with pure **vanilla JavaScript**. No jQuery, no build tools, no framework lock-in.
+
+The template features four distinct dashboard layouts (ICO/Crypto, Ecommerce, SEO/Marketing, and a horizontal-menu variant), each populated with realistic demo data rendered through Chart.js, Highcharts, ZingChart, and AmCharts. Every page is fully responsive, accessible out of the box (skip links, focus-visible, reduced-motion support), and optimized with AVIF images, modern font loading, and a GA4 tracking placeholder.
+
+Whether you are bootstrapping an internal tool, prototyping a client project, or learning Bootstrap 5, SRTdash gives you a polished starting point with clean, modular code you can understand and extend in minutes.
 
 <p align="center">
-  <img src="srtdash-dashboard-main-page.png" alt="SRTdash main dashboard — ICO/crypto variant with live charts and statistics" width="700">
+  <a href="https://colorlib.com/polygon/srtdash/index.html">
+    <img src="srtdash-dashboard-main-page.png" alt="SRTdash main dashboard — ICO/crypto variant with live charts and statistics" width="720">
+  </a>
 </p>
 
 <p align="center">
-  <img src="srtdash-secondary-dashboard-example.png" alt="SRTdash secondary dashboard — SEO/marketing variant with user statistics" width="700">
+  <a href="https://colorlib.com/polygon/srtdash/index.html">
+    <img src="srtdash-secondary-dashboard-example.png" alt="SRTdash secondary dashboard — SEO/marketing variant with user statistics" width="720">
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://colorlib.com/polygon/srtdash/index.html"><strong>Live Preview</strong></a>
 </p>
 
 ## Highlights
 
 - **56 pages** — 4 dashboard variants, 9 app pages, 25+ UI components, auth flows, error pages
-- **Zero dependencies on jQuery** — fully rewritten in vanilla JavaScript
-- **Bootstrap 5.3.8** — latest stable, with Popper bundled
-- **AVIF images** with `<picture>` JPG/PNG fallback for every image
+- **Zero jQuery** — every interaction is vanilla JavaScript
+- **Bootstrap 5.3.8** — latest stable release, Popper bundled
+- **4 charting libraries** — Chart.js 4, Highcharts 12, ZingChart, AmCharts
+- **AVIF images** with `<picture>` JPG/PNG fallback on every image
 - **Accessible** — skip links, `focus-visible`, `prefers-reduced-motion`
+- **Font Awesome 7.1** + Themify Icons — two full icon sets included
 - **GA4 ready** — tracking placeholder on every page
 - **No build step** — open any HTML file and go
+
+## Premium Admin Dashboards
+
+Looking for more features, more pages, and dedicated support? Check out our premium dashboard templates on [DashboardPack](https://dashboardpack.com/).
+
+<table>
+  <tr>
+    <td align="center" width="50%">
+      <a href="https://dashboardpack.com/theme-details/tailpanel/">
+        <img src="screenshots/tailpanel.png" alt="TailPanel — React + Tailwind CSS admin dashboard" width="100%">
+      </a>
+      <br>
+      <a href="https://dashboardpack.com/theme-details/tailpanel/"><strong>TailPanel</strong></a>
+      <br>
+      <sub>React + TypeScript + Tailwind CSS + Vite. 9 dashboard layouts, dark/light themes.</sub>
+    </td>
+    <td align="center" width="50%">
+      <a href="https://dashboardpack.com/theme-details/admindek-html/">
+        <img src="screenshots/admindek.png" alt="Admindek — Bootstrap 5 admin dashboard with 100+ components" width="100%">
+      </a>
+      <br>
+      <a href="https://dashboardpack.com/theme-details/admindek-html/"><strong>Admindek</strong></a>
+      <br>
+      <sub>Bootstrap 5 + vanilla JS. 100+ UI components, dark/light themes, RTL support.</sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <a href="https://dashboardpack.com/theme-details/adminty-html-dashboard/">
+        <img src="screenshots/adminty.png" alt="Adminty — Bootstrap 5 admin dashboard with 160+ pages" width="100%">
+      </a>
+      <br>
+      <a href="https://dashboardpack.com/theme-details/adminty-html-dashboard/"><strong>Adminty</strong></a>
+      <br>
+      <sub>Bootstrap 5. 160+ ready-to-use pages, comprehensive UI component library.</sub>
+    </td>
+    <td align="center" width="50%">
+      <a href="https://dashboardpack.com/theme-details/architectui-dashboard-html-pro/">
+        <img src="screenshots/architectui.png" alt="ArchitectUI — Bootstrap 5 admin dashboard with 250+ components" width="100%">
+      </a>
+      <br>
+      <a href="https://dashboardpack.com/theme-details/architectui-dashboard-html-pro/"><strong>ArchitectUI</strong></a>
+      <br>
+      <sub>Bootstrap 5. 250+ components and widgets, modular architecture, 9 dashboards.</sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <a href="https://dashboardpack.com/theme-details/kero-jquery-html-dashboard-pro/">
+        <img src="screenshots/kero.png" alt="Kero — Bootstrap 5 admin dashboard with Webpack" width="100%">
+      </a>
+      <br>
+      <a href="https://dashboardpack.com/theme-details/kero-jquery-html-dashboard-pro/"><strong>Kero</strong></a>
+      <br>
+      <sub>Bootstrap 5 + Webpack. Horizontal and sidebar layouts, SASS theming.</sub>
+    </td>
+    <td align="center" width="50%">
+      <a href="https://dashboardpack.com/theme-details/cryptocurrency-dashboard/">
+        <img src="screenshots/cryptocurrency.png" alt="Cryptocurrency Dashboard — Bitcoin and ICO admin panel" width="100%">
+      </a>
+      <br>
+      <a href="https://dashboardpack.com/theme-details/cryptocurrency-dashboard/"><strong>Cryptocurrency Dashboard</strong></a>
+      <br>
+      <sub>Bootstrap. Purpose-built for ICO, Bitcoin, and crypto asset management.</sub>
+    </td>
+  </tr>
+</table>
+
+<p align="center">
+  <a href="https://dashboardpack.com/"><strong>Browse All Premium Templates</strong></a>
+</p>
 
 ## Quick Start
 
@@ -32,7 +117,7 @@ npx http-server srtdash
 # Then visit http://localhost:8000
 ```
 
-There is a [starter template](srtdash/starter.html) for creating new pages — just copy it, update the `<title>` and `<meta description>`, and add your content inside `.main-content-inner`.
+There is a [starter template](srtdash/starter.html) for creating new pages — copy it, update the `<title>` and `<meta description>`, and add your content inside `.main-content-inner`.
 
 ## Pages
 
@@ -132,6 +217,7 @@ See [CHANGELOG.md](CHANGELOG.md) for the full version history.
 
 ## Related Resources
 
+- [Live Preview](https://colorlib.com/polygon/srtdash/index.html)
 - [Bootstrap Dashboards](https://colorlib.com/wp/free-bootstrap-admin-dashboard-templates/)
 - [Angular Dashboards](https://colorlib.com/wp/angularjs-admin-templates/)
 - [Free Admin Dashboards](https://colorlib.com/wp/free-html5-admin-dashboard-templates/)
