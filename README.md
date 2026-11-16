@@ -1,6 +1,6 @@
 # SRTdash Admin Dashboard
 
-SRTdash is a free, multipurpose admin dashboard template designed for web applications, SaaS products, and back-office panels. It ships with **56 ready-to-use pages** covering everything from analytics dashboards and data tables to chat, email, file management, user profiles, and full authentication flows — all built on **Bootstrap 5.3.8** with pure **vanilla JavaScript**. No jQuery, no build tools, no framework lock-in.
+SRTdash is a free, multipurpose admin dashboard template designed for web applications, SaaS products, and back-office panels. It ships with **56 ready-to-use pages** covering everything from analytics dashboards and data tables to chat, email, file management, user profiles, and full authentication flows — all built on **Bootstrap 5.3.9** with pure **vanilla JavaScript**. No jQuery, no build tools, no framework lock-in.
 
 The template features four distinct dashboard layouts (ICO/Crypto, Ecommerce, SEO/Marketing, and a horizontal-menu variant), each populated with realistic demo data rendered through Chart.js, Highcharts, ZingChart, and AmCharts. Every page is fully responsive, accessible out of the box (skip links, focus-visible, reduced-motion support), and optimized with AVIF images, modern font loading, and a GA4 tracking placeholder.
 
@@ -26,8 +26,8 @@ Whether you are bootstrapping an internal tool, prototyping a client project, or
 
 - **56 pages** — 4 dashboard variants, 9 app pages, 25+ UI components, auth flows, error pages
 - **Zero jQuery** — every interaction is vanilla JavaScript
-- **Bootstrap 5.3.8** — latest stable release, Popper bundled
-- **4 charting libraries** — Chart.js 4, Highcharts 12, ZingChart, AmCharts
+- **Bootstrap 5.3.9** — latest stable release, Popper bundled
+- **4 charting libraries** — Chart.js 4, Highcharts 13, ZingChart, AmCharts
 - **AVIF images** with `<picture>` JPG/PNG fallback on every image
 - **Accessible** — skip links, `focus-visible`, `prefers-reduced-motion`
 - **Font Awesome 7.1** + Themify Icons — two full icon sets included
@@ -181,14 +181,14 @@ Login (3 variants), Register (4 variants), Forgot Password, Reset Password, Scre
 
 | Library | Version | Source |
 |---------|---------|--------|
-| Bootstrap | 5.3.8 | Vendor (bundle with Popper) |
+| Bootstrap | 5.3.9 | Vendor (bundle with Popper) |
 | MetisMenuJS | 1.4.0 | Vendor |
-| Swiper | 12.1.0 | Vendor |
+| Swiper | 14.4.0 | Vendor |
 | Simple-DataTables | 10.x | CDN |
-| Chart.js | 4.5.1 | CDN |
-| Highcharts | 12.5.0 | CDN |
+| Chart.js | 4.6.1 | CDN |
+| Highcharts | 13.1.1 | CDN |
 | ZingChart | 2.9.16 | CDN |
-| Font Awesome | 7.1.0 Free | Vendor |
+| Font Awesome | 7.3.1 Free | Vendor |
 | Themify Icons | -- | Vendor |
 | Google Fonts | -- | CDN (Lato, Poppins) |
 
@@ -197,7 +197,7 @@ Login (3 variants), Register (4 variants), Forgot Password, Reset Password, Scre
 ```
 srtdash/
 ├── assets/
-│   ├── css/          # Bootstrap 5.3.8, Font Awesome 7.1, template styles
+│   ├── css/          # Bootstrap 5.3.9, Font Awesome 7.3, template styles
 │   ├── js/           # Vanilla JS — scripts.js, chart files, vendor libs
 │   ├── fonts/        # Font Awesome + Themify icon fonts
 │   └── images/       # AVIF + JPG/PNG fallback images
