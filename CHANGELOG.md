@@ -4,6 +4,8 @@ All notable changes to the SRTdash Admin Dashboard template are documented here.
 
 ## Unreleased
 
+## v2.1.1 - 2026-11-16
+
 ### Dependencies
 
 There is no package manager here — libraries are vendored under
