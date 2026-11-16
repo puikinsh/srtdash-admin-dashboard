@@ -860,3 +860,13 @@
         width: 300px;
     }
 }
+/* Keep wide widgets inside their card on narrow screens */
+@media (max-width: 575px) {
+    .btn-group:not(.btn-group-vertical) {
+        flex-wrap: wrap;
+        max-width: 100%;
+    }
+    .data-tables .datatable-container {
+        overflow-x: auto;
+    }
+}
