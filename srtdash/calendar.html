@@ -529,7 +529,7 @@
     <script src="assets/js/metismenujs.min.js"></script>
     <script src="assets/js/scripts.js"></script>
     <!-- FullCalendar 6 -->
-    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.21/index.global.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.22/index.global.min.js"></script>
     <script>
     document.addEventListener('DOMContentLoaded', function() {
         var calendarEl = document.getElementById('calendar');
@@ -556,6 +556,10 @@
         function formatTime(d) {
             return d.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' });
         }
+
+        // Demo events are placed in the current month so the calendar is never empty
+        var now = new Date();
+        var ym = now.getFullYear() + '-' + String(now.getMonth() + 1).padStart(2, '0');
 
         var calendar = new FullCalendar.Calendar(calendarEl, {
             initialView: 'dayGridMonth',
@@ -608,7 +612,7 @@
             events: [
                 {
                     title: 'Team Standup',
-                    start: '2026-02-10T10:00:00',
+                    start: ym + '-10T10:00:00',
                     color: '#4336fb',
                     extendedProps: {
                         description: 'Daily 15-minute sync with the development team to review progress and blockers.',
@@ -617,7 +621,7 @@
                 },
                 {
                     title: 'Project Review',
-                    start: '2026-02-11T14:00:00',
+                    start: ym + '-11T14:00:00',
                     color: '#36b398',
                     extendedProps: {
                         description: 'Review milestones and deliverables for the current sprint cycle.',
@@ -626,7 +630,7 @@
                 },
                 {
                     title: 'Deadline: Q1 Report',
-                    start: '2026-02-14T17:00:00',
+                    start: ym + '-14T17:00:00',
                     color: '#f96776',
                     extendedProps: {
                         description: 'Final submission of the Q1 financial and progress report to stakeholders.'
@@ -634,8 +638,8 @@
                 },
                 {
                     title: 'Client Meeting',
-                    start: '2026-02-15T11:00:00',
-                    end: '2026-02-15T12:00:00',
+                    start: ym + '-15T11:00:00',
+                    end: ym + '-15T12:00:00',
                     color: '#d6a20c',
                     extendedProps: {
                         description: 'Discuss project requirements and timeline with the client.',
@@ -644,7 +648,7 @@
                 },
                 {
                     title: 'Team Lunch',
-                    start: '2026-02-16T12:30:00',
+                    start: ym + '-16T12:30:00',
                     color: '#4796ea',
                     extendedProps: {
                         description: 'Monthly team lunch outing to celebrate recent wins.',
@@ -653,8 +657,8 @@
                 },
                 {
                     title: 'Sprint Planning',
-                    start: '2026-02-18T09:00:00',
-                    end: '2026-02-18T10:30:00',
+                    start: ym + '-18T09:00:00',
+                    end: ym + '-18T10:30:00',
                     color: '#4336fb',
                     extendedProps: {
                         description: 'Plan tasks and assign story points for the next two-week sprint.',
@@ -663,7 +667,7 @@
                 },
                 {
                     title: 'Design Review',
-                    start: '2026-02-20T15:00:00',
+                    start: ym + '-20T15:00:00',
                     color: '#36b398',
                     extendedProps: {
                         description: 'Review mockups and prototypes for the new dashboard redesign.',
@@ -672,8 +676,8 @@
                 },
                 {
                     title: 'Board Meeting',
-                    start: '2026-02-22T10:00:00',
-                    end: '2026-02-22T16:00:00',
+                    start: ym + '-22T10:00:00',
+                    end: ym + '-22T16:00:00',
                     color: '#f96776',
                     extendedProps: {
                         description: 'Full-day board meeting covering Q1 results, strategy, and budget approval.',
@@ -682,8 +686,8 @@
                 },
                 {
                     title: 'Workshop',
-                    start: '2026-02-25',
-                    end: '2026-02-27',
+                    start: ym + '-25',
+                    end: ym + '-27',
                     color: '#d6a20c',
                     extendedProps: {
                         description: 'Two-day hands-on workshop on modern front-end development practices.',

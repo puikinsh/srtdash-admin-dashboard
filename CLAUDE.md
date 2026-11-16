@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-SRTdash is a static Bootstrap 5.3.8 admin dashboard HTML template by Colorlib. It has 56 HTML pages, no build system, no package.json, and no server-side code. All assets are plain HTML/CSS/JS served directly. No jQuery — all JavaScript is vanilla.
+SRTdash is a static Bootstrap 5.3.9 admin dashboard HTML template by Colorlib. It has 56 HTML pages, no build system, no package.json, and no server-side code. All assets are plain HTML/CSS/JS served directly. No jQuery — all JavaScript is vanilla.
 
 ## Running Locally
 
@@ -54,7 +54,7 @@ GA4 tracking snippet
 ### CSS Load Order (in `<head>`)
 
 1. Google Fonts (preconnect + css2 API link)
-2. `bootstrap.min.css` — Bootstrap 5.3.8
+2. `bootstrap.min.css` — Bootstrap 5.3.9
 3. Icon CSS — `fontawesome.min.css`, `themify-icons.css`
 4. Plugin CSS — `metismenujs.min.css`, `swiper-bundle.min.css`
 5. Template CSS — `typography.css`, `default-css.css`, `styles.css`, `responsive.css`
@@ -64,7 +64,7 @@ GA4 tracking snippet
 1. `bootstrap.bundle.min.js` (includes Popper)
 2. `metismenujs.min.js`
 3. `swiper-bundle.min.js`
-4. Page-specific chart JS (CDN: Chart.js 4.5.1, Highcharts 12.5.0, ZingChart 2.9.16, AmCharts)
+4. Page-specific chart JS (CDN: Chart.js 4.6.1, Highcharts 13.1.1, ZingChart 2.9.16, AmCharts)
 5. `scripts.js` — Main app logic (vanilla JS IIFE)
 
 ### Key JS Behaviors (scripts.js)
@@ -110,14 +110,14 @@ All images use `<picture>` elements with AVIF sources and JPG/PNG fallback:
 
 | Library | Version | Source |
 | ------- | ------- | ------ |
-| Bootstrap | 5.3.8 | Vendor (bundle) |
+| Bootstrap | 5.3.9 | Vendor (bundle) |
 | MetisMenuJS | 1.4.0 | Vendor |
-| Swiper | 12.1.0 | Vendor |
+| Swiper | 14.4.0 | Vendor |
 | Simple-DataTables | 10.x | CDN |
-| Chart.js | 4.5.1 | CDN |
-| Highcharts | 12.5.0 | CDN |
+| Chart.js | 4.6.1 | CDN |
+| Highcharts | 13.1.1 | CDN |
 | ZingChart | 2.9.16 | CDN |
-| Font Awesome | 7.1.0 Free | Vendor |
+| Font Awesome | 7.3.1 Free | Vendor |
 | Themify Icons | — | Vendor |
 | Google Fonts | — | CDN (Lato, Poppins) |
 

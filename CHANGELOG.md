@@ -4,6 +4,8 @@ All notable changes to the SRTdash Admin Dashboard template are documented here.
 
 ## Unreleased
 
+## v2.1.1 - 2026-11-16
+
 ### Dependencies
 
 There is no package manager here — libraries are vendored under
@@ -12,13 +14,15 @@ current published version by hand.
 
 Updated:
 
+- Bootstrap 5.3.8 → 5.3.9 (vendored CSS and bundle JS)
+- Chart.js 4.5.1 → 4.6.1 (CDN pin)
 - Font Awesome 7.1.0 → 7.3.1 (`fontawesome.min.css` plus all four webfonts)
-- Swiper 12.1.0 → 14.2.0 (`swiper-bundle.min.css` / `.js`)
-- FullCalendar 6.1.15 → 6.1.21 (CDN pin)
-- Highcharts 12.5.0 → 13.0.2, and moved off `code.highcharts.com` — see below
+- Swiper 12.1.0 → 14.4.0 (`swiper-bundle.min.css` / `.js`)
+- FullCalendar 6.1.15 → 6.1.22 (CDN pin)
+- Highcharts 12.5.0 → 13.1.1, and moved off `code.highcharts.com` — see below
 
-Already current, left alone: Bootstrap 5.3.8, MetisMenuJS 1.4.0,
-Chart.js 4.5.1, ZingChart 2.9.16-1, simple-datatables 10.x.
+Already current, left alone: MetisMenuJS 1.4.0,
+ZingChart 2.9.16-1, simple-datatables 10.x.
 
 ### Fixed
 
@@ -36,6 +40,16 @@ Chart.js 4.5.1, ZingChart 2.9.16-1, simple-datatables 10.x.
   `new FullCalendar.Calendar(...)` from a plain `<script>` tag, so v7 would
   need `calendar.html` rewritten around an import map. Pinned to the latest
   6.x instead. Taking v7 is a deliberate migration, not a version bump.
+
+- **The calendar demo opened on an empty month.** Events were hard-coded to
+  February 2026; they are now generated in the current month.
+- **Horizontal overflow on phones** for long button groups
+  (`button-group.html`) and wide data tables (`datatable.html`).
+
+### Known upstream issue
+
+- `maps.html` embeds a Google Maps API key without billing enabled
+  (`BillingNotEnabledMapError`); replace it with your own key.
 
 ### Verified
 
